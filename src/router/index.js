@@ -3,7 +3,7 @@ import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
 
 import car from '../components/project/car'
-import centert from '../components/project/centert'
+import center from '../components/project/center'
 import EmptyCar from '../components/project/EmptyCar'
 import forget from '../components/project/forget'
 import Hrdetails from '../components/project/Hrdetails'
@@ -52,9 +52,9 @@ export default new Router({
           component: car
         },
         {
-          name: 'centert',
-          path: '/centert',
-          component: centert
+          name: 'center',
+          path: '/center',
+          component: center
         },
         {
           name: 'EmptyCar',

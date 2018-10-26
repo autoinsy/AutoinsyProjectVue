@@ -7,7 +7,7 @@ import './assets/css/index.css'
 import './assets/css/mystyle.css'
 import './assets/css/reset.css'
 import './assets/css/retable-f721744060.css'
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
