@@ -3,7 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import './assets/css/index.css'
+import './assets/css/mystyle.css'
+import './assets/css/reset.css'
+import './assets/css/retable-f721744060.css'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
