@@ -191,15 +191,15 @@
 </template>
 
 <script>
-  $(function(){
-    /* 商品轮播图（带缩略图的轮播效果） */
-    $(".banner_all").thumbnailImg({
-      large_elem: ".large_box",
-      small_elem: ".small_list",
-      left_btn: ".left_btn",
-      right_btn: ".right_btn"
-    });
-  });
+  // $(function(){
+  //   /* 商品轮播图（带缩略图的轮播效果） */
+  //   $(".banner_all").thumbnailImg({
+  //     large_elem: ".large_box",
+  //     small_elem: ".small_list",
+  //     left_btn: ".left_btn",
+  //     right_btn: ".right_btn"
+  //   });
+  // });
     export default {
         name: "RentDetails"
     }

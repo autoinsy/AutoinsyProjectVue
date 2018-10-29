@@ -28,9 +28,9 @@ import ServeDetails from '../components/project/ServeDetails'
 import TeachnicalDetails from '../components/project/TeachnicalDetails'
 import TechnicalAssistance from '../components/project/TechnicalAssistance'
 
-import footer from '../components/footer'
-import Nav from '../components/Nav'
-import TopNav from '../components/TopNav'
+// import footer from '../components/footer'
+// import Nav from '../components/Nav'
+// import TopNav from '../components/TopNav'
 
 Vue.use(Router)
 
@@ -79,7 +79,7 @@ export default new Router({
         {
           name: 'module',
           path: '/module',
-          component: user
+          component: module
         },
         {
           name: 'MotorPartsTown',
