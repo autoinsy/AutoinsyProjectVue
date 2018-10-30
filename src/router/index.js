@@ -32,17 +32,12 @@ import TechnicalAssistance from '../components/project/TechnicalAssistance'
 // import Nav from '../components/Nav'
 // import TopNav from '../components/TopNav'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'login',
-      component: login
-    },
-    {
-      path: '/index',
       name: 'index',
       component: resolve => {require(['@/components/Index'], resolve)},
       children: [
@@ -165,7 +160,12 @@ export default new Router({
           name: 'TechnicalAssistance',
           path: '/TechnicalAssistance',
           component: TechnicalAssistance
-        }
+        },
+        {
+          path: '/login',
+          name: 'login',
+          component: login
+        },
       ]
     },
   ]
