@@ -1,9 +1,9 @@
 <template>
   <div class="">
     <div class="newlogo">
-      <img src="picture/newlogo.png" height="64" width="270"/>
+      <img src="../../assets/picture/newlogo.png" height="64" width="270"/>
       <div class="logindiv" >
-        <img src="images/kefu01.png" height="18" width="18"/>
+        <img src="../../assets/images/kefu01.png" height="18" width="18"/>
         <p>客服热线<span>024-31040888</span></p>
       </div>
     </div>
@@ -13,7 +13,7 @@
     </div>
     <!---->
     <div class="loginbox">
-      <div class="logintitle">用户登录<div class="logintitle_img"><a href="loginphone.html"><img src="images/06.jpg" height="40" width="40"/></a> </div></div>
+      <div class="logintitle">用户登录<div class="logintitle_img"><a href="loginphone.html"><img src="../../assets/images/06.jpg" height="40" width="40"/></a> </div></div>
 
       <table width="0" border="0" cellspacing="0" cellpadding="0">
         <tbody>
@@ -44,6 +44,7 @@
     }
 </script>
 
-<style scoped>
-
-</style>
+<style src="../../assets/css/index.css"></style>
+<style src="../../assets/css/mystyle.css"></style>
+<style src="../../assets/css/reset.css"></style>
+<style src="../../assets/css/retable-f721744060.css"></style>

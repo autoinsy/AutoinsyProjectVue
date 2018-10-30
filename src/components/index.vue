@@ -1,6 +1,83 @@
 <template>
   <div class='' id="show">
-    <top-head></top-head>
+   <div class="">
+     <div id="jd-denglu">
+       <div class="dingbu">
+         <ul class="yfd">
+           <li><a href="">你好,请登录</a></li>
+           <li><a href="">免费注册</a></li>
+           <li style="color:#ccc;">|</li>
+           <li><a href="">我的订单</a></li>
+           <li style="color:#ccc;">|</li>
+           <li id="kkk"><a href="">个人中心</a>
+             <div id="wdjd">
+               <em></em>
+               <div class="diyi">
+                 <div class="wd"><img src="picture/16.jpg"></div>
+                 <div class="jd"><span><a href="###">你好,请登录</a></span> <span><a href="###">消息</a></span>
+                 </div>
+               </div>
+               <div class="dier">
+                 <div class="wen">
+                   <span><a href="###">待处理订单</a></span>
+                   <span><a href="###">咨询回复</a></span>
+                   <span><a href="###">返修退换货</a></span>
+                 </div>
+                 <div class="zi">
+                   <span><a href="###">我的关注</a></span>
+                   <span><a href="###">我的收藏</a></span>
+                 </div>
+               </div>
+             </div>
+           </li>
+           <li style="color:#ccc;">|</li>
+           <li id="iii"><img style="width:10px;height:14px; margin: 5px 5px 0 0;" src="picture/3.png"><a
+             href="">手机电商</a>
+             <div id="sjjd"><img src="picture/30.png"> <em></em></div>
+           </li>
+           <li style="color:#ccc;">|</li>
+           <li id="ppp"><a href="">关注电商&nbsp;</a>
+             <div id="gzjd"><img src="picture/32.jpg"> <em></em></div>
+           </li>
+         </ul>
+       </div>
+     </div>
+     <div class="jd-erbuf">
+       <div class="jd-erbuf2">
+         <div id="logo-1"><img src="picture/newlogo.png"/></div>
+         <div class="form">
+           <input class="kz" type="text" value="">
+           <input type="button" class="ss" value="搜索">
+           <div class="biaoqian"><span><a style="color:#ff7300">雨刷器</a></span> <span><a href="">轮胎</a></span> <span><a
+             href="">排气管</a></span> <span><a href="">方向盘</a></span> <span><a href="">汽车配饰</a></span> <span><a
+             href="">车载</a></span> <span><a href="">油箱</a></span></div>
+         </div>
+         <div class="gouwuche"><img class="cileft" src="picture/10.png"> <span><a href="">我的购物车</a></span> <a
+           href=""><img class="jt" src="picture/11.png"></a><em></em>
+           <div class="erlei"><img src="picture/12.png"> <span
+             style="color:#ccc;width:206px;height:14px;font-size: 13px;position: absolute;left: 116px;top: 31px;">购物车还没有东西哦,赶紧选购吧！</span>
+           </div>
+         </div>
+       </div>
+       <div class="sanlei">
+         <div class="zxkd">
+           <div class="qbfl"><a href="">全部商品分类</a></div>
+           <div class="sldh">
+             <ul id="uile">
+               <li><a href="index.html"  class="sldhactive">首页</a></li>
+               <li><a href="">汽配服务</a></li>
+               <li><a href="">汽配商城</a></li>
+               <li><a href="MotorPartsTown.html" >汽配城</a></li>
+               <li><a href="">关于本站</a></li>
+               <li><a href="technical%20assistance.html">技术支持</a></li>
+               <li><a href="Recruitment.html">招聘信息</a></li>
+               <li><a href="module.html">商家模块</a></li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
     <router-view></router-view>
     <div class="">
       <div id="cfoo6">
@@ -121,6 +198,7 @@
     }
 </script>
 
-<style scoped>
-
-</style>
+<style src="../assets/css/index.css"></style>
+<style src="../assets/css/mystyle.css"></style>
+<style src="../assets/css/reset.css"></style>
+<style src="../assets/css/retable-f721744060.css"></style>
