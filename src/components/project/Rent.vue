@@ -58,7 +58,7 @@
                 <td class="img">
                   <div class="ac_linkurl">
                     <a href="">
-                      <img src="images/05.jpg"/>
+                      <img src="../../assets/images/05.jpg"/>
                     </a>
                   </div>
                 </td>
@@ -84,7 +84,7 @@
                 <td class="img">
                   <div class="ac_linkurl">
                     <a href="">
-                      <img src="images/05.jpg"/>
+                      <img src="../../assets/images/05.jpg"/>
                     </a>
                   </div>
                 </td>
@@ -110,7 +110,7 @@
                 <td class="img">
                   <div class="ac_linkurl">
                     <a href="">
-                      <img src="images/05.jpg"/>
+                      <img src="../../assets/images/05.jpg"/>
                     </a>
                   </div>
                 </td>
@@ -136,7 +136,7 @@
                 <td class="img">
                   <div class="ac_linkurl">
                     <a href="">
-                      <img src="images/05.jpg"/>
+                      <img src="../../assets/images/05.jpg"/>
                     </a>
                   </div>
                 </td>
@@ -162,7 +162,7 @@
                 <td class="img">
                   <div class="ac_linkurl">
                     <a href="">
-                      <img src="images/05.jpg"/>
+                      <img src="../../assets/images/05.jpg"/>
                     </a>
                   </div>
                 </td>
@@ -188,7 +188,7 @@
                 <td class="img">
                   <div class="ac_linkurl">
                     <a href="">
-                      <img src="images/05.jpg"/>
+                      <img src="../../assets/images/05.jpg"/>
                     </a>
                   </div>
                 </td>
@@ -214,7 +214,7 @@
                 <td class="img">
                   <div class="ac_linkurl">
                     <a href="">
-                      <img src="images/05.jpg"/>
+                      <img src="../../assets/images/05.jpg"/>
                     </a>
                   </div>
                 </td>
@@ -240,7 +240,7 @@
                 <td class="img">
                   <div class="ac_linkurl">
                     <a href="">
-                      <img src="images/05.jpg"/>
+                      <img src="../../assets/images/05.jpg"/>
                     </a>
                   </div>
                 </td>
@@ -270,7 +270,7 @@
           <div class="rent_li">
             <ul>
               <li>
-                <div class="rent_img"><img src="images/05.jpg" width="160" height="120"/></div>
+                <div class="rent_img"><img src="../../assets/images/05.jpg" width="160" height="120"/></div>
                 <div class="rent_p">
                   <p>铁西/贵和/盛世华庭</p>
                   <p>两室 70平</p>
@@ -278,7 +278,7 @@
                 </div>
               </li>
               <li>
-                <div class="rent_img"><img src="images/05.jpg" width="160" height="120"/></div>
+                <div class="rent_img"><img src="../../assets/images/05.jpg" width="160" height="120"/></div>
                 <div class="rent_p">
                   <p>铁西/贵和/盛世华庭</p>
                   <p>两室 70平</p>
@@ -286,7 +286,7 @@
                 </div>
               </li>
               <li>
-                <div class="rent_img"><img src="images/05.jpg" width="160" height="120"/></div>
+                <div class="rent_img"><img src="../../assets/images/05.jpg" width="160" height="120"/></div>
                 <div class="rent_p">
                   <p>铁西/贵和/盛世华庭</p>
                   <p>两室 70平</p>
@@ -294,7 +294,7 @@
                 </div>
               </li>
               <li>
-                <div class="rent_img"><img src="images/05.jpg" width="160" height="120"/></div>
+                <div class="rent_img"><img src="../../assets/images/05.jpg" width="160" height="120"/></div>
                 <div class="rent_p">
                   <p>铁西/贵和/盛世华庭</p>
                   <p>两室 70平</p>
@@ -302,7 +302,7 @@
                 </div>
               </li>
               <li>
-                <div class="rent_img"><img src="images/05.jpg" width="160" height="120"/></div>
+                <div class="rent_img"><img src="../../assets/images/05.jpg" width="160" height="120"/></div>
                 <div class="rent_p">
                   <p>铁西/贵和/盛世华庭</p>
                   <p>两室 70平</p>

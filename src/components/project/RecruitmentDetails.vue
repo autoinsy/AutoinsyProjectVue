@@ -41,13 +41,13 @@
             <input type="button" value="收藏职位" class="rec_top_box_btn2"/>
             <div class="rec_btn_1">
               <a href="">
-                <img src="images/10.jpg"/>
+                <img src="../../assets/images/10.jpg"/>
                 <p>微聊</p>
               </a>
             </div>
             <div class="rec_btn_1">
               <a href="">
-                <img src="images/11.jpg"/>
+                <img src="../../assets/images/11.jpg"/>
                 <p>电话沟通</p>
               </a>
             </div>
@@ -74,13 +74,13 @@
           <div class="rec_r_box_title">—— 名企 ——</div>
           <div class="rec_last">
             <p style="font-size: 18px; color: #333;line-height: 42px;">沈阳伟恒科技发展有限公司</p>
-            <p><img src="images/12.jpg"/></p>
+            <p><img src="../../assets/images/12.jpg"/></p>
             <p>互联网/摄像机</p>
             <p>100-499人</p>
           </div>
           <div class="rec_r_box_b">
-            <img src="images/13.jpg"/>
-            <img src="images/14.jpg"/>
+            <img src="../../assets/images/13.jpg"/>
+            <img src="../../assets/images/14.jpg"/>
           </div>
           <div class="rec_li_r">
             <ul>

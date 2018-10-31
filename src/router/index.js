@@ -6,6 +6,7 @@ import car from '../components/project/car'
 import center from '../components/project/center'
 import EmptyCar from '../components/project/EmptyCar'
 import forget from '../components/project/forget'
+import Enroll from '../components/project/Enroll'
 import Hrdetails from '../components/project/Hrdetails'
 import login from '../components/project/login'
 import LoginPhone from '../components/project/LoginPhone'
@@ -27,6 +28,7 @@ import Serve from '../components/project/Serve'
 import ServeDetails from '../components/project/ServeDetails'
 import TeachnicalDetails from '../components/project/TeachnicalDetails'
 import TechnicalAssistance from '../components/project/TechnicalAssistance'
+// import indexs from '../components/project/indexs'
 
 // import footer from '../components/footer'
 // import Nav from '../components/Nav'
@@ -41,6 +43,11 @@ export default new Router({
       name: 'index',
       component: resolve => {require(['@/components/Index'], resolve)},
       children: [
+        {
+          name: 'Enroll',
+          path: '/Enroll',
+          component: Enroll
+        },
         {
           name: 'car',
           path: '/car',

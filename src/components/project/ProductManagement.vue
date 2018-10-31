@@ -44,7 +44,7 @@
                   <ul>
                     <li>
                       <div class="left product_box_li_img ">
-                        <img src="images/05.jpg"/>
+                        <img src="../../assets/images/05.jpg"/>
                       </div>
                       <div class="product_box_li_zi">
                         <div class="product_box_li_zi_p">这里是标题大标题标题标题这里是标题大标题标题</div>
@@ -63,7 +63,7 @@
                     </li>
                     <li>
                       <div class="left product_box_li_img ">
-                        <img src="images/05.jpg"/>
+                        <img src="../../assets/images/05.jpg"/>
                       </div>
                       <div class="product_box_li_zi">
                         <div class="product_box_li_zi_p">这里是标题大标题标题标题这里是标题大标题标题</div>
@@ -82,7 +82,7 @@
                     </li>
                     <li>
                       <div class="left product_box_li_img ">
-                        <img src="images/05.jpg"/>
+                        <img src="../../assets/images/05.jpg"/>
                       </div>
                       <div class="product_box_li_zi">
                         <div class="product_box_li_zi_p">这里是标题大标题标题标题这里是标题大标题标题</div>
@@ -101,7 +101,7 @@
                     </li>
                     <li>
                       <div class="left product_box_li_img ">
-                        <img src="images/05.jpg"/>
+                        <img src="../../assets/images/05.jpg"/>
                       </div>
                       <div class="product_box_li_zi">
                         <div class="product_box_li_zi_p">这里是标题大标题标题标题这里是标题大标题标题</div>
@@ -120,7 +120,7 @@
                     </li>
                     <li>
                       <div class="left product_box_li_img ">
-                        <img src="images/05.jpg"/>
+                        <img src="../../assets/images/05.jpg"/>
                       </div>
                       <div class="product_box_li_zi">
                         <div class="product_box_li_zi_p">这里是标题大标题标题标题这里是标题大标题标题</div>
@@ -171,7 +171,7 @@
                   <ul>
                     <li>
                       <div class="left product_box_li_img ">
-                        <img src="images/05.jpg"/>
+                        <img src="../../assets/images/05.jpg"/>
                       </div>
                       <div class="product_box_li_zi">
                         <div class="product_box_li_zi_p">这里是标题大标题标题标题这里是标题大标题标题</div>
@@ -190,7 +190,7 @@
                     </li>
                     <li>
                       <div class="left product_box_li_img ">
-                        <img src="images/05.jpg"/>
+                        <img src="../../assets/images/05.jpg"/>
                       </div>
                       <div class="product_box_li_zi">
                         <div class="product_box_li_zi_p">这里是标题大标题标题标题这里是标题大标题标题</div>
@@ -209,7 +209,7 @@
                     </li>
                     <li>
                       <div class="left product_box_li_img ">
-                        <img src="images/05.jpg"/>
+                        <img src="../../assets/images/05.jpg"/>
                       </div>
                       <div class="product_box_li_zi">
                         <div class="product_box_li_zi_p">这里是标题大标题标题标题这里是标题大标题标题</div>
@@ -228,7 +228,7 @@
                     </li>
                     <li>
                       <div class="left product_box_li_img ">
-                        <img src="images/05.jpg"/>
+                        <img src="../../assets/images/05.jpg"/>
                       </div>
                       <div class="product_box_li_zi">
                         <div class="product_box_li_zi_p">这里是标题大标题标题标题这里是标题大标题标题</div>
@@ -279,7 +279,7 @@
                   <ul>
                     <li>
                       <div class="left product_box_li_img ">
-                        <img src="images/05.jpg"/>
+                        <img src="../../assets/images/05.jpg"/>
                       </div>
                       <div class="product_box_li_zi">
                         <div class="product_box_li_zi_p">这里是标题大标题标题标题这里是标题大标题标题</div>
@@ -298,7 +298,7 @@
                     </li>
                     <li>
                       <div class="left product_box_li_img ">
-                        <img src="images/05.jpg"/>
+                        <img src="../../assets/images/05.jpg"/>
                       </div>
                       <div class="product_box_li_zi">
                         <div class="product_box_li_zi_p">这里是标题大标题标题标题这里是标题大标题标题</div>
@@ -317,7 +317,7 @@
                     </li>
                     <li>
                       <div class="left product_box_li_img ">
-                        <img src="images/05.jpg"/>
+                        <img src="../../assets/images/05.jpg"/>
                       </div>
                       <div class="product_box_li_zi">
                         <div class="product_box_li_zi_p">这里是标题大标题标题标题这里是标题大标题标题</div>
@@ -368,7 +368,7 @@
                   <ul>
                     <li>
                       <div class="left product_box_li_img ">
-                        <img src="images/05.jpg"/>
+                        <img src="../../assets/images/05.jpg"/>
                       </div>
                       <div class="product_box_li_zi">
                         <div class="product_box_li_zi_p">这里是标题大标题标题标题这里是标题大标题标题</div>
@@ -387,7 +387,7 @@
                     </li>
                     <li>
                       <div class="left product_box_li_img ">
-                        <img src="images/05.jpg"/>
+                        <img src="../../assets/images/05.jpg"/>
                       </div>
                       <div class="product_box_li_zi">
                         <div class="product_box_li_zi_p">这里是标题大标题标题标题这里是标题大标题标题</div>

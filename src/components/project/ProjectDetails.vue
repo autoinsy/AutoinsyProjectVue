@@ -8,21 +8,21 @@
       <div class="bg">
         <div class="bg_left">
           <div class="show">
-            <img src="picture/img1.png" alt="">
+            <img src="../../assets/picture/img1.png" alt="">
             <div class="mask"></div>
           </div>
           <div class="smallshow">
             <p class="prev prevnone"></p>
             <div class="middle_box">
               <ul class="middle">
-                <li><img src="picture/img1.png" alt=""></li>
-                <li><img src="picture/img2.png" alt=""></li>
-                <li><img src="picture/img3.png" alt=""></li>
-                <li><img src="picture/img4.png" alt=""></li>
-                <li><img src="picture/img5.png" alt=""></li>
-                <li><img src="picture/img6.png" alt=""></li>
-                <li><img src="picture/img7.png" alt=""></li>
-                <li><img src="picture/img8.png" alt=""></li>
+                <li><img src="../../assets/picture/img1.png" alt=""></li>
+                <li><img src="../../assets/picture/img2.png" alt=""></li>
+                <li><img src="../../assets/picture/img3.png" alt=""></li>
+                <li><img src="../../assets/picture/img4.png" alt=""></li>
+                <li><img src="../../assets/picture/img5.png" alt=""></li>
+                <li><img src="../../assets/picture/img6.png" alt=""></li>
+                <li><img src="../../assets/picture/img7.png" alt=""></li>
+                <li><img src="../../assets/picture/img8.png" alt=""></li>
               </ul>
             </div>
             <p class="next "></p>
@@ -31,7 +31,7 @@
         <div class="bg_right">
           <div class="bigshow">
             <div class="bigitem">
-              <img src="picture/img1.png" alt="">
+              <img src="../../assets/picture/img1.png" alt="">
             </div>
           </div>
         </div>
@@ -97,9 +97,9 @@
             <input type="button" value="关注店铺">
           </div>
           <div class="pro_btn">
-            <a href=""><img src="images/4.png"/></a>
-            <a href=""><img src="images/5.png"/></a>
-            <a href=""><img src="images/6.png"/></a>
+            <a href=""><img src="../../assets/images/4.png"/></a>
+            <a href=""><img src="../../assets/images/5.png"/></a>
+            <a href=""><img src="../../assets/images/6.png"/></a>
           </div>
         </div>
 
@@ -136,29 +136,29 @@
           </p>
           <p>文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行</p>
           <p>文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行</p>
-          <img src="images/03.jpg" width="790"/>
+          <img src="../../assets/images/03.jpg" width="790"/>
         </div>
       </div>
       <div class="right served_right_box">
         <div class="served_right_box_title">热门销售</div>
         <ul>
           <li>
-            <img src="images/03.jpg" width="178" height=""/>
+            <img src="../../assets/images/03.jpg" width="178" height=""/>
             <p>这里是标题这里是标题这里是标题</p>
             <p>￥39.6</p>
           </li>
           <li>
-            <img src="images/03.jpg" width="178" height=""/>
+            <img src="../../assets/images/03.jpg" width="178" height=""/>
             <p>这里是标题这里是标题这里是标题</p>
             <p>￥39.6</p>
           </li>
           <li>
-            <img src="images/03.jpg" width="178" height=""/>
+            <img src="../../assets/images/03.jpg" width="178" height=""/>
             <p>这里是标题这里是标题这里是标题</p>
             <p>￥39.6</p>
           </li>
           <li>
-            <img src="images/03.jpg" width="178" height=""/>
+            <img src="../../assets/images/03.jpg" width="178" height=""/>
             <p>这里是标题这里是标题这里是标题</p>
             <p>￥39.6</p>
           </li>

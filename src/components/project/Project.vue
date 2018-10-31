@@ -179,182 +179,182 @@
         <div class="prolist">
           <ul>
             <li>
-              <div class="prolist_img"><img src="images/02.jpg" width="220" height="220"/></div>
+              <div class="prolist_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
               <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
               <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
               <p><span style="color: #ff7300;">0</span>条评价</p>
               <p>店铺的名字</p>
-              <p><img src="images/22.jpg"/></p>
+              <p><img src="../../assets/images/22.jpg"/></p>
               <div class="proul">
                 <ul>
                   <li><a href=""> 对比</a></li>
                   <li><a href=""> 关注</a></li>
-                  <li><a href=""> <img src="images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
+                  <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
                 </ul>
               </div>
             </li>
             <li>
-              <div class="prolist_img"><img src="images/02.jpg" width="220" height="220"/></div>
+              <div class="prolist_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
               <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
               <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
               <p><span style="color: #ff7300;">0</span>条评价</p>
               <p>店铺的名字</p>
-              <p><img src="images/22.jpg"/></p>
+              <p><img src="../../assets/images/22.jpg"/></p>
               <div class="proul">
                 <ul>
                   <li><a href=""> 对比</a></li>
                   <li><a href=""> 关注</a></li>
-                  <li><a href=""> <img src="images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
+                  <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
                 </ul>
               </div>
             </li>
             <li>
-              <div class="prolist_img"><img src="images/02.jpg" width="220" height="220"/></div>
+              <div class="prolist_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
               <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
               <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
               <p><span style="color: #ff7300;">0</span>条评价</p>
               <p>店铺的名字</p>
-              <p><img src="images/22.jpg"/></p>
+              <p><img src="../../assets/images/22.jpg"/></p>
               <div class="proul">
                 <ul>
                   <li><a href=""> 对比</a></li>
                   <li><a href=""> 关注</a></li>
-                  <li><a href=""> <img src="images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
+                  <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
                 </ul>
               </div>
             </li>
             <li class="prolist_so">
-              <div class="prolist_img"><img src="images/02.jpg" width="220" height="220"/></div>
+              <div class="prolist_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
               <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
               <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
               <p><span style="color: #ff7300;">0</span>条评价</p>
               <p>店铺的名字</p>
-              <p><img src="images/22.jpg"/></p>
+              <p><img src="../../assets/images/22.jpg"/></p>
               <div class="proul">
                 <ul>
                   <li><a href=""> 对比</a></li>
                   <li><a href=""> 关注</a></li>
-                  <li><a href=""> <img src="images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
+                  <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
                 </ul>
               </div>
             </li>
             <li>
-              <div class="prolist_img"><img src="images/02.jpg" width="220" height="220"/></div>
+              <div class="prolist_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
               <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
               <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
               <p><span style="color: #ff7300;">0</span>条评价</p>
               <p>店铺的名字</p>
-              <p><img src="images/22.jpg"/></p>
+              <p><img src="../../assets/images/22.jpg"/></p>
               <div class="proul">
                 <ul>
                   <li><a href=""> 对比</a></li>
                   <li><a href=""> 关注</a></li>
-                  <li><a href=""> <img src="images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
+                  <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
                 </ul>
               </div>
             </li>
             <li>
-              <div class="prolist_img"><img src="images/02.jpg" width="220" height="220"/></div>
+              <div class="prolist_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
               <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
               <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
               <p><span style="color: #ff7300;">0</span>条评价</p>
               <p>店铺的名字</p>
-              <p><img src="images/22.jpg"/></p>
+              <p><img src="../../assets/images/22.jpg"/></p>
               <div class="proul">
                 <ul>
                   <li><a href=""> 对比</a></li>
                   <li><a href=""> 关注</a></li>
-                  <li><a href=""> <img src="images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
+                  <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
                 </ul>
               </div>
             </li>
             <li>
-              <div class="prolist_img"><img src="images/02.jpg" width="220" height="220"/></div>
+              <div class="prolist_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
               <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
               <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
               <p><span style="color: #ff7300;">0</span>条评价</p>
               <p>店铺的名字</p>
-              <p><img src="images/22.jpg"/></p>
+              <p><img src="../../assets/images/22.jpg"/></p>
               <div class="proul">
                 <ul>
                   <li><a href=""> 对比</a></li>
                   <li><a href=""> 关注</a></li>
-                  <li><a href=""> <img src="images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
+                  <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
                 </ul>
               </div>
             </li>
             <li class="prolist_so">
-              <div class="prolist_img"><img src="images/02.jpg" width="220" height="220"/></div>
+              <div class="prolist_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
               <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
               <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
               <p><span style="color: #ff7300;">0</span>条评价</p>
               <p>店铺的名字</p>
-              <p><img src="images/22.jpg"/></p>
+              <p><img src="../../assets/images/22.jpg"/></p>
               <div class="proul">
                 <ul>
                   <li><a href=""> 对比</a></li>
                   <li><a href=""> 关注</a></li>
-                  <li><a href=""> <img src="images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
+                  <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
                 </ul>
               </div>
             </li>
             <li>
-              <div class="prolist_img"><img src="images/02.jpg" width="220" height="220"/></div>
+              <div class="prolist_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
               <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
               <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
               <p><span style="color: #ff7300;">0</span>条评价</p>
               <p>店铺的名字</p>
-              <p><img src="images/22.jpg"/></p>
+              <p><img src="../../assets/images/22.jpg"/></p>
               <div class="proul">
                 <ul>
                   <li><a href=""> 对比</a></li>
                   <li><a href=""> 关注</a></li>
-                  <li><a href=""> <img src="images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
+                  <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
                 </ul>
               </div>
             </li>
             <li>
-              <div class="prolist_img"><img src="images/02.jpg" width="220" height="220"/></div>
+              <div class="prolist_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
               <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
               <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
               <p><span style="color: #ff7300;">0</span>条评价</p>
               <p>店铺的名字</p>
-              <p><img src="images/22.jpg"/></p>
+              <p><img src="../../assets/images/22.jpg"/></p>
               <div class="proul">
                 <ul>
                   <li><a href=""> 对比</a></li>
                   <li><a href=""> 关注</a></li>
-                  <li><a href=""> <img src="images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
+                  <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
                 </ul>
               </div>
             </li>
             <li>
-              <div class="prolist_img"><img src="images/02.jpg" width="220" height="220"/></div>
+              <div class="prolist_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
               <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
               <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
               <p><span style="color: #ff7300;">0</span>条评价</p>
               <p>店铺的名字</p>
-              <p><img src="images/22.jpg"/></p>
+              <p><img src="../../assets/images/22.jpg"/></p>
               <div class="proul">
                 <ul>
                   <li><a href=""> 对比</a></li>
                   <li><a href=""> 关注</a></li>
-                  <li><a href=""> <img src="images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
+                  <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
                 </ul>
               </div>
             </li>
             <li class="prolist_so">
-              <div class="prolist_img"><img src="images/02.jpg" width="220" height="220"/></div>
+              <div class="prolist_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
               <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
               <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
               <p><span style="color: #ff7300;">0</span>条评价</p>
               <p>店铺的名字</p>
-              <p><img src="images/22.jpg"/></p>
+              <p><img src="../../assets/images/22.jpg"/></p>
               <div class="proul">
                 <ul>
                   <li><a href=""> 对比</a></li>
                   <li><a href=""> 关注</a></li>
-                  <li><a href=""> <img src="images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
+                  <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
                 </ul>
               </div>
             </li>
@@ -374,7 +374,7 @@
             <ul>
               <li>
                 <div class="left">
-                  <div class="serve_img"><img src="images/02.jpg" width="87px" height="70"/></div>
+                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
                 </div>
                 <div class="left">
                   <div class="serve_p">
@@ -384,7 +384,7 @@
               </li>
               <li>
                 <div class="left">
-                  <div class="serve_img"><img src="images/02.jpg" width="87px" height="70"/></div>
+                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
                 </div>
                 <div class="left">
                   <div class="serve_p">
@@ -394,7 +394,7 @@
               </li>
               <li>
                 <div class="left">
-                  <div class="serve_img"><img src="images/02.jpg" width="87px" height="70"/></div>
+                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
                 </div>
                 <div class="left">
                   <div class="serve_p">
@@ -404,7 +404,7 @@
               </li>
               <li>
                 <div class="left">
-                  <div class="serve_img"><img src="images/02.jpg" width="87px" height="70"/></div>
+                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
                 </div>
                 <div class="left">
                   <div class="serve_p">
@@ -414,7 +414,7 @@
               </li>
               <li>
                 <div class="left">
-                  <div class="serve_img"><img src="images/02.jpg" width="87px" height="70"/></div>
+                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
                 </div>
                 <div class="left">
                   <div class="serve_p">
@@ -424,7 +424,7 @@
               </li>
               <li>
                 <div class="left">
-                  <div class="serve_img"><img src="images/02.jpg" width="87px" height="70"/></div>
+                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
                 </div>
                 <div class="left">
                   <div class="serve_p">
@@ -434,7 +434,7 @@
               </li>
               <li>
                 <div class="left">
-                  <div class="serve_img"><img src="images/02.jpg" width="87px" height="70"/></div>
+                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
                 </div>
                 <div class="left">
                   <div class="serve_p">
@@ -444,7 +444,7 @@
               </li>
               <li>
                 <div class="left">
-                  <div class="serve_img"><img src="images/02.jpg" width="87px" height="70"/></div>
+                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
                 </div>
                 <div class="left">
                   <div class="serve_p">
@@ -454,7 +454,7 @@
               </li>
               <li>
                 <div class="left">
-                  <div class="serve_img"><img src="images/02.jpg" width="87px" height="70"/></div>
+                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
                 </div>
                 <div class="left">
                   <div class="serve_p">
@@ -464,7 +464,7 @@
               </li>
               <li>
                 <div class="left">
-                  <div class="serve_img"><img src="images/02.jpg" width="87px" height="70"/></div>
+                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
                 </div>
                 <div class="left">
                   <div class="serve_p">
@@ -474,7 +474,7 @@
               </li>
               <li>
                 <div class="left">
-                  <div class="serve_img"><img src="images/02.jpg" width="87px" height="70"/></div>
+                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
                 </div>
                 <div class="left">
                   <div class="serve_p">
@@ -484,7 +484,7 @@
               </li>
               <li>
                 <div class="left">
-                  <div class="serve_img"><img src="images/02.jpg" width="87px" height="70"/></div>
+                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
                 </div>
                 <div class="left">
                   <div class="serve_p">

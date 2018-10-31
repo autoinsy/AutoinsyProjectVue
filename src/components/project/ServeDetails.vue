@@ -31,8 +31,8 @@
                   <ul>
                     <li>联系人：</li>
                     <li>王师傅</li>
-                    <li><img src="images/17.jpg"/></li>
-                    <li><img src="images/18.jpg"/></li>
+                    <li><img src="../../assets/images/17.jpg"/></li>
+                    <li><img src="../../assets/images/18.jpg"/></li>
                   </ul>
                 </div>
               </li>
@@ -41,7 +41,7 @@
                   <ul>
                     <li>商家地址：</li>
                     <li>皇姑—黄河—xxx地方</li>
-                    <li><img src="images/19.jpg"/></li>
+                    <li><img src="../../assets/images/19.jpg"/></li>
                   </ul>
                 </div>
               </li>
@@ -58,7 +58,7 @@
             <div class="rentd_box_title">沈阳西部汽配B102</div>
             <div class="rentd_box_icon">
               <span class="huang">会员2年</span>
-              <img src="images/15.jpg"/>
+              <img src="../../assets/images/15.jpg"/>
               <span class="fen">上升20</span>
               <div class="clear"></div>
             </div>
@@ -119,29 +119,29 @@
           </p>
           <p>文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行</p>
           <p>文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行</p>
-          <img src="images/03.jpg" width="790"/>
+          <img src="../../assets/images/03.jpg" width="790"/>
         </div>
       </div>
       <div class="right served_right_box">
         <div class="served_right_box_title">热门销售</div>
         <ul>
           <li>
-            <img src="images/03.jpg" width="178" height=""/>
+            <img src="../../assets/images/03.jpg" width="178" height=""/>
             <p>这里是标题这里是标题这里是标题</p>
             <p>￥39.6</p>
           </li>
           <li>
-            <img src="images/03.jpg" width="178" height=""/>
+            <img src="../../assets/images/03.jpg" width="178" height=""/>
             <p>这里是标题这里是标题这里是标题</p>
             <p>￥39.6</p>
           </li>
           <li>
-            <img src="images/03.jpg" width="178" height=""/>
+            <img src="../../assets/images/03.jpg" width="178" height=""/>
             <p>这里是标题这里是标题这里是标题</p>
             <p>￥39.6</p>
           </li>
           <li>
-            <img src="images/03.jpg" width="178" height=""/>
+            <img src="../../assets/images/03.jpg" width="178" height=""/>
             <p>这里是标题这里是标题这里是标题</p>
             <p>￥39.6</p>
           </li>

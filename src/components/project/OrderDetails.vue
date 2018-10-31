@@ -47,7 +47,7 @@
             <tr>
               <td class="or1">
                 <div class="div_or1">
-                  <img src="images/02.jpg" width="51" height="51"/>
+                  <img src="../../assets/images/02.jpg" width="51" height="51"/>
                   <p>这块是店铺的名字</p>
                   <p>这块是简介描述哦这块是简介描述哦</p>
                 </div>
@@ -61,7 +61,7 @@
             <tr>
               <td class="or1">
                 <div class="div_or1">
-                  <img src="images/02.jpg" width="51" height="51"/>
+                  <img src="../../assets/images/02.jpg" width="51" height="51"/>
                   <p>这块是店铺的名字</p>
                   <p>这块是简介描述哦这块是简介描述哦</p>
                 </div>

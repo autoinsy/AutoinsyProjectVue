@@ -14,6 +14,7 @@ import './assets/css/retable-f721744060.css'
 // import './assets/js/jquery.page.js'
 // import './assets/js/jquery-1.10.2.js'
 // import './assets/js/mag.js'
+// import './assets/js/my-js-style.js'
 
 Vue.config.productionTip = false;
 

@@ -7,7 +7,7 @@
     <div class="centermy">
       <div class="pay_top">
         <ul>
-          <li><img src="images/20.jpg"/></li>
+          <li><img src="../../assets/images/20.jpg"/></li>
           <li>我的收银台</li>
         </ul>
         <div class="pay_top_p">
@@ -21,7 +21,7 @@
       <div class="pay_box">
         <div class="pay_box_t">
           <ul>
-            <li><img src="images/21.jpg"/></li>
+            <li><img src="../../assets/images/21.jpg"/></li>
             <li>
               <p>这里是文字这里是文字这里是文字这里是文字这里是文字这里是文字这里是文字</p>
               <p>卖家昵称：骆驼祥子</p>

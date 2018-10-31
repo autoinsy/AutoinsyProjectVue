@@ -8,7 +8,7 @@
       <ul>
         <li>
           <a href="newsdetails.html">
-            <div class="news_img"><img src="images/04.jpg"/></div>
+            <div class="news_img"><img src="../../assets/images/04.jpg"/></div>
             <div class="news_center">
               <div class="news_title"><a href="newsdetails.html">新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题</a></div>
               <div class="news_zi"><a href="newsdetails.html">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题
@@ -25,7 +25,7 @@
         </li>
         <li>
           <a href="newsdetails.html">
-            <div class="news_img"><img src="images/04.jpg"/></div>
+            <div class="news_img"><img src="../../assets/images/04.jpg"/></div>
             <div class="news_center">
               <div class="news_title"><a href="newsdetails.html">新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题</a></div>
               <div class="news_zi"><a href="newsdetails.html">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题
@@ -42,7 +42,7 @@
         </li>
         <li>
           <a href="newsdetails.html">
-            <div class="news_img"><img src="images/04.jpg"/></div>
+            <div class="news_img"><img src="../../assets/images/04.jpg"/></div>
             <div class="news_center">
               <div class="news_title"><a href="newsdetails.html">新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题</a></div>
               <div class="news_zi"><a href="newsdetails.html">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题
@@ -59,7 +59,7 @@
         </li>
         <li>
           <a href="newsdetails.html">
-            <div class="news_img"><img src="images/04.jpg"/></div>
+            <div class="news_img"><img src="../../assets/images/04.jpg"/></div>
             <div class="news_center">
               <div class="news_title"><a href="newsdetails.html">新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题</a></div>
               <div class="news_zi"><a href="newsdetails.html">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题

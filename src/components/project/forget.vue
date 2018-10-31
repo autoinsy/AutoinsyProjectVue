@@ -3,7 +3,7 @@
     <div class="newlogo">
       <img src="picture/newlogo.png" height="64" width="270"/>
       <div class="logindiv" >
-        <img src="images/kefu01.png" height="18" width="18"/>
+        <img src="../../assets/images/kefu01.png" height="18" width="18"/>
         <p>客服热线<span>024-31040888</span></p>
       </div>
     </div>

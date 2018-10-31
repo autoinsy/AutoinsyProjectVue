@@ -20,7 +20,7 @@
             <li style="display:none;">
               <div class="tec_title">沈阳西郊汽配管理有限公司<span></span></div>
               <div class="left">
-                <div class="tec_img"><img src="images/04.jpg" width="351" height="223"/></div>
+                <div class="tec_img"><img src="../../assets/images/04.jpg" width="351" height="223"/></div>
               </div>
               <div class="right">
                 <div class="tec_p">
@@ -40,15 +40,15 @@
               <div class="tec_li">
                 <div class="tec_big_title">
                   <p>这里是大标题这里是大标题这里是大标题这里是大标题</p>
-                  <p><img src="images/b.png"/><span>云淡风轻2018</span><span>2018-09-02 提问</span></p>
+                  <p><img src="../../assets/images/b.png"/><span>云淡风轻2018</span><span>2018-09-02 提问</span></p>
                 </div>
               </div>
               <div class="tec_center">
-                <div class="tec_images">
-                  <img src="images/a.png" height="38" width="136"/>
+                <div class="tec_../../assets/images">
+                  <img src="../../assets/images/a.png" height="38" width="136"/>
                   <span>已回答</span>
                 </div>
-                <div class="tec_co"><img src="images/b.png"/><span>笑看人生2018</span><span>2018-09-02 回答</span></div>
+                <div class="tec_co"><img src="../../assets/images/b.png"/><span>笑看人生2018</span><span>2018-09-02 回答</span></div>
                 <p>这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里
                   是内容这里是内容这里是内容这里是内容这里是内容</p>
                 <p>这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里

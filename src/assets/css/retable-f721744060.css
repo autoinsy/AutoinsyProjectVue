@@ -1,103 +1,5 @@
 ﻿@charset "utf-8";
-a, abbr, acronym, address, applet, big, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, iframe, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, ul, var {
-    border: 0;
-    font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", arial, Tahoma, SimSun, sans-serif;
-    font-size: 14px;
-    font-style: inherit;
-    font-weight: inherit;
-    margin: 0;
-    outline: 0;
-    padding: 0;
-    vertical-align: baseline;
-}
 
-:focus {
-    outline: 0;
-}
-
-body {
-    background: #fff;
-    line-height: 1;
-    color: #585858;
-}
-
-ol, ul {
-    list-style: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-caption, td, th {
-    font-weight: 400;
-    text-align: left;
-}
-
-blockquote:after, blockquote:before, q:after, q:before {
-    content: "";
-}
-
-blockquote, q {
-    quotes: "" "";
-}
-
-a img {
-    border: 0;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-}
-
-strong {
-    font-weight: 700;
-}
-
-cite, em {
-    font-style: normal;
-}
-
-i {
-    font-style: italic;
-}
-
-td, th {
-    border: 1px solid #999;
-    padding: .5em 1em;
-}
-
-th {
-    font-weight: 700;
-    text-align: center;
-}
-
-caption {
-    text-align: center;
-}
-
-img {
-    vertical-align: middle;
-}
-
-a {
-    color: #15c;
-    text-decoration: none;
-}
-
-a.t:visited {
-    color: #810081;
-}
-
-a:hover {
-    color: #e50;
-    text-decoration: underline;
-}
 
 .f12 {
     font-size: 12px;
@@ -862,7 +764,7 @@ body {
     display: block;
     width: 100px;
     height: 42px;
-    color: #ff552e;
+    color: #ff7300;
     background: 0 0 !important;
     background: #ffefe7 !important;
     line-height: 42px;
@@ -949,7 +851,7 @@ body {
     width: 447px;
     padding: 8px 10px 8px 38px;
     margin: 0;
-    border: #ff552e solid 2px;
+    border: #ff7300 solid 2px;
     border-right: 0;
     background: 0 0;
     background: #fff
@@ -963,7 +865,7 @@ body {
     text-align: center;
     font-size: 16px;
     color: #fff;
-    background: #ff552e;
+    background: #ff7300;
     cursor: pointer;
     border: 0;
     font-weight: 400;
@@ -1136,7 +1038,7 @@ img.advertisement {
 }
 
 .tooltip div.search_allsite .t_o {
-    color: #ff552e;
+    color: #ff7300;
     font-size: 12px
 }
 
@@ -1178,7 +1080,7 @@ img.advertisement {
 }
 
 #header .nav a:hover {
-    color: #ff552e
+    color: #ff7300
 }
 
 #footer, .footer {
@@ -1386,7 +1288,7 @@ img.advertisement {
 }
 
 .secitem a.select {
-    color: #ff552e;
+    color: #ff7300;
     font-weight: 700;
     text-decoration: none;
     position: relative
@@ -2307,7 +2209,7 @@ span.morebtn.b2 a:hover {
     height: 40px;
     line-height: 40px;
     font-size: 18px;
-    border-bottom: 2px solid #ff552e;
+    border-bottom: 2px solid #ff7300;
     position: relative;
     z-index: 9
 }
@@ -2321,7 +2223,7 @@ span.morebtn.b2 a:hover {
     float: left;
     height: 40px;
     line-height: 40px;
-    background: #ff552e;
+    background: #ff7300;
     color: #fff;
     padding: 0 30px;
     cursor: pointer;
@@ -2344,7 +2246,7 @@ span.morebtn.b2 a:hover {
 }
 
 .list-tabs .sel, .list-tabs .select, .list-tabs a.sel:hover, .list-tabs a.select:hover {
-    background: #ff552e;
+    background: #ff7300;
     color: #fff;
     font-weight: 700
 }
@@ -2543,7 +2445,7 @@ a.itemmore i.change {
     top: 0;
     width: 288px;
     height: 178px;
-    border: 1px solid #ff552e;
+    border: 1px solid #ff7300;
     border-radius: 3px;
     background: #fff;
     z-index: 100;
@@ -2565,7 +2467,7 @@ a.itemmore i.change {
 
 .lxqrcode .lxdown, .lxqrcode .lxup {
     display: inline-block;
-    border-top: 5px solid #ff552e;
+    border-top: 5px solid #ff7300;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     margin-left: 10px;
@@ -2574,7 +2476,7 @@ a.itemmore i.change {
 
 .lxqrcode .lxup {
     border-top: none;
-    border-bottom: 5px solid #ff552e
+    border-bottom: 5px solid #ff7300
 }
 
 .lxqrcode_show .lxqrcode {
@@ -2781,6 +2683,7 @@ a.t {
     font-size: 20px;
     line-height: 25px;
     color: #333 !important;
+  text-align: left;
 }
 
 a.t font {
@@ -2809,11 +2712,13 @@ a.t b {
     overflow: hidden;
     display: inline;
     color: #333;
+  text-align: left;
 }
 .item-desc {
     clear: both;
     margin-top: 10px;
-    color: #999
+    color: #999;
+  text-align: left;
 }
 
 .item-desc b {
@@ -3872,15 +3777,15 @@ a.wantgo:active {
 
 .pager a:hover {
     text-decoration: none;
-    border: 1px solid #ff552e;
+    border: 1px solid #ff7300;
     position: relative
 }
 
 .pager strong {
     color: #fff;
     text-decoration: none;
-    background: #ff552e;
-    border: 1px solid #ff552e
+    background: #ff7300;
+    border: 1px solid #ff7300
 }
 
 .pager a.next {
@@ -5700,7 +5605,7 @@ tr.nobg {
 }
 
 .time.active {
-    border-left: 1px solid # #878a8e;
+    border-left: 1px solid #878a8e;
     background-position: -10px -38px
 }
 
@@ -6732,7 +6637,8 @@ a.c_666:hover {
     clear: both;
     margin-top: 5px;
     line-height: 20px;
-    padding-bottom: 5px
+    padding-bottom: 5px;
+  text-align: left;
 }
 
 .seller a {
@@ -8886,8 +8792,8 @@ tr.newtr .ico.bbonline, tr.newtr1 .ico.bbonline {
 }
 
 .body-newui .pager strong {
-    color: #ff552e;
-    border: 2px solid #ff552e;
+    color: #ff7300;
+    border: 2px solid #ff7300;
 }
 
 .body-newui .pager a span, .body-newui .pager strong span {
@@ -8956,8 +8862,8 @@ body .zhuanche-header .logo {
 }
 
 body.body-newui .list-tabs .sel, body.body-newui .list-tabs .sel:hover, body.body-newui .list-tabs .sel:visited, body.body-newui .list-tabs .select, body.body-newui .list-tabs .select:hover, body.body-newui .list-tabs .select:visited {
-    background: #ff552e;
-    border: 1px solid #ff552e
+    background: #ff7300;
+    border: 1px solid #ff7300
 }
 
 .body-newui .list-tabs {
@@ -8976,7 +8882,7 @@ body.body-newui .list-tabs .sel, body.body-newui .list-tabs .sel:hover, body.bod
 
 .body-newui .tabsbar {
     height: 42px;
-    border-bottom: 2px solid #ff552e
+    border-bottom: 2px solid #ff7300
 }
 
 .route_city_search {
@@ -9153,7 +9059,7 @@ body.body-newui .small-tbimg td.img div, body.body-newui .small-tbimg td.img img
     line-height: 34px;
     margin-left: 20px;
     color: #fff;
-    background: #ff552e;
+    background: #ff7300;
     text-align: center;
     font-size: 14px;
     cursor: pointer;
@@ -9226,7 +9132,7 @@ body.body-newui .small-tbimg td.img div, body.body-newui .small-tbimg td.img img
     padding: 0 2px;
     font-size: 16px;
     font-weight: 700;
-    color: #ff552e;
+    color: #ff7300;
     vertical-align: middle
 }
 
@@ -9261,7 +9167,7 @@ body.body-newui .small-tbimg td.img div, body.body-newui .small-tbimg td.img img
 }
 
 .ui-datepicker .ui-datepicker-calendar td {
-    border: 1px solid # #d3d3d3
+    border: 1px solid #d3d3d3
 }
 
 .ui-datepicker td {
@@ -10063,7 +9969,7 @@ body.body-newui .small-tbimg td.img div, body.body-newui .small-tbimg td.img img
     height: 40px;
     margin: 35px 0 0 5px;
     line-height: 40px;
-    background: #ff552e;
+    background: #ff7300;
     border-radius: 3px;
     text-align: center;
     color: #fff;

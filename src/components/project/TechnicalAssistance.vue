@@ -20,7 +20,7 @@
             <li style="display:block;">
               <div class="tec_title">沈阳西郊汽配管理有限公司<span></span></div>
               <div class="left">
-                <div class="tec_img"><img src="images/04.jpg" width="351" height="223"/></div>
+                <div class="tec_img"><img src="../../assets/images/04.jpg" width="351" height="223"/></div>
               </div>
               <div class="right">
                 <div class="tec_p">

@@ -78,7 +78,6 @@
                     <tr>
                       <td><em>*</em><p>验证码</p></td>
                       <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
-                      </td>
                     </tr>
                     <tr>
                       <td><em>*</em><p>QQ或微信</p></td>
@@ -91,7 +90,7 @@
               </div>
               <div class="module_tanchu">
                 <div class="module_tanchu_img">
-                  <img src="images/icon06.png"/>
+                  <img src="../../assets/images/icon06.png"/>
                   <span>产品发布成功</span>
                 </div>
                 <p><a href="product management.html">如需查看发布成功的产品，请点击此链接</a> </p>
@@ -155,7 +154,6 @@
                   <tr>
                     <td><em>*</em><p>验证码</p></td>
                     <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
-                    </td>
                   </tr>
                   <tr>
                     <td><em>*</em><p>QQ或微信</p></td>
@@ -239,7 +237,6 @@
                   <tr>
                     <td><em>*</em><p>验证码</p></td>
                     <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
-                    </td>
                   </tr>
                   <tr>
                     <td><em>*</em><p>QQ或微信</p></td>
@@ -304,7 +301,6 @@
                   <tr>
                     <td><em>*</em><p>验证码</p></td>
                     <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
-                    </td>
                   </tr>
                   <tr>
                     <td><em>*</em><p>QQ或微信</p></td>
@@ -330,11 +326,11 @@
                       <p><span>更新时间:2018-09-02</span></p>
                     </div>
                     <div class="module_resume_icon">
-                      <div class="module_resume_icon_li"><img src="images/icon01.png" height="36" width="36"/><p>刷新</p></div>
-                      <div class="module_resume_icon_li"><img src="images/icon02.png" height="36" width="36"/><p>修改</p></div>
-                      <div class="module_resume_icon_li"><img src="images/icon03.png" height="36" width="36"/><p>置顶</p></div>
-                      <div class="module_resume_icon_li"><img src="images/icon04.png" height="36" width="36"/><p>预览</p></div>
-                      <div class="module_resume_icon_li"><img src="images/icon05.png" height="36" width="36"/><p>删除</p></div>
+                      <div class="module_resume_icon_li"><img src="../../assets/images/icon01.png" height="36" width="36"/><p>刷新</p></div>
+                      <div class="module_resume_icon_li"><img src="../../assets/images/icon02.png" height="36" width="36"/><p>修改</p></div>
+                      <div class="module_resume_icon_li"><img src="../../assets/images/icon03.png" height="36" width="36"/><p>置顶</p></div>
+                      <div class="module_resume_icon_li"><img src="../../assets/images/icon04.png" height="36" width="36"/><p>预览</p></div>
+                      <div class="module_resume_icon_li"><img src="../../assets/images/icon05.png" height="36" width="36"/><p>删除</p></div>
                     </div>
                     <div class="module_resume_last">
                       <p>55%</p>
@@ -349,11 +345,11 @@
                       <p><span>更新时间:2018-09-02</span></p>
                     </div>
                     <div class="module_resume_icon">
-                      <div class="module_resume_icon_li"><img src="images/icon01.png" height="36" width="36"/><p>刷新</p></div>
-                      <div class="module_resume_icon_li"><img src="images/icon02.png" height="36" width="36"/><p>修改</p></div>
-                      <div class="module_resume_icon_li"><img src="images/icon03.png" height="36" width="36"/><p>置顶</p></div>
-                      <div class="module_resume_icon_li"><img src="images/icon04.png" height="36" width="36"/><p>预览</p></div>
-                      <div class="module_resume_icon_li"><img src="images/icon05.png" height="36" width="36"/><p>删除</p></div>
+                      <div class="module_resume_icon_li"><img src="../../assets/images/icon01.png" height="36" width="36"/><p>刷新</p></div>
+                      <div class="module_resume_icon_li"><img src="../../assets/images/icon02.png" height="36" width="36"/><p>修改</p></div>
+                      <div class="module_resume_icon_li"><img src="../../assets/images/icon03.png" height="36" width="36"/><p>置顶</p></div>
+                      <div class="module_resume_icon_li"><img src="../../assets/images/icon04.png" height="36" width="36"/><p>预览</p></div>
+                      <div class="module_resume_icon_li"><img src="../../assets/images/icon05.png" height="36" width="36"/><p>删除</p></div>
                     </div>
                     <div class="module_resume_last">
                       <p>55%</p>
@@ -368,11 +364,11 @@
                       <p><span>更新时间:2018-09-02</span></p>
                     </div>
                     <div class="module_resume_icon">
-                      <div class="module_resume_icon_li"><img src="images/icon01.png" height="36" width="36"/><p>刷新</p></div>
-                      <div class="module_resume_icon_li"><img src="images/icon02.png" height="36" width="36"/><p>修改</p></div>
-                      <div class="module_resume_icon_li"><img src="images/icon03.png" height="36" width="36"/><p>置顶</p></div>
-                      <div class="module_resume_icon_li"><img src="images/icon04.png" height="36" width="36"/><p>预览</p></div>
-                      <div class="module_resume_icon_li"><img src="images/icon05.png" height="36" width="36"/><p>删除</p></div>
+                      <div class="module_resume_icon_li"><img src="../../assets/images/icon01.png" height="36" width="36"/><p>刷新</p></div>
+                      <div class="module_resume_icon_li"><img src="../../assets/images/icon02.png" height="36" width="36"/><p>修改</p></div>
+                      <div class="module_resume_icon_li"><img src="../../assets/images/icon03.png" height="36" width="36"/><p>置顶</p></div>
+                      <div class="module_resume_icon_li"><img src="../../assets/images/icon04.png" height="36" width="36"/><p>预览</p></div>
+                      <div class="module_resume_icon_li"><img src="../../assets/images/icon05.png" height="36" width="36"/><p>删除</p></div>
                     </div>
                     <div class="module_resume_last">
                       <p>55%</p>

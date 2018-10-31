@@ -43,9 +43,9 @@
     </div>
     <!--top over-->
     <div class="newlogo">
-      <img src="picture/newlogo.png" height="64" width="270"/>
+      <img src="../../assets/picture/newlogo.png" height="64" width="270"/>
       <div class="logindiv" >
-        <img src="images/kefu01.png" height="18" width="18"/>
+        <img src="../../assets/images/kefu01.png" height="18" width="18"/>
         <p>客服热线<span>024-31040888</span></p>
       </div>
     </div>
@@ -94,7 +94,7 @@
               <td>
                 <input name="" class="samllinputa" autocomplete="off" type="text" style="color:#999" value="" placeholder="请输入验证码">
                 <span style="display:none;"><i>!</i><p>该验证码错误</p></span>
-                <div  class="samllinputas" ><img src="images/01.jpg" height="42" width="91"/></div>
+                <div  class="samllinputas" ><img src="../../assets/images/01.jpg" height="42" width="91"/></div>
                 <span class="loginspan">看不清，换一张</span>
               </td>
             </tr>
@@ -146,7 +146,7 @@
                     <td>
                       <input name="" class="samllinputa" autocomplete="off" type="text" style="color:#999" value="" placeholder="请输入验证码">
                       <span style="display:none;"><i>!</i><p>该验证码错误</p></span>
-                      <div  class="samllinputas" ><img src="images/01.jpg" height="42" width="91"/></div>
+                      <div  class="samllinputas" ><img src="../../assets/images/01.jpg" height="42" width="91"/></div>
                       <span class="loginspan">看不清，换一张</span>
                     </td>
                   </tr>

@@ -5,6 +5,9 @@
       <my-nav></my-nav>
     </div>
     <router-view></router-view>
+    <div class="">
+      <my-footer></my-footer>
+    </div>
   </div>
 </template>
 

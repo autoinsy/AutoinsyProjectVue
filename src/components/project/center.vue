@@ -32,7 +32,7 @@
               <div class="getlist">
                 <ul>
                   <li>
-                    <div class="getlist_img"><img src="images/02.jpg"/></div>
+                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
                     <p>描述的小标题描述的小...</p>
                     <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
                     <div class="getlist_btn">
@@ -41,7 +41,7 @@
                     </div>
                   </li>
                   <li>
-                    <div class="getlist_img"><img src="images/02.jpg"/></div>
+                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
                     <p>描述的小标题描述的小...</p>
                     <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
                     <div class="getlist_btn">
@@ -50,7 +50,7 @@
                     </div>
                   </li>
                   <li>
-                    <div class="getlist_img"><img src="images/02.jpg"/></div>
+                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
                     <p>描述的小标题描述的小...</p>
                     <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
                     <div class="getlist_btn">
@@ -59,7 +59,7 @@
                     </div>
                   </li>
                   <li>
-                    <div class="getlist_img"><img src="images/02.jpg"/></div>
+                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
                     <p>描述的小标题描述的小...</p>
                     <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
                     <div class="getlist_btn">
@@ -68,7 +68,7 @@
                     </div>
                   </li>
                   <li style="margin-right: 0">
-                    <div class="getlist_img"><img src="images/02.jpg"/></div>
+                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
                     <p>描述的小标题描述的小...</p>
                     <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
                     <div class="getlist_btn">
@@ -77,7 +77,7 @@
                     </div>
                   </li>
                   <li>
-                    <div class="getlist_img"><img src="images/02.jpg"/></div>
+                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
                     <p>描述的小标题描述的小...</p>
                     <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
                     <div class="getlist_btn">
@@ -86,7 +86,7 @@
                     </div>
                   </li>
                   <li>
-                    <div class="getlist_img"><img src="images/02.jpg"/></div>
+                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
                     <p>描述的小标题描述的小...</p>
                     <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
                     <div class="getlist_btn">
@@ -95,7 +95,7 @@
                     </div>
                   </li>
                   <li>
-                    <div class="getlist_img"><img src="images/02.jpg"/></div>
+                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
                     <p>描述的小标题描述的小...</p>
                     <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
                     <div class="getlist_btn">
@@ -104,7 +104,7 @@
                     </div>
                   </li>
                   <li>
-                    <div class="getlist_img"><img src="images/02.jpg"/></div>
+                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
                     <p>描述的小标题描述的小...</p>
                     <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
                     <div class="getlist_btn">
@@ -113,7 +113,7 @@
                     </div>
                   </li>
                   <li style="margin-right: 0">
-                    <div class="getlist_img"><img src="images/02.jpg"/></div>
+                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
                     <p>描述的小标题描述的小...</p>
                     <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
                     <div class="getlist_btn">
@@ -122,7 +122,7 @@
                     </div>
                   </li>
                   <li>
-                    <div class="getlist_img"><img src="images/02.jpg"/></div>
+                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
                     <p>描述的小标题描述的小...</p>
                     <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
                     <div class="getlist_btn">
@@ -131,7 +131,7 @@
                     </div>
                   </li>
                   <li>
-                    <div class="getlist_img"><img src="images/02.jpg"/></div>
+                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
                     <p>描述的小标题描述的小...</p>
                     <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
                     <div class="getlist_btn">
@@ -140,7 +140,7 @@
                     </div>
                   </li>
                   <li>
-                    <div class="getlist_img"><img src="images/02.jpg"/></div>
+                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
                     <p>描述的小标题描述的小...</p>
                     <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
                     <div class="getlist_btn">
@@ -149,7 +149,7 @@
                     </div>
                   </li>
                   <li>
-                    <div class="getlist_img"><img src="images/02.jpg"/></div>
+                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
                     <p>描述的小标题描述的小...</p>
                     <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
                     <div class="getlist_btn">
@@ -158,7 +158,7 @@
                     </div>
                   </li>
                   <li style="margin-right: 0">
-                    <div class="getlist_img"><img src="images/02.jpg"/></div>
+                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
                     <p>描述的小标题描述的小...</p>
                     <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
                     <div class="getlist_btn">
@@ -182,7 +182,7 @@
                   <tbody>
                   <tr>
                     <td><p>当前头像:</p></td>
-                    <td><img src="images/03.jpg"/></td>
+                    <td><img src="../../assets/images/03.jpg"/></td>
                   </tr>
                   <tr>
                     <td><em>*</em><p>昵称:</p></td>

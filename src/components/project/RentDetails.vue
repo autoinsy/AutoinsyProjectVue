@@ -15,19 +15,19 @@
             <div class="large_box">
               <ul>
                 <li style="display: none;">
-                  <img src="images/04.jpg" width="465" height="400">
+                  <img src="../../assets/images/04.jpg" width="465" height="400">
                 </li>
                 <li style="display: none;">
-                  <img src="images/04.jpg" width="465" height="400">
+                  <img src="../../assets/images/04.jpg" width="465" height="400">
                 </li>
                 <li style="display: none;">
-                  <img src="images/04.jpg" width="465" height="400">
+                  <img src="../../assets/images/04.jpg" width="465" height="400">
                 </li>
                 <li style="display: none;">
-                  <img src="images/04.jpg" width="465" height="400">
+                  <img src="../../assets/images/04.jpg" width="465" height="400">
                 </li>
                 <li style="display: none;">
-                  <img src="images/04.jpg" width="465" height="400">
+                  <img src="../../assets/images/04.jpg" width="465" height="400">
                 </li>
               </ul>
             </div>
@@ -36,31 +36,31 @@
               <div class="small_list">
                 <ul>
                   <li class="">
-                    <img src="images/04.jpg" width="112" height="75">
+                    <img src="../../assets/images/04.jpg" width="112" height="75">
                     <div class="bun_bg"></div>
                   </li>
                   <li class="">
-                    <img src="images/04.jpg" width="112" height="75">
+                    <img src="../../assets/images/04.jpg" width="112" height="75">
                     <div class="bun_bg"></div>
                   </li>
                   <li class="">
-                    <img src="images/04.jpg" width="112" height="75">
+                    <img src="../../assets/images/04.jpg" width="112" height="75">
                     <div class="bun_bg"></div>
                   </li>
                   <li class="">
-                    <img src="images/04.jpg" width="112" height="75">
+                    <img src="../../assets/images/04.jpg" width="112" height="75">
                     <div class="bun_bg"></div>
                   </li>
                   <li class="">
-                    <img src="images/04.jpg" width="112" height="75">
+                    <img src="../../assets/images/04.jpg" width="112" height="75">
                     <div class="bun_bg"></div>
                   </li>
                   <li class="">
-                    <img src="images/04.jpg" width="112" height="75">
+                    <img src="../../assets/images/04.jpg" width="112" height="75">
                     <div class="bun_bg"></div>
                   </li>
                   <li class="">
-                    <img src="images/04.jpg" width="112" height="75">
+                    <img src="../../assets/images/04.jpg" width="112" height="75">
                     <div class="bun_bg"></div>
                   </li>
                 </ul>
@@ -82,7 +82,7 @@
             <div class="rentd_box_title">沈阳西部汽配B102</div>
             <div class="rentd_box_icon">
               <span class="huang">会员2年</span>
-              <img src="images/15.jpg"/>
+              <img src="../../assets/images/15.jpg"/>
               <span class="fen">上升20</span>
               <div class="clear"></div>
             </div>
@@ -111,11 +111,11 @@
           </div>
           <div class="rentd_btn">
             <div class="rentd_btn_left left">
-              <img src="images/2.png"/>
+              <img src="../../assets/images/2.png"/>
               <p>微信</p>
             </div>
             <div class="rentd_btn_left left">
-              <img src="images/3.png"/>
+              <img src="../../assets/images/3.png"/>
               <p>QQ</p>
             </div>
             <div class="clear"></div>
@@ -133,13 +133,13 @@
         <p>这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊
           这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊
           这里是详情啊这里是详情啊这里是详情啊这里是详情啊</p>
-        <img src="images/05.jpg"/></div>
+        <img src="../../assets/images/05.jpg"/></div>
       <div class="right rentd_r">
         <p class="rentd_r_p">推荐租赁消息</p>
         <ul>
           <li>
             <div class="left rentd_r_img">
-              <img src="images/05.jpg"/>
+              <img src="../../assets/images/05.jpg"/>
             </div>
             <div class="right rentd_r_zi">
               <p>这里是大标题这里是大标题这里是大标题</p>
@@ -150,7 +150,7 @@
           </li>
           <li>
             <div class="left rentd_r_img">
-              <img src="images/05.jpg"/>
+              <img src="../../assets/images/05.jpg"/>
             </div>
             <div class="right rentd_r_zi">
               <p>这里是大标题这里是大标题这里是大标题</p>
@@ -161,7 +161,7 @@
           </li>
           <li>
             <div class="left rentd_r_img">
-              <img src="images/05.jpg"/>
+              <img src="../../assets/images/05.jpg"/>
             </div>
             <div class="right rentd_r_zi">
               <p>这里是大标题这里是大标题这里是大标题</p>
@@ -172,7 +172,7 @@
           </li>
           <li>
             <div class="left rentd_r_img">
-              <img src="images/05.jpg"/>
+              <img src="../../assets/images/05.jpg"/>
             </div>
             <div class="right rentd_r_zi">
               <p>这里是大标题这里是大标题这里是大标题</p>

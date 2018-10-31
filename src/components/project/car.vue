@@ -60,7 +60,7 @@
         <tr class="tr_t">
           <td class="td0">
             <input type="checkbox" class="checkbox_all left"/>
-            <img src="images/04.jpg"/>
+            <img src="../../assets/images/04.jpg"/>
             <div class="clear"></div>
           </td>
           <td class="td1" valign="top">
@@ -91,7 +91,7 @@
         <tr class="tr_t">
           <td class="td0">
             <input type="checkbox" class="checkbox_all left"/>
-            <img src="images/04.jpg"/>
+            <img src="../../assets/images/04.jpg"/>
             <div class="clear"></div>
           </td>
           <td class="td1" valign="top">
