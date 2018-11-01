@@ -726,9 +726,9 @@ body {
     background: #fff
 }
 
-#footer a, #footer div, #footer em, #header, #header a, #header div, #header input, .footer a, .footer div, .footer em, .tooltip, .tooltip a, .tooltip div, .tooltip span {
-    font-family: PingHei, "Helvetica Neue", Helvetica, "微软雅黑", Arial, Verdana, sans-serif
-}
+/*#footer a, #footer div, #footer em, #header, #header a, #header div, #header input, .footer a, .footer div, .footer em, .tooltip, .tooltip a, .tooltip div, .tooltip span {*/
+    /*font-family: PingHei, "Helvetica Neue", Helvetica, "微软雅黑", Arial, Verdana, sans-serif*/
+/*}*/
 
 #header {
     height: auto;
@@ -1083,25 +1083,25 @@ img.advertisement {
     color: #ff7300
 }
 
-#footer, .footer {
-    width: 100%;
-    background-color: #fff;
-    font-size: 12px;
-    margin: 0 auto;
-    margin-top: 30px !important;
-    border-top: 0;
-    text-align: center
-}
+/*#footer, .footer {*/
+    /*width: 100%;*/
+    /*background-color: #fff;*/
+    /*font-size: 12px;*/
+    /*margin: 0 auto;*/
+    /*margin-top: 30px !important;*/
+    /*border-top: 0;*/
+    /*text-align: center*/
+/*}*/
 
-#footer a, .footer a {
-    text-decoration: none
-}
+/*#footer a, .footer a {*/
+    /*text-decoration: none*/
+/*}*/
 
-.footerCon {
-    width: 1190px;
-    margin: 0 auto;
-    border-top: 1px solid #eee
-}
+/*.footerCon {*/
+    /*width: 1190px;*/
+    /*margin: 0 auto;*/
+    /*border-top: 1px solid #eee*/
+/*}*/
 
 #upWrap {
     border-top: 1px solid #eee;
@@ -5955,9 +5955,9 @@ tr.nobg {
     /*background: url(../images/liuxuexianshuo.gif) no-repeat -18px 0*/
 }
 
-.body-zhuanche #footer, .body-zhuanche .footer {
-    width: 100%
-}
+/*.body-zhuanche #footer, .body-zhuanche .footer {*/
+    /*width: 100%*/
+/*}*/
 
 .body-zhuanche #links {
     background: #fff
@@ -10900,10 +10900,10 @@ a:hover {
     text-align: left
 }
 
-.footer {
-    text-align: center;
-    margin-bottom: 20px
-}
+/*.footer {*/
+    /*text-align: center;*/
+    /*margin-bottom: 20px*/
+/*}*/
 
 .header, .panel-header {
     padding-left: 20px
@@ -11022,28 +11022,28 @@ a:hover {
     /*background: url(../images/checked.png) no-repeat center*/
 }
 
-.footer .submit, .panel-footer .submit {
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    width: 148px;
-    height: 45px;
-    background-color: #eb6c01
-}
+/*.footer .submit, .panel-footer .submit {*/
+    /*border: none;*/
+    /*color: #fff;*/
+    /*font-size: 16px;*/
+    /*width: 148px;*/
+    /*height: 45px;*/
+    /*background-color: #eb6c01*/
+/*}*/
 
-.footer .submit, .panel-footer .submit {
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    width: 148px;
-    height: 45px;
-    background-color: #eb6c01
-}
+/*.footer .submit, .panel-footer .submit {*/
+    /*border: none;*/
+    /*color: #fff;*/
+    /*font-size: 16px;*/
+    /*width: 148px;*/
+    /*height: 45px;*/
+    /*background-color: #eb6c01*/
+/*}*/
 
-.footer .submit:hover, .panel-footer .submit:hover {
-    cursor: pointer;
-    background-color: #fb6f4f
-}
+/*.footer .submit:hover, .panel-footer .submit:hover {*/
+    /*cursor: pointer;*/
+    /*background-color: #fb6f4f*/
+/*}*/
 
 .clearfix:after, .clearfix:before {
     content: "";
