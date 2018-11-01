@@ -6,17 +6,17 @@
     <!---->
     <div class="qpcbox">
       <ul>
-        <li><a href="MotorPartsTownDetails.html"><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></a> </li>
-        <li><a href="MotorPartsTownDetails.html"><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></a> </li>
-        <li><a href="MotorPartsTownDetails.html"><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></a> </li>
+        <li><router-link to='/MotorPartsTownDetails'><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></router-link> </li>
+        <li><router-link to='/MotorPartsTownDetails'><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></router-link> </li>
+        <li><router-link to='/MotorPartsTownDetails'><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></router-link> </li>
 
-        <li><a href="MotorPartsTownDetails.html"><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></a> </li>
-        <li><a href="MotorPartsTownDetails.html"><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></a> </li>
-        <li><a href="MotorPartsTownDetails.html"><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></a> </li>
+        <li><router-link to='/MotorPartsTownDetails'><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></router-link> </li>
+        <li><router-link to='/MotorPartsTownDetails'><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></router-link> </li>
+        <li><router-link to='/MotorPartsTownDetails'><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></router-link> </li>
 
-        <li><a href="MotorPartsTownDetails.html"><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></a> </li>
-        <li><a href="MotorPartsTownDetails.html"><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></a> </li>
-        <li><a href="MotorPartsTownDetails.html"><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></a> </li>
+        <li><router-link to='/MotorPartsTownDetails'><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></router-link> </li>
+        <li><router-link to='/MotorPartsTownDetails'><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></router-link> </li>
+        <li><router-link to='/MotorPartsTownDetails'><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></router-link> </li>
       </ul>
     </div>
     <!--中间内容 over-->

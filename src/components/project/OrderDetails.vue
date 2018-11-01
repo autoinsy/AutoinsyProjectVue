@@ -107,7 +107,7 @@
           </label>
         </div>
         <div class="order_send">
-          <a href="car.html">返回购物车</a>
+          <router-link to='/car'>返回购物车</router-link>
           <input type="button" value="提交支付" class="order_send_btn"/>
         </div>
       </div>

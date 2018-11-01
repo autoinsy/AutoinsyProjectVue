@@ -7,7 +7,7 @@
     <div class="news_box">
       <ul>
         <li>
-          <a href="newsdetails.html">
+          <router-link to='/NewsDetails'>
             <div class="news_img"><img src="../../assets/images/04.jpg"/></div>
             <div class="news_center">
               <div class="news_title"><a href="newsdetails.html">新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题</a></div>
@@ -19,12 +19,12 @@
             </div>
             <div class="news_date">
               <p>09-03</p>
-              <sapn><a href="newsdetails.html" class="news_data_more"><</a></sapn>
+              <sapn><router-link to='/NewsDetails'  class="news_data_more"><</router-link></sapn>
             </div>
-          </a>
+          </router-link>
         </li>
         <li>
-          <a href="newsdetails.html">
+          <router-link to='/NewsDetails'>
             <div class="news_img"><img src="../../assets/images/04.jpg"/></div>
             <div class="news_center">
               <div class="news_title"><a href="newsdetails.html">新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题</a></div>
@@ -36,12 +36,12 @@
             </div>
             <div class="news_date">
               <p>09-03</p>
-              <sapn><a href="newsdetails.html" class="news_data_more"><</a></sapn>
+              <sapn><router-link to='/NewsDetails'  class="news_data_more"><</router-link></sapn>
             </div>
-          </a>
+          </router-link>
         </li>
         <li>
-          <a href="newsdetails.html">
+          <router-link to='/NewsDetails'>
             <div class="news_img"><img src="../../assets/images/04.jpg"/></div>
             <div class="news_center">
               <div class="news_title"><a href="newsdetails.html">新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题</a></div>
@@ -53,12 +53,12 @@
             </div>
             <div class="news_date">
               <p>09-03</p>
-              <sapn><a href="newsdetails.html" class="news_data_more"><</a></sapn>
+              <sapn><router-link to='/NewsDetails'  class="news_data_more"><</router-link></sapn>
             </div>
-          </a>
+          </router-link>
         </li>
         <li>
-          <a href="newsdetails.html">
+          <router-link to='/NewsDetails'>
             <div class="news_img"><img src="../../assets/images/04.jpg"/></div>
             <div class="news_center">
               <div class="news_title"><a href="newsdetails.html">新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题</a></div>
@@ -70,9 +70,9 @@
             </div>
             <div class="news_date">
               <p>09-03</p>
-              <sapn><a href="newsdetails.html" class="news_data_more"><</a></sapn>
+              <sapn><router-link to='/NewsDetails'  class="news_data_more"><</router-link></sapn>
             </div>
-          </a>
+          </router-link>
         </li>
       </ul>
       <div class="clear"></div>

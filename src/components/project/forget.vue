@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="newlogo">
-      <img src="picture/newlogo.png" height="64" width="270"/>
+      <img src="../../assets/picture/newlogo.png" height="64" width="270"/>
       <div class="logindiv" >
         <img src="../../assets/images/kefu01.png" height="18" width="18"/>
         <p>客服热线<span>024-31040888</span></p>
@@ -10,7 +10,7 @@
 
     <!--导航 over-->
     <div class="loginsize">
-      还没有账号？<a href="enroll.html">立即注册</a>
+      还没有账号？<router-link to='/Enroll'>立即注册</router-link>
     </div>
     <!---->
     <div class="loginbox">

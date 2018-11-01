@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="all">
     <div class="newlogo">
       <img src="../../assets/picture/newlogo.png" height="64" width="270"/>
       <div class="logindiv" >
@@ -9,11 +9,17 @@
     </div>
     <!--导航 over-->
     <div class="loginsize">
-      还没有账号？<a href="enroll.html">立即注册</a>
+      还没有账号？<router-link to='/Enroll'>立即注册</router-link>
     </div>
     <!---->
     <div class="loginbox">
-      <div class="logintitle">用户登录<div class="logintitle_img"><a href="loginphone.html"><img src="../../assets/images/06.jpg" height="40" width="40"/></a> </div></div>
+      <div class="logintitle">用户登录
+        <div class="logintitle_img">
+          <router-link to='/loginphone'>
+            <img src="../../assets/images/06.jpg" height="40" width="40"/>
+          </router-link>
+        </div>
+      </div>
 
       <table width="0" border="0" cellspacing="0" cellpadding="0">
         <tbody>
@@ -30,7 +36,7 @@
       <h3>
         <input type="checkbox" checked="checked" id="checkbox_a0" class="chk_1">
         <label for="checkbox_a0"></label><a href="">记住账号</a>
-        <span class="loginforget"><a href="forget.html">忘记密码？</a></span>
+        <span class="loginforget"><router-link to='/forget'>忘记密码？</router-link></span>
       </h3>
       <input type="submit" value="登录" class="register_nav2"/>
     </div>
@@ -43,8 +49,7 @@
         name: "login"
     }
 </script>
+<style scoped>
 
-<style src="../../assets/css/index.css"></style>
-<style src="../../assets/css/mystyle.css"></style>
-<style src="../../assets/css/reset.css"></style>
-<style src="../../assets/css/retable-f721744060.css"></style>
+</style>
+
