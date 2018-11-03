@@ -6,6 +6,7 @@
     </div>
     <router-view></router-view>
     <div class="">
+      <index-detail></index-detail>
       <my-footer></my-footer>
     </div>
   </div>
@@ -15,6 +16,7 @@
   import myFooter from '@/components/footer'
   import myNav from '@/components/Nav'
   import TopNav from '@/components/TopNav'
+  import indexDetail from '@/components/project/index.vue'
 
   export default {
     name: "index",
@@ -22,11 +24,11 @@
       myFooter: myFooter,
       myNav: myNav,
       TopNav: TopNav,
+      indexDetail: indexDetail,
     },
 
     data() {
-      return {
-      }
+      return {}
     },
   }
 </script>

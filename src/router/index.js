@@ -28,7 +28,7 @@ import Serve from '../components/project/Serve'
 import ServeDetails from '../components/project/ServeDetails'
 import TeachnicalDetails from '../components/project/TeachnicalDetails'
 import TechnicalAssistance from '../components/project/TechnicalAssistance'
-// import indexs from '../components/project/indexs'
+import indexDetail from '../components/project/index'
 
 // import footer from '../components/footer'
 // import Nav from '../components/Nav'
@@ -43,6 +43,11 @@ export default new Router({
       name: 'index',
       component: resolve => {require(['@/components/Index'], resolve)},
       children: [
+        {
+          name: '',
+          path: 'indexDetail',
+          component:indexDetail
+        },
         {
           name: 'Enroll',
           path: '/Enroll',

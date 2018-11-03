@@ -28,40 +28,38 @@
           </div>
           <div class="bd">
             <div class="tempWrap" style="overflow:hidden; position:relative; width:746px">
-              <ul class="picList" style="width: 746px; left: 0px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+              <ul class="picList"
+                  style="width: 746px; left: 0px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
                 <li style="float: left;">
-                  <div class="pic"><a href="" ><img src="../../assets/images/01.jpg"></a></div>
+                  <div class="pic"><a href=""><img src="../../assets/images/01.jpg"></a></div>
                   <div class="title">
-                    <a href="" >
+                    <a href="">
                       <p>这里是产品的描述这里是产品的描述</p>
                       <p class="coler_7">$201</p>
                     </a>
                   </div>
                 </li>
                 <li style="float: left;">
-                  <div class="pic"><a href="" ><img src="../../assets/images/02.jpg"></a></div>
-                  <div class="title"><a href="" >效果图2</a></div>
+                  <div class="pic"><a href=""><img src="../../assets/images/02.jpg"></a></div>
+                  <div class="title"><a href="">效果图2</a></div>
                 </li>
                 <li style="float: left;">
-                  <div class="pic"><a href="" ><img src="../../assets/images/03.jpg"></a></div>
-                  <div class="title"><a href="" >效果图3</a></div>
+                  <div class="pic"><a href=""><img src="../../assets/images/03.jpg"></a></div>
+                  <div class="title"><a href="">效果图3</a></div>
                 </li>
                 <li style="float: left;">
-                  <div class="pic"><a href="" ><img src="../../assets/images/01.jpg"></a></div>
-                  <div class="title"><a href="" >效果图4</a></div>
+                  <div class="pic"><a href=""><img src="../../assets/images/01.jpg"></a></div>
+                  <div class="title"><a href="">效果图4</a></div>
                 </li>
                 <li style="float: left;">
-                  <div class="pic"><a href="" ><img src="../../assets/images/02.jpg"></a></div>
-                  <div class="title"><a href="" >效果图5</a></div>
+                  <div class="pic"><a href=""><img src="../../assets/images/02.jpg"></a></div>
+                  <div class="title"><a href="">效果图5</a></div>
                 </li>
                 <li style="float: left;">
-                  <div class="pic"><a href="" ><img src="../../assets/images/03.jpg"></a></div>
-                  <div class="title"><a href="" >效果图6</a></div>
+                  <div class="pic"><a href=""><img src="../../assets/images/03.jpg"></a></div>
+                  <div class="title"><a href="">效果图6</a></div>
                 </li>
               </ul>
-              <script>
-                jQuery(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:4});
-              </script>
             </div>
           </div>
         </div>
@@ -85,35 +83,33 @@
           </div>
           <div class="bd">
             <div class="tempWrap" style="overflow:hidden; position:relative; width:746px">
-              <ul class="picList" style="width: 746px; left: 0px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+              <ul class="picList"
+                  style="width: 746px; left: 0px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
                 <li style="float: left;">
-                  <div class="pic"><a href="" ><img src="../../assets/images/01.jpg"></a></div>
-                  <div class="title"><a href="" >效果图1</a></div>
+                  <div class="pic"><a href=""><img src="../../assets/images/01.jpg"></a></div>
+                  <div class="title"><a href="">效果图1</a></div>
                 </li>
                 <li style="float: left;">
-                  <div class="pic"><a href="" ><img src="../../assets/images/02.jpg"></a></div>
-                  <div class="title"><a href="" >效果图2</a></div>
+                  <div class="pic"><a href=""><img src="../../assets/images/02.jpg"></a></div>
+                  <div class="title"><a href="">效果图2</a></div>
                 </li>
                 <li style="float: left;">
-                  <div class="pic"><a href="" ><img src="../../assets/images/03.jpg"></a></div>
-                  <div class="title"><a href="" >效果图3</a></div>
+                  <div class="pic"><a href=""><img src="../../assets/images/03.jpg"></a></div>
+                  <div class="title"><a href="">效果图3</a></div>
                 </li>
                 <li style="float: left;">
-                  <div class="pic"><a href="" ><img src="../../assets/images/01.jpg"></a></div>
-                  <div class="title"><a href="" >效果图4</a></div>
+                  <div class="pic"><a href=""><img src="../../assets/images/01.jpg"></a></div>
+                  <div class="title"><a href="">效果图4</a></div>
                 </li>
                 <li style="float: left;">
-                  <div class="pic"><a href="" ><img src="../../assets/images/02.jpg"></a></div>
-                  <div class="title"><a href="" >效果图5</a></div>
+                  <div class="pic"><a href=""><img src="../../assets/images/02.jpg"></a></div>
+                  <div class="title"><a href="">效果图5</a></div>
                 </li>
                 <li style="float: left;">
-                  <div class="pic"><a href="" ><img src="../../assets/images/03.jpg"></a></div>
-                  <div class="title"><a href="" >效果图6</a></div>
+                  <div class="pic"><a href=""><img src="../../assets/images/03.jpg"></a></div>
+                  <div class="title"><a href="">效果图6</a></div>
                 </li>
               </ul>
-              <script>
-                jQuery(".picScroll-lefts").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:4});
-              </script>
             </div>
           </div>
         </div>
@@ -171,18 +167,18 @@
         <div id="slideBoxs" class="slideBoxs">
           <div class="bds">
             <ul>
-              <li style="display: none;"><a href=""><img src="../../assets/images/01.jpg" width="1002" height="363"></a></li>
-              <li style="display: none;"><a href=""><img src="../../assets/images/01.jpg" width="1002" height="363"></a></li>
-              <li style="display: list-item;"><a href=""><img src="../../assets/images/01.jpg" width="1002" height="363"></a></li>
+              <li style="display: none;"><a href=""><img src="../../assets/images/01.jpg" width="1002" height="363"></a>
+              </li>
+              <li style="display: none;"><a href=""><img src="../../assets/images/01.jpg" width="1002" height="363"></a>
+              </li>
+              <li style="display: list-item;"><a href=""><img src="../../assets/images/01.jpg" width="1002"
+                                                              height="363"></a></li>
             </ul>
           </div>
           <!-- 下面是前/后按钮代码-->
           <a class="prevs" href="javascript:void(0)"></a>
           <a class="nexts" href="javascript:void(0)"></a>
         </div>
-        <script>
-          jQuery(".slideBoxs").slide({mainCell:".bds ul",effect:"left",autoPlay:true});
-        </script>
       </div>
       <div class="clear"></div>
     </div>
@@ -285,9 +281,21 @@
 </template>
 
 <script>
-    export default {
-        name: "index"
+  export default {
+    name: "index",
+    mounted:function () {
+      $(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:4});
+      $(".slideBoxs").slide({mainCell: ".bds ul", effect: "left", autoPlay: true});
+      $(".picScroll-lefts").slide({
+        titCell: ".hd ul",
+        mainCell: ".bd ul",
+        autoPage: true,
+        effect: "left",
+        autoPlay: true,
+        vis: 4
+      });
     }
+  }
 </script>
 
 <style scoped>
