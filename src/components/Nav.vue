@@ -21,7 +21,7 @@
         <div class="qbfl"><a href="">全部商品分类</a></div>
         <div class="sldh">
           <ul id="uile">
-            <li><router-link to='/index' class="sldhactive">首页</router-link></li>
+            <li><router-link to='/indexDetail' class="sldhactive">首页</router-link></li>
             <li><router-link to='/serve'>汽配服务</router-link></li>
             <li><router-link to='/Project'>汽配商城</router-link></li>
             <li><router-link to='/MotorPartsTown'>汽配城</router-link></li>
