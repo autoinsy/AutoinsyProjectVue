@@ -43,11 +43,11 @@ export default new Router({
       name: 'index',
       component: resolve => {require(['@/components/Index'], resolve)},
       children: [
-        {
-          name: '',
-          path: 'indexDetail',
-          component:indexDetail
-        },
+        // {
+        //   name: '',
+        //   path: 'indexDetail',
+        //   component:indexDetail
+        // },
         {
           name: 'Enroll',
           path: '/Enroll',

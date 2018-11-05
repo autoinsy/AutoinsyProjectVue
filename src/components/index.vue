@@ -6,7 +6,7 @@
     </div>
     <router-view></router-view>
     <div class="">
-      <index-detail></index-detail>
+      <index-detail v-if="href=='/'"></index-detail>
       <my-footer></my-footer>
     </div>
   </div>
@@ -26,9 +26,15 @@
       TopNav: TopNav,
       indexDetail: indexDetail,
     },
-
+    watch: {
+      $route: function (to, from) {
+        this.href = to.path;
+      }
+    },
     data() {
-      return {}
+      return {
+        href:'',
+      }
     },
   }
 </script>
