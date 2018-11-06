@@ -421,11 +421,10 @@
   export default {
     name: "index",
     mounted:function () {
-      console.log($);
-      $(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
-      $(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:4});
-      $(".slideBoxs").slide({mainCell: ".bds ul", effect: "left", autoPlay: true});
-      $(".picScroll-lefts").slide({
+      // $(".slideBox").flexslider({mainCell:".bd ul",autoPlay:true});
+      // $(".picScroll-left").flexslider({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:4});
+      // $(".slideBoxs").flexslider({mainCell: ".bds ul", effect: "left", autoPlay: true});
+      $(".picScroll-lefts").flexslider({
         titCell: ".hd ul",
         mainCell: ".bd ul",
         autoPage: true,

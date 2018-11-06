@@ -940,9 +940,9 @@
 		v.init()
 	};
 	e(window).blur(function(e) {
-		focused = !1
+    let focused = !1
 	}).focus(function(e) {
-		focused = !0
+    let focused = !0
 	});
 	e.flexslider.defaults = {
 		namespace : "flex-",
