@@ -2,7 +2,7 @@
   <div class="all">
     <div class="newlogo">
       <img src="../../assets/picture/newlogo.png" height="64" width="270"/>
-      <div class="logindiv" >
+      <div class="logindiv">
         <img src="../../assets/images/kefu01.png" height="18" width="18"/>
         <p>客服热线<span>024-31040888</span></p>
       </div>
@@ -10,49 +10,58 @@
 
     <!--导航 over-->
     <div class="loginsize">
-      已有账号， <router-link to='/login'>立即登录</router-link>
+      已有账号，
+      <router-link to='/login'>立即登录</router-link>
     </div>
     <!---->
     <div class="loginbtn">
       <ul>
-        <li><a href="javascript:" class="activer">个人注册</a> </li>
-        <li><a href="javascript:" >商家注册</a></li>
+        <li><a href="javascript:" class="activer">个人注册</a></li>
+        <li><a href="javascript:">商家注册</a></li>
       </ul>
     </div>
     <div class="loginbox">
       <ul>
         <li class="ablock" style="display: block;">
           <div class="logintitle">个人注册</div>
-          <table width="0" border="0" cellspacing="0" cellpadding="0">
+          <table width="0" border="0" cellspacing="0" id="userRegistry" cellpadding="0">
             <tbody>
             <tr>
-              <td><em>*</em><p>手机号码</p></td>
+              <td><em>*</em>
+                <p>手机号码</p></td>
               <td>
-                <input name="phonenumber" autocomplete="off" type="text" style="color:#999" value="" placeholder="请输入手机号码"/>
+                <input name="phonenumber" autocomplete="off" type="text" style="color:#999" value=""
+                       placeholder="请输入手机号码"/>
                 <span style="display:none;"><i>!</i><p>该手机号已注册</p></span>
               </td>
             </tr>
             <tr>
-              <td><em>*</em><p>账户密码</p></td>
+              <td><em>*</em>
+                <p>账户密码</p></td>
               <td>
-                <input name="password" autocomplete="off" type="text" style="color:#999" value="" placeholder="请输入密码" />
+                <input name="password" autocomplete="off" type="password" style="color:#999" value=""
+                       placeholder="请输入密码"/>
                 <span style="display:none;"><i>!</i><p>该密码错误</p></span>
               </td>
             </tr>
             <tr>
-              <td><em>*</em><p>手机验证码</p></td>
+              <td><em>*</em>
+                <p>手机验证码</p></td>
               <td>
-                <input name="passwords" class="samllinput" autocomplete="off" type="text" style="color:#999" value="" placeholder="请输入验证码">
+                <input name="passwords" class="samllinput" autocomplete="off" type="text" style="color:#999" value=""
+                       placeholder="请输入验证码">
                 <span style="display:none;"><i>!</i><p>该验证码错误</p></span>
-                <input  class="samllinputs" autocomplete="off" type="button" value="获取验证码">
+                <input class="samllinputs" autocomplete="off" type="button" value="获取验证码">
               </td>
             </tr>
             <tr>
-              <td><em>*</em><p>验证码</p></td>
+              <td><em>*</em>
+                <p>验证码</p></td>
               <td>
-                <input name="" class="samllinputa" autocomplete="off" type="text" style="color:#999" value="" placeholder="请输入验证码">
+                <input name="" class="samllinputa" autocomplete="off" type="text" style="color:#999" value=""
+                       placeholder="请输入验证码">
                 <span style="display:none;"><i>!</i><p>该验证码错误</p></span>
-                <div  class="samllinputas" ><img src="../../assets/images/01.jpg" height="42" width="91"/></div>
+                <div class="samllinputas"><img src="../../assets/images/01.jpg" height="42" width="91"/></div>
                 <span class="loginspan">看不清，换一张</span>
               </td>
             </tr>
@@ -62,7 +71,7 @@
             <input type="checkbox" checked="checked" id="checkbox_a0" class="chk_1">
             <label for="checkbox_a0"></label>我同意并准守<span class="yingshen"><a href="javascript:" style="color: #ff7300">《英沈商城用户协议》</a></span>
           </h3>
-          <input type="submit" value="立即注册" class="register_nav2"/>
+          <input type="button" value="立即注册" class="register_nav2" @click="regist" @keydown.13="regist"/>
         </li>
         <li style="display: none;" class="bblock">
           <div class="logintitle">商户注册</div>
@@ -78,33 +87,41 @@
                 <table width="0" border="0" cellspacing="0" cellpadding="0">
                   <tbody>
                   <tr>
-                    <td><em>*</em><p>手机号码</p></td>
+                    <td><em>*</em>
+                      <p>手机号码</p></td>
                     <td>
-                      <input name="phonenumber" autocomplete="off" type="text" style="color:#999" value="" placeholder="请输入手机号码"/>
+                      <input name="phonenumber" autocomplete="off" type="text" style="color:#999" value=""
+                             placeholder="请输入手机号码"/>
                       <span style="display:none;"><i>!</i><p>该手机号已注册</p></span>
                     </td>
                   </tr>
                   <tr>
-                    <td><em>*</em><p>账户密码</p></td>
+                    <td><em>*</em>
+                      <p>账户密码</p></td>
                     <td>
-                      <input name="password" autocomplete="off" type="text" style="color:#999" value="" placeholder="请输入密码" />
+                      <input name="password" autocomplete="off" type="text" style="color:#999" value=""
+                             placeholder="请输入密码"/>
                       <span style="display:none;"><i>!</i><p>该密码错误</p></span>
                     </td>
                   </tr>
                   <tr>
-                    <td><em>*</em><p>手机验证码</p></td>
+                    <td><em>*</em>
+                      <p>手机验证码</p></td>
                     <td>
-                      <input name="passwords" class="samllinput" autocomplete="off" type="text" style="color:#999" value="" placeholder="请输入验证码">
+                      <input name="passwords" class="samllinput" autocomplete="off" type="text" style="color:#999"
+                             value="" placeholder="请输入验证码">
                       <span style="display:none;"><i>!</i><p>该验证码错误</p></span>
-                      <input  class="samllinputs" autocomplete="off" type="button" value="获取验证码">
+                      <input class="samllinputs" autocomplete="off" type="button" value="获取验证码">
                     </td>
                   </tr>
                   <tr>
-                    <td><em>*</em><p>验证码</p></td>
+                    <td><em>*</em>
+                      <p>验证码</p></td>
                     <td>
-                      <input name="" class="samllinputa" autocomplete="off" type="text" style="color:#999" value="" placeholder="请输入验证码">
+                      <input name="" class="samllinputa" autocomplete="off" type="text" style="color:#999" value=""
+                             placeholder="请输入验证码">
                       <span style="display:none;"><i>!</i><p>该验证码错误</p></span>
-                      <div  class="samllinputas" ><img src="../../assets/images/01.jpg" height="42" width="91"/></div>
+                      <div class="samllinputas"><img src="../../assets/images/01.jpg" height="42" width="91"/></div>
                       <span class="loginspan">看不清，换一张</span>
                     </td>
                   </tr>
@@ -112,7 +129,8 @@
                 </table>
                 <h3>
                   <input type="checkbox" checked="checked" id="checkbox_a0" class="chk_1">
-                  <label for="checkbox_a0"></label>我同意并准守<span class="yingshen"><a href="javascript:" style="color: #ff7300">《英沈商城用户协议》</a></span>
+                  <label for="checkbox_a0"></label>我同意并准守<span class="yingshen"><a href="javascript:"
+                                                                                   style="color: #ff7300">《英沈商城用户协议》</a></span>
                 </h3>
                 <input type="submit" value="保存并下一步" class="register_nav2 nextbtn"/>
               </li>
@@ -120,32 +138,40 @@
                 <table width="0" border="0" cellspacing="0" cellpadding="0">
                   <tbody>
                   <tr>
-                    <td><em>*</em><p>身份证号</p></td>
+                    <td><em>*</em>
+                      <p>身份证号</p></td>
                     <td>
-                      <input name="phonenumber" autocomplete="off" type="text" style="color:#999" value="" placeholder="请输入18位身份证号码"/>
+                      <input name="phonenumber" autocomplete="off" type="text" style="color:#999" value=""
+                             placeholder="请输入18位身份证号码"/>
                       <span style="display:none;"><i>!</i><p></p></span>
                     </td>
                   </tr>
                   <tr>
-                    <td><em>*</em><p>上传身份证照片</p></td>
+                    <td><em>*</em>
+                      <p>上传身份证照片</p></td>
                     <td style="position: relative">
-                      <input name="" autocomplete="off" type="text" style="color:#999" class="table_style" value="" placeholder="点击上传身份证正面照片" />
+                      <input name="" autocomplete="off" type="text" style="color:#999" class="table_style" value=""
+                             placeholder="点击上传身份证正面照片"/>
                       <input type="file" class="table_styles"/>
-                      <input name="" autocomplete="off" type="text" style="color:#999" class="table_style" value="" placeholder="点击上传身份证反面照片" />
+                      <input name="" autocomplete="off" type="text" style="color:#999" class="table_style" value=""
+                             placeholder="点击上传身份证反面照片"/>
                       <input type="file" class="table_stylesd"/>
                     </td>
                   </tr>
                   <tr>
-                    <td><em>*</em><p>营业执照号</p></td>
+                    <td><em>*</em>
+                      <p>营业执照号</p></td>
                     <td>
                       <input name="" autocomplete="off" type="text" style="color:#999" value="" placeholder="请输入营业执照号码">
                       <span style="display:none;"><i>!</i><p></p></span>
                     </td>
                   </tr>
                   <tr>
-                    <td><em>*</em><p>上传营业执照照片</p></td>
+                    <td><em>*</em>
+                      <p>上传营业执照照片</p></td>
                     <td style="position: relative">
-                      <input name="" autocomplete="off" type="text" style="color:#999" class="table_style" value="" placeholder="点击上传营业执正面照片" />
+                      <input name="" autocomplete="off" type="text" style="color:#999" class="table_style" value=""
+                             placeholder="点击上传营业执正面照片"/>
                       <input type="file" class="table_styles"/>
                     </td>
                   </tr>
@@ -153,7 +179,8 @@
                 </table>
                 <h3>
                   <input type="checkbox" checked="checked" id="checkbox_a0" class="chk_1">
-                  <label for="checkbox_a0"></label>我同意并准守<span class="yingshen"><a href="javascript:" style="color: #ff7300">《英沈商城用户协议》</a></span>
+                  <label for="checkbox_a0"></label>我同意并准守<span class="yingshen"><a href="javascript:"
+                                                                                   style="color: #ff7300">《英沈商城用户协议》</a></span>
                 </h3>
                 <input type="submit" value="立即注册" class="register_nav2"/>
               </li>
@@ -222,7 +249,7 @@
           尊敬的用户，欢迎访问英沈汽配商城！ 在注册成为英沈汽配商城会员前，请您认真阅读本用户注册协议（以下简称“本协议”），以确保您
           已完整阅读、充分理解及自愿遵守本协议中的各项条款、责任和义务。</p>
       </div>
-      <div class="popup_btn"><input type="button" value="同意并返回" class="return"/> </div>
+      <div class="popup_btn"><input type="button" value="同意并返回" class="return"/></div>
       <div class="clear"></div>
     </div>
     <!--图片弹出结束-->
@@ -230,9 +257,50 @@
 </template>
 
 <script>
-    export default {
-        name: "Enroll"
+  export default {
+    name: "Enroll",
+    methods: {
+      enroll: function () {
+        let _this = this;
+        this.$('.loginbtn li').click(function () {
+          _this.$('.loginbtn li').children("a").removeClass("activer");
+          _this.$(this).children("a").addClass("activer");
+          var index = _this.$(this).index();
+          _this.$(".loginbox>ul>li").hide().eq(index).show();
+        });
+      },
+      regist: function () {
+        let inputs = $('#userRegistry input');
+        let values = [];
+        let param = new URLSearchParams;
+        let _this = this;
+        for (let i = 0; i < inputs.length; i++) {
+          if ($(inputs[i]).attr('type') !== 'button') {
+            let length = values.length + 1;
+            for (let j = 0; j < length; j++) {
+              if (!values[j]) {
+                values[j] = $(inputs[i]).val();
+              }
+            }
+          }
+        }
+        param.append("userName", values[0]);
+        param.append("password", values[1]);
+        param.append("validateCode", values[2]);
+        param.append("type", values[3]);
+        this.$axios({
+          url: _this.HOME +'/user/registryUser',
+          method: 'post',
+          data:param
+        }).then(res => {
+          alert(res.data.message)
+        }).catch(e => {
+          console.log(e)
+        })
+
+      }
     }
+  }
 </script>
 
 <style scoped>
