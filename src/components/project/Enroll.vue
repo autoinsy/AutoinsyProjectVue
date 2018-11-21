@@ -16,8 +16,8 @@
     <!---->
     <div class="loginbtn">
       <ul>
-        <li><a href="javascript:" class="activer">个人注册</a></li>
-        <li><a href="javascript:">商家注册</a></li>
+        <li><a @click="enroll" href="javascript:" class="activer">个人注册</a></li>
+        <li><a @click="enroll" href="javascript:">商家注册</a></li>
       </ul>
     </div>
     <div class="loginbox">
@@ -71,9 +71,9 @@
             <input type="checkbox" checked="checked" id="checkbox_a0" class="chk_1">
             <label for="checkbox_a0"></label>我同意并准守<span class="yingshen"><a href="javascript:" style="color: #ff7300">《英沈商城用户协议》</a></span>
           </h3>
-          <input type="button" value="立即注册" class="register_nav2" @click="regist" @keydown.13="regist"/>
+          <input type="button" value="立即注册" class="register_nav2" @click="registUser" @keydown.13="registUser"/>
         </li>
-        <li style="display: none;" class="bblock">
+        <li class="bblock" style="display: none;">
           <div class="logintitle">商户注册</div>
           <div class="loginul">
             <ul>
@@ -129,10 +129,13 @@
                 </table>
                 <h3>
                   <input type="checkbox" checked="checked" id="checkbox_a0" class="chk_1">
-                  <label for="checkbox_a0"></label>我同意并准守<span class="yingshen"><a href="javascript:"
-                                                                                   style="color: #ff7300">《英沈商城用户协议》</a></span>
+                  <label for="checkbox_a0"></label>
+                  我同意并准守
+                  <span class="yingshen">
+                    <a href="javascript:" style="color: #ff7300">《英沈商城用户协议》</a>
+                  </span>
                 </h3>
-                <input type="submit" value="保存并下一步" class="register_nav2 nextbtn"/>
+                <input type="button" value="保存并下一步" class="register_nav2 nextbtn" @click="holdData"/>
               </li>
               <li style="display: none">
                 <table width="0" border="0" cellspacing="0" cellpadding="0">
@@ -179,14 +182,17 @@
                 </table>
                 <h3>
                   <input type="checkbox" checked="checked" id="checkbox_a0" class="chk_1">
-                  <label for="checkbox_a0"></label>我同意并准守<span class="yingshen"><a href="javascript:"
-                                                                                   style="color: #ff7300">《英沈商城用户协议》</a></span>
+                  <label for="checkbox_a0"></label>
+                  我同意并准守
+                  <span class="yingshen">
+                    <a href="javascript:" style="color: #ff7300">《英沈商城用户协议》</a>
+                  </span>
                 </h3>
-                <input type="submit" value="立即注册" class="register_nav2"/>
+                <input type="button" value="立即注册" class="register_nav2" @click="registSeller"
+                       @keydown.13="registSeller"/>
               </li>
             </ul>
           </div>
-
         </li>
       </ul>
     </div>
@@ -259,6 +265,14 @@
 <script>
   export default {
     name: "Enroll",
+    data() {
+      return {
+        userName: '',
+        password: '',
+        msgCode: '',
+        code: ''
+      }
+    },
     methods: {
       enroll: function () {
         let _this = this;
@@ -269,7 +283,7 @@
           _this.$(".loginbox>ul>li").hide().eq(index).show();
         });
       },
-      regist: function () {
+      registUser: function () {
         let inputs = $('#userRegistry input');
         let values = [];
         let param = new URLSearchParams;
@@ -289,15 +303,99 @@
         param.append("validateCode", values[2]);
         param.append("type", values[3]);
         this.$axios({
-          url: _this.HOME +'/user/registryUser',
+          url: _this.HOME + '/user/registryUser',
           method: 'post',
-          data:param
+          data: param
         }).then(res => {
+          if (Math.ceil(res.data.code) === 200) {
+
+          }
           alert(res.data.message)
         }).catch(e => {
           console.log(e)
         })
+      },
+      registSeller: function (e) {
+        if (this.userName && this.password && this.msgCode && this.code) {
+          let _this = this;
+          let param = new URLSearchParams();
+          param.append("type", '1');
+          param.append("validateCode", this.msgCode);
+          param.append("password", this.password);
+          param.append("userName", this.userName);
+          let table = $(e.target).parent().children("table");
+          let trs = $(table).children().children();
+          let values = [];
+          for (let i = 0; i < trs.length; i++) {
+            values[i] = $(trs[i]).children().eq(1).children('input').eq(0).val();
+          }
+          // this.$axios({
+          //   url: _this.HOME + '/user/registryUser',
+          //   method: 'POST',
+          //   data: param
+          // }).then(res => {
+          //   if (Math.ceil(res.data.code) === 200) {
+          //     let data = new URLSearchParams();
+          //     // data.append("idCardNum", );
+          //     // data.append("licenceNum", );
+          //     // data.append("userName", );
+          //     // data.append("password", );
+          //     // data.append("idCard,", );
+          //     // data.append("lincence", );
+          //     _this.$axios({
+          //       url: _this.HOME + '',
+          //       method: 'post',
+          //       data: data
+          //     }).then(res => {
+          //       alert(res.data.message)
+          //     }).catch(e => {
+          //       console.log(e)
+          //     })
+          //   }
+          // }).catch(e => {
+          //   console.log(e)
+          // })
+        } else {
+          if (!confirm("上一步信息为空")) {
+            for (let i = 0; i < 10; i++) {
+              if (confirm("快回去填信息")) {
+                let parent = $(e.target).parent().parent().children();
+                let loginulLi = $('.loginul li');
+                $(parent).eq(1).css('display', 'none');
+                loginulLi.eq(1).children('a').addClass("activers");
+                $(parent).eq(0).css('display', 'block');
+                loginulLi.eq(0).children('a').removeClass("activers");
+                break;
+              }
+            }
+          } else {
+            let parent = $(e.target).parent().parent().children();
+            let loginulLi = $('.loginul li');
+            $(parent).eq(1).css('display', 'none');
+            loginulLi.eq(1).children('a').addClass("activers");
+            $(parent).eq(0).css('display', 'block');
+            loginulLi.eq(0).children('a').removeClass("activers");
+          }
+        }
+      },
+      holdData: function (e) {
+        let table = $(e.target).parent().children("table");
+        let trs = $(table).children().children();
+        let values = [];
+        for (let i = 0; i < trs.length; i++) {
+          values[i] = $(trs[i]).children().eq(1).children('input').eq(0).val();
+        }
 
+        this.userName = values[0];
+        this.password = values[1];
+        this.msgCode = values[2];
+        this.code = values[3];
+        let parent = $(e.target).parent();
+        let loginulLi = $('.loginul li');
+        $(parent).css('display', 'none');
+        loginulLi.eq(0).children('a').removeClass("activers");
+        $(parent).next().css('display', 'block');
+        loginulLi.eq(1).children('a').addClass("activers");
       }
     }
   }
