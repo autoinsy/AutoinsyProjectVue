@@ -6,17 +6,11 @@
     <!---->
     <div class="qpcbox">
       <ul>
-        <li><router-link to='/MotorPartsTownDetails'><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></router-link> </li>
-        <li><router-link to='/MotorPartsTownDetails'><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></router-link> </li>
-        <li><router-link to='/MotorPartsTownDetails'><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></router-link> </li>
-
-        <li><router-link to='/MotorPartsTownDetails'><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></router-link> </li>
-        <li><router-link to='/MotorPartsTownDetails'><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></router-link> </li>
-        <li><router-link to='/MotorPartsTownDetails'><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></router-link> </li>
-
-        <li><router-link to='/MotorPartsTownDetails'><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></router-link> </li>
-        <li><router-link to='/MotorPartsTownDetails'><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></router-link> </li>
-        <li><router-link to='/MotorPartsTownDetails'><img src="../../assets/picture/qpc01.jpg"/> <p>西部汽配城二期</p></router-link> </li>
+        <li v-for="city in cities">
+          <router-link :to='{path: "/MotorPartsTownDetails", query: {cityId: city.cityId}}' tag="a" active-class="activer"><img v-bind:src="city.cityImgUrl" style="width: 100%;height: 100%"/>
+            <p>{{city.cityName}}</p>
+          </router-link>
+        </li>
       </ul>
     </div>
     <!--中间内容 over-->
@@ -24,9 +18,22 @@
 </template>
 
 <script>
-    export default {
-        name: "MotorPartsTown"
+  export default {
+    name: "MotorPartsTown",
+    data() {
+      return {
+        cities: []
+      }
+    },
+    mounted: function () {
+      let _this = this;
+      this.$axios({
+        url: _this.HOME + '/autoinsyCity/cityList'
+      }).then(res => {
+        _this.cities = res.data.data;
+      })
     }
+  }
 </script>
 
 <style scoped>

@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       // '/web' :'http://47.93.195.248:8080/planform/api/'
-      '/web' :'http://localhost:8080/planform/api/'
+      '/web' :'http://localhost:8082/api/'
     },
 
     // Various Dev Server settings
