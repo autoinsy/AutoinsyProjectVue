@@ -6,8 +6,9 @@
     <!---->
     <div class="centermy">
       <div class="rentd_title served_title">
-        <p>这里是大标题这里是大标题这里是大标题这里是大标题</p>
-        <p><span>2018-10-16</span></p>
+        <p>{{server}}</p>
+        <p>{{server.title}}</p>
+        <p><span>{{server.publishTime}}</span></p>
       </div>
       <div class="rentd_top rentd_tops">
         <div class="left rentd_title_p served_left">
@@ -98,7 +99,7 @@
             <li><a href=""> 商品评价</a></li>
             <li><a href=""> 本店好评商品</a></li>
           </ul>
-          <div class="served_r"><input type="button" value="加入购物车"/> </div>
+          <div class="served_r"><input type="button" value="加入购物车"/></div>
           <div class="clear"></div>
         </div>
         <div class="served_top_box">
@@ -119,7 +120,7 @@
           </p>
           <p>文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行</p>
           <p>文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行</p>
-          <img src="../../assets/images/03.jpg" width="790"/>
+          <img v-bind:src="server.servicePhoto" width="790"/>
         </div>
       </div>
       <div class="right served_right_box">
@@ -154,9 +155,25 @@
 </template>
 
 <script>
-    export default {
-        name: "ServeDetails"
+  export default {
+    name: "ServeDetails",
+    data() {
+      return {
+        server: '',
+      }
+    },
+    mounted: function () {
+      let serverId = this.$route.query.serverId;
+      let _this = this;
+      this.$axios({
+        url: _this.HOME + '/service/getOne?service_id='+ serverId,
+        method: 'post'
+      }).then(res =>{
+        _this.server = res.data.data;
+        console.log(_this.server)
+      })
     }
+  }
 </script>
 
 <style scoped>

@@ -120,12 +120,12 @@
             </div>
             <div class="mc">
               <ul>
-                <li class="" v-for="news in newsList">
+                <li class="" v-for="notice in noticeList">
                   <span>
-                    <router-link
-                      :to='{path: "/NewsDetails", query: {newsId: news.newsID}}'>[{{news.content}}]</router-link>
-                    <router-link
-                      :to='{path: "/NewsDetails", query: {newsId: news.newsID}}'>{{news.newsTitle}}</router-link>
+                    <!--<router-link-->
+                      <!--:to='{path: "/NewsDetails", query: {newsId: news.newsID}}'>[{{news.content}}]</router-link>-->
+                    <!--<router-link-->
+                      <!--:to='{path: "/NewsDetails", query: {newsId: news.newsID}}'>{{news.newsTitle}}</router-link>-->
                   </span>
                 </li>
               </ul>
@@ -231,21 +231,9 @@
             <div class="tempWrap" style="overflow:hidden; position:relative; width:746px">
               <ul class="picList"
                   style="width: 746px; left: 0px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
-                <li style="float: left;">
-                  <div class="pic"><a href=""><img src="../../assets/images/01.jpg"></a></div>
-                  <div class="title"><a href="">效果图1</a></div>
-                </li>
-                <li style="float: left;">
-                  <div class="pic"><a href=""><img src="../../assets/images/02.jpg"></a></div>
-                  <div class="title"><a href="">效果图2</a></div>
-                </li>
-                <li style="float: left;">
-                  <div class="pic"><a href=""><img src="../../assets/images/03.jpg"></a></div>
-                  <div class="title"><a href="">效果图3</a></div>
-                </li>
-                <li style="float: left;">
-                  <div class="pic"><a href=""><img src="../../assets/images/01.jpg"></a></div>
-                  <div class="title"><a href="">效果图4</a></div>
+                <li style="float: left;" v-for="server in serverList">
+                  <div class="pic"><router-link :to="{path: '/ServeDetails', query: {serverId: server.serviceID}}"><img v-bind:src="server.servicePhoto"></router-link></div>
+                  <div class="title"><router-link :to="{path: '/ServeDetails', query: {serverId: server.serviceID}}">{{server.title}}</router-link></div>
                 </li>
               </ul>
             </div>
@@ -351,114 +339,41 @@
       <div class="clear"></div>
       <div class="index_news_li">
         <ul>
-          <li>
+          <li v-for="news in newsList">
             <div class="index_news_li_top">
               <div class="left">
-                <router-link to='/NewsDetails'><img src="../../assets/images/05.jpg" width="119" height="80"/>
+                <router-link to='/NewsDetails'><img v-bind:src="news.imageUrl1" width="119" height="80"/>
                 </router-link>
               </div>
               <div class="right">
                 <p style="font-size: 18px;color: #333">
-                  <router-link to='/NewsDetails'>这里是新闻的大标题</router-link>
+                  <router-link to='/NewsDetails'>{{news.newsTitle}}</router-link>
                 </p>
                 <p>
-                  <router-link to='/NewsDetails'>这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述</router-link>
+                  <router-link to='/NewsDetails'>{{news.content}}</router-link>
                 </p>
               </div>
             </div>
             <div class="clear"></div>
-            <div class="index_news_ul">
-              <ul>
-                <li>
-                  <router-link to='/NewsDetails'> ·改装一族 | 2014年石城车友会足球赛第一场zjp426</router-link>
-                </li>
-                <li>
-                  <router-link to='/NewsDetails'>·汽车测评 | 银河主题涂装兰博基尼Aventador超级跑车</router-link>
-                </li>
-                <li>
-                  <router-link to='/NewsDetails'>·汽车贴图 | 罗杰摩尔1970版阿斯顿马丁拍出90万美元</router-link>
-                </li>
-                <li>
-                  <router-link to='/NewsDetails'>·汽车模型 | 最强欧翼：奔驰 SLS AMG 超级跑车美图</router-link>
-                </li>
-                <li>
-                  <router-link to='/NewsDetails'>·汽车商家 | 2014年石城车友会足球赛第一场zjp426</router-link>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="index_news_li_top">
-              <div class="left">
-                <router-link to='/NewsDetails'><img src="../../assets/images/05.jpg" width="119" height="80"/>
-                </router-link>
-              </div>
-              <div class="right">
-                <p style="font-size: 18px;color: #333">
-                  <router-link to='/NewsDetails'>这里是新闻的大标题</router-link>
-                </p>
-                <p>
-                  <router-link to='/NewsDetails'>这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述</router-link>
-                </p>
-              </div>
-            </div>
-            <div class="clear"></div>
-            <div class="index_news_ul">
-              <ul>
-                <li>
-                  <router-link to='/NewsDetails'> ·改装一族 | 2014年石城车友会足球赛第一场zjp426</router-link>
-                </li>
-                <li>
-                  <router-link to='/NewsDetails'>·汽车测评 | 银河主题涂装兰博基尼Aventador超级跑车</router-link>
-                </li>
-                <li>
-                  <router-link to='/NewsDetails'>·汽车贴图 | 罗杰摩尔1970版阿斯顿马丁拍出90万美元</router-link>
-                </li>
-                <li>
-                  <router-link to='/NewsDetails'>·汽车模型 | 最强欧翼：奔驰 SLS AMG 超级跑车美图</router-link>
-                </li>
-                <li>
-                  <router-link to='/NewsDetails'>·汽车商家 | 2014年石城车友会足球赛第一场zjp426</router-link>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="index_news_li_top">
-              <div class="left">
-                <router-link to='/NewsDetails'>
-                  <img src="../../assets/images/05.jpg" width="119" height="80"/>
-                </router-link>
-              </div>
-              <div class="right">
-                <p style="font-size: 18px;color: #333">
-                  <router-link to='/NewsDetails'>这里是新闻的大标题</router-link>
-                </p>
-                <p>
-                  <router-link to='/NewsDetails'>这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述</router-link>
-                </p>
-              </div>
-            </div>
-            <div class="clear"></div>
-            <div class="index_news_ul">
-              <ul>
-                <li>
-                  <router-link to='/NewsDetails'> ·改装一族 | 2014年石城车友会足球赛第一场zjp426</router-link>
-                </li>
-                <li>
-                  <router-link to='/NewsDetails'>·汽车测评 | 银河主题涂装兰博基尼Aventador超级跑车</router-link>
-                </li>
-                <li>
-                  <router-link to='/NewsDetails'>·汽车贴图 | 罗杰摩尔1970版阿斯顿马丁拍出90万美元</router-link>
-                </li>
-                <li>
-                  <router-link to='/NewsDetails'>·汽车模型 | 最强欧翼：奔驰 SLS AMG 超级跑车美图</router-link>
-                </li>
-                <li>
-                  <router-link to='/NewsDetails'>·汽车商家 | 2014年石城车友会足球赛第一场zjp426</router-link>
-                </li>
-              </ul>
-            </div>
+            <!--<div class="index_news_ul">-->
+              <!--<ul>-->
+                <!--<li>-->
+                  <!--<router-link to='/NewsDetails'> ·改装一族 | 2014年石城车友会足球赛第一场zjp426</router-link>-->
+                <!--</li>-->
+                <!--<li>-->
+                  <!--<router-link to='/NewsDetails'>·汽车测评 | 银河主题涂装兰博基尼Aventador超级跑车</router-link>-->
+                <!--</li>-->
+                <!--<li>-->
+                  <!--<router-link to='/NewsDetails'>·汽车贴图 | 罗杰摩尔1970版阿斯顿马丁拍出90万美元</router-link>-->
+                <!--</li>-->
+                <!--<li>-->
+                  <!--<router-link to='/NewsDetails'>·汽车模型 | 最强欧翼：奔驰 SLS AMG 超级跑车美图</router-link>-->
+                <!--</li>-->
+                <!--<li>-->
+                  <!--<router-link to='/NewsDetails'>·汽车商家 | 2014年石城车友会足球赛第一场zjp426</router-link>-->
+                <!--</li>-->
+              <!--</ul>-->
+            <!--</div>-->
           </li>
         </ul>
         <div class="clear"></div>
@@ -479,6 +394,7 @@
         server: [],
         newsList: [],
         goods: [],
+        noticeList: [],
         valueFromParent: '',
       }
     },
@@ -486,6 +402,8 @@
       this.getGoodTypeList();
       this.getFourceGoodByTime();
       this.getAllNewsList();
+      this.getServerList();
+      this.getAllNotice();
     },
     watch: {
       goodsTypeList: function () {
@@ -509,9 +427,6 @@
         vis: 4
       });
       this.valueFromParent = this.parentToChild
-      // let goodType = $('.index_lb_title').eq(0).children().children('li').children('span[class="activer"]').attr('value');
-      // this.getGoodByGoodType(goodType);
-      // this.getServerList();
     },
     components: {},
     props: ['parentToChild'],
@@ -538,12 +453,11 @@
       },
       getServerList: function () {
         let _this = this;
-        // this.$axios({
-        //   url: _this.HOME + '',
-        //   method: 'post'
-        // }).then(res => {
-
-        // })
+        this.$axios({
+          url: _this.HOME + '/service/getAllService',
+        }).then(res => {
+          _this.serverList = res.data.data;
+        })
       },
       getFourceGoodByTime: function () {
         let _this = this;
@@ -564,10 +478,15 @@
         }).then(res => {
           _this.newsList = res.data.data;
         });
+      },
+      getAllNotice: function() {
+        let _this = this;
+        this.$axios({
+          url: _this.HOME + '/notice/all'
+        }).then(res => {
+          _this.noticeList = res.data.data;
+        })
       }
-      // let goodType = $('.index_lb_title').eq(0).children().children('li').children('span[class="activer"]').attr('value');
-      // this.getGoodByGoodType(goodType);
-      // this.getServerList();
     },
   }
 </script>
