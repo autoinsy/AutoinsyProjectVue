@@ -6,95 +6,55 @@
     <!---->
     <div class="news_box">
       <ul>
-        <li>
-          <router-link to='/NewsDetails'>
-            <div class="news_img"><img src="../../assets/images/04.jpg"/></div>
+        <li v-for="news in newsList">
+          <router-link :to='{path: "/NewsDetails", query:{newsId: news.newsID, newsList: newsList}}'>
+            <div class="news_img"><img v-bind:src="news.imageUrl1" style="height: 100%; width: 100%"/></div>
             <div class="news_center">
-              <div class="news_title"><a href="newsdetails.html">新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题</a></div>
-              <div class="news_zi"><a href="newsdetails.html">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题
-                新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a>
+              <div class="news_title">
+                <a href="">{{news.newsTitle}}</a>
               </div>
-              <div class="news_k"><a href="newsdetails.html">关键词</a><span style="padding: 0 10px;">|</span><a href="newsdetails.html">重要关键词</a> </div>
+              <div class="news_zi">
+                <a href="">{{news.content}}</a>
+              </div>
+              <div class="news_k">
+                <a href="">{{news.content}}</a>
+                <span style="padding: 0 10px;">|</span>
+                <a href="">{{news.content}}</a>
+              </div>
               <div class="clear"></div>
             </div>
             <div class="news_date">
-              <p>09-03</p>
-              <sapn><router-link to='/NewsDetails'  class="news_data_more"><</router-link></sapn>
-            </div>
-          </router-link>
-        </li>
-        <li>
-          <router-link to='/NewsDetails'>
-            <div class="news_img"><img src="../../assets/images/04.jpg"/></div>
-            <div class="news_center">
-              <div class="news_title"><a href="newsdetails.html">新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题</a></div>
-              <div class="news_zi"><a href="newsdetails.html">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题
-                新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a>
-              </div>
-              <div class="news_k"><a href="newsdetails.html">关键词</a><span style="padding: 0 10px;">|</span><a href="newsdetails.html">重要关键词</a> </div>
-              <div class="clear"></div>
-            </div>
-            <div class="news_date">
-              <p>09-03</p>
-              <sapn><router-link to='/NewsDetails'  class="news_data_more"><</router-link></sapn>
-            </div>
-          </router-link>
-        </li>
-        <li>
-          <router-link to='/NewsDetails'>
-            <div class="news_img"><img src="../../assets/images/04.jpg"/></div>
-            <div class="news_center">
-              <div class="news_title"><a href="newsdetails.html">新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题</a></div>
-              <div class="news_zi"><a href="newsdetails.html">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题
-                新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a>
-              </div>
-              <div class="news_k"><a href="newsdetails.html">关键词</a><span style="padding: 0 10px;">|</span><a href="newsdetails.html">重要关键词</a> </div>
-              <div class="clear"></div>
-            </div>
-            <div class="news_date">
-              <p>09-03</p>
-              <sapn><router-link to='/NewsDetails'  class="news_data_more"><</router-link></sapn>
-            </div>
-          </router-link>
-        </li>
-        <li>
-          <router-link to='/NewsDetails'>
-            <div class="news_img"><img src="../../assets/images/04.jpg"/></div>
-            <div class="news_center">
-              <div class="news_title"><a href="newsdetails.html">新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题新闻大标题</a></div>
-              <div class="news_zi"><a href="newsdetails.html">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题
-                新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a>
-              </div>
-              <div class="news_k"><a href="newsdetails.html">关键词</a><span style="padding: 0 10px;">|</span><a href="newsdetails.html">重要关键词</a> </div>
-              <div class="clear"></div>
-            </div>
-            <div class="news_date">
-              <p>09-03</p>
-              <sapn><router-link to='/NewsDetails'  class="news_data_more"><</router-link></sapn>
+              <p>{{news.publishTime.split('-')[1]+'-'+news.publishTime.split('-')[2]}}</p>
+              <span>
+                <router-link to='/NewsDetails' class="news_data_more"><</router-link>
+              </span>
             </div>
           </router-link>
         </li>
       </ul>
       <div class="clear"></div>
-      <!-- 分页开始 -->
       <div class="tcdPageCode"></div>
-      <!-- 分页结束 -->
     </div>
-    <!--中间内容 over-->
   </div>
 </template>
 
 <script>
-  // $(".tcdPageCode").createPage({
-  //   pageCount:20,
-  //   current:1,
-  //   backFn:function(p){
-  //     //console.log(p);
-  //   }
-  // });
-    export default {
-        name: "News"
+  export default {
+    name: "News",
+    data() {
+      return {
+        newsList: []
+      }
+    },
+    mounted: function () {
+      let _this = this;
+      this.$axios({
+        url: _this.HOME + '/news/allNews'
+      }).then(res => {
+        _this.newsList = res.data.data;
+      })
     }
+  }
 </script>
 
 <style scoped>

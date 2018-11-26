@@ -6,7 +6,7 @@
     </div>
     <router-view></router-view>
     <div class="">
-      <index-detail v-if="href=='/'"></index-detail>
+      <index-detail v-if="href==='/'"></index-detail>
       <my-footer></my-footer>
     </div>
   </div>
@@ -33,9 +33,12 @@
     },
     data() {
       return {
-        href:'',
+        href: '',
       }
     },
+    mounted: function () {
+      this.href = '/'
+    }
   }
 </script>
 

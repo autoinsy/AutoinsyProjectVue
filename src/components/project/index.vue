@@ -6,14 +6,14 @@
           <li class="lm" id="cf1"><a class="ml" href="">侧导航分类</a><em class="zt">></em>
             <div class="mbc1">
               <div class="fenlei1">
-                <div class="sdh">
-                  <div class="bz1">
-                    <div class="sdh1"><span>侧导航分类</span> <i>></i></div>
-                    <div class="sdh2"><span>侧导航分类</span> <i>></i></div>
-                    <div class="sdh3"><span>侧导航分类</span> <i>></i></div>
-                    <div class="sdh4"><span>侧导航分类</span> <i>></i></div>
-                  </div>
-                </div>
+                <!--<div class="sdh">-->
+                <!--<div class="bz1">-->
+                <!--<div class="sdh1"><span>侧导航分类</span> <i>></i></div>-->
+                <!--<div class="sdh2"><span>侧导航分类</span> <i>></i></div>-->
+                <!--<div class="sdh3"><span>侧导航分类</span> <i>></i></div>-->
+                <!--<div class="sdh4"><span>侧导航分类</span> <i>></i></div>-->
+                <!--</div>-->
+                <!--</div>-->
                 <div class="liebiao">
                   <div class="dh1">
                     <div class="biaoti1">
@@ -86,50 +86,48 @@
                       </div>
                     </div>
                     <div class="fenlei2">
-                      <div class="yige"><a href=""><img src="picture/39.jpg"></a> <a href=""><img
-                        src="picture/38.jpg"></a> <a href=""><img src="picture/37.jpg"></a> <a
-                        href=""><img src="picture/36.jpg"></a> <a href=""><img src="picture/35.jpg"></a>
-                        <a href=""><img src="picture/34.jpg"></a> <a href=""><img src="picture/33.jpg"></a>
-                        <a href=""><img src="picture/41.jpg"></a></div>
-                      <div class="erge"><a href=""><img src="picture/8889.jpg"></a></div>
+                      <div class="yige"><a href=""><img src="../../assets/picture/39.jpg"></a> <a href=""><img
+                        src="../../assets/picture/38.jpg"></a> <a href=""><img src="../../assets/picture/37.jpg"></a> <a
+                        href=""><img src="../../assets/picture/36.jpg"></a> <a href=""><img
+                        src="../../assets/picture/35.jpg"></a>
+                        <a href=""><img src="../../assets/picture/34.jpg"></a> <a href=""><img
+                          src="../../assets/picture/33.jpg"></a>
+                        <a href=""><img src="../../assets/picture/41.jpg"></a></div>
+                      <div class="erge"><a href=""><img src="../../assets/picture/8889.jpg"></a></div>
+                      <div class="erge"><a href=""><img src="../../assets/picture/8889.jpg"></a></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </li>
-          <li class="lm"><a class="ml" href="">侧导航分类</a><em class="zt">></em></li>
-          <li class="lm"><a class="ml" href="">侧导航分类</a><em class="zt">></em></li>
-          <li class="lm"><a class="ml" href="">侧导航分类</a><em class="zt">></em></li>
-          <li class="lm"><a class="ml" href="">侧导航分类</a><em class="zt">></em></li>
-          <li class="lm"><a class="ml" href="">侧导航分类</a><em class="zt">></em></li>
-          <li class="lm"><a class="ml" href="">侧导航分类</a><em class="zt">></em></li>
-          <li class="lm"><a class="ml" href="">侧导航分类</a><em class="zt">></em></li>
-          <li class="lm"><a class="ml" href="">侧导航分类</a><em class="zt">></em></li>
-          <li class="lm"><a class="ml" href="">侧导航分类</a><em class="zt">></em></li>
-          <li class="lm"><a class="ml" href="">侧导航分类</a><em class="zt">></em></li>
+          <li class="lm"><a class="ml" href="">维修保养</a><em class="zt">></em></li>
+          <li class="lm"><a class="ml" href="">轮胎配件</a><em class="zt">></em></li>
+          <li class="lm"><a class="ml" href="">车载电器</a><em class="zt">></em></li>
+          <li class="lm"><a class="ml" href="">汽车装饰</a><em class="zt">></em></li>
+          <li class="lm"><a class="ml" href="">美容洗车</a><em class="zt">></em></li>
+          <li class="lm"><a class="ml" href="">安全自驾</a><em class="zt">></em></li>
+          <li class="lm"><a class="ml" href="">线下服务</a><em class="zt">></em></li>
+          <li class="lm"><a class="ml" href="">摩托车</a><em class="zt">></em></li>
         </div>
         <div id="babab">
           <div id="news">
             <div class="mt">
               <h2>电商快报</h2>
-              <div class="extra"><router-link to='/NewsDetails' class="zt">更多 ></router-link></div>
+              <div class="extra">
+                <router-link to='/NewsDetails' class="zt">更多 ></router-link>
+              </div>
             </div>
             <div class="mc">
               <ul>
-                <li class="">
-                  <marquee>
-                    <router-link to='/NewsDetails'>[今日通知]</router-link>
-                      <router-link to='/NewsDetails'>国庆七天乐休息放假七天，从10月1日休息到10月7日</router-link>
-                  </marquee>
+                <li class="" v-for="news in newsList">
+                  <span>
+                    <router-link
+                      :to='{path: "/NewsDetails", query: {newsId: news.newsID}}'>[{{news.content}}]</router-link>
+                    <router-link
+                      :to='{path: "/NewsDetails", query: {newsId: news.newsID}}'>{{news.newsTitle}}</router-link>
+                  </span>
                 </li>
-                <li class=""><router-link to='/NewsDetails'>[特惠]</router-link> <router-link to='/NewsDetails'>大牌男装特卖1折起 夏日优选</router-link></li>
-                <li class=""><router-link to='/NewsDetails'>[公告]</router-link> <router-link to='/NewsDetails'>电商杯智能硬件创新创业大赛</router-link></li>
-                <li class=""><router-link to='/NewsDetails'>[特惠]</router-link> <router-link to='/NewsDetails'>华南8周年盛典 爆品1元起抢</router-link></li>
-                <li class=""><router-link to='/NewsDetails'>[特惠]</router-link> <router-link to='/NewsDetails'>大牌男装特卖1折起 夏日优选</router-link></li>
-                <li class=""><router-link to='/NewsDetails'>[公告]</router-link> <router-link to='/NewsDetails'>电商杯智能硬件创新创业大赛</router-link></li>
-                <li class=""><router-link to='/NewsDetails'>[特惠]</router-link> <router-link to='/NewsDetails'>华南8周年盛典 爆品1元起抢</router-link></li>
-                <li class=""><router-link to='/NewsDetails'>[特惠]</router-link> <router-link to='/NewsDetails'>为爱而来 AUX儿童空调众筹</router-link></li>
               </ul>
             </div>
           </div>
@@ -138,7 +136,11 @@
         <div id="jiaodian">
           <div id="slideBox" class="slideBox">
             <div class="hd">
-              <ul><li class="">1</li><li class="">2</li><li class="on">3</li></ul>
+              <ul>
+                <li class="">1</li>
+                <li class="">2</li>
+                <li class="on">3</li>
+              </ul>
             </div>
             <div class="bd">
               <ul>
@@ -176,13 +178,13 @@
         <div class="index_lb_title">
           <div class="title_img"><img src="../../assets/images/14.png"/></div>
           <ul>
-            <li><a href="">车门车窗</a></li>
-            <li>|</li>
-            <li><a href="">车门车窗</a></li>
-            <li>|</li>
-            <li><a href="">车门车窗</a></li>
-            <li>|</li>
-            <li><a href="">车门车窗</a></li>
+            <li v-for="(goodType, index) in goodsTypeList" v-if="index<5" @click="changeActiver">
+              <span v-bind:value="goodType.subTypeCode">{{goodType.subType}}</span>
+              &nbsp;&nbsp;&nbsp;|
+            </li>
+            <li v-else-if="index===5">
+              <button>更多</button>
+            </li>
           </ul>
         </div>
         <div class="picScroll-left">
@@ -194,26 +196,14 @@
             <div class="tempWrap" style="overflow:hidden; position:relative; width:746px">
               <ul class="picList"
                   style="width: 746px; left: 0px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
-                <li style="float: left;">
-                  <div class="pic"><a href=""><img src="../../assets/images/01.jpg"></a></div>
+                <li style="float: left;" v-for="good in goods">
+                  <div class="pic"><a href=""><img v-bind:src="good.goodsPic"></a></div>
                   <div class="title">
                     <a href="">
-                      <p>这里是产品的描述这里是产品的描述</p>
-                      <p class="coler_7">$201</p>
+                      <p>{{good.describe}}</p>
+                      <p class="coler_7">${{good.price}}</p>
                     </a>
                   </div>
-                </li>
-                <li style="float: left;">
-                  <div class="pic"><a href=""><img src="../../assets/images/02.jpg"></a></div>
-                  <div class="title"><a href="">效果图2</a></div>
-                </li>
-                <li style="float: left;">
-                  <div class="pic"><a href=""><img src="../../assets/images/03.jpg"></a></div>
-                  <div class="title"><a href="">效果图3</a></div>
-                </li>
-                <li style="float: left;">
-                  <div class="pic"><a href=""><img src="../../assets/images/01.jpg"></a></div>
-                  <div class="title"><a href="">效果图4</a></div>
                 </li>
               </ul>
             </div>
@@ -310,11 +300,21 @@
         <div id="slideBoxs" class="slideBoxs">
           <div class="bds">
             <ul>
-              <li style="display: none;"><a href=""><img src="../../assets/images/05.jpg" width="1002" height="363"></a>
+              <li style="display: none;">
+                <a href="">
+                  <img src="../../assets/images/05.jpg" width="1002" height="363">
+                </a>
               </li>
-              <li style="display: none;"><a href=""><img src="../../assets/images/05.jpg" width="1002" height="363"></a>
+              <li style="display: none;">
+                <a href="">
+                  <img src="../../assets/images/05.jpg" width="1002" height="363">
+                </a>
               </li>
-              <li style="display: list-item;"><a href=""><img src="../../assets/images/05.jpg" width="1002" height="363"></a></li>
+              <li style="display: list-item;">
+                <a href="">
+                  <img src="../../assets/images/05.jpg" width="1002" height="363">
+                </a>
+              </li>
             </ul>
           </div>
           <!-- 下面是前/后按钮代码-->
@@ -353,58 +353,110 @@
         <ul>
           <li>
             <div class="index_news_li_top">
-              <div class="left"><router-link to='/NewsDetails'><img src="../../assets/images/05.jpg" width="119" height="80"/></router-link></div>
+              <div class="left">
+                <router-link to='/NewsDetails'><img src="../../assets/images/05.jpg" width="119" height="80"/>
+                </router-link>
+              </div>
               <div class="right">
-                <p style="font-size: 18px;color: #333"><router-link to='/NewsDetails'>这里是新闻的大标题</router-link></p>
-                <p><router-link to='/NewsDetails'>这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述</router-link></p>
+                <p style="font-size: 18px;color: #333">
+                  <router-link to='/NewsDetails'>这里是新闻的大标题</router-link>
+                </p>
+                <p>
+                  <router-link to='/NewsDetails'>这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述</router-link>
+                </p>
               </div>
             </div>
             <div class="clear"></div>
             <div class="index_news_ul">
               <ul>
-                <li><router-link to='/NewsDetails'> ·改装一族 | 2014年石城车友会足球赛第一场zjp426</router-link></li>
-                <li><router-link to='/NewsDetails'>·汽车测评 | 银河主题涂装兰博基尼Aventador超级跑车</router-link></li>
-                <li><router-link to='/NewsDetails'>·汽车贴图 | 罗杰摩尔1970版阿斯顿马丁拍出90万美元</router-link></li>
-                <li><router-link to='/NewsDetails'>·汽车模型 | 最强欧翼：奔驰 SLS AMG 超级跑车美图</router-link></li>
-                <li><router-link to='/NewsDetails'>·汽车商家 | 2014年石城车友会足球赛第一场zjp426</router-link></li>
+                <li>
+                  <router-link to='/NewsDetails'> ·改装一族 | 2014年石城车友会足球赛第一场zjp426</router-link>
+                </li>
+                <li>
+                  <router-link to='/NewsDetails'>·汽车测评 | 银河主题涂装兰博基尼Aventador超级跑车</router-link>
+                </li>
+                <li>
+                  <router-link to='/NewsDetails'>·汽车贴图 | 罗杰摩尔1970版阿斯顿马丁拍出90万美元</router-link>
+                </li>
+                <li>
+                  <router-link to='/NewsDetails'>·汽车模型 | 最强欧翼：奔驰 SLS AMG 超级跑车美图</router-link>
+                </li>
+                <li>
+                  <router-link to='/NewsDetails'>·汽车商家 | 2014年石城车友会足球赛第一场zjp426</router-link>
+                </li>
               </ul>
             </div>
           </li>
           <li>
             <div class="index_news_li_top">
-              <div class="left"><router-link to='/NewsDetails'><img src="../../assets/images/05.jpg" width="119" height="80"/></router-link></div>
+              <div class="left">
+                <router-link to='/NewsDetails'><img src="../../assets/images/05.jpg" width="119" height="80"/>
+                </router-link>
+              </div>
               <div class="right">
-                <p style="font-size: 18px;color: #333"><router-link to='/NewsDetails'>这里是新闻的大标题</router-link></p>
-                <p><router-link to='/NewsDetails'>这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述</router-link></p>
+                <p style="font-size: 18px;color: #333">
+                  <router-link to='/NewsDetails'>这里是新闻的大标题</router-link>
+                </p>
+                <p>
+                  <router-link to='/NewsDetails'>这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述</router-link>
+                </p>
               </div>
             </div>
             <div class="clear"></div>
             <div class="index_news_ul">
               <ul>
-                <li><router-link to='/NewsDetails'> ·改装一族 | 2014年石城车友会足球赛第一场zjp426</router-link></li>
-                <li><router-link to='/NewsDetails'>·汽车测评 | 银河主题涂装兰博基尼Aventador超级跑车</router-link></li>
-                <li><router-link to='/NewsDetails'>·汽车贴图 | 罗杰摩尔1970版阿斯顿马丁拍出90万美元</router-link></li>
-                <li><router-link to='/NewsDetails'>·汽车模型 | 最强欧翼：奔驰 SLS AMG 超级跑车美图</router-link></li>
-                <li><router-link to='/NewsDetails'>·汽车商家 | 2014年石城车友会足球赛第一场zjp426</router-link></li>
+                <li>
+                  <router-link to='/NewsDetails'> ·改装一族 | 2014年石城车友会足球赛第一场zjp426</router-link>
+                </li>
+                <li>
+                  <router-link to='/NewsDetails'>·汽车测评 | 银河主题涂装兰博基尼Aventador超级跑车</router-link>
+                </li>
+                <li>
+                  <router-link to='/NewsDetails'>·汽车贴图 | 罗杰摩尔1970版阿斯顿马丁拍出90万美元</router-link>
+                </li>
+                <li>
+                  <router-link to='/NewsDetails'>·汽车模型 | 最强欧翼：奔驰 SLS AMG 超级跑车美图</router-link>
+                </li>
+                <li>
+                  <router-link to='/NewsDetails'>·汽车商家 | 2014年石城车友会足球赛第一场zjp426</router-link>
+                </li>
               </ul>
             </div>
           </li>
           <li>
             <div class="index_news_li_top">
-              <div class="left"><router-link to='/NewsDetails'><img src="../../assets/images/05.jpg" width="119" height="80"/></router-link></div>
+              <div class="left">
+                <router-link to='/NewsDetails'>
+                  <img src="../../assets/images/05.jpg" width="119" height="80"/>
+                </router-link>
+              </div>
               <div class="right">
-                <p style="font-size: 18px;color: #333"><router-link to='/NewsDetails'>这里是新闻的大标题</router-link></p>
-                <p><router-link to='/NewsDetails'>这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述</router-link></p>
+                <p style="font-size: 18px;color: #333">
+                  <router-link to='/NewsDetails'>这里是新闻的大标题</router-link>
+                </p>
+                <p>
+                  <router-link to='/NewsDetails'>这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述这里是文字的简单描述</router-link>
+                </p>
               </div>
             </div>
             <div class="clear"></div>
             <div class="index_news_ul">
               <ul>
-                <li><router-link to='/NewsDetails'> ·改装一族 | 2014年石城车友会足球赛第一场zjp426</router-link></li>
-                <li><router-link to='/NewsDetails'>·汽车测评 | 银河主题涂装兰博基尼Aventador超级跑车</router-link></li>
-                <li><router-link to='/NewsDetails'>·汽车贴图 | 罗杰摩尔1970版阿斯顿马丁拍出90万美元</router-link></li>
-                <li><router-link to='/NewsDetails'>·汽车模型 | 最强欧翼：奔驰 SLS AMG 超级跑车美图</router-link></li>
-                <li><router-link to='/NewsDetails'>·汽车商家 | 2014年石城车友会足球赛第一场zjp426</router-link></li>
+                <li>
+                  <router-link to='/NewsDetails'> ·改装一族 | 2014年石城车友会足球赛第一场zjp426</router-link>
+                </li>
+                <li>
+                  <router-link to='/NewsDetails'>·汽车测评 | 银河主题涂装兰博基尼Aventador超级跑车</router-link>
+                </li>
+                <li>
+                  <router-link to='/NewsDetails'>·汽车贴图 | 罗杰摩尔1970版阿斯顿马丁拍出90万美元</router-link>
+                </li>
+                <li>
+                  <router-link to='/NewsDetails'>·汽车模型 | 最强欧翼：奔驰 SLS AMG 超级跑车美图</router-link>
+                </li>
+                <li>
+                  <router-link to='/NewsDetails'>·汽车商家 | 2014年石城车友会足球赛第一场zjp426</router-link>
+                </li>
               </ul>
             </div>
           </li>
@@ -416,14 +468,51 @@
     <!--新闻 over-->
   </div>
 </template>
-
+<!--
+	.gitignore
+	config/index.js
+	package-lock.json
+	package.json
+	src/components/index.vue
+	src/components/project/Enroll.vue
+	src/components/project/MotorPartsTown.vue
+	src/components/project/MotorPartsTownDetails.vue
+	src/components/project/News.vue
+	src/components/project/NewsDetails.vue
+	src/components/project/forget.vue
+	src/components/project/index.vue
+-->
 <script>
   export default {
     name: "index",
-    mounted:function () {
-      // $(".slideBox").flexslider({mainCell:".bd ul",autoPlay:true});
-      // $(".picScroll-left").flexslider({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:4});
-      // $(".slideBoxs").flexslider({mainCell: ".bds ul", effect: "left", autoPlay: true});
+    data() {
+      return {
+        goodsTypeList: [],
+        serverList: [],
+        server: [],
+        newsList: [],
+        goods: [],
+        valueFromParent: '',
+      }
+    },
+    mounted: function () {
+      this.getGoodTypeList();
+      this.getFourceGoodByTime();
+      this.getAllNewsList();
+    },
+    watch: {
+      goodsTypeList: function () {
+        this.$nextTick(function () {
+          let lis = $('.index_lb_title li');
+          for (let i = 0; i < lis.length; i++) {
+            if (i % 6 === 0) {
+              $(lis[i]).children('span').addClass('activer')
+            }
+          }
+        })
+      }
+    },
+    created: function () {
       $(".picScroll-lefts").flexslider({
         titCell: ".hd ul",
         mainCell: ".bd ul",
@@ -432,6 +521,63 @@
         autoPlay: true,
         vis: 4
       });
+      this.valueFromParent = this.parentToChild
+      // let goodType = $('.index_lb_title').eq(0).children().children('li').children('span[class="activer"]').attr('value');
+      // this.getGoodByGoodType(goodType);
+      // this.getServerList();
+    },
+    components: {},
+    props: ['parentToChild'],
+    methods: {
+      getGoodTypeList: function () {
+        let _this = this;
+        this.$axios({
+          url: _this.HOME + '/goodsType/getGoodsType?main_goods_type=2',
+          method: 'post'
+        }).then(res => {
+          _this.goodsTypeList = res.data.data;
+        }).catch(e => {
+          console.log(e)
+        });
+      },
+      getGoodByGoodType: function (subTypeCode) {
+        let _this = this;
+        this.$axios({
+          url: _this.HOME + '/goods/getGoodsByTypeCode?sub_type_code=' + subTypeCode,
+          method: 'post'
+        }).then(res => {
+          _this.goods = res.data.data
+        })
+      },
+      getServerList: function () {
+        let _this = this;
+        // this.$axios({
+        //   url: _this.HOME + '',
+        //   method: 'post'
+        // }).then(res => {
+
+        // })
+      },
+      getFourceGoodByTime: function () {
+        let _this = this;
+        this.$axios({
+          url: _this.HOME + '/goods/getFourGood'
+        }).then(res => {
+          _this.goods = res.data.data;
+        })
+      },
+      changeActiver: function (e) {
+        $('.index_lb_title').eq(0).children().children('li').children('span').removeClass("activer");
+        $(e.target).addClass("activer")
+      },
+      getAllNewsList: function () {
+        let _this = this;
+        this.$axios({
+          url: _this.HOME + '/news/allNews'
+        }).then(res => {
+          _this.newsList = res.data.data;
+        });
+      }
     }
   }
 </script>
