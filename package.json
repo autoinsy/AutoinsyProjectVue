@@ -12,16 +12,18 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "jquery": "^3.3.1",
-    "npm": "^6.4.1",
-    "vue": "^2.5.2",
-    "vue-router": "^3.0.1",
-    "jquery-page": "^1.1.1",
-    "carousel": "^0.0.3",
-    "jquery-easing": "^0.0.1",
-    "slider": "^1.0.4",
     "axios": "^0.18.0",
-    "mag": "^0.9.1"
+    "carousel": "^0.0.3",
+    "jquery": "^3.3.1",
+    "jquery-easing": "^0.0.1",
+    "jquery-page": "^1.1.1",
+    "mag": "^0.9.1",
+    "npm": "^6.4.1",
+    "peer": "^0.2.10",
+    "slider": "^1.0.4",
+    "ajv": "^6.5.5",
+    "vue": "^2.5.2",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
