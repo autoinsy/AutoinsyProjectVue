@@ -13,3 +13,5 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+修改_1105.patch
+修改_js.patch
