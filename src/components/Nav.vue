@@ -18,7 +18,7 @@
     </div>
     <div class="sanlei">
       <div class="zxkd">
-        <div class="qbfl"><a href="">全部商品分类</a></div>
+        <div class="qbfl"> <child :parentToChild="value1"><a href="">全部商品分类</a> </child></div>
         <div class="sldh">
           <ul id="uile">
             <li><router-link to='/' class="sldhactive">首页</router-link></li>
@@ -38,7 +38,12 @@
 
 <script>
     export default {
-        name: "Nav"
+        name: "Nav",
+      data () {
+        return {
+          value1:'父组件的值传给子组件'
+        }
+      },
     }
 </script>
 

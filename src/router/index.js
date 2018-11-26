@@ -29,6 +29,7 @@ import ServeDetails from '../components/project/ServeDetails'
 import TeachnicalDetails from '../components/project/TeachnicalDetails'
 import TechnicalAssistance from '../components/project/TechnicalAssistance'
 import indexDetail from '../components/project/index'
+import SHindex from '../components/project/SHindex'
 
 // import footer from '../components/footer'
 // import Nav from '../components/Nav'
@@ -177,6 +178,11 @@ export default new Router({
           path: '/login',
           name: 'login',
           component: login
+        },
+        {
+          name: 'SHindex',
+          path: '/SHindex',
+          component: SHindex
         },
       ]
     },

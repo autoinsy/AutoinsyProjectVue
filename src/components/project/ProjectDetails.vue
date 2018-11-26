@@ -93,7 +93,7 @@
             <div class="clear"></div>
           </div>
           <div class="pro_btn">
-            <input type="button" value="进入店铺"/>
+            <router-link to='/SHindex'><input type="button" value="进入店铺"/></router-link>
             <input type="button" value="关注店铺">
           </div>
           <div class="pro_btn">

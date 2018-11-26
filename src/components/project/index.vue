@@ -478,33 +478,6 @@
         serverList: [],
         server: [],
         newsList: [],
-        goods: []
-      }
-    },
-    mounted: function () {
-      this.getGoodTypeList();
-      this.getFourceGoodByTime();
-      this.getAllNewsList();
-    },
-    watch: {
-      goodsTypeList: function () {
-        this.$nextTick(function () {
-          let lis = $('.index_lb_title li');
-          for (let i = 0; i < lis.length; i++) {
-            if (i % 6 === 0) {
-              $(lis[i]).children('span').addClass('activer')
-            }
-          }
-        })
-      }
-    },
-    created: function () {
-    data() {
-      return {
-        goodsTypeList: [],
-        serverList: [],
-        server: [],
-        newsList: [],
         goods: [],
         valueFromParent: '',
       }
@@ -596,57 +569,6 @@
       // this.getGoodByGoodType(goodType);
       // this.getServerList();
     },
-    methods: {
-      getGoodTypeList: function () {
-        let _this = this;
-        this.$axios({
-          url: _this.HOME + '/goodsType/getGoodsType?main_goods_type=2',
-          method: 'post'
-        }).then(res => {
-          _this.goodsTypeList = res.data.data;
-        }).catch(e => {
-          console.log(e)
-        });
-      },
-      getGoodByGoodType: function (subTypeCode) {
-        let _this = this;
-        this.$axios({
-          url: _this.HOME + '/goods/getGoodsByTypeCode?sub_type_code=' + subTypeCode,
-          method: 'post'
-        }).then(res => {
-          _this.goods = res.data.data
-        })
-      },
-      getServerList: function () {
-        let _this = this;
-        // this.$axios({
-        //   url: _this.HOME + '',
-        //   method: 'post'
-        // }).then(res => {
-
-        // })
-      },
-      getFourceGoodByTime: function () {
-        let _this = this;
-        this.$axios({
-          url: _this.HOME + '/goods/getFourGood'
-        }).then(res => {
-          _this.goods = res.data.data;
-        })
-      },
-      changeActiver: function (e) {
-        $('.index_lb_title').eq(0).children().children('li').children('span').removeClass("activer");
-        $(e.target).addClass("activer")
-      },
-      getAllNewsList: function () {
-        let _this = this;
-        this.$axios({
-          url: _this.HOME + '/news/allNews'
-        }).then(res => {
-          _this.newsList = res.data.data;
-        });
-      }
-    }
   }
 </script>
 

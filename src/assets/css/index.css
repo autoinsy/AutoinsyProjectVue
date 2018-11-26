@@ -707,6 +707,7 @@ body {
 		background-position: right;background-repeat: no-repeat;  */
     position: relative;
     list-style: none;
+  padding-left: 10px;
 }
 
 #jd-dtgd a {

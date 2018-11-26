@@ -3848,3 +3848,67 @@ em, i, u {
         cursor: pointer;
     }
 /**/
+/*商户首页*/
+.atop{
+  width: 100%;
+  height: 40px;
+  background-color: #ff7300;
+}
+.atop ul{
+  width: 1200px;
+  margin: 0 auto;
+}
+.atop ul li{
+  float: left;
+  line-height: 40px;
+  font-size: 16px;
+  color: #fff;
+}
+.atop ul li a{
+  color: #fff;
+  background-color: #ff7300;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.atop ul li a:hover{
+  color: #fff;
+  background-color: #666;
+  border-radius: 10px;
+}
+.abanner{
+  width: 100%;
+  height: 600px;
+}
+.ali{
+  margin: 0 auto;
+  width: 1200px;
+  padding: 30px 0 30px 50px;
+}
+.alia{
+  width: 1200px;
+  margin-top: 20px;
+}
+.alia li{
+  float: left;
+  margin-right: 5px;
+}
+.alia .alia_so{
+  margin-right: 0;
+}
+.alia li p{
+  line-height: 28px;
+  font-size: 14px;
+  color: #333;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  width: 220px;
+}
+.alia_img{
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
