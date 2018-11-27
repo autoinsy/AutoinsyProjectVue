@@ -123,9 +123,9 @@
                 <li class="" v-for="notice in noticeList">
                   <span>
                     <!--<router-link-->
-                      <!--:to='{path: "/NewsDetails", query: {newsId: news.newsID}}'>[{{news.content}}]</router-link>-->
+                    <!--:to='{path: "/NewsDetails", query: {newsId: news.newsID}}'>[{{news.content}}]</router-link>-->
                     <!--<router-link-->
-                      <!--:to='{path: "/NewsDetails", query: {newsId: news.newsID}}'>{{news.newsTitle}}</router-link>-->
+                    <!--:to='{path: "/NewsDetails", query: {newsId: news.newsID}}'>{{news.newsTitle}}</router-link>-->
                   </span>
                 </li>
               </ul>
@@ -135,23 +135,23 @@
         <!--侧导航 over-->
         <div id="jiaodian">
           <!--<div id="slideBox" class="slideBox">-->
-            <!--<div class="hd">-->
-              <!--<ul>-->
-                <!--<li class="">1</li>-->
-                <!--<li class="">2</li>-->
-                <!--<li class="on">3</li>-->
-              <!--</ul>-->
-            <!--</div>-->
-            <!--<div class="bd">-->
-              <!--<ul>-->
-                <!--<li style="display: none;"><a href=""><img src="../../assets/images/01.jpg"></a></li>-->
-                <!--<li style="display: none;"><a href=""><img src="../../assets/images/02.jpg"></a></li>-->
-                <!--<li style="display: list-item;"><a href=""><img src="../../assets/images/03.jpg"></a></li>-->
-              <!--</ul>-->
-            <!--</div>-->
-            <!--&lt;!&ndash; 下面是前/后按钮代码&ndash;&gt;-->
-            <!--<a class="prev" href="javascript:void(0)"></a>-->
-            <!--<a class="next" href="javascript:void(0)"></a>-->
+          <!--<div class="hd">-->
+          <!--<ul>-->
+          <!--<li class="">1</li>-->
+          <!--<li class="">2</li>-->
+          <!--<li class="on">3</li>-->
+          <!--</ul>-->
+          <!--</div>-->
+          <!--<div class="bd">-->
+          <!--<ul>-->
+          <!--<li style="display: none;"><a href=""><img src="../../assets/images/01.jpg"></a></li>-->
+          <!--<li style="display: none;"><a href=""><img src="../../assets/images/02.jpg"></a></li>-->
+          <!--<li style="display: list-item;"><a href=""><img src="../../assets/images/03.jpg"></a></li>-->
+          <!--</ul>-->
+          <!--</div>-->
+          <!--&lt;!&ndash; 下面是前/后按钮代码&ndash;&gt;-->
+          <!--<a class="prev" href="javascript:void(0)"></a>-->
+          <!--<a class="next" href="javascript:void(0)"></a>-->
           <!--</div>-->
           <!--lb-->
           <div class="slide" v-on:mouseover="stop()" v-on:mouseout="move()">
@@ -159,7 +159,7 @@
               <transition-group tag="ul" name="image">
                 <li v-for="(img, index) in imgArray" v-show="index===mark" :key="index">
                   <a href="#">
-                    <img :src='img'>
+                    <img v-bind:src='img'>
                   </a>
                 </li>
               </transition-group>
@@ -249,8 +249,14 @@
               <ul class="picList"
                   style="width: 746px; left: 0px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
                 <li style="float: left;" v-for="server in serverList">
-                  <div class="pic"><router-link :to="{path: '/ServeDetails', query: {serverId: server.serviceID}}"><img v-bind:src="server.servicePhoto"></router-link></div>
-                  <div class="title"><router-link :to="{path: '/ServeDetails', query: {serverId: server.serviceID}}">{{server.title}}</router-link></div>
+                  <div class="pic">
+                    <router-link :to="{path: '/ServeDetails', query: {serverId: server.serviceID}}"><img
+                      v-bind:src="server.servicePhoto"></router-link>
+                  </div>
+                  <div class="title">
+                    <router-link :to="{path: '/ServeDetails', query: {serverId: server.serviceID}}">{{server.title}}
+                    </router-link>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -373,23 +379,23 @@
             </div>
             <div class="clear"></div>
             <!--<div class="index_news_ul">-->
-              <!--<ul>-->
-                <!--<li>-->
-                  <!--<router-link to='/NewsDetails'> ·改装一族 | 2014年石城车友会足球赛第一场zjp426</router-link>-->
-                <!--</li>-->
-                <!--<li>-->
-                  <!--<router-link to='/NewsDetails'>·汽车测评 | 银河主题涂装兰博基尼Aventador超级跑车</router-link>-->
-                <!--</li>-->
-                <!--<li>-->
-                  <!--<router-link to='/NewsDetails'>·汽车贴图 | 罗杰摩尔1970版阿斯顿马丁拍出90万美元</router-link>-->
-                <!--</li>-->
-                <!--<li>-->
-                  <!--<router-link to='/NewsDetails'>·汽车模型 | 最强欧翼：奔驰 SLS AMG 超级跑车美图</router-link>-->
-                <!--</li>-->
-                <!--<li>-->
-                  <!--<router-link to='/NewsDetails'>·汽车商家 | 2014年石城车友会足球赛第一场zjp426</router-link>-->
-                <!--</li>-->
-              <!--</ul>-->
+            <!--<ul>-->
+            <!--<li>-->
+            <!--<router-link to='/NewsDetails'> ·改装一族 | 2014年石城车友会足球赛第一场zjp426</router-link>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<router-link to='/NewsDetails'>·汽车测评 | 银河主题涂装兰博基尼Aventador超级跑车</router-link>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<router-link to='/NewsDetails'>·汽车贴图 | 罗杰摩尔1970版阿斯顿马丁拍出90万美元</router-link>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<router-link to='/NewsDetails'>·汽车模型 | 最强欧翼：奔驰 SLS AMG 超级跑车美图</router-link>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<router-link to='/NewsDetails'>·汽车商家 | 2014年石城车友会足球赛第一场zjp426</router-link>-->
+            <!--</li>-->
+            <!--</ul>-->
             <!--</div>-->
           </li>
         </ul>
@@ -416,10 +422,10 @@
         timer: null, //定时器
         mark: 0, //比对图片索引的变量
         imgArray: [
-          '../../assets/images/01.jpg',
-          '../../assets/images/02.jpg',
-          '../../assets/images/03.jpg',
-          '../../assets/images/04.jpg'
+          require('../../assets/images/01.jpg'),
+          require('../../assets/images/02.jpg'),
+          require('../../assets/images/03.jpg'),
+          require('../../assets/images/04.jpg'),
         ]
       }
     },
@@ -451,7 +457,8 @@
         autoPlay: true,
         vis: 4
       });
-      this.valueFromParent = this.parentToChild
+      this.valueFromParent = this.parentToChild;
+      this.play()
     },
     components: {},
     props: ['parentToChild'],
@@ -504,7 +511,7 @@
           _this.newsList = res.data.data;
         });
       },
-      getAllNotice: function() {
+      getAllNotice: function () {
         let _this = this;
         this.$axios({
           url: _this.HOME + '/notice/all'
@@ -512,27 +519,24 @@
           _this.noticeList = res.data.data;
         })
       },
-      autoPlay () {
+      autoPlay() {
         this.mark++;
         if (this.mark === 4) {
           this.mark = 0
         }
       },
-      play () {
+      play() {
         this.timer = setInterval(this.autoPlay, 2500)
       },
-      change (i) {
+      change(i) {
         this.mark = i
       },
-      stop () {
+      stop() {
         clearInterval(this.timer)
       },
-      move () {
+      move() {
         this.timer = setInterval(this.autoPlay, 2500)
       }
-    },
-    created () {
-      this.play()
     },
   }
 
@@ -540,23 +544,27 @@
 
 <style>
   .slide {
-    width:800px;
-    height:331px;
+    width: 800px;
+    height: 331px;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
   }
+
   .slideshow {
-    width:800px;
-    height:330px;
+    width: 800px;
+    height: 330px;
   }
-  .slide  li {
+
+  .slide li {
     position: absolute;
   }
-  .slide  img {
-    width:800px;
-    height:330px;
+
+  .slide img {
+    width: 800px;
+    height: 330px;
   }
+
   .bar {
     position: absolute;
     width: 100%;
@@ -565,6 +573,7 @@
     z-index: 10;
     text-align: center;
   }
+
   .bar span {
     width: 20px;
     height: 5px;
@@ -573,7 +582,8 @@
     display: inline-block;
     margin-right: 10px;
   }
-  .slide  .active {
+
+  .slide .active {
     background: red !important;
   }
 </style>

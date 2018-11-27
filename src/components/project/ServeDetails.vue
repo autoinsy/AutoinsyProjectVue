@@ -6,7 +6,6 @@
     <!---->
     <div class="centermy">
       <div class="rentd_title served_title">
-        <p>{{server}}</p>
         <p>{{server.title}}</p>
         <p><span>{{server.publishTime}}</span></p>
       </div>
@@ -18,12 +17,7 @@
                 <div class="served_li">
                   <ul>
                     <li>服务区域：</li>
-                    <li>皇姑</li>
-                    <li>沈河</li>
-                    <li>和平</li>
-                    <li>大东</li>
-                    <li>浑南</li>
-                    <li>于洪</li>
+                    <li v-for="area in server.serviceArea">{{area}}</li>
                   </ul>
                 </div>
               </li>
@@ -31,9 +25,9 @@
                 <div class="served_li">
                   <ul>
                     <li>联系人：</li>
-                    <li>王师傅</li>
-                    <li><img src="../../assets/images/17.jpg"/></li>
-                    <li><img src="../../assets/images/18.jpg"/></li>
+                    <li>{{server.contacts}}</li>
+                    <li><img src="../../assets/images/17.jpg"/><span style="display: none">{{server.qq}}</span></li>
+                    <li><img src="../../assets/images/18.jpg"/><span style="display: none">{{server.weichat}}</span></li>
                   </ul>
                 </div>
               </li>
@@ -41,7 +35,7 @@
                 <div class="served_li">
                   <ul>
                     <li>商家地址：</li>
-                    <li>皇姑—黄河—xxx地方</li>
+                    <li>{{server.address}}</li>
                     <li><img src="../../assets/images/19.jpg"/></li>
                   </ul>
                 </div>
@@ -105,21 +99,17 @@
         <div class="served_top_box">
           <p>品牌:XX牌</p>
           <ul>
-            <li>商品名称：商品叫啥名</li>
-            <li>商品编号：12304563214</li>
-            <li>店铺：这里是店铺的名字</li>
+            <li>商品名称：{{server.storeName}}</li>
+            <li>商品编号：{{server.service_code}}</li>
+            <li>店铺：{{server.storeName}}</li>
             <li>产品毛重：2.0KG</li>
             <li>产品产地：中国大陆</li>
-            <li>类别：这里是类别</li>
+            <li>类别：{{server.serviceType}}</li>
           </ul>
           <div class="clear"></div>
         </div>
         <div class="served_p">
-          <p>文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行
-            文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行
-          </p>
-          <p>文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行</p>
-          <p>文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行</p>
+          <p>{{server.descript}}</p>
           <img v-bind:src="server.servicePhoto" width="790"/>
         </div>
       </div>
