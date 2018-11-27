@@ -134,27 +134,44 @@
         </div>
         <!--侧导航 over-->
         <div id="jiaodian">
-          <div id="slideBox" class="slideBox">
-            <div class="hd">
-              <ul>
-                <li class="">1</li>
-                <li class="">2</li>
-                <li class="on">3</li>
-              </ul>
+          <!--<div id="slideBox" class="slideBox">-->
+            <!--<div class="hd">-->
+              <!--<ul>-->
+                <!--<li class="">1</li>-->
+                <!--<li class="">2</li>-->
+                <!--<li class="on">3</li>-->
+              <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="bd">-->
+              <!--<ul>-->
+                <!--<li style="display: none;"><a href=""><img src="../../assets/images/01.jpg"></a></li>-->
+                <!--<li style="display: none;"><a href=""><img src="../../assets/images/02.jpg"></a></li>-->
+                <!--<li style="display: list-item;"><a href=""><img src="../../assets/images/03.jpg"></a></li>-->
+              <!--</ul>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; 下面是前/后按钮代码&ndash;&gt;-->
+            <!--<a class="prev" href="javascript:void(0)"></a>-->
+            <!--<a class="next" href="javascript:void(0)"></a>-->
+          <!--</div>-->
+          <!--lb-->
+          <div class="slide" v-on:mouseover="stop()" v-on:mouseout="move()">
+            <div class="slideshow">
+              <transition-group tag="ul" name="image">
+                <li v-for="(img, index) in imgArray" v-show="index===mark" :key="index">
+                  <a href="#">
+                    <img :src='img'>
+                  </a>
+                </li>
+              </transition-group>
             </div>
-            <div class="bd">
-              <ul>
-                <li style="display: none;"><a href=""><img src="../../assets/images/01.jpg"></a></li>
-                <li style="display: none;"><a href=""><img src="../../assets/images/02.jpg"></a></li>
-                <li style="display: list-item;"><a href=""><img src="../../assets/images/03.jpg"></a></li>
-              </ul>
+            <div class="bullet">
+      <span v-for="(item, index) in imgArray" :class="{ 'active':index===mark }"
+            @click="change(index)" :key="index"></span>
             </div>
-            <!-- 下面是前/后按钮代码-->
-            <a class="prev" href="javascript:void(0)"></a>
-            <a class="next" href="javascript:void(0)"></a>
           </div>
           <div class="clear"></div>
         </div>
+
         <div id="log">
           <div id="index_login">
             <div class="index_login_title"><img src="../../assets/images/11.png"/></div>
@@ -396,6 +413,14 @@
         goods: [],
         noticeList: [],
         valueFromParent: '',
+        timer: null, //定时器
+        mark: 0, //比对图片索引的变量
+        imgArray: [
+          '../../assets/images/01.jpg',
+          '../../assets/images/02.jpg',
+          '../../assets/images/03.jpg',
+          '../../assets/images/04.jpg'
+        ]
       }
     },
     mounted: function () {
@@ -486,11 +511,69 @@
         }).then(res => {
           _this.noticeList = res.data.data;
         })
+      },
+      autoPlay () {
+        this.mark++;
+        if (this.mark === 4) {
+          this.mark = 0
+        }
+      },
+      play () {
+        this.timer = setInterval(this.autoPlay, 2500)
+      },
+      change (i) {
+        this.mark = i
+      },
+      stop () {
+        clearInterval(this.timer)
+      },
+      move () {
+        this.timer = setInterval(this.autoPlay, 2500)
       }
     },
+    created () {
+      this.play()
+    },
   }
+
 </script>
 
-<style scoped>
-
+<style>
+  .slide {
+    width:800px;
+    height:331px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+  }
+  .slideshow {
+    width:800px;
+    height:330px;
+  }
+  .slide  li {
+    position: absolute;
+  }
+  .slide  img {
+    width:800px;
+    height:330px;
+  }
+  .bar {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    margin: 0 auto;
+    z-index: 10;
+    text-align: center;
+  }
+  .bar span {
+    width: 20px;
+    height: 5px;
+    border: 1px solid;
+    background: white;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .slide  .active {
+    background: red !important;
+  }
 </style>
