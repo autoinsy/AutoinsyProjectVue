@@ -2944,22 +2944,22 @@
 }
 /*租赁详情 over*/
 .served_title{
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 32px;
+    border-bottom: 1px solid #ddd!important;
+    margin-bottom: 32px!important;
 }
 .served_left{
-    width: 771px;
+    width: 771px!important;
 }
 .served_list li{
-    line-height: 40px;
+    line-height: 40px!important;
 }
 .served_li li{
-    float: left;
-    padding: 0 5px;
+    float: left!important;
+    padding: 0 5px!important;
 }
 .served_p p{
-    font-size: 30px;
-    color: #ff7300;
+    font-size: 30px!important;
+    color: #ff7300!important;
 }
 .served_left_box{
     width: 990px;

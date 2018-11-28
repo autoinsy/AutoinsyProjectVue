@@ -44,7 +44,7 @@
             <div class="clear"></div>
             <input type="button" value="查看电话号码" class="rentd_title_btn"/>
           </div>
-          <div class="right served_p">
+          <div class="right served_p" style="width: 300px;">
             <p>3小时/工时</p>
           </div>
         </div>
@@ -70,14 +70,14 @@
               </ul>
               <div class="clear"></div>
             </div>
-            <div class="rentd_li">
-              <ul>
-                <li>人气4.1↑</li>
-                <li>活跃4.1↑</li>
-                <li>服务4.1↑</li>
-              </ul>
-              <div class="clear"></div>
-            </div>
+            <!--<div class="rentd_li">-->
+              <!--<ul>-->
+                <!--<li>人气4.1↑</li>-->
+                <!--<li>活跃4.1↑</li>-->
+                <!--<li>服务4.1↑</li>-->
+              <!--</ul>-->
+              <!--<div class="clear"></div>-->
+            <!--</div>-->
             <div class="rentd_hui"></div>
           </div>
         </div>
@@ -166,6 +166,5 @@
   }
 </script>
 
-<style scoped>
-
+<style>
 </style>

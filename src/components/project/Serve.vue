@@ -80,22 +80,22 @@
               <tr  data-sign="" class="ac_item">
                 <td class="img">
                   <div class="ac_linkurl">
-                    <a href="">
+                    <router-link to='/ServeDetails'>
                       <img src="../../assets/images/05.jpg"/>
-                    </a>
+                    </router-link>
                   </div>
                 </td>
                 <td class="t">
                   <div class="tdiv">
-                    <a href='' class="t ac_linkurl" >全沈阳<b>汽修</b> 修理 换配件 清洗 修理 换配件 清洗 修理 换配件 清洗
+                    <router-link to='/ServeDetails' class="t ac_linkurl" >全沈阳<b>汽修</b> 修理 换配件 清洗 修理 换配件 清洗 修理 换配件 清洗
                       <span class='tu'>[5图]</span>
                       <span class="jingpin">精</span>
-                    </a>
+                    </router-link>
                     <div class="item-desc">
                       沈阳全区域每个街道都有师傅 十分钟上门维修
                     </div>
                     <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">辽宁XXX服务有限公司</a>
+                      <router-link to='/ServeDetails' class='sellername ac_linkurl' rel="nofollow">辽宁XXX服务有限公司 </router-link>
                     </p>
                     <p class="item-tags">
                       <span class="async-tags"></span>
@@ -105,7 +105,7 @@
                 <td class="vertop">
                   <div class="yuyue_vertop ac_linkurl " data-id='31996204049709'>
                                     <span class='cont_Pa'>
-                                        <a href='javascript:;' class='click_btn'>联系商家</a>
+                                         <router-link to='/ServeDetails' class='click_btn'>联系商家</router-link>
                                     </span>
                   </div>
                 </td>
