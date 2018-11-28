@@ -177,8 +177,8 @@
             <div class="index_login_title"><img src="../../assets/images/11.png"/></div>
             <p>HI，欢迎来到英沈汽配商城</p>
             <P><img src="../../assets/images/12.png"/>注册享受最低价</P>
-            <input type="button" value="登录" class="index_btn"/>
-            <input type="button" value="注册" class="index_btn"/>
+            <router-link to='/login'><input type="button" value="登录" class="index_btn"/></router-link>
+            <router-link to='/Enroll'><input type="button" value="注册" class="index_btn"/></router-link>
             <img src="../../assets/images/13.png" height="143" width="200"/></div>
         </div>
         <!--banner 右边的新闻over-->

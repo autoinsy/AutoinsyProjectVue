@@ -45,7 +45,7 @@
             <input type="button" value="查看电话号码" class="rentd_title_btn"/>
           </div>
           <div class="right served_p" style="width: 300px;">
-            <p>3小时/工时</p>
+            <p style="font-size: 30px;color: #ff7300;">3小时/工时</p>
           </div>
         </div>
         <div class="left">
@@ -167,4 +167,18 @@
 </script>
 
 <style>
+  .served_title{
+    border-bottom: 1px solid #ddd !important;
+    margin-bottom: 32px!important;
+  }
+  .served_left{
+    width: 771px!important;
+  }
+  .served_list li{
+    line-height: 40px!important;
+  }
+  .served_li li{
+    float: left!important;
+    padding: 0 5px!important;
+  }
 </style>

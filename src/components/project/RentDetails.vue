@@ -81,9 +81,9 @@
           <div class="rentd_left_box">
             <div class="rentd_box_title">沈阳西部汽配B102</div>
             <div class="rentd_box_icon">
-              <span class="huang">会员2年</span>
+              <!--<span class="huang">会员2年</span>-->
               <img src="../../assets/images/15.jpg"/>
-              <span class="fen">上升20</span>
+              <!--<span class="fen">上升20</span>-->
               <div class="clear"></div>
             </div>
             <div class="rentd_block">
@@ -125,10 +125,10 @@
       </div>
       <!--top over-->
       <div class="left rentd_d">
-        <p style="font-size: 18px;">租赁详情</p>
-        <p>这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊
-          这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊
-          这里是详情啊这里是详情啊这里是详情啊这里是详情啊</p>
+        <!--<p style="font-size: 18px;">租赁详情</p>-->
+        <!--<p>这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊-->
+          <!--这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊-->
+          <!--这里是详情啊这里是详情啊这里是详情啊这里是详情啊</p>-->
         <p style="font-size: 18px;">租赁详情</p>
         <p>这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊
           这里是详情啊这里是详情啊这里是详情啊这里是详情啊这里是详情啊
