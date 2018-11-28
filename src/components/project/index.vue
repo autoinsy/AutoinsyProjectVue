@@ -159,7 +159,7 @@
               <transition-group tag="ul" name="image">
                 <li v-for="(img, index) in imgArray" v-show="index===mark" :key="index">
                   <a href="#">
-                    <img v-bind:src='img'>
+                    <img :src='img'>
                   </a>
                 </li>
               </transition-group>
@@ -177,8 +177,8 @@
             <div class="index_login_title"><img src="../../assets/images/11.png"/></div>
             <p>HI，欢迎来到英沈汽配商城</p>
             <P><img src="../../assets/images/12.png"/>注册享受最低价</P>
-            <router-link to='/login'><input type="button" value="登录" class="index_btn"/></router-link>
-            <router-link to='/Enroll'><input type="button" value="注册" class="index_btn"/></router-link>
+            <input type="button" value="登录" class="index_btn"/>
+            <input type="button" value="注册" class="index_btn"/>
             <img src="../../assets/images/13.png" height="143" width="200"/></div>
         </div>
         <!--banner 右边的新闻over-->
@@ -310,23 +310,15 @@
       <div class="zs_tab_lb">
         <div id="slideBoxs" class="slideBoxs">
           <div class="bds">
-            <ul>
-              <li style="display: none;">
+            <ul v-on:mouseover="stop()" v-on:mouseout="move()">
+              <li style="display: none;" v-for="(img, index) in imgArray" v-show="index===mark" :key="index">
                 <a href="">
-                  <img src="../../assets/images/05.jpg" width="1002" height="363">
-                </a>
-              </li>
-              <li style="display: none;">
-                <a href="">
-                  <img src="../../assets/images/05.jpg" width="1002" height="363">
-                </a>
-              </li>
-              <li style="display: list-item;">
-                <a href="">
-                  <img src="../../assets/images/05.jpg" width="1002" height="363">
+                  <img v-bind:src="img" width="1002" height="363">
                 </a>
               </li>
             </ul>
+            <span v-for="(item, index) in imgArray" :class="{ 'active':index===mark }"
+                  @click="change(index)" :key="index"></span>
           </div>
           <!-- 下面是前/后按钮代码-->
           <a class="prevs" href="javascript:void(0)"></a>
@@ -457,8 +449,7 @@
         autoPlay: true,
         vis: 4
       });
-      this.valueFromParent = this.parentToChild;
-      this.play()
+      this.valueFromParent = this.parentToChild
     },
     components: {},
     props: ['parentToChild'],

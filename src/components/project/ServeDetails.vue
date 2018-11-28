@@ -6,6 +6,7 @@
     <!---->
     <div class="centermy">
       <div class="rentd_title served_title">
+        <p>{{server}}</p>
         <p>{{server.title}}</p>
         <p><span>{{server.publishTime}}</span></p>
       </div>
@@ -27,7 +28,8 @@
                     <li>联系人：</li>
                     <li>{{server.contacts}}</li>
                     <li><img src="../../assets/images/17.jpg"/><span style="display: none">{{server.qq}}</span></li>
-                    <li><img src="../../assets/images/18.jpg"/><span style="display: none">{{server.weichat}}</span></li>
+                    <li><img src="../../assets/images/18.jpg"/><span style="display: none">{{server.weichat}}</span>
+                    </li>
                   </ul>
                 </div>
               </li>
@@ -71,12 +73,12 @@
               <div class="clear"></div>
             </div>
             <!--<div class="rentd_li">-->
-              <!--<ul>-->
-                <!--<li>人气4.1↑</li>-->
-                <!--<li>活跃4.1↑</li>-->
-                <!--<li>服务4.1↑</li>-->
-              <!--</ul>-->
-              <!--<div class="clear"></div>-->
+            <!--<ul>-->
+            <!--<li>人气4.1↑</li>-->
+            <!--<li>活跃4.1↑</li>-->
+            <!--<li>服务4.1↑</li>-->
+            <!--</ul>-->
+            <!--<div class="clear"></div>-->
             <!--</div>-->
             <div class="rentd_hui"></div>
           </div>
@@ -156,9 +158,9 @@
       let serverId = this.$route.query.serverId;
       let _this = this;
       this.$axios({
-        url: _this.HOME + '/service/getOne?service_id='+ serverId,
+        url: _this.HOME + '/service/getOne?service_id=' + serverId,
         method: 'post'
-      }).then(res =>{
+      }).then(res => {
         _this.server = res.data.data;
         console.log(_this.server)
       })
@@ -167,18 +169,29 @@
 </script>
 
 <style>
-  .served_title{
+  .served_top_box p {
+    text-align: left;
+  }
+
+  .served_p p {
+    text-align: left;
+  }
+
+  .served_title {
     border-bottom: 1px solid #ddd !important;
-    margin-bottom: 32px!important;
+    margin-bottom: 32px !important;
   }
-  .served_left{
-    width: 771px!important;
+
+  .served_left {
+    width: 771px !important;
   }
-  .served_list li{
-    line-height: 40px!important;
+
+  .served_list li {
+    line-height: 40px !important;
   }
-  .served_li li{
-    float: left!important;
-    padding: 0 5px!important;
+
+  .served_li li {
+    float: left !important;
+    padding: 0 5px !important;
   }
 </style>

@@ -86,6 +86,7 @@
                   </div>
                 </td>
                 <td class="t">
+                  <router-link to='ServeDetails'>
                   <div class="tdiv">
                     <router-link to='/ServeDetails' class="t ac_linkurl" >全沈阳<b>汽修</b> 修理 换配件 清洗 修理 换配件 清洗 修理 换配件 清洗
                       <span class='tu'>[5图]</span>
@@ -101,6 +102,7 @@
                       <span class="async-tags"></span>
                     </p>
                   </div>
+                  </router-link>
                 </td>
                 <td class="vertop">
                   <div class="yuyue_vertop ac_linkurl " data-id='31996204049709'>
