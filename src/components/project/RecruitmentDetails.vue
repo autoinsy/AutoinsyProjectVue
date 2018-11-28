@@ -9,64 +9,58 @@
         <div class="rec_top_box">
           <div class="rec_top_box_title">
             <div class="left">
-              <p class="left_so">汽车配件销售专员</p>
-              <p class="left_s">车工科技（北京）股份有限公司</p>
+              <p class="left_so">{{recruit.title}}</p>
+              <p class="left_s">{{recruit.companyName}}</p>
             </div>
             <div class="right">
-              <p class="left_color">5000-8000 <span style="font-size: 18px;">元/月</span></p>
+              <p class="left_color">{{recruit.startSalary}}-{{recruit.endSalary}} <span style="font-size: 18px;">元/月</span></p>
             </div>
             <div class="clear"></div>
             <div class="rec_top_btn">
               <ul>
-                <li><a href="">五险一金</a> </li>
-                <li><a href="">周末双休</a> </li>
-                <li><a href="">带薪年假</a> </li>
+                <li><a href="">五险一金</a></li>
+                <li><a href="">周末双休</a></li>
+                <li><a href="">带薪年假</a></li>
               </ul>
             </div>
             <div class="clear"></div>
           </div>
           <div class="rec_top_box_li">
             <ul>
-              <li>招20人</li>
+              <li>招{{recruit.recruitPersonNumber}}人</li>
               <li>|</li>
-              <li>学历不限</li>
+              <li>{{recruit.educationRequirement}}</li>
               <li>|</li>
-              <li>经验不限</li>
+              <li>{{recruit.experience}}</li>
               <li>|</li>
               <li>可接收应届毕业生</li>
             </ul>
             <div class="clear"></div>
-            <p>商家地址：西部汽配城二期B区102</p>
+            <p>商家地址：{{recruit.sellerAddress}}</p>
             <input type="button" value="申请职位" class="rec_top_box_btn1"/>
             <input type="button" value="收藏职位" class="rec_top_box_btn2"/>
             <div class="rec_btn_1">
               <a href="">
                 <img src="../../assets/images/10.jpg"/>
                 <p>微聊</p>
+                <span style="display: none">{{recruit.weichat}}</span>
               </a>
             </div>
             <div class="rec_btn_1">
               <a href="">
                 <img src="../../assets/images/11.jpg"/>
                 <p>电话沟通</p>
+                <span style="display: none">{{recruit.contactPhoneNum}}</span>
               </a>
             </div>
           </div>
         </div>
         <div class="rec_b_box">
           <p><span>岗位职责：</span></p>
-          <p>1、负责公司代理产品的销售及推广；</p>
-          <p>2、根据市场营销计划，完成部门销售指标；</p>
-          <p>3、开拓新市场,发展新客户,增加产品销售范围；</p>
-          <p>4、负责辖区市场信息的收集及竞争对手的分析；</p>
-          <p>5、负责销售区域内销售活动的策划和执行，完成销售任务；</p>
-          <p>6、管理维护客户关系以及客户间的长期战略合作计划。</p>
+          <p>{{recruit.positionRequirement}}</p>
           <p><span>任职要求：</span></p>
-          <p>1、1年以上汽配销售工作经验，业绩突出者优先；</p>
-          <p>2、反应敏捷、表达能力强，具有较强的沟通能力及交际技巧，具有亲和力；</p>
-          <p>3、具备一定的市场分析及判断能力，良好的客户服务意识；</p>
-          <p>4、有责任心，能承受较大的工作压力；</p>
-          <div class="rec_b_box_btn">查看更多  ></div>
+          <p>{{recruit.takeOfficeRequirement}}</p>
+          <div class="rec_b_box_btn">查看更多 ></div>
         </div>
       </div>
       <div class="right">
@@ -99,7 +93,8 @@
             </ul>
             <div class="clear"></div>
           </div>
-          <div style="margin: 30px auto; width: 279px; height: 50px;"><input type="button" value="查看招聘职位" class="rec_btn_r"/></div>
+          <div style="margin: 30px auto; width: 279px; height: 50px;"><input type="button" value="查看招聘职位"
+                                                                             class="rec_btn_r"/></div>
         </div>
         <div class="rec_rb_box">
           <p class="rec_rb_box_p">职位推荐</p>
@@ -128,9 +123,24 @@
 </template>
 
 <script>
-    export default {
-        name: "RecruitmentDetails"
+  export default {
+    name: "RecruitmentDetails",
+    data() {
+      return {
+        recruit:'',
+      }
+    },
+    mounted: function() {
+      let _this = this;
+      let recruitId = this.$route.query.recruitId;
+      this.$axios({
+        url: _this.HOME + '/recruit/showRecruit?recruit_id=' + recruitId,
+        method: 'POST'
+      }).then(res => {
+        _this.recruit = res.data.data
+      })
     }
+  }
 </script>
 
 <style scoped>

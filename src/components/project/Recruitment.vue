@@ -63,31 +63,19 @@
       <div class="clear"></div>
       <div class="rec_tab">
         <ul>
-          <li>
-            <div class="rec_ul">
-              <ul>
-                <li>招聘销售汽车配件的 </li>
-                <li>西部汽配城一楼B102</li>
-                <li>销售</li>
-                <li>XXX配车配件厂家直销</li>
-              </ul>
-              <div class="clear"></div>
-              <p>1.要求女性年龄在18-25岁之间，形象好，气质佳，会说话，有销售经验优先  2.大专以上学历，未婚  3.工作时间为早八晚五，周末不休息，可以轮休倒班  4.要求会计算机数学好点...</p>
-            </div>
-
-          </li>
-          <li>
-            <div class="rec_ul">
-              <ul>
-                <li>招聘销售汽车配件的 </li>
-                <li>西部汽配城一楼B102</li>
-                <li>销售</li>
-                <li>XXX配车配件厂家直销</li>
-              </ul>
-              <div class="clear"></div>
-              <p>1.要求女性年龄在18-25岁之间，形象好，气质佳，会说话，有销售经验优先  2.大专以上学历，未婚  3.工作时间为早八晚五，周末不休息，可以轮休倒班  4.要求会计算机数学好点...</p>
-            </div>
-
+          <li v-for="recruit in recruitList">
+            <router-link :to="{path: '/RecruitmentDetails', query: {recruitId: recruit.recruitID}}">
+              <div class="rec_ul">
+                <ul>
+                  <li>{{recruit.title}}</li>
+                  <li>{{recruit.sellerAddress}}</li>
+                  <li>销售</li>
+                  <li>XXX配车配件厂家直销</li>
+                </ul>
+                <div class="clear"></div>
+                <p>{{recruit.positionRequirement}}</p>
+              </div>
+            </router-link>
           </li>
         </ul>
         <div class="clear"></div>
@@ -101,16 +89,22 @@
 </template>
 
 <script>
-  // $(".tcdPageCode").createPage({
-  //   pageCount:20,
-  //   current:1,
-  //   backFn:function(p){
-  //     //console.log(p);
-  //   }
-  // });
-    export default {
-        name: "Recruitment"
+  export default {
+    name: "Recruitment",
+    data() {
+      return {
+        recruitList: []
+      }
+    },
+    mounted: function () {
+      let _this = this;
+      this.$axios({
+        url: _this.HOME + '/recruit/allRecruit'
+      }).then(res => {
+        _this.recruitList = res.data.data;
+      })
     }
+  }
 </script>
 
 <style scoped>

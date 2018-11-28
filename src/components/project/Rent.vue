@@ -49,217 +49,44 @@
                         </span>
             </div>
             <div class="filterbar-md">
-              <a class="mdtj" style="display:inline-block;" rel="nofollow" target="_blank" href="">想提升接单效果，请致电4008107258</a>
+              <a class="mdtj" style="display:inline-block;" rel="nofollow" target="_blank"
+                 href="">想提升接单效果，请致电4008107258</a>
             </div>
           </div>
           <div id="infolist" class="cleft">
             <table id="jingzhun" class="small-tbimg ac_container" cellspacing="0" cellpadding="0">
-              <tr  data-sign="" class="ac_item">
+              <tr data-sign="" class="ac_item" v-for="lease in leaseList">
+                {{lease}}
                 <td class="img">
                   <div class="ac_linkurl">
-                    <router-link to='/RentDetails'>
-                      <img src="../../assets/images/05.jpg"/>
+                    <router-link :to='{path: "/RentDetails", query: {leaseId: lease.leaseId}}'>
+                      <img v-bind:src="lease.leaseImageSet[0]"/>
                     </router-link>
                   </div>
                 </td>
                 <td class="t">
                   <div class="tdiv">
-                    <router-link to='/RentDetails' class="t ac_linkurl" >这里是标题  |  大标题  标题标题标题标题标题标题标题标题标</router-link>
+                    <router-link :to='{path: "/RentDetails", query: {leaseId: lease.leaseId}}' class="t ac_linkurl">
+                      {{lease.title}}
+                    </router-link>
                     <p class="seller">
-                      <router-link to='/RentDetails' class='sellername ac_linkurl' rel="nofollow"> 面积：60㎡</router-link>
+                      <router-link :to='{path: "/RentDetails", query: {leaseId: lease.leaseId}}' class='sellername ac_linkurl' rel="nofollow">
+                        面积：{{lease.acreage}}
+                      </router-link>
                     </p>
                     <p class="seller">
-                      <router-link to='/RentDetails' class='sellername ac_linkurl' rel="nofollow">位置：B区201</router-link>
+                      <router-link :to='{path: "/RentDetails", query: {leaseId: lease.leaseId}}' class='sellername ac_linkurl' rel="nofollow">
+                        位置：{{lease.stallPosition}}
+                      </router-link>
                     </p>
                     <p class="seller">
-                      <router-link to='/RentDetails' class='sellername ac_linkurl' rel="nofollow">发布时间：2018-11-28</router-link>
-                    </p>
-                  </div>
-                </td>
-                <td class="vertop">
-                  <p>4440元/月</p>
-                </td>
-              </tr>
-              <tr  data-sign="" class="ac_item">
-                <td class="img">
-                  <div class="ac_linkurl">
-                    <a href="">
-                      <img src="../../assets/images/05.jpg"/>
-                    </a>
-                  </div>
-                </td>
-                <td class="t">
-                  <div class="tdiv">
-                    <a href='' class="t ac_linkurl" >这里是标题  |  大标题  标题标题标题标题标题标题标题标题标</a>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow"> 面积：60㎡</a>
-                    </p>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">位置：B区201</a>
-                    </p>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">发布时间：2018-11-28</a>
+                      <router-link :to='{path: "/RentDetails", query: {leaseId: lease.leaseId}}' class='sellername ac_linkurl' rel="nofollow">发布时间：{{}}
+                      </router-link>
                     </p>
                   </div>
                 </td>
                 <td class="vertop">
-                  <p>4440元/月</p>
-                </td>
-              </tr>
-              <tr  data-sign="" class="ac_item">
-                <td class="img">
-                  <div class="ac_linkurl">
-                    <a href="">
-                      <img src="../../assets/images/05.jpg"/>
-                    </a>
-                  </div>
-                </td>
-                <td class="t">
-                  <div class="tdiv">
-                    <a href='' class="t ac_linkurl" >这里是标题  |  大标题  标题标题标题标题标题标题标题标题标</a>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow"> 面积：60㎡</a>
-                    </p>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">位置：B区201</a>
-                    </p>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">发布时间：2018-11-28</a>
-                    </p>
-                  </div>
-                </td>
-                <td class="vertop">
-                  <p>4440元/月</p>
-                </td>
-              </tr>
-              <tr  data-sign="" class="ac_item">
-                <td class="img">
-                  <div class="ac_linkurl">
-                    <a href="">
-                      <img src="../../assets/images/05.jpg"/>
-                    </a>
-                  </div>
-                </td>
-                <td class="t">
-                  <div class="tdiv">
-                    <a href='' class="t ac_linkurl" >这里是标题  |  大标题  标题标题标题标题标题标题标题标题标</a>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow"> 面积：60㎡</a>
-                    </p>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">位置：B区201</a>
-                    </p>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">发布时间：2018-11-28</a>
-                    </p>
-                  </div>
-                </td>
-                <td class="vertop">
-                  <p>4440元/月</p>
-                </td>
-              </tr>
-              <tr  data-sign="" class="ac_item">
-                <td class="img">
-                  <div class="ac_linkurl">
-                    <a href="">
-                      <img src="../../assets/images/05.jpg"/>
-                    </a>
-                  </div>
-                </td>
-                <td class="t">
-                  <div class="tdiv">
-                    <a href='' class="t ac_linkurl" >这里是标题  |  大标题  标题标题标题标题标题标题标题标题标</a>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow"> 面积：60㎡</a>
-                    </p>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">位置：B区201</a>
-                    </p>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">发布时间：2018-11-28</a>
-                    </p>
-                  </div>
-                </td>
-                <td class="vertop">
-                  <p>4440元/月</p>
-                </td>
-              </tr>
-              <tr  data-sign="" class="ac_item">
-                <td class="img">
-                  <div class="ac_linkurl">
-                    <a href="">
-                      <img src="../../assets/images/05.jpg"/>
-                    </a>
-                  </div>
-                </td>
-                <td class="t">
-                  <div class="tdiv">
-                    <a href='' class="t ac_linkurl" >这里是标题  |  大标题  标题标题标题标题标题标题标题标题标</a>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow"> 面积：60㎡</a>
-                    </p>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">位置：B区201</a>
-                    </p>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">发布时间：2018-11-28</a>
-                    </p>
-                  </div>
-                </td>
-                <td class="vertop">
-                  <p>4440元/月</p>
-                </td>
-              </tr>
-              <tr  data-sign="" class="ac_item">
-                <td class="img">
-                  <div class="ac_linkurl">
-                    <a href="">
-                      <img src="../../assets/images/05.jpg"/>
-                    </a>
-                  </div>
-                </td>
-                <td class="t">
-                  <div class="tdiv">
-                    <a href='' class="t ac_linkurl" >这里是标题  |  大标题  标题标题标题标题标题标题标题标题标</a>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow"> 面积：60㎡</a>
-                    </p>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">位置：B区201</a>
-                    </p>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">发布时间：2018-11-28</a>
-                    </p>
-                  </div>
-                </td>
-                <td class="vertop">
-                  <p>4440元/月</p>
-                </td>
-              </tr>
-              <tr  data-sign="" class="ac_item">
-                <td class="img">
-                  <div class="ac_linkurl">
-                    <a href="">
-                      <img src="../../assets/images/05.jpg"/>
-                    </a>
-                  </div>
-                </td>
-                <td class="t">
-                  <div class="tdiv">
-                    <a href='' class="t ac_linkurl" >这里是标题  |  大标题  标题标题标题标题标题标题标题标题标</a>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow"> 面积：60㎡</a>
-                    </p>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">位置：B区201</a>
-                    </p>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">发布时间：2018-11-28</a>
-                    </p>
-                  </div>
-                </td>
-                <td class="vertop">
-                  <p>4440元/月</p>
+                  <p>{{lease.price}}</p>
                 </td>
               </tr>
             </table>
@@ -323,16 +150,24 @@
 </template>
 
 <script>
-  // $(".tcdPageCode").createPage({
-  //   pageCount:20,
-  //   current:1,
-  //   backFn:function(p){
-  //     //console.log(p);
-  //   }
-  // });
-    export default {
-        name: "Rent"
+  export default {
+    name: "Rent",
+    data() {
+      return {
+        leaseList: [],
+        pages: '',
+        cur: 1,
+      }
+    },
+    mounted: function () {
+      let _this = this;
+      this.$axios({
+        url: _this.HOME + '/lease/list?page=' + _this.cur
+      }).then(res => {
+        _this.leaseList = res.data.data;
+      })
     }
+  }
 </script>
 
 <style scoped>
