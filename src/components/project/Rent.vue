@@ -72,7 +72,7 @@
                       <router-link to='/RentDetails' class='sellername ac_linkurl' rel="nofollow">位置：B区201</router-link>
                     </p>
                     <p class="seller">
-                      <router-link to='/RentDetails' class='sellername ac_linkurl' rel="nofollow">联系人：李易峰先生</router-link>
+                      <router-link to='/RentDetails' class='sellername ac_linkurl' rel="nofollow">发布时间：2018-11-28</router-link>
                     </p>
                   </div>
                 </td>
@@ -98,7 +98,7 @@
                       <a href='' class='sellername ac_linkurl' rel="nofollow">位置：B区201</a>
                     </p>
                     <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">联系人：李易峰先生</a>
+                      <a href='' class='sellername ac_linkurl' rel="nofollow">发布时间：2018-11-28</a>
                     </p>
                   </div>
                 </td>
@@ -124,7 +124,7 @@
                       <a href='' class='sellername ac_linkurl' rel="nofollow">位置：B区201</a>
                     </p>
                     <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">联系人：李易峰先生</a>
+                      <a href='' class='sellername ac_linkurl' rel="nofollow">发布时间：2018-11-28</a>
                     </p>
                   </div>
                 </td>
@@ -150,7 +150,7 @@
                       <a href='' class='sellername ac_linkurl' rel="nofollow">位置：B区201</a>
                     </p>
                     <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">联系人：李易峰先生</a>
+                      <a href='' class='sellername ac_linkurl' rel="nofollow">发布时间：2018-11-28</a>
                     </p>
                   </div>
                 </td>
@@ -176,7 +176,7 @@
                       <a href='' class='sellername ac_linkurl' rel="nofollow">位置：B区201</a>
                     </p>
                     <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">联系人：李易峰先生</a>
+                      <a href='' class='sellername ac_linkurl' rel="nofollow">发布时间：2018-11-28</a>
                     </p>
                   </div>
                 </td>
@@ -202,7 +202,7 @@
                       <a href='' class='sellername ac_linkurl' rel="nofollow">位置：B区201</a>
                     </p>
                     <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">联系人：李易峰先生</a>
+                      <a href='' class='sellername ac_linkurl' rel="nofollow">发布时间：2018-11-28</a>
                     </p>
                   </div>
                 </td>
@@ -228,7 +228,7 @@
                       <a href='' class='sellername ac_linkurl' rel="nofollow">位置：B区201</a>
                     </p>
                     <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">联系人：李易峰先生</a>
+                      <a href='' class='sellername ac_linkurl' rel="nofollow">发布时间：2018-11-28</a>
                     </p>
                   </div>
                 </td>
@@ -254,7 +254,7 @@
                       <a href='' class='sellername ac_linkurl' rel="nofollow">位置：B区201</a>
                     </p>
                     <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">联系人：李易峰先生</a>
+                      <a href='' class='sellername ac_linkurl' rel="nofollow">发布时间：2018-11-28</a>
                     </p>
                   </div>
                 </td>

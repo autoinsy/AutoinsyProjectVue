@@ -93,8 +93,8 @@
                   <p style="color: #999">加入英沈</p>
                 </li>
                 <li>
-                  <p style="font-size: 16px">129个</p>
-                  <p style="color: #999">发布帖子</p>
+                  <p style="font-size: 16px">129次</p>
+                  <p style="color: #999">浏览次数</p>
                 </li>
               </ul>
               <div class="clear"></div>
