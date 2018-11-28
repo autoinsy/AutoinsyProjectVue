@@ -57,22 +57,22 @@
               <tr  data-sign="" class="ac_item">
                 <td class="img">
                   <div class="ac_linkurl">
-                    <a href="">
+                    <router-link to='/RentDetails'>
                       <img src="../../assets/images/05.jpg"/>
-                    </a>
+                    </router-link>
                   </div>
                 </td>
                 <td class="t">
                   <div class="tdiv">
-                    <a href='' class="t ac_linkurl" >这里是标题  |  大标题  标题标题标题标题标题标题标题标题标</a>
+                    <router-link to='/RentDetails' class="t ac_linkurl" >这里是标题  |  大标题  标题标题标题标题标题标题标题标题标</router-link>
                     <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow"> 面积：60㎡</a>
+                      <router-link to='/RentDetails' class='sellername ac_linkurl' rel="nofollow"> 面积：60㎡</router-link>
                     </p>
                     <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">位置：B区201</a>
+                      <router-link to='/RentDetails' class='sellername ac_linkurl' rel="nofollow">位置：B区201</router-link>
                     </p>
                     <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">联系人：李易峰先生</a>
+                      <router-link to='/RentDetails' class='sellername ac_linkurl' rel="nofollow">联系人：李易峰先生</router-link>
                     </p>
                   </div>
                 </td>

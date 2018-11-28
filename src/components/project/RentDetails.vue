@@ -99,27 +99,27 @@
               </ul>
               <div class="clear"></div>
             </div>
-            <div class="rentd_li">
-              <ul>
-                <li>人气4.1↑</li>
-                <li>活跃4.1↑</li>
-                <li>服务4.1↑</li>
-              </ul>
-              <div class="clear"></div>
-            </div>
+            <!--<div class="rentd_li">-->
+              <!--<ul>-->
+                <!--<li>人气4.1↑</li>-->
+                <!--<li>活跃4.1↑</li>-->
+                <!--<li>服务4.1↑</li>-->
+              <!--</ul>-->
+              <!--<div class="clear"></div>-->
+            <!--</div>-->
             <div class="rentd_hui"></div>
           </div>
-          <div class="rentd_btn">
-            <div class="rentd_btn_left left">
-              <img src="../../assets/images/2.png"/>
-              <p>微信</p>
-            </div>
-            <div class="rentd_btn_left left">
-              <img src="../../assets/images/3.png"/>
-              <p>QQ</p>
-            </div>
-            <div class="clear"></div>
-          </div>
+          <!--<div class="rentd_btn">-->
+            <!--<div class="rentd_btn_left left">-->
+              <!--<img src="../../assets/images/2.png"/>-->
+              <!--<p>微信</p>-->
+            <!--</div>-->
+            <!--<div class="rentd_btn_left left">-->
+              <!--<img src="../../assets/images/3.png"/>-->
+              <!--<p>QQ</p>-->
+            <!--</div>-->
+            <!--<div class="clear"></div>-->
+          <!--</div>-->
         </div>
         <div class="clear"></div>
       </div>
