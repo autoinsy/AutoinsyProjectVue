@@ -9,10 +9,10 @@
         <div class="details_left">
           <div class="detalis_top">产品管理</div>
           <ul>
-            <li><a href=""class="li_active">所有产品</a></li>
-            <li><a href="" >销售中</a></li>
-            <li><a href="" >已下架</a></li>
-            <li><a href="" >未下架</a></li>
+            <li><a href=""class="li_active" @click="ProductManagements">所有产品</a></li>
+            <li><a href="" @click="ProductManagements">销售中</a></li>
+            <li><a href="" @click="ProductManagements">已下架</a></li>
+            <li><a href="" @click="ProductManagements">未下架</a></li>
           </ul>
         </div>
       </div>
@@ -431,7 +431,18 @@
   //   }
   // });
     export default {
-        name: "ProductManagement"
+        name: "ProductManagement",
+      methods: {
+        ProductManagements: function () {
+          let _this = this;
+          this.$('.details_left li').click(function () {
+            _this.$('.details_left li').children("a").removeClass("li_active");
+            _this.$(this).children("a").addClass("li_active");
+            var index = _this.$(this).index();
+            _this.$(".details_right>ul>li").hide().eq(index).show();
+          });
+        },
+      }
     }
 </script>
 

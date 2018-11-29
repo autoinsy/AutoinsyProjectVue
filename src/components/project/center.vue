@@ -9,10 +9,13 @@
         <div class="details_left">
           <div class="detalis_top">个人中心</div>
           <ul>
-            <li><a href="" class="li_active">我的收藏</a></li>
-            <li><a href="">我的资料</a></li>
-            <li><a href="">收货地址</a></li>
-            <li><a href="">账户管理</a></li>
+            <li><a href="" class="li_active" @click="centers">我的收藏</a></li>
+            <li><a href="" @click="centers">我的资料</a></li>
+            <li><a href="" @click="centers">收货地址</a></li>
+            <li><a href="" @click="centers">账户管理</a></li>
+            <li>
+              <router-link to='/module' @click="center">商家模块</router-link>
+            </li>
           </ul>
         </div>
       </div>
@@ -365,6 +368,7 @@
               </div>
             </li>
             <!--4-->
+            <li></li>
           </ul>
         </div>
       </div>
@@ -382,7 +386,18 @@
   //   }
   // });
     export default {
-        name: "center"
+        name: "center",
+      methods: {
+        centers: function () {
+          let _this = this;
+          this.$('.details_left li').click(function () {
+            _this.$('.details_left li').children("a").removeClass("li_active");
+            _this.$(this).children("a").addClass("li_active");
+            var index = _this.$(this).index();
+            _this.$(".details_right>ul>li").hide().eq(index).show();
+          });
+        },
+      }
     }
 </script>
 

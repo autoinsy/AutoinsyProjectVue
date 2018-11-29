@@ -206,8 +206,8 @@
         </div>
         <div class="picScroll-left">
           <div class="hd">
-            <a class="next" href="javascript:void(0)"></a>
-            <a class="prev" href="javascript:void(0)"></a>
+            <!--<a class="next" href="javascript:void(0)"></a>-->
+            <!--<a class="prev" href="javascript:void(0)"></a>-->
           </div>
           <div class="bd">
             <div class="tempWrap" style="overflow:hidden; position:relative; width:746px">
@@ -241,8 +241,8 @@
         </div>
         <div class="picScroll-lefts">
           <div class="hd">
-            <a class="next" href="javascript:void(0)"></a>
-            <a class="prev" href="javascript:void(0)"></a>
+            <!--<a class="next" href="javascript:void(0)"></a>-->
+            <!--<a class="prev" href="javascript:void(0)"></a>-->
           </div>
           <div class="bd">
             <div class="tempWrap" style="overflow:hidden; position:relative; width:746px">
@@ -295,15 +295,15 @@
       <div class="index_zs_title">
         <div class="index_zs_p"><img src="../../assets/images/10.png"/>汽配装饰区</div>
         <ul>
-          <li><a href="">轮胎</a></li>
+          <li><a href="">头枕腰靠</a></li>
           <li>|</li>
-          <li><a href="">发动机</a></li>
+          <li><a href="">挂件摆件</a></li>
           <li>|</li>
-          <li><a href="">胎铃</a></li>
+          <li><a href="">车载支架</a></li>
           <li>|</li>
-          <li><a href="">充电器</a></li>
+          <li><a href="">空气净化</a></li>
           <li>|</li>
-          <li><a href="">雨刷 >></a></li>
+          <li><a href="">更多 >></a></li>
         </ul>
         <div class="clear"></div>
       </div>

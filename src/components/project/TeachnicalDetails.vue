@@ -9,8 +9,8 @@
         <div class="details_left">
           <div class="detalis_top">技术支持</div>
           <ul>
-            <li><a href="technical assistance.html">联系方式</a></li>
-            <li><a href="technical assistance.html" class="li_active">咨询留言</a></li>
+            <li><router-link to='/TechnicalAssistance'>联系方式 </router-link></li>
+            <li><router-link to='/TeachnicalDetails'class="li_active">咨询留言 </router-link></li>
           </ul>
         </div>
       </div>

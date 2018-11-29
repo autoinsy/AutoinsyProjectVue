@@ -1352,9 +1352,11 @@
     overflow: hidden;
     display: block;
     font-size: 14px;
+  text-align: left !important;
 }
 .tec_li li a{
     color:#666;
+  text-align: left;
 }
 .tec_big_title{
     font-size: 24px;

@@ -7,7 +7,7 @@
     <div class="centermy">
       <div class="rec_title">
         <p> 汽配城商户招聘职位</p>
-        <input type="button" value="我要发布" class="rec_btn"/>
+        <router-link to='/module'><input type="button" value="我要发布" class="rec_btn"/></router-link>
       </div>
       <div class="rec_list">
         <ul>

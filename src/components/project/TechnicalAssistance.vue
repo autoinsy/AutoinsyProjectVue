@@ -9,8 +9,8 @@
         <div class="details_left">
           <div class="detalis_top">技术支持</div>
           <ul>
-            <li><a href="javascript:" class="li_active">联系方式</a></li>
-            <li><a href="javascript:">咨询留言</a></li>
+            <li><a href="javascript:" class="li_active" @click="techincal">联系方式</a></li>
+            <li><a href="javascript:" @click="techincal">咨询留言</a></li>
           </ul>
         </div>
       </div>
@@ -40,60 +40,54 @@
               <div class="tec_li">
                 <ul>
                   <li>
-                    <a href="technicaldetails.html">
+                    <router-link to='/TeachnicalDetails'>
                       每个页面就10条列表哦~
-                    </a>
+                    </router-link>
                   </li>
                   <li>
-                    <a href="technicaldetails.html">
+                    <router-link to='/TeachnicalDetails'>
                       这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表
-
-                    </a>
+                    </router-link>
                   </li>
                   <li>
-                    <a href="technicaldetails.html">
+                    <router-link to='/TeachnicalDetails'>
                       这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表
-                      这里是问题列表这里是问题列表这里是问题列表这里
-                    </a>
+                    </router-link>
                   </li>
                   <li>
-                    <a href="technicaldetails.html">
-                      这里是问题列表这里是问题列表这里是问题列表
-                    </a>
-                  </li>
-                  <li>
-                    <a href="technicaldetails.html">
+                    <router-link to='/TeachnicalDetails'>
                       这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表
+                    </router-link>
+                  </li>
+                  <li>
+                    <router-link to='/TeachnicalDetails'>
+                      这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表题列表
+                    </router-link>
+                  </li>
+                  <li>
+                    <router-link to='/TeachnicalDetails'>
                       这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表
-                    </a>
+                    </router-link>
                   </li>
                   <li>
-                    <a href="technicaldetails.html">
+                    <router-link to='/TeachnicalDetails'>
+                      这里是问题列表这里是问题列表这里是问题列表这里是问题列表
+                    </router-link>
+                  </li>
+                  <li>
+                    <router-link to='/TeachnicalDetails'>
                       这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表
-                      这里是问题列表这里是问题列表这里是
-                    </a>
+                    </router-link>
                   </li>
                   <li>
-                    <a href="technicaldetails.html">
-                      这里是问题列表这里是
-                    </a>
+                    <router-link to='/TeachnicalDetails'>
+                      这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表
+                    </router-link>
                   </li>
                   <li>
-                    <a href="technicaldetails.html">
-                      这里是问题列表这里是问题列表这里是问题列表这
-                    </a>
-                  </li>
-                  <li>
-                    <a href="technicaldetails.html">
+                    <router-link to='/TeachnicalDetails'>
                       这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表
-                      这里是问题列表这里是问题列表这
-                    </a>
-                  </li>
-                  <li>
-                    <a href="technicaldetails.html">
-                      这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表
-                      这里是问
-                    </a>
+                    </router-link>
                   </li>
                 </ul>
               </div>
@@ -120,7 +114,18 @@
   //   }
   // });
     export default {
-        name: "TechnicalAssistance"
+        name: "TechnicalAssistance",
+      methods: {
+        techincal: function () {
+          let _this = this;
+          this.$('.details_left li').click(function () {
+            _this.$('.details_left li').children("a").removeClass("li_active");
+            _this.$(this).children("a").addClass("li_active");
+            var index = _this.$(this).index();
+            _this.$(".details_right>ul>li").hide().eq(index).show();
+          });
+        },
+      }
     }
 </script>
 

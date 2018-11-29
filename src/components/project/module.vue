@@ -9,11 +9,10 @@
         <div class="details_left">
           <div class="detalis_top">技术支持</div>
           <ul>
-            <li><a href="javascript:"class="li_active">发布产品</a></li>
-            <li><a href="javascript:" >发布服务</a></li>
-            <li><a href="javascript:" >发布租赁</a></li>
-            <li><a href="javascript:" >发布招聘</a></li>
-            <li><a href="javascript:" >查看简历</a></li>
+            <li><a href="javascript:"class="li_active" @click="module">发布产品</a></li>
+            <li><a href="javascript:" @click="module">发布服务</a></li>
+            <li><a href="javascript:" @click="module">发布租赁</a></li>
+            <li><a href="javascript:" @click="module">发布招聘</a></li>
           </ul>
         </div>
       </div>
@@ -48,10 +47,10 @@
                     </tr>
                     <tr>
                       <td><em>*</em><p>价格</p></td>
-                      <td>
-                        <select class="select_box">
-                          <option>面议</option>
-                        </select>
+                      <td><input name="" autocomplete="off" type="text" style="color:#999" value="">
+                        <!--<select class="select_box">-->
+                          <!--<option>面议</option>-->
+                        <!--</select>-->
                       </td>
                     </tr>
                     <tr>
@@ -75,25 +74,25 @@
                       <td><em>*</em><p>联系电话</p></td>
                       <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
                     </tr>
-                    <tr>
-                      <td><em>*</em><p>验证码</p></td>
-                      <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
-                    </tr>
-                    <tr>
-                      <td><em>*</em><p>QQ或微信</p></td>
-                      <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
-                    </tr>
+                    <!--<tr>-->
+                      <!--<td><em>*</em><p>验证码</p></td>-->
+                      <!--<td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                      <!--<td><em>*</em><p>QQ或微信</p></td>-->
+                      <!--<td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>-->
+                    <!--</tr>-->
                     </tbody>
                   </table>
                 </div>
-                <input type="submit" value="发布" class="module_btn module_peoject_btn"/>
+                <input type="submit" value="发布" class="module_btn module_peoject_btn" @click="moduletanchu"/>
               </div>
               <div class="module_tanchu">
                 <div class="module_tanchu_img">
                   <img src="../../assets/images/icon06.png"/>
                   <span>产品发布成功</span>
                 </div>
-                <p><a href="product management.html">如需查看发布成功的产品，请点击此链接</a> </p>
+                <p style="text-align: center;"><router-link to='/ProductManagement'>如需查看发布成功的产品，请点击此链接</router-link> </p>
               </div>
             </li>
             <!--1-->
@@ -149,14 +148,6 @@
                   </tr>
                   <tr>
                     <td><em>*</em><p>联系电话</p></td>
-                    <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
-                  </tr>
-                  <tr>
-                    <td><em>*</em><p>验证码</p></td>
-                    <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
-                  </tr>
-                  <tr>
-                    <td><em>*</em><p>QQ或微信</p></td>
                     <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
                   </tr>
                   </tbody>
@@ -234,14 +225,6 @@
                     <td><em>*</em><p>联系电话</p></td>
                     <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
                   </tr>
-                  <tr>
-                    <td><em>*</em><p>验证码</p></td>
-                    <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
-                  </tr>
-                  <tr>
-                    <td><em>*</em><p>QQ或微信</p></td>
-                    <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
-                  </tr>
                   </tbody>
                 </table>
               </div>
@@ -312,74 +295,6 @@
               <input type="submit" value="发布" class="module_btn"/>
             </li>
             <!--4-->
-            <li style="display:none;">
-              <div class="module_resume">
-                <input type="button" value="创建全职简历" class="module_resume_btn"/>
-                <input type="button" value="创建兼职简历" class="module_resume_btn"/>
-              </div>
-              <div class="module_resume_li">
-                <ul>
-                  <li>
-                    <div class="module_resume_zi">
-                      <p>销售汽车配件</p>
-                      <p><span>大专</span><span>1-2年</span><span>面议</span></p>
-                      <p><span>更新时间:2018-09-02</span></p>
-                    </div>
-                    <div class="module_resume_icon">
-                      <div class="module_resume_icon_li"><img src="../../assets/images/icon01.png" height="36" width="36"/><p>刷新</p></div>
-                      <div class="module_resume_icon_li"><img src="../../assets/images/icon02.png" height="36" width="36"/><p>修改</p></div>
-                      <div class="module_resume_icon_li"><img src="../../assets/images/icon03.png" height="36" width="36"/><p>置顶</p></div>
-                      <div class="module_resume_icon_li"><img src="../../assets/images/icon04.png" height="36" width="36"/><p>预览</p></div>
-                      <div class="module_resume_icon_li"><img src="../../assets/images/icon05.png" height="36" width="36"/><p>删除</p></div>
-                    </div>
-                    <div class="module_resume_last">
-                      <p>55%</p>
-                      <p>简历完善度</p>
-                      <p><span><a href="javascript:">继续去完善</a> </span></p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="module_resume_zi">
-                      <p>销售汽车配件</p>
-                      <p><span>大专</span><span>1-2年</span><span>面议</span></p>
-                      <p><span>更新时间:2018-09-02</span></p>
-                    </div>
-                    <div class="module_resume_icon">
-                      <div class="module_resume_icon_li"><img src="../../assets/images/icon01.png" height="36" width="36"/><p>刷新</p></div>
-                      <div class="module_resume_icon_li"><img src="../../assets/images/icon02.png" height="36" width="36"/><p>修改</p></div>
-                      <div class="module_resume_icon_li"><img src="../../assets/images/icon03.png" height="36" width="36"/><p>置顶</p></div>
-                      <div class="module_resume_icon_li"><img src="../../assets/images/icon04.png" height="36" width="36"/><p>预览</p></div>
-                      <div class="module_resume_icon_li"><img src="../../assets/images/icon05.png" height="36" width="36"/><p>删除</p></div>
-                    </div>
-                    <div class="module_resume_last">
-                      <p>55%</p>
-                      <p>简历完善度</p>
-                      <p><span><a href="javascript:">继续去完善</a> </span></p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="module_resume_zi">
-                      <p>销售汽车配件</p>
-                      <p><span>大专</span><span>1-2年</span><span>面议</span></p>
-                      <p><span>更新时间:2018-09-02</span></p>
-                    </div>
-                    <div class="module_resume_icon">
-                      <div class="module_resume_icon_li"><img src="../../assets/images/icon01.png" height="36" width="36"/><p>刷新</p></div>
-                      <div class="module_resume_icon_li"><img src="../../assets/images/icon02.png" height="36" width="36"/><p>修改</p></div>
-                      <div class="module_resume_icon_li"><img src="../../assets/images/icon03.png" height="36" width="36"/><p>置顶</p></div>
-                      <div class="module_resume_icon_li"><img src="../../assets/images/icon04.png" height="36" width="36"/><p>预览</p></div>
-                      <div class="module_resume_icon_li"><img src="../../assets/images/icon05.png" height="36" width="36"/><p>删除</p></div>
-                    </div>
-                    <div class="module_resume_last">
-                      <p>55%</p>
-                      <p>简历完善度</p>
-                      <p><span><a href="javascript:">继续去完善</a> </span></p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <!--5-->
           </ul>
         </div>
       </div>
@@ -391,7 +306,25 @@
 
 <script>
     export default {
-        name: "module"
+        name: "module",
+      methods: {
+        module: function () {
+          let _this = this;
+          this.$('.details_left li').click(function () {
+            _this.$('.details_left li').children("a").removeClass("li_active");
+            _this.$(this).children("a").addClass("li_active");
+            var index = _this.$(this).index();
+            _this.$(".details_right>ul>li").hide().eq(index).show();
+          });
+        },
+        moduletanchu: function () {
+          let _this = this;
+          this.$('.module_peoject_btn').click(function () {
+            _this.$('.module_tanchu').show();
+            _this. $('.module_peoject').hide();
+          });
+        }
+      }
     }
 </script>
 

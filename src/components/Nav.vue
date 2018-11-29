@@ -37,16 +37,13 @@
               <router-link to='/MotorPartsTown'>汽配城</router-link>
             </li>
             <li>
+              <router-link to='/Recruitment'>招聘信息</router-link>
+            </li>
+            <li>
               <router-link to='/MotorPartsTownDetails'>关于本站</router-link>
             </li>
             <li>
               <router-link to='/TechnicalAssistance'>技术支持</router-link>
-            </li>
-            <li>
-              <router-link to='/Recruitment'>招聘信息</router-link>
-            </li>
-            <li>
-              <router-link to='/module'>商家模块</router-link>
             </li>
           </ul>
         </div>
