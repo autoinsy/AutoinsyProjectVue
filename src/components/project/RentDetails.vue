@@ -7,7 +7,7 @@
     <div class="centermy">
       <div class="rentd_title">
         <p>{{lease.title}}</p>
-        <p><span>2018-10-16</span></p>
+        <p><span>{{lease.publishDate}}</span></p>
       </div>
       <div class="rentd_top">
         <div class="left">
