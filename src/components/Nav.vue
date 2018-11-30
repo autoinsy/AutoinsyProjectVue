@@ -20,7 +20,106 @@
     <div class="sanlei">
       <div class="zxkd">
         <div class="qbfl">
-          <child :parentToChild="value1"><a href="">全部商品分类</a></child>
+         <span> 全部商品分类</span>
+          <div class="topmenu" id="#jd-dtgd">
+            <li class="lm"  id="cf1"><a class="ml" href="">维修保养</a><em class="zt">></em>
+              <div class="mbc1">
+                <div class="fenlei1">
+                  <div class="liebiao">
+                    <div class="dh1">
+                      <div class="biaoti1">
+                        <div class="djd"><a>侧导航分类</a> <i>></i></div>
+                        <div class="neirong">
+                          <div class=""><a href>侧导航分类</a></div>
+                          <div class=""><a href>侧导航分类</a></div>
+                          <div class=""><a href>侧导航分类</a></div>
+                          <div class=""><a href>侧导航分类</a></div>
+                          <div class=""><a href>侧导航分类</a></div>
+                          <div class=""><a href>侧导航分类</a></div>
+                          <div class=""><a href>侧导航分类</a></div>
+                          <div class=""><a href>侧导航分类</a></div>
+                          <div class=""><a href>侧导航分类</a></div>
+                          <div class=""><a href>侧导航分类</a></div>
+                          <div class=""><a href>侧导航分类</a></div>
+                          <div class=""><a href>侧导航分类</a></div>
+                          <div class=""><a href>侧导航分类</a></div>
+                        </div>
+                      </div>
+                      <div class="dh2">
+                        <div class="biaoti2">
+                          <div class="djd2"><a>侧导航分类</a> <i>></i></div>
+                          <div class="neirong3">
+                            <div class=""><a href>侧导航分类</a></div>
+                            <div class=""><a href>侧导航分类</a></div>
+                            <div class=""><a href>侧导航分类</a></div>
+                            <div class=""><a href>侧导航分类</a></div>
+                            <div class=""><a href>侧导航分类</a></div>
+                            <div class=""><a href>侧导航分类</a></div>
+                            <div class=""><a href>侧导航分类</a></div>
+                            <div class=""><a href>侧导航分类</a></div>
+                            <div class=""><a href>侧导航分类</a></div>
+                            <div class=""><a href>侧导航分类</a></div>
+                            <div class=""><a href>侧导航分类</a></div>
+                            <div class=""><a href>侧导航分类</a></div>
+                            <div class=""><a href>侧导航分类</a></div>
+                            <div class=""><a href>侧导航分类</a></div>
+                            <div class=""><a href>侧导航分类</a></div>
+                            <div class=""><a href>侧导航分类</a></div>
+                            <div class=""><a href>侧导航分类</a></div>
+                            <div class=""><a href>侧导航分类</a></div>
+                          </div>
+                        </div>
+                        <div class="dh3">
+                          <div class="biaoti2">
+                            <div class="djd2"><a>侧导航分类</a> <i>></i></div>
+                            <div class="neirong2">
+                              <div class=""><a href>侧导航分类</a></div>
+                              <div class=""><a href>侧导航分类</a></div>
+                              <div class=""><a href>侧导航分类</a></div>
+                              <div class=""><a href>侧导航分类</a></div>
+                              <div class=""><a href>侧导航分类</a></div>
+                              <div class=""><a href>侧导航分类</a></div>
+                              <div class=""><a href>侧导航分类</a></div>
+                              <div class=""><a href>侧导航分类</a></div>
+                              <div class=""><a href>侧导航分类</a></div>
+                              <div class=""><a href>侧导航分类</a></div>
+                              <div class=""><a href>侧导航分类</a></div>
+                              <div class=""><a href>侧导航分类</a></div>
+                              <div class=""><a href>侧导航分类</a></div>
+                              <div class=""><a href>侧导航分类</a></div>
+                              <div class=""><a href>侧导航分类</a></div>
+                              <div class=""><a href>侧导航分类</a></div>
+                              <div class=""><a href>侧导航分类</a></div>
+                              <div class=""><a href>侧导航分类</a></div>
+                              <div class=""><a href>侧导航分类</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="fenlei2">
+                        <div class="yige"><a href=""><img src="../assets/picture/39.jpg"></a> <a href=""><img
+                          src="../assets/picture/38.jpg"></a> <a href=""><img src="../assets/picture/37.jpg"></a> <a
+                          href=""><img src="../assets/picture/36.jpg"></a> <a href=""><img
+                          src="../assets/picture/35.jpg"></a>
+                          <a href=""><img src="../assets/picture/34.jpg"></a> <a href=""><img
+                            src="../assets/picture/33.jpg"></a>
+                          <a href=""><img src="../assets/picture/41.jpg"></a></div>
+                        <div class="erge"><a href=""><img src="../assets/picture/8889.jpg"></a></div>
+                        <div class="erge"><a href=""><img src="../assets/picture/8889.jpg"></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="lm"><a class="ml" href="">轮胎配件</a><em class="zt">></em></li>
+            <li class="lm"><a class="ml" href="">车载电器</a><em class="zt">></em></li>
+            <li class="lm"><a class="ml" href="">汽车装饰</a><em class="zt">></em></li>
+            <li class="lm"><a class="ml" href="">美容洗车</a><em class="zt">></em></li>
+            <li class="lm"><a class="ml" href="">安全自驾</a><em class="zt">></em></li>
+            <li class="lm"><a class="ml" href="">线下服务</a><em class="zt">></em></li>
+            <li class="lm"><a class="ml" href="">摩托车</a><em class="zt">></em></li>
+          </div>
         </div>
         <div class="sldh">
           <ul id="uile">
@@ -57,7 +156,7 @@
     name: "Nav",
     data() {
       return {
-        value1: '父组件的值传给子组件'
+
       }
     },
   }

@@ -9,10 +9,10 @@
         <div class="details_left">
           <div class="detalis_top">个人中心</div>
           <ul>
-            <li><a href="" class="li_active" @click="centers">我的收藏</a></li>
-            <li><a href="" @click="centers">我的资料</a></li>
-            <li><a href="" @click="centers">收货地址</a></li>
-            <li><a href="" @click="centers">账户管理</a></li>
+            <li><a href="" class="li_active" @click="center">我的收藏</a></li>
+            <li><a href="" @click="center">我的资料</a></li>
+            <li><a href="" @click="center">收货地址</a></li>
+            <li><a href="" @click="center">账户管理</a></li>
             <li>
               <router-link to='/module' @click="center">商家模块</router-link>
             </li>
@@ -388,7 +388,7 @@
     export default {
         name: "center",
       methods: {
-        centers: function () {
+        center: function () {
           let _this = this;
           this.$('.details_left li').click(function () {
             _this.$('.details_left li').children("a").removeClass("li_active");

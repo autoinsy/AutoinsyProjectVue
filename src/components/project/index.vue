@@ -1,115 +1,8 @@
 <template>
   <div class="">
-    <div id="jd-dtgd">
+    <div id="jd-dtgd" style="height: 343px;">
       <div class="dingbu">
-        <div class="topmenu">
-          <li class="lm" id="cf1"><a class="ml" href="">侧导航分类</a><em class="zt">></em>
-            <div class="mbc1">
-              <div class="fenlei1">
-                <!--<div class="sdh">-->
-                <!--<div class="bz1">-->
-                <!--<div class="sdh1"><span>侧导航分类</span> <i>></i></div>-->
-                <!--<div class="sdh2"><span>侧导航分类</span> <i>></i></div>-->
-                <!--<div class="sdh3"><span>侧导航分类</span> <i>></i></div>-->
-                <!--<div class="sdh4"><span>侧导航分类</span> <i>></i></div>-->
-                <!--</div>-->
-                <!--</div>-->
-                <div class="liebiao">
-                  <div class="dh1">
-                    <div class="biaoti1">
-                      <div class="djd"><a>侧导航分类</a> <i>></i></div>
-                      <div class="neirong">
-                        <div class=""><a href>侧导航分类</a></div>
-                        <div class=""><a href>侧导航分类</a></div>
-                        <div class=""><a href>侧导航分类</a></div>
-                        <div class=""><a href>侧导航分类</a></div>
-                        <div class=""><a href>侧导航分类</a></div>
-                        <div class=""><a href>侧导航分类</a></div>
-                        <div class=""><a href>侧导航分类</a></div>
-                        <div class=""><a href>侧导航分类</a></div>
-                        <div class=""><a href>侧导航分类</a></div>
-                        <div class=""><a href>侧导航分类</a></div>
-                        <div class=""><a href>侧导航分类</a></div>
-                        <div class=""><a href>侧导航分类</a></div>
-                        <div class=""><a href>侧导航分类</a></div>
-                      </div>
-                    </div>
-                    <div class="dh2">
-                      <div class="biaoti2">
-                        <div class="djd2"><a>侧导航分类</a> <i>></i></div>
-                        <div class="neirong3">
-                          <div class=""><a href>侧导航分类</a></div>
-                          <div class=""><a href>侧导航分类</a></div>
-                          <div class=""><a href>侧导航分类</a></div>
-                          <div class=""><a href>侧导航分类</a></div>
-                          <div class=""><a href>侧导航分类</a></div>
-                          <div class=""><a href>侧导航分类</a></div>
-                          <div class=""><a href>侧导航分类</a></div>
-                          <div class=""><a href>侧导航分类</a></div>
-                          <div class=""><a href>侧导航分类</a></div>
-                          <div class=""><a href>侧导航分类</a></div>
-                          <div class=""><a href>侧导航分类</a></div>
-                          <div class=""><a href>侧导航分类</a></div>
-                          <div class=""><a href>侧导航分类</a></div>
-                          <div class=""><a href>侧导航分类</a></div>
-                          <div class=""><a href>侧导航分类</a></div>
-                          <div class=""><a href>侧导航分类</a></div>
-                          <div class=""><a href>侧导航分类</a></div>
-                          <div class=""><a href>侧导航分类</a></div>
-                        </div>
-                      </div>
-                      <div class="dh3">
-                        <div class="biaoti2">
-                          <div class="djd2"><a>侧导航分类</a> <i>></i></div>
-                          <div class="neirong2">
-                            <div class=""><a href>侧导航分类</a></div>
-                            <div class=""><a href>侧导航分类</a></div>
-                            <div class=""><a href>侧导航分类</a></div>
-                            <div class=""><a href>侧导航分类</a></div>
-                            <div class=""><a href>侧导航分类</a></div>
-                            <div class=""><a href>侧导航分类</a></div>
-                            <div class=""><a href>侧导航分类</a></div>
-                            <div class=""><a href>侧导航分类</a></div>
-                            <div class=""><a href>侧导航分类</a></div>
-                            <div class=""><a href>侧导航分类</a></div>
-                            <div class=""><a href>侧导航分类</a></div>
-                            <div class=""><a href>侧导航分类</a></div>
-                            <div class=""><a href>侧导航分类</a></div>
-                            <div class=""><a href>侧导航分类</a></div>
-                            <div class=""><a href>侧导航分类</a></div>
-                            <div class=""><a href>侧导航分类</a></div>
-                            <div class=""><a href>侧导航分类</a></div>
-                            <div class=""><a href>侧导航分类</a></div>
-                            <div class=""><a href>侧导航分类</a></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="fenlei2">
-                      <div class="yige"><a href=""><img src="../../assets/picture/39.jpg"></a> <a href=""><img
-                        src="../../assets/picture/38.jpg"></a> <a href=""><img src="../../assets/picture/37.jpg"></a> <a
-                        href=""><img src="../../assets/picture/36.jpg"></a> <a href=""><img
-                        src="../../assets/picture/35.jpg"></a>
-                        <a href=""><img src="../../assets/picture/34.jpg"></a> <a href=""><img
-                          src="../../assets/picture/33.jpg"></a>
-                        <a href=""><img src="../../assets/picture/41.jpg"></a></div>
-                      <div class="erge"><a href=""><img src="../../assets/picture/8889.jpg"></a></div>
-                      <div class="erge"><a href=""><img src="../../assets/picture/8889.jpg"></a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="lm"><a class="ml" href="">维修保养</a><em class="zt">></em></li>
-          <li class="lm"><a class="ml" href="">轮胎配件</a><em class="zt">></em></li>
-          <li class="lm"><a class="ml" href="">车载电器</a><em class="zt">></em></li>
-          <li class="lm"><a class="ml" href="">汽车装饰</a><em class="zt">></em></li>
-          <li class="lm"><a class="ml" href="">美容洗车</a><em class="zt">></em></li>
-          <li class="lm"><a class="ml" href="">安全自驾</a><em class="zt">></em></li>
-          <li class="lm"><a class="ml" href="">线下服务</a><em class="zt">></em></li>
-          <li class="lm"><a class="ml" href="">摩托车</a><em class="zt">></em></li>
-        </div>
+
         <div id="babab">
           <div id="news">
             <div class="mt">
@@ -308,21 +201,38 @@
         <div class="clear"></div>
       </div>
       <div class="zs_tab_lb">
-        <div id="slideBoxs" class="slideBoxs">
-          <div class="bds">
-            <ul v-on:mouseover="stop()" v-on:mouseout="move()">
-              <li style="display: none;" v-for="(img, index) in imgArray" v-show="index===mark" :key="index">
-                <a href="">
-                  <img v-bind:src="img" width="1002" height="363">
-                </a>
-              </li>
-            </ul>
-            <span v-for="(item, index) in imgArray" :class="{ 'active':index===mark }"
-                  @click="change(index)" :key="index"></span>
-          </div>
-          <!-- 下面是前/后按钮代码-->
-          <a class="prevs" href="javascript:void(0)"></a>
-          <a class="nexts" href="javascript:void(0)"></a>
+        <!--<div id="slideBoxs" class="slideBoxs">-->
+          <!--<div class="bds">-->
+            <!--<ul v-on:mouseover="stop()" v-on:mouseout="move()">-->
+              <!--<li style="display: none;" v-for="(img, index) in imgArray" v-show="index===mark" :key="index">-->
+                <!--<a href="">-->
+                  <!--<img v-bind:src="img" width="1002" height="363">-->
+                <!--</a>-->
+              <!--</li>-->
+            <!--</ul>-->
+            <!--<span v-for="(item, index) in imgArray" :class="{ 'active':index===mark }"-->
+                  <!--@click="change(index)" :key="index"></span>-->
+          <!--</div>-->
+          <!--&lt;!&ndash; 下面是前/后按钮代码&ndash;&gt;-->
+        <!--</div>-->
+        <div class="left left-img"><img src="../../assets/images/28.jpg" height="362" width="211"/></div>
+        <div class="right right-table">
+          <table>
+            <tr class="toptable">
+              <td><img src="../../assets/images/33.jpg" height="251" width="196"/></td>
+              <td><img src="../../assets/images/34.jpg" height="251" width="196"/></td>
+              <td><img src="../../assets/images/35.jpg" height="251" width="196"/></td>
+              <td><img src="../../assets/images/36.jpg" height="251" width="196"/></td>
+              <td><img src="../../assets/images/34.jpg" height="251" width="196"/></td>
+            </tr>
+            <tr class="bottomtable">
+              <td><img src="../../assets/images/29.jpg" height="108" width="196"/></td>
+              <td><img src="../../assets/images/30.jpg" height="108" width="196"/></td>
+              <td><img src="../../assets/images/31.jpg" height="108" width="196"/></td>
+              <td><img src="../../assets/images/32.jpg" height="108" width="196"/></td>
+              <td><img src="../../assets/images/30.jpg" height="108" width="196"/></td>
+            </tr>
+          </table>
         </div>
       </div>
       <div class="clear"></div>
