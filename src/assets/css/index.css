@@ -686,7 +686,10 @@ body {
     position: relative;
     background-color: #ffffff;
 }
-
+.open{
+  display: block;
+  cursor: pointer;
+}
 .topmenu {
     width: 198px;
     height: 333px;
@@ -695,7 +698,7 @@ body {
     float: left;
     position: absolute;
     z-index: 100;
-    /*display: none;*/
+    display: none;
 }
 
 .topmenu .lm {

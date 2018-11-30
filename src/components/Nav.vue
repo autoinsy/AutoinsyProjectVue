@@ -20,7 +20,7 @@
     <div class="sanlei">
       <div class="zxkd">
         <div class="qbfl">
-         <span> 全部商品分类</span>
+         <span class="open" @click="navtop"> 全部商品分类</span>
           <div class="topmenu" id="#jd-dtgd">
             <li class="lm"  id="cf1"><a class="ml" href="">维修保养</a><em class="zt">></em>
               <div class="mbc1">
@@ -150,7 +150,6 @@
     </div>
   </div>
 </template>
-
 <script>
   export default {
     name: "Nav",
@@ -159,6 +158,15 @@
 
       }
     },
+    methods: {
+      navtop: function () {
+        let _this = this;
+        this.$('.open').click(function () {
+          _this.$('.topmenu').show();
+          _this.$('.topmenu').hide();
+        });
+      }
+    }
   }
 </script>
 
