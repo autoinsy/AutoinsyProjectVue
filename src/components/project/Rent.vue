@@ -56,11 +56,10 @@
           <div id="infolist" class="cleft">
             <table id="jingzhun" class="small-tbimg ac_container" cellspacing="0" cellpadding="0">
               <tr data-sign="" class="ac_item" v-for="lease in leaseList">
-                {{lease}}
                 <td class="img">
                   <div class="ac_linkurl">
                     <router-link :to='{path: "/RentDetails", query: {leaseId: lease.leaseId}}'>
-                      <img v-bind:src="lease.leaseImageSet[0]"/>
+                      <img v-bind:src="lease.leaseImageSet[0].leaseImageUrl"/>
                     </router-link>
                   </div>
                 </td>
@@ -164,7 +163,7 @@
       this.$axios({
         url: _this.HOME + '/lease/list?page=' + _this.cur
       }).then(res => {
-        _this.leaseList = res.data.data;
+        _this.leaseList = res.data.data.content;
       })
     }
   }

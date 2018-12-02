@@ -15,7 +15,7 @@
             <div class="large_box">
               <ul>
                 <li style="display: none;" v-for="leaseImg in lease.leaseImageSet">
-                  <img v-bind:src="leaseImg" width="465" height="400">
+                  <img v-bind:src="leaseImg.leaseImageUrl" width="465" height="400">
                 </li>
               </ul>
             </div>
@@ -24,7 +24,7 @@
               <div class="small_list">
                 <ul>
                   <li v-for="leaseImg in lease.leaseImageSet">
-                    <img v-bind:src="leaseImg" width="112" height="75">
+                    <img v-bind:src="leaseImg.leaseImageUrl" width="112" height="75">
                     <div class="bun_bg"></div>
                   </li>
                 </ul>
