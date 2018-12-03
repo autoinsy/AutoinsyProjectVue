@@ -417,7 +417,6 @@
       },
     }
   }
-  }
 </script>
 
 <style scoped>

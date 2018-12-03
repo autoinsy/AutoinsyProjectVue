@@ -49,18 +49,20 @@
                         <p>类别</p>
                       </td>
                       <td>
-                        <select class="select_box">
+                        <select class="select_box" v-model="mainType">
                           <option v-for="mainType in mainTypeList" v-bind:value="mainType.mainTypeCode">{{mainType.mainTypeName}}</option>
                         </select>
                       </td>
                     </tr>
-                    <tr>
+                    <tr v-if="mainType">
                       <td>
                         <em>*</em>
                         <p>类别标签</p>
                       </td>
                       <td>
-                        <input name="" autocomplete="off" type="text" style="color:#999" value="">
+                        <select class="select_box">
+                          <option v-for="subType in subTypeList" v-bind:value="subType.subTypeCode">{{subType.subType}}</option>
+                        </select>
                       </td>
                     </tr>
                     <tr>
@@ -361,8 +363,21 @@
     name: "module",
     data() {
       return {
-        backCode: '',
         mainTypeList: [],
+        subTypeList: [],
+        backCode: '',
+        mainType: '',
+      }
+    },
+    watch: {
+      mainType: function(n, o) {
+        let _this = this
+        this.$axios({
+          url: _this.HOME + '/goodsType/getGoodsType?main_goods_type=' + n,
+          method: 'post'
+        }).then(res => {
+          _this.subTypeList = res.data.data;
+        })
       }
     },
     mounted: function() {
