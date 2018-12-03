@@ -38,21 +38,21 @@
             <div class="clear"></div>
             <p>商家地址：{{recruit.sellerAddress}}</p>
             <input type="button" value="申请职位" class="rec_top_box_btn1"/>
-            <input type="button" value="收藏职位" class="rec_top_box_btn2"/>
-            <div class="rec_btn_1">
-              <a href="">
-                <img src="../../assets/images/10.jpg"/>
-                <p>微聊</p>
-                <span style="display: none">{{recruit.weichat}}</span>
-              </a>
-            </div>
-            <div class="rec_btn_1">
-              <a href="">
-                <img src="../../assets/images/11.jpg"/>
-                <p>电话沟通</p>
-                <span style="display: none">{{recruit.contactPhoneNum}}</span>
-              </a>
-            </div>
+            <!--<input type="button" value="收藏职位" class="rec_top_box_btn2"/>-->
+            <!--<div class="rec_btn_1">-->
+              <!--<a href="">-->
+                <!--<img src="../../assets/images/10.jpg"/>-->
+                <!--<p>微聊</p>-->
+                <!--<span style="display: none">{{recruit.weichat}}</span>-->
+              <!--</a>-->
+            <!--</div>-->
+            <!--<div class="rec_btn_1">-->
+              <!--<a href="">-->
+                <!--<img src="../../assets/images/11.jpg"/>-->
+                <!--<p>电话沟通</p>-->
+                <!--<span style="display: none">{{recruit.contactPhoneNum}}</span>-->
+              <!--</a>-->
+            <!--</div>-->
           </div>
         </div>
         <div class="rec_b_box">
@@ -60,15 +60,15 @@
           <p>{{recruit.positionRequirement}}</p>
           <p><span>任职要求：</span></p>
           <p>{{recruit.takeOfficeRequirement}}</p>
-          <div class="rec_b_box_btn">查看更多 ></div>
+          <!--<div class="rec_b_box_btn">查看更多 ></div>-->
         </div>
       </div>
       <div class="right">
         <div class="rec_r_box">
-          <div class="rec_r_box_title">—— 名企 ——</div>
+          <!--<div class="rec_r_box_title">—— 名企 ——</div>-->
           <div class="rec_last">
             <p style="font-size: 18px; color: #333;line-height: 42px;">沈阳伟恒科技发展有限公司</p>
-            <p><img src="../../assets/images/12.jpg"/></p>
+            <!--<p><img src="../../assets/images/12.jpg"/></p>-->
             <p>互联网/摄像机</p>
             <p>100-499人</p>
           </div>
@@ -76,23 +76,23 @@
             <img src="../../assets/images/13.jpg"/>
             <img src="../../assets/images/14.jpg"/>
           </div>
-          <div class="rec_li_r">
-            <ul>
-              <li>
-                <p>0%</p>
-                <p><span>简历反馈率</span></p>
-              </li>
-              <li>
-                <p>6个</p>
-                <p><span>职位招聘</span></p>
-              </li>
-              <li>
-                <p>4月</p>
-                <p><span>加入英沈</span></p>
-              </li>
-            </ul>
-            <div class="clear"></div>
-          </div>
+          <!--<div class="rec_li_r">-->
+            <!--<ul>-->
+              <!--<li>-->
+                <!--<p>0%</p>-->
+                <!--<p><span>简历反馈率</span></p>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<p>6个</p>-->
+                <!--<p><span>职位招聘</span></p>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<p>4月</p>-->
+                <!--<p><span>加入英沈</span></p>-->
+              <!--</li>-->
+            <!--</ul>-->
+            <!--<div class="clear"></div>-->
+          <!--</div>-->
           <div style="margin: 30px auto; width: 279px; height: 50px;"><input type="button" value="查看招聘职位"
                                                                              class="rec_btn_r"/></div>
         </div>
