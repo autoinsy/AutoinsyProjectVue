@@ -50,7 +50,7 @@
                       </td>
                       <td>
                         <select class="select_box">
-                          <option>雨刮器</option>
+                          <option v-for="mainType in mainTypeList" v-bind:value="mainType.mainTypeCode">{{mainType.mainTypeName}}</option>
                         </select>
                       </td>
                     </tr>
@@ -82,31 +82,6 @@
                         <textarea class="textarea_box"></textarea>
                       </td>
                     </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="module_boxs">
-                  <p class="module_box_p">联系方式</p>
-                  <table width="0" border="0" cellspacing="0" cellpadding="0">
-                    <tbody>
-                    <tr>
-                      <td><em>*</em>
-                        <p>联系人</p></td>
-                      <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
-                    </tr>
-                    <tr>
-                      <td><em>*</em>
-                        <p>联系电话</p></td>
-                      <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
-                    </tr>
-                    <!--<tr>-->
-                    <!--<td><em>*</em><p>验证码</p></td>-->
-                    <!--<td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>-->
-                    <!--</tr>-->
-                    <!--<tr>-->
-                    <!--<td><em>*</em><p>QQ或微信</p></td>-->
-                    <!--<td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>-->
-                    <!--</tr>-->
                     </tbody>
                   </table>
                 </div>
@@ -386,8 +361,17 @@
     name: "module",
     data() {
       return {
-        backCode: ''
+        backCode: '',
+        mainTypeList: [],
       }
+    },
+    mounted: function() {
+      let _this = this;
+      this.$axios({
+        url: _this.HOME + '/goodsType/getAllMainType'
+      }).then(res => {
+        _this.mainTypeList = res.data.data;
+      })
     },
     methods: {
       module: function () {
