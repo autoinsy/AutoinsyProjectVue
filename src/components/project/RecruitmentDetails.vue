@@ -32,8 +32,6 @@
               <li>{{recruit.educationRequirement}}</li>
               <li>|</li>
               <li>{{recruit.experience}}</li>
-              <li>|</li>
-              <li>可接收应届毕业生</li>
             </ul>
             <div class="clear"></div>
             <p>商家地址：{{recruit.sellerAddress}}</p>
@@ -68,8 +66,7 @@
           <!--<div class="rec_r_box_title">—— 名企 ——</div>-->
           <div class="rec_last">
             <p style="font-size: 18px; color: #333;line-height: 42px;">沈阳伟恒科技发展有限公司</p>
-            <!--<p><img src="../../assets/images/12.jpg"/></p>-->
-            <p>互联网/摄像机</p>
+            <p><img src="../../assets/images/12.jpg"/></p>
             <p>100-499人</p>
           </div>
           <div class="rec_r_box_b">
