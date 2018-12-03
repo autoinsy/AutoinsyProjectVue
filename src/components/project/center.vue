@@ -188,9 +188,11 @@
                     <td><img src="../../assets/images/03.jpg"/></td>
                   </tr>
                   <tr>
-                    <td><em>*</em><p>昵称:</p></td>
+                    <td><em>*</em>
+                      <p>昵称:</p></td>
                     <td>
-                      <input name="phonenumber" autocomplete="off" type="text" style="color:#999" value="" placeholder="海阔天空"/>
+                      <input name="phonenumber" autocomplete="off" type="text" style="color:#999" value=""
+                             placeholder="海阔天空"/>
                     </td>
                   </tr>
                   <tr>
@@ -198,7 +200,8 @@
                     <td><input name="phonenumber" autocomplete="off" type="text" style="color:#999" value=""/></td>
                   </tr>
                   <tr>
-                    <td><em>*</em><p>性别:</p></td>
+                    <td><em>*</em>
+                      <p>性别:</p></td>
                     <td>
                       <label class="demo--label">
                         <input class="demo--radio" type="radio" name="demo-radio">
@@ -238,7 +241,8 @@
                 <table width="0" border="0" cellspacing="0" cellpadding="0">
                   <tbody>
                   <tr>
-                    <td><em>*</em><p>地址信息:</p></td>
+                    <td><em>*</em>
+                      <p>地址信息:</p></td>
                     <td>
                       <select>
                         <option value="audi">请选择市/区/街道</option>
@@ -250,20 +254,27 @@
                     </td>
                   </tr>
                   <tr>
-                    <td><em>*</em><p>详细地址:</p></td>
-                    <td><input name="phonenumber" autocomplete="off" type="text" style="color:#999" placeholder="请输入详细地址信息"/></td>
+                    <td><em>*</em>
+                      <p>详细地址:</p></td>
+                    <td><input name="phonenumber" autocomplete="off" type="text" style="color:#999"
+                               placeholder="请输入详细地址信息"/></td>
                   </tr>
                   <tr>
                     <td><p>邮政编码:</p></td>
-                    <td><input name="phonenumber" autocomplete="off" type="text" style="color:#999" placeholder="如不清楚邮政编号请填写000000"/></td>
+                    <td><input name="phonenumber" autocomplete="off" type="text" style="color:#999"
+                               placeholder="如不清楚邮政编号请填写000000"/></td>
                   </tr>
                   <tr>
-                    <td><em>*</em><p>收货人姓名:</p></td>
-                    <td><input name="phonenumber" autocomplete="off" type="text" style="color:#999" placeholder="最长不超过25个字符"/></td>
+                    <td><em>*</em>
+                      <p>收货人姓名:</p></td>
+                    <td><input name="phonenumber" autocomplete="off" type="text" style="color:#999"
+                               placeholder="最长不超过25个字符"/></td>
                   </tr>
                   <tr>
-                    <td><em>*</em><p>手机号码:</p></td>
-                    <td><input name="phonenumber" autocomplete="off" type="text" style="color:#999" placeholder="请输入手机号码"/></td>
+                    <td><em>*</em>
+                      <p>手机号码:</p></td>
+                    <td><input name="phonenumber" autocomplete="off" type="text" style="color:#999"
+                               placeholder="请输入手机号码"/></td>
                   </tr>
                   </tbody>
                 </table>
@@ -292,13 +303,15 @@
                   <tr>
                     <td>刘德华</td>
                     <td>沈阳市浑南区</td>
-                    <td><p  class="table_set">万达公寓1602万达公寓1602万达公寓1602万达公寓1602万达公寓1602万达公寓1602</p></td>
+                    <td><p class="table_set">万达公寓1602万达公寓1602万达公寓1602万达公寓1602万达公寓1602万达公寓1602</p></td>
                     <td>000000</td>
                     <td>15012345678</td>
                     <td>
                       <a href="">修改</a>|<a href="">删除</a>
                     </td>
-                    <td><div class="table_btn1 table_btn ">设为默认</div></td>
+                    <td>
+                      <div class="table_btn1 table_btn ">设为默认</div>
+                    </td>
                   </tr>
                   <tr>
                     <td>刘德华</td>
@@ -309,7 +322,9 @@
                     <td>
                       <a href="">修改</a>|<a href="">删除</a>
                     </td>
-                    <td><div class="table_btn1  ">设为默认</div></td>
+                    <td>
+                      <div class="table_btn1  ">设为默认</div>
+                    </td>
                   </tr>
                   <tr>
                     <td>刘德华</td>
@@ -320,7 +335,9 @@
                     <td>
                       <a href="">修改</a>|<a href="">删除</a>
                     </td>
-                    <td><div class="table_btn1  ">设为默认</div></td>
+                    <td>
+                      <div class="table_btn1  ">设为默认</div>
+                    </td>
                   </tr>
                   </tbody>
                 </table>
@@ -342,21 +359,22 @@
                     <tbody>
                     <tr>
                       <td><p>真实姓名:</p></td>
-                      <td><input name="phonenumber" autocomplete="off" type="text" style="color:#999" /></td>
+                      <td><input name="phonenumber" autocomplete="off" type="text" style="color:#999"/></td>
                     </tr>
                     <tr>
                       <td><p>身份证号:</p></td>
-                      <td><input name="phonenumber" autocomplete="off" type="text" style="color:#999"  placeholder="210***********1234"/></td>
+                      <td><input name="phonenumber" autocomplete="off" type="text" style="color:#999"
+                                 placeholder="210***********1234"/></td>
                     </tr>
                     <tr>
                       <td><p>银行卡卡号:</p></td>
-                      <td><input name="phonenumber" autocomplete="off" type="text" style="color:#999" /><br/>
+                      <td><input name="phonenumber" autocomplete="off" type="text" style="color:#999"/><br/>
                         <p class="table_p">输入卡号后会自动识别银行卡的卡种和银行卡要求</p>
                       </td>
                     </tr>
                     <tr>
                       <td><p>手机号码:</p></td>
-                      <td><input name="phonenumber" autocomplete="off" type="text" style="color:#999" /><br/>
+                      <td><input name="phonenumber" autocomplete="off" type="text" style="color:#999"/><br/>
                         <p class="table_p">请填写您在银行预留的电话号码，以验证银行卡是否为您本人</p>
                       </td>
                     </tr>
@@ -364,7 +382,7 @@
                   </table>
                 </div>
                 <input type="submit" value="同意协议并确认" class="mylistcenter_btn"/>
-                <div class="xieyi"><a href="">《英沈汽配支付服务协议》</a> </div>
+                <div class="xieyi"><a href="">《英沈汽配支付服务协议》</a></div>
               </div>
             </li>
             <!--4-->
@@ -385,20 +403,20 @@
   //     //console.log(p);
   //   }
   // });
-    export default {
-        name: "center",
-      methods: {
-        center: function () {
-          let _this = this;
-          this.$('.details_left li').click(function () {
-            _this.$('.details_left li').children("a").removeClass("li_active");
-            _this.$(this).children("a").addClass("li_active");
-            var index = _this.$(this).index();
-            _this.$(".details_right>ul>li").hide().eq(index).show();
-          });
-        },
-      }
+  export default {
+    name: "center",
+    methods: {
+      center: function () {
+        let _this = this;
+        this.$('.details_left li').click(function () {
+          _this.$('.details_left li').children("a").removeClass("li_active");
+          _this.$(this).children("a").addClass("li_active");
+          var index = _this.$(this).index();
+          _this.$(".details_right>ul>li").hide().eq(index).show();
+        });
+      },
     }
+  }
 </script>
 
 <style scoped>

@@ -49,18 +49,20 @@
                         <p>类别</p>
                       </td>
                       <td>
-                        <select class="select_box">
-                          <option>雨刮器</option>
+                        <select class="select_box" v-model="mainType">
+                          <option v-for="mainType in mainTypeList" v-bind:value="mainType.mainTypeCode">{{mainType.mainTypeName}}</option>
                         </select>
                       </td>
                     </tr>
-                    <tr>
+                    <tr v-if="mainType">
                       <td>
                         <em>*</em>
                         <p>类别标签</p>
                       </td>
                       <td>
-                        <input name="" autocomplete="off" type="text" style="color:#999" value="">
+                        <select class="select_box">
+                          <option v-for="subType in subTypeList" v-bind:value="subType.subTypeCode">{{subType.subType}}</option>
+                        </select>
                       </td>
                     </tr>
                     <tr>
@@ -82,31 +84,6 @@
                         <textarea class="textarea_box"></textarea>
                       </td>
                     </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="module_boxs">
-                  <p class="module_box_p">联系方式</p>
-                  <table width="0" border="0" cellspacing="0" cellpadding="0">
-                    <tbody>
-                    <tr>
-                      <td><em>*</em>
-                        <p>联系人</p></td>
-                      <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
-                    </tr>
-                    <tr>
-                      <td><em>*</em>
-                        <p>联系电话</p></td>
-                      <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
-                    </tr>
-                    <!--<tr>-->
-                    <!--<td><em>*</em><p>验证码</p></td>-->
-                    <!--<td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>-->
-                    <!--</tr>-->
-                    <!--<tr>-->
-                    <!--<td><em>*</em><p>QQ或微信</p></td>-->
-                    <!--<td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>-->
-                    <!--</tr>-->
                     </tbody>
                   </table>
                 </div>
@@ -386,8 +363,30 @@
     name: "module",
     data() {
       return {
-        backCode: ''
+        mainTypeList: [],
+        subTypeList: [],
+        backCode: '',
+        mainType: '',
       }
+    },
+    watch: {
+      mainType: function(n, o) {
+        let _this = this
+        this.$axios({
+          url: _this.HOME + '/goodsType/getGoodsType?main_goods_type=' + n,
+          method: 'post'
+        }).then(res => {
+          _this.subTypeList = res.data.data;
+        })
+      }
+    },
+    mounted: function() {
+      let _this = this;
+      this.$axios({
+        url: _this.HOME + '/goodsType/getAllMainType'
+      }).then(res => {
+        _this.mainTypeList = res.data.data;
+      })
     },
     methods: {
       module: function () {
