@@ -3955,3 +3955,18 @@ em, i, u {
   overflow: hidden;
   margin-bottom: 20px;
 }
+/**/
+.fafasoso{
+  color:#ff7300;
+  background-color: #fff;
+  text-indent: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  padding:6px 10px 6px 0;
+}
+.fafalala{
+  border: 1px solid #d6d7dc;
+  border-radius: 5px;
+  outline: none !important;
+  cursor: pointer;
+}

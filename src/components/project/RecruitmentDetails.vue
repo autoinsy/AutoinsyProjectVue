@@ -66,7 +66,7 @@
           <!--<div class="rec_r_box_title">—— 名企 ——</div>-->
           <div class="rec_last">
             <p style="font-size: 18px; color: #333;line-height: 42px;">沈阳伟恒科技发展有限公司</p>
-            <p><img src="../../assets/images/12.jpg"/></p>
+            <!--<p><img src="../../assets/images/12.jpg"/></p>-->
             <p>100-499人</p>
           </div>
           <div class="rec_r_box_b">

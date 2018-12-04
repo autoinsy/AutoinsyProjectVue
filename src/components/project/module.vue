@@ -91,10 +91,10 @@
                         <em>*</em>
                         <p>数量</p>
                       </td>
-                      <td>
-                        <button @click="changeNum"><i class="fa fa-minus"></i></button>
-                        <input type="text" style="width: 25%;" v-model="count">
-                        <button @click="changeNum"><i class="fa fa-plus"></i></button>
+                      <td style="text-align: left">
+                        <button @click="changeNum" class="fafalala"><i class="fa fa-minus fafasoso"></i></button>
+                        <input type="text" style="width: 25%; text-align: center; padding-left: 0;" v-model="count">
+                        <button @click="changeNum" class="fafalala"><i class="fa fa-plus fafasoso"></i></button>
                       </td>
                     </tr>
                     <tr>
