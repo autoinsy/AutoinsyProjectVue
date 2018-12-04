@@ -62,7 +62,7 @@
       </div>
       <div class="containnerWrap clearfix">
         <section id="mainlist" class="main clearfix pr">
-          <div class="filterbar">
+          <div class="filterbar" style="height: 30px;">
             <div class="filterbar-l">
               <div class="filterup" id="filterup">
                 <a class="m1 sel" title="默认" href="#" rel="nofollow"><span>默认排序<em></em></span></a>

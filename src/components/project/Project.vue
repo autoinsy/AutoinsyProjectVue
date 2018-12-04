@@ -142,7 +142,7 @@
 
               <span class="clr"></span>
             </div>
-            <div class="f-line">
+            <div class="f-line" style="height: 32px;">
               <div class="f-store">
                 <div class="fs-cell delivery-location">配送至</div>
                 <div id="J_store_selector" class="ui-area-wrap ui-area-oversea-mode" style="float:left;margin-right:10px">
