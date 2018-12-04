@@ -202,35 +202,33 @@
       </div>
       <div class="zs_tab_lb">
         <!--<div id="slideBoxs" class="slideBoxs">-->
-          <!--<div class="bds">-->
-            <!--<ul v-on:mouseover="stop()" v-on:mouseout="move()">-->
-              <!--<li style="display: none;" v-for="(img, index) in imgArray" v-show="index===mark" :key="index">-->
-                <!--<a href="">-->
-                  <!--<img v-bind:src="img" width="1002" height="363">-->
-                <!--</a>-->
-              <!--</li>-->
-            <!--</ul>-->
-            <!--<span v-for="(item, index) in imgArray" :class="{ 'active':index===mark }"-->
-                  <!--@click="change(index)" :key="index"></span>-->
-          <!--</div>-->
-          <!--&lt;!&ndash; 下面是前/后按钮代码&ndash;&gt;-->
+        <!--<div class="bds">-->
+        <!--<ul v-on:mouseover="stop()" v-on:mouseout="move()">-->
+        <!--<li style="display: none;" v-for="(img, index) in imgArray" v-show="index===mark" :key="index">-->
+        <!--<a href="">-->
+        <!--<img v-bind:src="img" width="1002" height="363">-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--<span v-for="(item, index) in imgArray" :class="{ 'active':index===mark }"-->
+        <!--@click="change(index)" :key="index"></span>-->
         <!--</div>-->
-        <div class="left left-img"><img src="../../assets/images/28.jpg" height="362" width="211"/></div>
+        <!--&lt;!&ndash; 下面是前/后按钮代码&ndash;&gt;-->
+        <!--</div>-->
+        <div class="left left-img">
+          <img v-bind:src="goods[0].goodsPic" height="362" width="211"/>
+        </div>
         <div class="right right-table">
           <table>
             <tr class="toptable">
-              <td><img src="../../assets/images/33.jpg" height="251" width="196"/></td>
-              <td><img src="../../assets/images/34.jpg" height="251" width="196"/></td>
-              <td><img src="../../assets/images/35.jpg" height="251" width="196"/></td>
-              <td><img src="../../assets/images/36.jpg" height="251" width="196"/></td>
-              <td><img src="../../assets/images/34.jpg" height="251" width="196"/></td>
+              <td v-if="index < 6" v-for="(adron, index) in adronList">
+                <img v-bind:src="adron.goodsPic" height="251" width="196"/>
+              </td>
             </tr>
             <tr class="bottomtable">
-              <td><img src="../../assets/images/29.jpg" height="108" width="196"/></td>
-              <td><img src="../../assets/images/30.jpg" height="108" width="196"/></td>
-              <td><img src="../../assets/images/31.jpg" height="108" width="196"/></td>
-              <td><img src="../../assets/images/32.jpg" height="108" width="196"/></td>
-              <td><img src="../../assets/images/30.jpg" height="108" width="196"/></td>
+              <td v-for="(adron, index) in adronList" v-if="index < 10 && index>6">
+                <img v-bind:src="adron.goodsPic" height="108" width="196"/>
+              </td>
             </tr>
           </table>
         </div>
@@ -320,6 +318,7 @@
         newsList: [],
         goods: [],
         noticeList: [],
+        adronList: [],
         valueFromParent: '',
         timer: null, //定时器
         mark: 0, //比对图片索引的变量
@@ -337,6 +336,7 @@
       this.getAllNewsList();
       this.getServerList();
       this.getAllNotice();
+      this.getSomeAdron();
     },
     watch: {
       goodsTypeList: function () {
@@ -418,6 +418,14 @@
           url: _this.HOME + '/notice/all'
         }).then(res => {
           _this.noticeList = res.data.data;
+        })
+      },
+      getSomeAdron: function () {
+        let _this = this;
+        this.$axios({
+          url: _this.HOME + '/goods/listAdorn'
+        }).then(res => {
+          _this.adronList = res.data.data;
         })
       },
       autoPlay() {
