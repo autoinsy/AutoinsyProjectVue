@@ -11,19 +11,19 @@
         </div>
         <div class="sousuo">
           <dl class="selectbarTree clearfix">
-            <dt><a href="">类别：</a></dt>
+            <dt><a href="javascript:">类别：</a></dt>
             <dd class="clearfix">
               <ul class="s_ul">
-                <li><a href="">汽配服务</a><i>53</i></li>
-                <li><a href="">汽配服务</a><i>32</i></li>
-                <li><a href="">汽配服务</a><i>18</i></li>
-                <li><a href="">汽配服务</a><i>6</i></li>
-                <li><a href="">汽配服务</a><i>3</i></li>
-                <li style='display:none'><a href="">汽配服务</a><i>2</i></li>
-                <li style='display:none'><a href="">汽配服务</a><i>1</i></li>
-                <li style='display:none'><a href="">汽配服务</a><i>1</i></li>
-                <li style='display:none'><a href="">汽配服务</a><i>1</i></li>
-                <li style='display:none'><a href="">汽配服务</a><i>1</i></li>
+                <li><a href="javascript:"></a><i>53</i></li>
+                <li><a href="javascript:"></a><i>32</i></li>
+                <li><a href="javascript:"></a><i>18</i></li>
+                <li><a href="javascript:"></a><i>6</i></li>
+                <li><a href="javascript:"></a><i>3</i></li>
+                <li style='display:none'><a href="javascript:"></a><i>2</i></li>
+                <li style='display:none'><a href="javascript:"></a><i>1</i></li>
+                <li style='display:none'><a href="javascript:"></a><i>1</i></li>
+                <li style='display:none'><a href="javascript:"></a><i>1</i></li>
+                <li style='display:none'><a href="javascript:"></a><i>1</i></li>
               </ul>
               <span name='cateswitch' class="moreBtn b1">展开</span>
             </dd>
@@ -43,17 +43,17 @@
             <dt class="secitem_brand">服务区域 ：</dt>
             <dd id="local">
               <a href="" class='select'>全沈阳</a>
-              <a href="">和平</a>
-              <a href="">沈河</a>
-              <a href="">皇姑</a>
-              <a href="">大东</a>
-              <a href="">铁西</a>
-              <a href="">东陵</a>
-              <a href="">于洪</a>
-              <a href="">沈北新区</a>
-              <a href="">苏家屯</a>
-              <a href="">浑南新区</a>
-              <a href="">沈阳周边</a>
+              <a href="javascript:">和平</a>
+              <a href="javascript:">沈河</a>
+              <a href="javascript:">皇姑</a>
+              <a href="javascript:">大东</a>
+              <a href="javascript:">铁西</a>
+              <a href="javascript:">东陵</a>
+              <a href="javascript:">于洪</a>
+              <a href="javascript:">沈北新区</a>
+              <a href="javascript:">苏家屯</a>
+              <a href="javascript:">浑南新区</a>
+              <a href="javascript:">沈阳周边</a>
             </dd>
           </dl>
           <div id="selected" class="bar"></div>
@@ -62,7 +62,7 @@
       </div>
       <div class="containnerWrap clearfix">
         <section id="mainlist" class="main clearfix pr">
-          <div class="filterbar">
+          <div class="filterbar" style="height: 30px;">
             <div class="filterbar-l">
               <div class="filterup" id="filterup">
                 <a class="m1 sel" title="默认" href="#" rel="nofollow"><span>默认排序<em></em></span></a>
@@ -72,7 +72,7 @@
                         </span>
             </div>
             <div class="filterbar-md">
-              <a class="mdtj" style="display:inline-block;" rel="nofollow" target="_blank" href="">想提升接单效果，请致电4008107258</a>
+              <a class="mdtj" style="display:inline-block;" rel="nofollow" target="_blank" href="">想提升接单效果，请致电024-31040888</a>
             </div>
           </div>
           <div id="infolist" class="cleft">
@@ -115,22 +115,22 @@
               <tr  data-sign="" class="ac_item">
                 <td class="img">
                   <div class="ac_linkurl">
-                    <a href="">
+                    <a href="javascript:">
                       <img src="../../assets/images/05.jpg"/>
                     </a>
                   </div>
                 </td>
                 <td class="t">
                   <div class="tdiv">
-                    <a href='' class="t ac_linkurl"name='31996204049709'>全沈阳<b>汽修</b> 修理 换配件 清洗
-                      <span class='tu'>[5图]</span>
-                      <span class="jingpin">精</span>
+                    <a href='' class="t ac_linkurl"name='31996204049709'>
+                      <span class='tu'></span>
+                      <span class="jingpin"></span>
                     </a>
                     <div class="item-desc">
-                      沈阳全区域每个街道都有师傅 十分钟上门维修
+
                     </div>
                     <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">辽宁XXX服务有限公司</a>
+                      <a href='' class='sellername ac_linkurl' rel="nofollow"></a>
                     </p>
                     <p class="item-tags">
                       <span class="async-tags"></span>
@@ -145,204 +145,7 @@
                   </div>
                 </td>
               </tr>
-              <tr  data-sign="" class="ac_item">
-                <td class="img">
-                  <div class="ac_linkurl">
-                    <a href="">
-                      <img src="../../assets/images/05.jpg"/>
-                    </a>
-                  </div>
-                </td>
-                <td class="t">
-                  <div class="tdiv">
-                    <a href='' class="t ac_linkurl"name='31996204049709'>全沈阳<b>汽修</b> 修理 换配件 清洗
-                      <span class='tu'>[5图]</span>
-                      <span class="jingpin">精</span>
-                    </a>
-                    <div class="item-desc">
-                      沈阳全区域每个街道都有师傅 十分钟上门维修
-                    </div>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">辽宁XXX服务有限公司</a>
-                    </p>
-                    <p class="item-tags">
-                      <span class="async-tags"></span>
-                    </p>
-                  </div>
-                </td>
-                <td class="vertop">
-                  <div class="yuyue_vertop ac_linkurl " data-id='31996204049709'>
-                                    <span class='cont_Pa'>
-                                        <a href='javascript:;' class='click_btn'>联系商家</a>
-                                    </span>
-                  </div>
-                </td>
-              </tr>
-              <tr  data-sign="" class="ac_item">
-                <td class="img">
-                  <div class="ac_linkurl">
-                    <a href="">
-                      <img src="../../assets/images/05.jpg"/>
-                    </a>
-                  </div>
-                </td>
-                <td class="t">
-                  <div class="tdiv">
-                    <a href='' class="t ac_linkurl"name='31996204049709'>全沈阳<b>汽修</b> 修理 换配件 清洗
-                      <span class='tu'>[5图]</span>
-                      <span class="jingpin">精</span>
-                    </a>
-                    <div class="item-desc">
-                      沈阳全区域每个街道都有师傅 十分钟上门维修
-                    </div>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">辽宁XXX服务有限公司</a>
-                    </p>
-                    <p class="item-tags">
-                      <span class="async-tags"></span>
-                    </p>
-                  </div>
-                </td>
-                <td class="vertop">
-                  <div class="yuyue_vertop ac_linkurl " data-id='31996204049709'>
-                                    <span class='cont_Pa'>
-                                        <a href='javascript:;' class='click_btn'>联系商家</a>
-                                    </span>
-                  </div>
-                </td>
-              </tr>
-              <tr  data-sign="" class="ac_item">
-                <td class="img">
-                  <div class="ac_linkurl">
-                    <a href="">
-                      <img src="../../assets/images/05.jpg"/>
-                    </a>
-                  </div>
-                </td>
-                <td class="t">
-                  <div class="tdiv">
-                    <a href='' class="t ac_linkurl"name='31996204049709'>全沈阳<b>汽修</b> 修理 换配件 清洗
-                      <span class='tu'>[5图]</span>
-                      <span class="jingpin">精</span>
-                    </a>
-                    <div class="item-desc">
-                      沈阳全区域每个街道都有师傅 十分钟上门维修
-                    </div>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">辽宁XXX服务有限公司</a>
-                    </p>
-                    <p class="item-tags">
-                      <span class="async-tags"></span>
-                    </p>
-                  </div>
-                </td>
-                <td class="vertop">
-                  <div class="yuyue_vertop ac_linkurl " data-id='31996204049709'>
-                                    <span class='cont_Pa'>
-                                        <a href='javascript:;' class='click_btn'>联系商家</a>
-                                    </span>
-                  </div>
-                </td>
-              </tr>
-              <tr  data-sign="" class="ac_item">
-                <td class="img">
-                  <div class="ac_linkurl">
-                    <a href="">
-                      <img src="../../assets/images/05.jpg"/>
-                    </a>
-                  </div>
-                </td>
-                <td class="t">
-                  <div class="tdiv">
-                    <a href='' class="t ac_linkurl"name='31996204049709'>全沈阳<b>汽修</b> 修理 换配件 清洗
-                      <span class='tu'>[5图]</span>
-                      <span class="jingpin">精</span>
-                    </a>
-                    <div class="item-desc">
-                      沈阳全区域每个街道都有师傅 十分钟上门维修
-                    </div>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">辽宁XXX服务有限公司</a>
-                    </p>
-                    <p class="item-tags">
-                      <span class="async-tags"></span>
-                    </p>
-                  </div>
-                </td>
-                <td class="vertop">
-                  <div class="yuyue_vertop ac_linkurl " data-id='31996204049709'>
-                                    <span class='cont_Pa'>
-                                        <a href='javascript:;' class='click_btn'>联系商家</a>
-                                    </span>
-                  </div>
-                </td>
-              </tr>
-              <tr  data-sign="" class="ac_item">
-                <td class="img">
-                  <div class="ac_linkurl">
-                    <a href="">
-                      <img src="../../assets/images/05.jpg"/>
-                    </a>
-                  </div>
-                </td>
-                <td class="t">
-                  <div class="tdiv">
-                    <a href='' class="t ac_linkurl"name='31996204049709'>全沈阳<b>汽修</b> 修理 换配件 清洗
-                      <span class='tu'>[5图]</span>
-                      <span class="jingpin">精</span>
-                    </a>
-                    <div class="item-desc">
-                      沈阳全区域每个街道都有师傅 十分钟上门维修
-                    </div>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">辽宁XXX服务有限公司</a>
-                    </p>
-                    <p class="item-tags">
-                      <span class="async-tags"></span>
-                    </p>
-                  </div>
-                </td>
-                <td class="vertop">
-                  <div class="yuyue_vertop ac_linkurl " data-id='31996204049709'>
-                                    <span class='cont_Pa'>
-                                        <a href='javascript:;' class='click_btn'>联系商家</a>
-                                    </span>
-                  </div>
-                </td>
-              </tr>
-              <tr  data-sign="" class="ac_item">
-                <td class="img">
-                  <div class="ac_linkurl">
-                    <a href="">
-                      <img src="../../assets/images/05.jpg"/>
-                    </a>
-                  </div>
-                </td>
-                <td class="t">
-                  <div class="tdiv">
-                    <a href='' class="t ac_linkurl"name='31996204049709'>全沈阳<b>汽修</b> 修理 换配件 清洗
-                      <span class='tu'>[5图]</span>
-                      <span class="jingpin">精</span>
-                    </a>
-                    <div class="item-desc">
-                      沈阳全区域每个街道都有师傅 十分钟上门维修
-                    </div>
-                    <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow">辽宁XXX服务有限公司</a>
-                    </p>
-                    <p class="item-tags">
-                      <span class="async-tags"></span>
-                    </p>
-                  </div>
-                </td>
-                <td class="vertop">
-                  <div class="yuyue_vertop ac_linkurl " data-id='31996204049709'>
-                                    <span class='cont_Pa'>
-                                        <a href='javascript:;' class='click_btn'>联系商家</a>
-                                    </span>
-                  </div>
-                </td>
-              </tr>
+
             </table>
           </div>
         </section>
@@ -358,117 +161,7 @@
                 </div>
                 <div class="left">
                   <div class="serve_p">
-                    <p>各种文字各种文字各种文字各种文字各种文字各种文字种文字各种文字</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="left">
-                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
-                </div>
-                <div class="left">
-                  <div class="serve_p">
-                    <p>各种文字各种文字各字各种文字种文字各种文字</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="left">
-                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
-                </div>
-                <div class="left">
-                  <div class="serve_p">
-                    <p>各种文字各种文字各种文</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="left">
-                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
-                </div>
-                <div class="left">
-                  <div class="serve_p">
-                    <p>各种文字各种文字各种文字各种文字各种文字各种文字种文字各种文字</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="left">
-                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
-                </div>
-                <div class="left">
-                  <div class="serve_p">
-                    <p>各种文字各种文字各字各种文字种文字各种文字</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="left">
-                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
-                </div>
-                <div class="left">
-                  <div class="serve_p">
-                    <p>各种文字各种文字各种文</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="left">
-                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
-                </div>
-                <div class="left">
-                  <div class="serve_p">
-                    <p>各种文字各种文字各种文字各种文字各种文字各种文字种文字各种文字</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="left">
-                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
-                </div>
-                <div class="left">
-                  <div class="serve_p">
-                    <p>各种文字各种文字各字各种文字种文字各种文字</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="left">
-                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
-                </div>
-                <div class="left">
-                  <div class="serve_p">
-                    <p>各种文字各种文字各种文</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="left">
-                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
-                </div>
-                <div class="left">
-                  <div class="serve_p">
-                    <p>各种文字各种文字各种文字各种文字各种文字各种文字种文字各种文字</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="left">
-                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
-                </div>
-                <div class="left">
-                  <div class="serve_p">
-                    <p>各种文字各种文字各字各种文字种文字各种文字</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="left">
-                  <div class="serve_img"><img src="../../assets/images/02.jpg" width="87px" height="70"/></div>
-                </div>
-                <div class="left">
-                  <div class="serve_p">
-                    <p>各种文字各种文字各种文</p>
+                    <p></p>
                   </div>
                 </div>
               </li>

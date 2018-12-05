@@ -36,15 +36,19 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><em>*</em>
-                        <p>产品说明</p></td>
+                      <td>
+                        <em>*</em>
+                        <p>产品说明</p>
+                      </td>
                       <td>
                         <textarea class="textarea_box"></textarea>
                       </td>
                     </tr>
                     <tr>
-                      <td><em>*</em>
-                        <p>品牌</p></td>
+                      <td>
+                        <em>*</em>
+                        <p>品牌</p>
+                      </td>
                       <td>
                         <select class="select_box">
                           <option></option>
@@ -91,10 +95,10 @@
                         <em>*</em>
                         <p>数量</p>
                       </td>
-                      <td>
-                        <button @click="changeNum"><i class="fa fa-minus"></i></button>
-                        <input type="text" style="width: 25%;" v-model="count">
-                        <button @click="changeNum"><i class="fa fa-plus"></i></button>
+                      <td style="text-align: left">
+                        <button @click="changeNum" class="fafalala"><i class="fa fa-minus fafasoso"></i></button>
+                        <input type="text" style="width: 25%; text-align: center; padding-left: 0;" v-model="count">
+                        <button @click="changeNum" class="fafalala"><i class="fa fa-plus fafasoso"></i></button>
                       </td>
                     </tr>
                     <tr>
@@ -229,12 +233,12 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><em>*</em>
-                        <p>价格</p></td>
                       <td>
-                        <select class="select_box">
-                          <option>平米</option>
-                        </select>
+                        <em>*</em>
+                        <p>价格</p>
+                      </td>
+                      <td>
+                        <input type="text"/>平米
                       </td>
                     </tr>
                     <tr>
@@ -243,47 +247,67 @@
                         <p>租赁方式</p>
                       </td>
                       <td>
-                        <select>
-                          <option></option>
+                        <select class="select_box">
+                          <option value="0">请选择</option>
+                          <option value="1">店铺</option>
+                          <option value="2">库房</option>
+                          <option value="3">写字间</option>
                         </select>
                       </td>
                     </tr>
                     <tr>
-                      <td><em>*</em>
-                        <p>房屋面积（下拉框）</p></td>
+                      <td>
+                        <em>*</em>
+                        <p>房屋面积</p>
+                      </td>
                       <td>
                         <select class="select_box">
-                          <option value="0">面议</option>
+                          <option value="0">请选择</option>
+                          <option value="1">5平以下</option>
+                          <option value="2">5-10平</option>
+                          <option value="3">10-50平</option>
+                          <option value="4">50-100平</option>
+                          <option value="5">100平以上</option>
                         </select>
                       </td>
                     </tr>
                     <tr>
-                      <td><em>*</em>
-                        <p>所在区域</p></td>
+                      <td>
+                        <em>*</em>
+                        <p>所在区域</p>
+                      </td>
                       <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
                     </tr>
                     <tr>
-                      <td><em>*</em>
-                        <p>档口编号</p></td>
+                      <td>
+                        <em>*</em>
+                        <p>档口编号</p>
+                      </td>
                       <td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>
                     </tr>
                     <tr>
-                      <td><em>*</em>
-                        <p>租赁详情</p></td>
+                      <td>
+                        <em>*</em>
+                        <p>租赁详情</p>
+                      </td>
                       <td>
                         <textarea class="textarea_box"></textarea>
                       </td>
                     </tr>
                     <tr>
-                      <td><em>*</em>
-                        <p>档口描述</p></td>
+                      <td>
+                        <em>*</em>
+                        <p>档口描述</p>
+                      </td>
                       <td>
                         <textarea class="textarea_box"></textarea>
                       </td>
                     </tr>
                     <tr>
-                      <td><em>*</em>
-                        <p>多张照片</p></td>
+                      <td>
+                        <em>*</em>
+                        <p>多张照片</p>
+                      </td>
                       <td>
                         <textarea class="textarea_box"></textarea>
                       </td>
@@ -342,19 +366,12 @@
                       </td>
                       <td>
                         <select class="select_box">
-                          <option value="0">面议</option>
-                          <option value="1">1K以下</option>
-                          <option value="2">1K-2K</option>
-                          <option value="3">2K-4K</option>
-                          <option value="4">4K-6K</option>
-                          <option value="5">6K-8K</option>
-                          <option value="6">8K-10K</option>
-                          <option value="7">10K-15K</option>
-                          <option value="8">15K-25K</option>
-                          <option value="9">25K-35K</option>
-                          <option value="10">35K-50K</option>
-                          <option value="11">50K-70K</option>
-                          <option value="12">70K-100K</option>
+                          <option>5000</option>
+                          <option>5001-6000</option>
+                          <option>6001-7000</option>
+                          <option>7001-8000</option>
+                          <option>8001-9000</option>
+                          <option>9001-10000</option>
                         </select>
                       </td>
                     </tr>
@@ -385,8 +402,12 @@
                         <p>任职要求</p>
                       </td>
                       <td>
-                        <select>
-                          <option></option>
+                        <select class="select_box">
+                          <option>0-100</option>
+                          <option>100-200</option>
+                          <option>200-300</option>
+                          <option>300-400</option>
+                          <option>400-500</option>
                         </select>
                       </td>
                     </tr>
@@ -435,7 +456,7 @@
         }).then(res => {
           _this.subTypeList = res.data.data;
         })
-      }
+      },
     },
     mounted: function () {
       let _this = this;
@@ -482,16 +503,11 @@
       moduletanchu: function (e) {
         let _this = this;
         let trs = $(e.target).parent().children().eq(0).children('table').children().children();
-        let moduleBoxs = $(e.target).parent().children().eq(1).children('table').children().children();
         let aes = $('.details_left a');
         let params = [];
         let aIndex = '';
         for (let i = 0; i < trs.length; i++) {
           params[i] = ($(trs[i]).children().eq(1).children().val());
-        }
-        let length = params.length;
-        for (let i = 0; i < moduleBoxs.length; i++) {
-          params[i + length] = $(moduleBoxs[i]).children().eq(1).children().val();
         }
         for (let i = 0; i < aes.length; i++) {
           if ($(aes[i]).hasClass('li_active')) {
@@ -501,15 +517,19 @@
         }
         switch (aIndex) {
           case 1:
-            _this.pushLease(params, e);
-            break;
-          case 2:
+            // 发布服务
             _this.pushService(params, e);
             break;
+          case 2:
+            // 发布租赁
+            _this.pushLease(params, e);
+            break;
           case 3:
+            // 发布招聘
             _this.pushRecruit(params, e);
             break;
           default:
+            // 发布产品
             _this.pushGood(params, e);
             break;
         }
@@ -518,32 +538,45 @@
         let _this = this;
         this.$axios({
           url: _this.HOME + '/goods/add?name=' + list[0] +
-            '&price=' + list[1] +
-            '&describe=' + list[2] +
-            '&brand=' + list[3] +
-            '&productPlace=' + list[4] +
-            '&subTypeCode=' + list[5] +
-            '&isInStock=' + list[6] +
-            '&goodsPic=' + list[7] +
-            '&mainType=' + list[8],
+            '&describe=' + list[1] +
+            '&brand=' + list[2] +
+            '&mainTypeCode=' + list[3] +
+            '&subTypeCode=' + list[4] +
+            '&videoUrl=' + list[5] +
+            '&quantity=' + list[6] +
+            '&productPlace=' + list[7] +
+            '&goodsImagesList=' + list[8] +
+            '&goodsPic=' + list[9] +
+            '&price=' + list[10],
           method: 'POST'
         }).then(res => {
-          _this.backCode = res.data.code
+          if (Math.ceil(res.data.code) === 200) {
+            let parent = $(event.target).parent().parent().children();
+            $(parent).eq(0).hide();
+            $(parent).eq(1).show();
+          } else {
+            alert(res.data.message)
+          }
         })
       },
       pushLease: function (list, event) {
         let _this = this;
         this.$axios({
-          url: _this.HOME + '/lease/add?leaseType=' + list[0] +
-            '&acreage=' + list[1] +
-            '&stallPosition=' + list[2] +
-            '&price=' + list[3] +
-            '&leaseTerm=' + list[4] +
-            '&title=' + list[5] +
-            '&descript=' + list[6],
+          url: _this.HOME + '/lease/add?title=' + list[0] +
+            '&price=' + list[1] +
+            '&leaseType=' + list[2] +
+            '&acreageTypeCode=' + list[3] +
+            '&stallPosition=' + list[4] +
+            '&stallCode=' + list[5] +
+            '&descript=' + list[6] + "\n" + list[7],
+          // '&leaseImageSet=' + list[8],
           method: 'POST'
         }).then(res => {
-          _this.backCode = res.data.code
+          if (Math.ceil(res.data.code) === 200) {
+            let parent = $(event.target).parent().parent().children();
+            $(parent).eq(0).hide();
+            $(parent).eq(1).show();
+          }
         })
       },
       pushService: function (list, event) {
@@ -553,14 +586,23 @@
       pushRecruit: function (list, event) {
         let _this = this;
         this.$axios({
-          url: _this.HOME + '/recruit/add?companyName=' + list[0] +
-            '&title=' + list[1] +
-            '&startSalary=' + list[2] +
-            '&positionRequirement=' + list[3] +
-            '&publishTime=' + list[4],
+          url: _this.HOME + '/recruit/add?title=' + list[0] +
+            '&sellerAddress=' + list[1] +
+            '&positionRequirement=' + list[2] +
+            '&startSalary=' + list[3].split('-')[0] +
+            '&endSalary=' + list[3].split('-')[1] +
+            '&takeOfficeRequirement=' + list[4] +
+            //待遇                 =' + list[5] +
+            '&companyPropleNum=' + list[6],
           method: 'POST'
         }).then(res => {
-          _this.backCode = res.data.code
+          if (Math.ceil(res.data.code) === 200) {
+            let parent = $(event.target).parent().parent().children();
+            $(parent).eq(0).hide();
+            $(parent).eq(1).show();
+          } else {
+            alert(res.data.message)
+          }
         })
       },
       changeNum: function (e) {

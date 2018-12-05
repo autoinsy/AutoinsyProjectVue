@@ -50,7 +50,7 @@
             </div>
             <div class="pay_mima">
               支付密码：<input type="text" />
-              <a href="">忘记密码？</a>
+              <a href="javascript:">忘记密码？</a>
             </div>
             <div class="pay_btn">
               <input type="button" value="确认付款"/>

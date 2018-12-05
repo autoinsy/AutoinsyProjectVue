@@ -46,47 +46,7 @@
                   </li>
                   <li>
                     <router-link to='/TeachnicalDetails'>
-                      这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表
-                    </router-link>
-                  </li>
-                  <li>
-                    <router-link to='/TeachnicalDetails'>
-                      这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表
-                    </router-link>
-                  </li>
-                  <li>
-                    <router-link to='/TeachnicalDetails'>
-                      这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表
-                    </router-link>
-                  </li>
-                  <li>
-                    <router-link to='/TeachnicalDetails'>
-                      这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表题列表
-                    </router-link>
-                  </li>
-                  <li>
-                    <router-link to='/TeachnicalDetails'>
-                      这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表
-                    </router-link>
-                  </li>
-                  <li>
-                    <router-link to='/TeachnicalDetails'>
-                      这里是问题列表这里是问题列表这里是问题列表这里是问题列表
-                    </router-link>
-                  </li>
-                  <li>
-                    <router-link to='/TeachnicalDetails'>
-                      这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表
-                    </router-link>
-                  </li>
-                  <li>
-                    <router-link to='/TeachnicalDetails'>
-                      这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表
-                    </router-link>
-                  </li>
-                  <li>
-                    <router-link to='/TeachnicalDetails'>
-                      这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表这里是问题列表
+
                     </router-link>
                   </li>
                 </ul>

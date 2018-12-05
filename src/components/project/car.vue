@@ -65,8 +65,8 @@
           </td>
           <td class="td1" valign="top">
             <ul>
-              <li><p>这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文文字描述</p></li>
-              <li><p class="td1_p">这里是文字描述这里是文字描述这里是文字描述这里是文文字描述</p></li>
+              <li><p></p></li>
+              <li><p class="td1_p"></p></li>
             </ul>
           </td>
           <td class="td2" valign="top">
@@ -82,9 +82,9 @@
           </td>
           <td class="td5" valign="top">
             <ul>
-              <li><a href="">删除</a> </li>
-              <li><a href="">移到我的关注</a> </li>
-              <li><a href="">加到我的关注</a> </li>
+              <li><a href="javascript:">删除</a> </li>
+              <li><a href="javascript:">移到我的关注</a> </li>
+              <li><a href="javascript:">加到我的关注</a> </li>
             </ul>
           </td>
         </tr>
@@ -96,8 +96,8 @@
           </td>
           <td class="td1" valign="top">
             <ul>
-              <li><p>这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文文字描述</p></li>
-              <li><p class="td1_p">这里是文字描述这里是文字描述这里是文字描述这里是文文字描述</p></li>
+              <li><p></p></li>
+              <li><p class="td1_p"></p></li>
             </ul>
           </td>
           <td class="td2" valign="top">
@@ -113,9 +113,9 @@
           </td>
           <td class="td5" valign="top">
             <ul>
-              <li><a href="">删除</a> </li>
-              <li><a href="">移到我的关注</a> </li>
-              <li><a href="">加到我的关注</a> </li>
+              <li><a href="javascript:">删除</a> </li>
+              <li><a href="javascript:">移到我的关注</a> </li>
+              <li><a href="javascript:">加到我的关注</a> </li>
             </ul>
           </td>
         </tr>
@@ -126,9 +126,9 @@
             <input type="checkbox" class="checkbox_all"/>全选
           </td>
           <td class="td1">
-            <a href=""> 删除选中的商品</a>
-            <a href=""> 移到我的关注</a>
-            <a href=""> 清理购物车</a>
+            <a href="javascript:"> 删除选中的商品</a>
+            <a href="javascript:"> 移到我的关注</a>
+            <a href="javascript:"> 清理购物车</a>
           </td>
           <td class="td2">
 

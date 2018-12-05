@@ -14,16 +14,16 @@
               <p>详细地址到门牌号详细地址到门牌号详细地址到门牌号详细地址到门牌号详细地址到门牌号详细地址到门牌号</p>
             </li>
             <li>
-              <div class="order_li_p">辽宁省沈阳市于洪区</div>
-              <p>详细地址到门牌号详细地址到门牌号详细地址到门牌号详细地址到门牌号详细地址到门牌号详细地址到门牌号</p>
+              <div class="order_li_p"></div>
+              <p></p>
             </li>
             <li>
-              <div class="order_li_p">辽宁省沈阳市于洪区</div>
-              <p>详细地址到门牌号详细地址到门牌号详细地址到门牌号详细地址到门牌号详细地址到门牌号详细地址到门牌号</p>
+              <div class="order_li_p"></div>
+              <p></p>
             </li>
             <li class="order_li_more">
-              <div class="order_li_p">辽宁省沈阳市于洪区</div>
-              <p>详细地址到门牌号详细地址到门牌号详细地址到门牌号详细地址到门牌号详细地址到门牌号详细地址到门牌号</p>
+              <div class="order_li_p"></div>
+              <p></p>
             </li>
           </ul>
         </div>
@@ -44,20 +44,6 @@
             </thead>
             <tbody>
             <tr><td colspan="6"><p style="line-height: 40px;font-size: 16px; border-bottom: 1px dashed #7eb3ff;">店铺的名字</p></td></tr>
-            <tr>
-              <td class="or1">
-                <div class="div_or1">
-                  <img src="../../assets/images/02.jpg" width="51" height="51"/>
-                  <p>这块是店铺的名字</p>
-                  <p>这块是简介描述哦这块是简介描述哦</p>
-                </div>
-              </td>
-              <td class="or2">雨刮器</td>
-              <td class="or3">378.00</td>
-              <td class="or4">1</td>
-              <td class="or5">包邮</td>
-              <td class="or6">378.00</td>
-            </tr>
             <tr>
               <td class="or1">
                 <div class="div_or1">

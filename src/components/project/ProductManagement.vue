@@ -9,10 +9,10 @@
         <div class="details_left">
           <div class="detalis_top">产品管理</div>
           <ul>
-            <li><a href=""class="li_active" @click="ProductManagements">所有产品</a></li>
-            <li><a href="" @click="ProductManagements">销售中</a></li>
-            <li><a href="" @click="ProductManagements">已下架</a></li>
-            <li><a href="" @click="ProductManagements">未下架</a></li>
+            <li><a href="javascript:"class="li_active" @click="ProductManagements">所有产品</a></li>
+            <li><a href="javascript:" @click="ProductManagements">销售中</a></li>
+            <li><a href="javascript:" @click="ProductManagements">已下架</a></li>
+            <li><a href="javascript:" @click="ProductManagements">未下架</a></li>
           </ul>
         </div>
       </div>

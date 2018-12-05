@@ -566,11 +566,11 @@
 }
 
 .detalis_top {
-    width: 177px;
-    height: 30px;
-    line-height: 30px;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
     background-color: #f7f7f7;
-    padding-left: 21px;
+    /*padding-left: 21px;*/
     color: #333;
     font-size: 16px;
 }
@@ -611,7 +611,7 @@
 }
 
 .details_right {
-    width: 891px;
+    width: 1000px !important;
     height: auto;
     border: 1px solid #ebebeb;
     margin-bottom: 20px;
@@ -802,6 +802,7 @@
 .mylistcenter p {
     font-size: 14px;
     color: #666;
+  text-align: left;
 }
 
 .mylistcenter table {
@@ -869,7 +870,7 @@
     line-height: 22px;
     outline: none;
     color: #fff;
-    margin: 20px 0 0 230px;
+    margin: 20px 0 0 0;
     border: 1px solid #ff7300;
     padding: 2px 24px;
     font-size: 14px;
@@ -1317,6 +1318,7 @@
     width: 351px;
     height: 223px;
     margin-right: 40px;
+  float: left;
 }
 
 .tec_p {
@@ -1326,6 +1328,7 @@
     color: #000;
     line-height: 36px;
     margin-bottom: 20px;
+  float: right;
 }
 
 .tec_pp {
@@ -1388,6 +1391,7 @@
 .tec_center{
     margin-top: 30px;
     width: 100%;
+  text-align: left;
 }
 .tec_center p{
     font-size: 14px;
@@ -1915,7 +1919,7 @@
 .serve_right_li li{
     border-bottom: 1px dashed #dcdcdc;
     height: 72px;
-    padding: 5px;
+    padding: 5px 5px;
 }
 .serve_img{
     width: 87px;
@@ -3090,10 +3094,11 @@
     width: 940px;
     border-bottom: 1px solid #dddddd;
     padding-bottom: 30px;
+  text-align: left !important;
 }
 .served_top_box p{
     line-height: 70px;
-  text-align: left;
+  text-align: left !important;
 }
 .served_top_box li{
     float: left;
@@ -3391,6 +3396,7 @@
 .prolist li{
     float: left;
     margin-right: 5px;
+  margin-bottom: 10px;
 }
 .prolist .prolist_so{
     margin-right: 0;
@@ -3954,6 +3960,21 @@ em, i, u {
   height: 220px;
   overflow: hidden;
   margin-bottom: 20px;
+}
+/**/
+.fafasoso{
+  color:#ff7300;
+  background-color: #fff;
+  text-indent: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  padding:6px 10px 6px 0;
+}
+.fafalala{
+  border: 1px solid #d6d7dc;
+  border-radius: 5px;
+  outline: none !important;
+  cursor: pointer;
 }
 /**/
 .upimg{

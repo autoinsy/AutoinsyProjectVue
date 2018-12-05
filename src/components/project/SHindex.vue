@@ -2,14 +2,14 @@
     <div class="">
       <div class="atop">
         <ul>
-          <li><a href=""> 首页</a></li>
-          <li><a href="">全部分类</a></li>
-          <li><a href="">雨刮器</a></li>
-          <li><a href="">轮胎</a></li>
-          <li><a href="">雨刮器</a></li>
-          <li><a href="">轮胎</a></li>
-          <li><a href="">雨刮器</a></li>
-          <li><a href="">轮胎</a></li>
+          <li><a href="javascript:"> 首页</a></li>
+          <li><a href="javascript:">全部分类</a></li>
+          <li><a href="javascript:">雨刮器</a></li>
+          <li><a href="javascript:">轮胎</a></li>
+          <li><a href="javascript:">雨刮器</a></li>
+          <li><a href="javascript:">轮胎</a></li>
+          <li><a href="javascript:">雨刮器</a></li>
+          <li><a href="javascript:">轮胎</a></li>
         </ul>
       </div>
       <!---->
@@ -30,203 +30,16 @@
             <li>
               <router-link to='/ProjectDetails'>
                 <div class="alia_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
-                <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
-                <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
-                <p><span style="color: #ff7300;">0</span>条评价</p>
-                <p>店铺的名字</p>
+                <p><span style="color: #ff7300;"><span style="font-size: 24px"></span></span></p>
+                <p></p>
+                <p><span style="color: #ff7300;"></span></p>
+                <p></p>
                 <p><img src="../../assets/images/22.jpg"/></p>
                 <div class="proul">
                   <ul>
-                    <li><a href=""> 对比</a></li>
-                    <li><a href=""> 关注</a></li>
-                    <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
-                  </ul>
-                </div>
-              </router-link>
-            </li>
-            <li>
-              <router-link to='/ProjectDetails'>
-                <div class="alia_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
-                <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
-                <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
-                <p><span style="color: #ff7300;">0</span>条评价</p>
-                <p>店铺的名字</p>
-                <p><img src="../../assets/images/22.jpg"/></p>
-                <div class="proul">
-                  <ul>
-                    <li><a href=""> 对比</a></li>
-                    <li><a href=""> 关注</a></li>
-                    <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
-                  </ul>
-                </div>
-              </router-link>
-            </li>
-            <li>
-              <router-link to='/ProjectDetails'>
-                <div class="alia_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
-                <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
-                <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
-                <p><span style="color: #ff7300;">0</span>条评价</p>
-                <p>店铺的名字</p>
-                <p><img src="../../assets/images/22.jpg"/></p>
-                <div class="proul">
-                  <ul>
-                    <li><a href=""> 对比</a></li>
-                    <li><a href=""> 关注</a></li>
-                    <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
-                  </ul>
-                </div>
-              </router-link>
-            </li>
-            <li>
-              <router-link to='/ProjectDetails'>
-                <div class="alia_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
-                <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
-                <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
-                <p><span style="color: #ff7300;">0</span>条评价</p>
-                <p>店铺的名字</p>
-                <p><img src="../../assets/images/22.jpg"/></p>
-                <div class="proul">
-                  <ul>
-                    <li><a href=""> 对比</a></li>
-                    <li><a href=""> 关注</a></li>
-                    <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
-                  </ul>
-                </div>
-              </router-link>
-            </li>
-            <li>
-              <router-link to='/ProjectDetails'>
-                <div class="alia_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
-                <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
-                <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
-                <p><span style="color: #ff7300;">0</span>条评价</p>
-                <p>店铺的名字</p>
-                <p><img src="../../assets/images/22.jpg"/></p>
-                <div class="proul">
-                  <ul>
-                    <li><a href=""> 对比</a></li>
-                    <li><a href=""> 关注</a></li>
-                    <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
-                  </ul>
-                </div>
-              </router-link>
-            </li>
-            <li>
-              <router-link to='/ProjectDetails'>
-                <div class="alia_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
-                <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
-                <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
-                <p><span style="color: #ff7300;">0</span>条评价</p>
-                <p>店铺的名字</p>
-                <p><img src="../../assets/images/22.jpg"/></p>
-                <div class="proul">
-                  <ul>
-                    <li><a href=""> 对比</a></li>
-                    <li><a href=""> 关注</a></li>
-                    <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
-                  </ul>
-                </div>
-              </router-link>
-            </li>
-            <li>
-              <router-link to='/ProjectDetails'>
-                <div class="alia_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
-                <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
-                <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
-                <p><span style="color: #ff7300;">0</span>条评价</p>
-                <p>店铺的名字</p>
-                <p><img src="../../assets/images/22.jpg"/></p>
-                <div class="proul">
-                  <ul>
-                    <li><a href=""> 对比</a></li>
-                    <li><a href=""> 关注</a></li>
-                    <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
-                  </ul>
-                </div>
-              </router-link>
-            </li>
-            <li class="alia_so">
-              <router-link to='/ProjectDetails'>
-                <div class="alia_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
-                <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
-                <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
-                <p><span style="color: #ff7300;">0</span>条评价</p>
-                <p>店铺的名字</p>
-                <p><img src="../../assets/images/22.jpg"/></p>
-                <div class="proul">
-                  <ul>
-                    <li><a href=""> 对比</a></li>
-                    <li><a href=""> 关注</a></li>
-                    <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
-                  </ul>
-                </div>
-              </router-link>
-            </li>
-            <li>
-              <router-link to='/ProjectDetails'>
-                <div class="alia_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
-                <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
-                <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
-                <p><span style="color: #ff7300;">0</span>条评价</p>
-                <p>店铺的名字</p>
-                <p><img src="../../assets/images/22.jpg"/></p>
-                <div class="proul">
-                  <ul>
-                    <li><a href=""> 对比</a></li>
-                    <li><a href=""> 关注</a></li>
-                    <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
-                  </ul>
-                </div>
-              </router-link>
-            </li>
-            <li>
-              <router-link to='/ProjectDetails'>
-                <div class="alia_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
-                <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
-                <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
-                <p><span style="color: #ff7300;">0</span>条评价</p>
-                <p>店铺的名字</p>
-                <p><img src="../../assets/images/22.jpg"/></p>
-                <div class="proul">
-                  <ul>
-                    <li><a href=""> 对比</a></li>
-                    <li><a href=""> 关注</a></li>
-                    <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
-                  </ul>
-                </div>
-              </router-link>
-            </li>
-            <li>
-              <router-link to='/ProjectDetails'>
-                <div class="alia_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
-                <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
-                <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
-                <p><span style="color: #ff7300;">0</span>条评价</p>
-                <p>店铺的名字</p>
-                <p><img src="../../assets/images/22.jpg"/></p>
-                <div class="proul">
-                  <ul>
-                    <li><a href=""> 对比</a></li>
-                    <li><a href=""> 关注</a></li>
-                    <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
-                  </ul>
-                </div>
-              </router-link>
-            </li>
-            <li class="alia_so">
-              <router-link to='/ProjectDetails'>
-                <div class="alia_img"><img src="../../assets/images/02.jpg" width="220" height="220"/></div>
-                <p><span style="color: #ff7300;">￥<span style="font-size: 24px">109.00</span></span></p>
-                <p>描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小描述的小标题描述的小</p>
-                <p><span style="color: #ff7300;">0</span>条评价</p>
-                <p>店铺的名字</p>
-                <p><img src="../../assets/images/22.jpg"/></p>
-                <div class="proul">
-                  <ul>
-                    <li><a href=""> 对比</a></li>
-                    <li><a href=""> 关注</a></li>
-                    <li><a href=""> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
+                    <li><a href="javascript:"> 对比</a></li>
+                    <li><a href="javascript:"> 关注</a></li>
+                    <li><a href="javascript:"> <img src="../../assets/images/7.png" style="margin-right: 10px"/>加入购物车</a></li>
                   </ul>
                 </div>
               </router-link>

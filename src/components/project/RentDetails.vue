@@ -86,40 +86,6 @@
               <p style="color: #ff7300; line-height: 40px">4400元/月</p>
             </div>
           </li>
-          <li>
-            <div class="left rentd_r_img">
-              <img src="../../assets/images/05.jpg"/>
-            </div>
-            <div class="right rentd_r_zi">
-              <p>这里是大标题这里是大标题这里是大标题</p>
-              <p>这里是描述</p>
-              <p>这里是描述</p>
-              <p style="color: #ff7300; line-height: 40px">4400元/月</p>
-            </div>
-          </li>
-          <li>
-            <div class="left rentd_r_img">
-              <img src="../../assets/images/05.jpg"/>
-            </div>
-            <div class="right rentd_r_zi">
-              <p>这里是大标题这里是大标题这里是大标题</p>
-              <p>这里是描述</p>
-              <p>这里是描述</p>
-              <p style="color: #ff7300; line-height: 40px">4400元/月</p>
-            </div>
-          </li>
-          <li>
-            <div class="left rentd_r_img">
-              <img src="../../assets/images/05.jpg"/>
-            </div>
-            <div class="right rentd_r_zi">
-              <p>这里是大标题这里是大标题这里是大标题</p>
-              <p>这里是描述</p>
-              <p>这里是描述</p>
-              <p style="color: #ff7300; line-height: 40px">4400元/月</p>
-            </div>
-          </li>
-
         </ul>
       </div>
       <div class="clear"></div>

@@ -97,9 +97,9 @@
             <input type="button" value="关注店铺">
           </div>
           <div class="pro_btn">
-            <a href=""><img src="../../assets/images/4.png"/></a>
-            <a href=""><img src="../../assets/images/5.png"/></a>
-            <a href=""><img src="../../assets/images/6.png"/></a>
+            <a href="javascript:"><img src="../../assets/images/4.png"/></a>
+            <a href="javascript:"><img src="../../assets/images/5.png"/></a>
+            <a href="javascript:"><img src="../../assets/images/6.png"/></a>
           </div>
         </div>
 
@@ -110,10 +110,10 @@
         <div class="served_left_box_title">
           <ul>
             <li><a href="" class="title_color_li"> 商品介绍</a></li>
-            <li><a href=""> 规格与包装</a></li>
-            <li><a href=""> 售后保障</a></li>
-            <li><a href=""> 商品评价</a></li>
-            <li><a href=""> 本店好评商品</a></li>
+            <li><a href="javascript:"> 规格与包装</a></li>
+            <li><a href="javascript:"> 售后保障</a></li>
+            <li><a href="javascript:"> 商品评价</a></li>
+            <li><a href="javascript:"> 本店好评商品</a></li>
           </ul>
           <div class="served_r"><input type="button" value="加入购物车"/> </div>
           <div class="clear"></div>

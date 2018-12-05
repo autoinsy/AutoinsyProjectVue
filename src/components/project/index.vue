@@ -37,9 +37,9 @@
           <!--</div>-->
           <!--<div class="bd">-->
           <!--<ul>-->
-          <!--<li style="display: none;"><a href=""><img src="../../assets/images/01.jpg"></a></li>-->
-          <!--<li style="display: none;"><a href=""><img src="../../assets/images/02.jpg"></a></li>-->
-          <!--<li style="display: list-item;"><a href=""><img src="../../assets/images/03.jpg"></a></li>-->
+          <!--<li style="display: none;"><a href="javascript:"><img src="../../assets/images/01.jpg"></a></li>-->
+          <!--<li style="display: none;"><a href="javascript:"><img src="../../assets/images/02.jpg"></a></li>-->
+          <!--<li style="display: list-item;"><a href="javascript:"><img src="../../assets/images/03.jpg"></a></li>-->
           <!--</ul>-->
           <!--</div>-->
           <!--&lt;!&ndash; 下面是前/后按钮代码&ndash;&gt;-->
@@ -107,9 +107,9 @@
               <ul class="picList"
                   style="width: 746px; left: 0px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
                 <li style="float: left;" v-for="good in goods">
-                  <div class="pic"><a href=""><img v-bind:src="good.goodsPic"></a></div>
+                  <div class="pic"><a href="javascript:"><img v-bind:src="good.goodsPic"></a></div>
                   <div class="title">
-                    <a href="">
+                    <a href="javascript:">
                       <p>{{good.describe}}</p>
                       <p class="coler_7">${{good.price}}</p>
                     </a>
@@ -123,13 +123,13 @@
         <div class="index_lb_title">
           <div class="title_img"><img src="../../assets/images/15.png"/></div>
           <ul>
-            <li><a href="">车门车窗</a></li>
+            <li><a href="javascript:">车门车窗</a></li>
             <li>|</li>
-            <li><a href="">车门车窗</a></li>
+            <li><a href="javascript:">车门车窗</a></li>
             <li>|</li>
-            <li><a href="">车门车窗</a></li>
+            <li><a href="javascript:">车门车窗</a></li>
             <li>|</li>
-            <li><a href="">车门车窗</a></li>
+            <li><a href="javascript:">车门车窗</a></li>
           </ul>
         </div>
         <div class="picScroll-lefts">
@@ -170,10 +170,10 @@
           <img src="../../assets/images/17.png"/>热门推荐
         </div>
         <div class="index_r_img">
-          <a href=""><img src="../../assets/images/20.png" height="99" width="220"/></a>
+          <a href="javascript:"><img src="../../assets/images/20.png" height="99" width="220"/></a>
         </div>
         <div class="index_r_img">
-          <a href=""><img src="../../assets/images/21.png" height="99" width="220"/></a>
+          <a href="javascript:"><img src="../../assets/images/21.png" height="99" width="220"/></a>
         </div>
       </div>
       <div class="clear"></div>
@@ -188,49 +188,47 @@
       <div class="index_zs_title">
         <div class="index_zs_p"><img src="../../assets/images/10.png"/>汽配装饰区</div>
         <ul>
-          <li><a href="">头枕腰靠</a></li>
+          <li><a href="javascript:">头枕腰靠</a></li>
           <li>|</li>
-          <li><a href="">挂件摆件</a></li>
+          <li><a href="javascript:">挂件摆件</a></li>
           <li>|</li>
-          <li><a href="">车载支架</a></li>
+          <li><a href="javascript:">车载支架</a></li>
           <li>|</li>
-          <li><a href="">空气净化</a></li>
+          <li><a href="javascript:">空气净化</a></li>
           <li>|</li>
-          <li><a href="">更多 >></a></li>
+          <li><a href="javascript:">更多 >></a></li>
         </ul>
         <div class="clear"></div>
       </div>
       <div class="zs_tab_lb">
         <!--<div id="slideBoxs" class="slideBoxs">-->
-          <!--<div class="bds">-->
-            <!--<ul v-on:mouseover="stop()" v-on:mouseout="move()">-->
-              <!--<li style="display: none;" v-for="(img, index) in imgArray" v-show="index===mark" :key="index">-->
-                <!--<a href="">-->
-                  <!--<img v-bind:src="img" width="1002" height="363">-->
-                <!--</a>-->
-              <!--</li>-->
-            <!--</ul>-->
-            <!--<span v-for="(item, index) in imgArray" :class="{ 'active':index===mark }"-->
-                  <!--@click="change(index)" :key="index"></span>-->
-          <!--</div>-->
-          <!--&lt;!&ndash; 下面是前/后按钮代码&ndash;&gt;-->
+        <!--<div class="bds">-->
+        <!--<ul v-on:mouseover="stop()" v-on:mouseout="move()">-->
+        <!--<li style="display: none;" v-for="(img, index) in imgArray" v-show="index===mark" :key="index">-->
+        <!--<a href="javascript:">-->
+        <!--<img v-bind:src="img" width="1002" height="363">-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--<span v-for="(item, index) in imgArray" :class="{ 'active':index===mark }"-->
+        <!--@click="change(index)" :key="index"></span>-->
         <!--</div>-->
-        <div class="left left-img"><img src="../../assets/images/28.jpg" height="362" width="211"/></div>
+        <!--&lt;!&ndash; 下面是前/后按钮代码&ndash;&gt;-->
+        <!--</div>-->
+        <div class="left left-img">
+          <img v-bind:src="goods[0].goodsPic" height="362" width="211"/>
+        </div>
         <div class="right right-table">
           <table>
             <tr class="toptable">
-              <td><img src="../../assets/images/33.jpg" height="251" width="196"/></td>
-              <td><img src="../../assets/images/34.jpg" height="251" width="196"/></td>
-              <td><img src="../../assets/images/35.jpg" height="251" width="196"/></td>
-              <td><img src="../../assets/images/36.jpg" height="251" width="196"/></td>
-              <td><img src="../../assets/images/34.jpg" height="251" width="196"/></td>
+              <td v-if="index < 6" v-for="(adron, index) in adronList">
+                <img v-bind:src="adron.goodsPic" height="251" width="196"/>
+              </td>
             </tr>
             <tr class="bottomtable">
-              <td><img src="../../assets/images/29.jpg" height="108" width="196"/></td>
-              <td><img src="../../assets/images/30.jpg" height="108" width="196"/></td>
-              <td><img src="../../assets/images/31.jpg" height="108" width="196"/></td>
-              <td><img src="../../assets/images/32.jpg" height="108" width="196"/></td>
-              <td><img src="../../assets/images/30.jpg" height="108" width="196"/></td>
+              <td v-for="(adron, index) in adronList" v-if="index < 10 && index>6">
+                <img v-bind:src="adron.goodsPic" height="108" width="196"/>
+              </td>
             </tr>
           </table>
         </div>
@@ -247,17 +245,17 @@
       <div class="index_news_title">
         <div class="index_news_p"><img src="../../assets/images/8.png"/>新闻资讯</div>
         <ul>
-          <li><a href="">改车一族</a></li>
+          <li><a href="javascript:">改车一族</a></li>
           <li>|</li>
-          <li><a href="">汽车贴图</a></li>
+          <li><a href="javascript:">汽车贴图</a></li>
           <li>|</li>
-          <li><a href="">汽车测评</a></li>
+          <li><a href="javascript:">汽车测评</a></li>
           <li>|</li>
-          <li><a href="">我为车狂</a></li>
+          <li><a href="javascript:">我为车狂</a></li>
           <li>|</li>
-          <li><a href="">车坛八卦</a></li>
+          <li><a href="javascript:">车坛八卦</a></li>
           <li>|</li>
-          <li><a href="">汽车商家 >></a></li>
+          <li><a href="javascript:">汽车商家 >></a></li>
         </ul>
         <div class="clear"></div>
       </div>
@@ -320,6 +318,7 @@
         newsList: [],
         goods: [],
         noticeList: [],
+        adronList: [],
         valueFromParent: '',
         timer: null, //定时器
         mark: 0, //比对图片索引的变量
@@ -337,6 +336,7 @@
       this.getAllNewsList();
       this.getServerList();
       this.getAllNotice();
+      this.getSomeAdron();
     },
     watch: {
       goodsTypeList: function () {
@@ -418,6 +418,14 @@
           url: _this.HOME + '/notice/all'
         }).then(res => {
           _this.noticeList = res.data.data;
+        })
+      },
+      getSomeAdron: function () {
+        let _this = this;
+        this.$axios({
+          url: _this.HOME + '/goods/listAdorn'
+        }).then(res => {
+          _this.adronList = res.data.data;
         })
       },
       autoPlay() {

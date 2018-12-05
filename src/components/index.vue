@@ -29,7 +29,11 @@
     watch: {
       $route: function (to, from) {
         this.href = to.path;
-      }
+        sessionStorage.setItem("href", this.href);
+      },
+    },
+    beforeDestroy: function(ev) {
+      console.log(ev)
     },
     data() {
       return {
@@ -37,7 +41,7 @@
       }
     },
     mounted: function () {
-      this.href = '/'
+      this.href = this.$route.path;
     }
   }
 </script>
