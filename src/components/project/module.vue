@@ -83,7 +83,7 @@
                         <p>上传视频</p>
                       </td>
                       <td>
-                        <input id="uploadMP4" type="file">
+                        <input id="uploadMP4" type="file" class="upimg" >
                       </td>
                     </tr>
                     <tr>

@@ -3955,3 +3955,8 @@ em, i, u {
   overflow: hidden;
   margin-bottom: 20px;
 }
+/**/
+.upimg{
+  width:155px;
+  height: 100px !important;
+}
