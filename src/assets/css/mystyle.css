@@ -1919,7 +1919,7 @@
 .serve_right_li li{
     border-bottom: 1px dashed #dcdcdc;
     height: 72px;
-    padding: 5px;
+    padding: 5px 5px;
 }
 .serve_img{
     width: 87px;

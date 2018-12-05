@@ -15,12 +15,12 @@
             <div class="rec_li">
               <ul>
                 <li>职位类别</li>
-                <li><a href="">销售</a></li>
-                <li><a href="">销售</a></li>
-                <li><a href="">销售</a></li>
-                <li><a href="">销售</a></li>
-                <li><a href="">销售</a></li>
-                <li><a href="">销售</a></li>
+                <li><a href="javascript:"></a></li>
+                <li><a href="javascript:"></a></li>
+                <li><a href="javascript:"></a></li>
+                <li><a href="javascript:"></a></li>
+                <li><a href="javascript:"></a></li>
+                <li><a href="javascript:"></a></li>
               </ul>
             </div>
           </li>
@@ -28,14 +28,14 @@
             <div class="rec_li">
               <ul>
                 <li>单位类型</li>
-                <li><a href="">汽车配件</a></li>
-                <li><a href="">汽车修理</a></li>
-                <li><a href="">汽车配件</a></li>
-                <li><a href="">汽车修理</a></li>
-                <li><a href="">汽车配件</a></li>
-                <li><a href="">汽车修理</a></li>
-                <li><a href="">汽车配件</a></li>
-                <li><a href="">汽车修理</a></li>
+                <li><a href="javascript:"></a></li>
+                <li><a href="javascript:"></a></li>
+                <li><a href="javascript:"></a></li>
+                <li><a href="javascript:"></a></li>
+                <li><a href="javascript:"></a></li>
+                <li><a href="javascript:"></a></li>
+                <li><a href="javascript:"></a></li>
+                <li><a href="javascript:"></a></li>
               </ul>
             </div>
           </li>
@@ -69,7 +69,7 @@
                 <ul>
                   <li>{{recruit.title}}</li>
                   <li>{{recruit.sellerAddress}}</li>
-                  <li>销售</li>
+                  <li></li>
                   <li>XXX配车配件厂家直销</li>
                 </ul>
                 <div class="clear"></div>

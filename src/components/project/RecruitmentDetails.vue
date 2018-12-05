@@ -18,9 +18,9 @@
             <div class="clear"></div>
             <div class="rec_top_btn">
               <ul>
-                <li><a href="">五险一金</a></li>
-                <li><a href="">周末双休</a></li>
-                <li><a href="">带薪年假</a></li>
+                <li><a href="javascript:">五险一金</a></li>
+                <li><a href="javascript:">周末双休</a></li>
+                <li><a href="javascript:">带薪年假</a></li>
               </ul>
             </div>
             <div class="clear"></div>
@@ -38,14 +38,14 @@
             <input type="button" value="申请职位" class="rec_top_box_btn1"/>
             <!--<input type="button" value="收藏职位" class="rec_top_box_btn2"/>-->
             <!--<div class="rec_btn_1">-->
-              <!--<a href="">-->
+              <!--<a href="javascript:">-->
                 <!--<img src="../../assets/images/10.jpg"/>-->
                 <!--<p>微聊</p>-->
                 <!--<span style="display: none">{{recruit.weichat}}</span>-->
               <!--</a>-->
             <!--</div>-->
             <!--<div class="rec_btn_1">-->
-              <!--<a href="">-->
+              <!--<a href="javascript:">-->
                 <!--<img src="../../assets/images/11.jpg"/>-->
                 <!--<p>电话沟通</p>-->
                 <!--<span style="display: none">{{recruit.contactPhoneNum}}</span>-->
@@ -97,14 +97,7 @@
           <p class="rec_rb_box_p">职位推荐</p>
           <ul>
             <li>
-              <a href="">
-                <p>汽车销售</p>
-                <p class="rec_rb_box_color_q">5000-10000元/月</p>
-                <p class="rec_rb_box_color_d">铁西区-兴工街</p>
-              </a>
-            </li>
-            <li>
-              <a href="">
+              <a href="javascript:">
                 <p>汽车销售</p>
                 <p class="rec_rb_box_color_q">5000-10000元/月</p>
                 <p class="rec_rb_box_color_d">铁西区-兴工街</p>

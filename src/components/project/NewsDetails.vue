@@ -18,7 +18,7 @@
                 {{news.newsTitle}}
               </router-link>
             </li>
-            <p class="news_p"><a href="">更多></a></p>
+            <p class="news_p"><a href="javascript:">更多></a></p>
           </ul>
         </div>
       </div>

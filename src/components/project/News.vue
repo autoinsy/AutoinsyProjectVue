@@ -11,15 +11,15 @@
             <div class="news_img"><img v-bind:src="news.imageUrl1" style="height: 100%; width: 100%"/></div>
             <div class="news_center">
               <div class="news_title">
-                <a href="">{{news.newsTitle}}</a>
+                <a href="javascript:">{{news.newsTitle}}</a>
               </div>
               <div class="news_zi">
-                <a href="">{{news.content}}</a>
+                <a href="javascript:">{{news.content}}</a>
               </div>
               <div class="news_k">
-                <a href="">{{news.content}}</a>
+                <a href="javascript:">{{news.content}}</a>
                 <span style="padding: 0 10px;">|</span>
-                <a href="">{{news.content}}</a>
+                <a href="javascript:">{{news.content}}</a>
               </div>
               <div class="clear"></div>
             </div>

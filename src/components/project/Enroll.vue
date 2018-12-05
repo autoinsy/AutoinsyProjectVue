@@ -16,8 +16,8 @@
     <!---->
     <div class="loginbtn">
       <ul>
-        <li><a @click="enroll" href="javascript:" class="activer">个人注册</a></li>
-        <li><a @click="enroll" href="javascript:">商家注册</a></li>
+        <li><a <a href="javascript:"> href="javascript:" class="activer">个人注册</a></li>
+        <li><a <a href="javascript:"> href="javascript:">商家注册</a></li>
       </ul>
     </div>
     <div class="loginbox">

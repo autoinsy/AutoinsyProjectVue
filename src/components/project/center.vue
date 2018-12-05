@@ -70,105 +70,6 @@
                       <input type="button" class="right getlist_btn_right" value="找相似"/>
                     </div>
                   </li>
-                  <li style="margin-right: 0">
-                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
-                    <p>描述的小标题描述的小...</p>
-                    <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
-                    <div class="getlist_btn">
-                      <input type="button" class="left getlist_btn_left" value="加入购物车"/>
-                      <input type="button" class="right getlist_btn_right" value="找相似"/>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
-                    <p>描述的小标题描述的小...</p>
-                    <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
-                    <div class="getlist_btn">
-                      <input type="button" class="left getlist_btn_left" value="加入购物车"/>
-                      <input type="button" class="right getlist_btn_right" value="找相似"/>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
-                    <p>描述的小标题描述的小...</p>
-                    <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
-                    <div class="getlist_btn">
-                      <input type="button" class="left getlist_btn_left" value="加入购物车"/>
-                      <input type="button" class="right getlist_btn_right" value="找相似"/>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
-                    <p>描述的小标题描述的小...</p>
-                    <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
-                    <div class="getlist_btn">
-                      <input type="button" class="left getlist_btn_left" value="加入购物车"/>
-                      <input type="button" class="right getlist_btn_right" value="找相似"/>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
-                    <p>描述的小标题描述的小...</p>
-                    <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
-                    <div class="getlist_btn">
-                      <input type="button" class="left getlist_btn_left" value="加入购物车"/>
-                      <input type="button" class="right getlist_btn_right" value="找相似"/>
-                    </div>
-                  </li>
-                  <li style="margin-right: 0">
-                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
-                    <p>描述的小标题描述的小...</p>
-                    <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
-                    <div class="getlist_btn">
-                      <input type="button" class="left getlist_btn_left" value="加入购物车"/>
-                      <input type="button" class="right getlist_btn_right" value="找相似"/>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
-                    <p>描述的小标题描述的小...</p>
-                    <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
-                    <div class="getlist_btn">
-                      <input type="button" class="left getlist_btn_left" value="加入购物车"/>
-                      <input type="button" class="right getlist_btn_right" value="找相似"/>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
-                    <p>描述的小标题描述的小...</p>
-                    <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
-                    <div class="getlist_btn">
-                      <input type="button" class="left getlist_btn_left" value="加入购物车"/>
-                      <input type="button" class="right getlist_btn_right" value="找相似"/>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
-                    <p>描述的小标题描述的小...</p>
-                    <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
-                    <div class="getlist_btn">
-                      <input type="button" class="left getlist_btn_left" value="加入购物车"/>
-                      <input type="button" class="right getlist_btn_right" value="找相似"/>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
-                    <p>描述的小标题描述的小...</p>
-                    <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
-                    <div class="getlist_btn">
-                      <input type="button" class="left getlist_btn_left" value="加入购物车"/>
-                      <input type="button" class="right getlist_btn_right" value="找相似"/>
-                    </div>
-                  </li>
-                  <li style="margin-right: 0">
-                    <div class="getlist_img"><img src="../../assets/images/02.jpg"/></div>
-                    <p>描述的小标题描述的小...</p>
-                    <p>价格：<span style="  color: #ff7300;">￥109.00</span></p>
-                    <div class="getlist_btn">
-                      <input type="button" class="left getlist_btn_left" value="加入购物车"/>
-                      <input type="button" class="right getlist_btn_right" value="找相似"/>
-                    </div>
-                  </li>
                 </ul>
                 <div class="clear"></div>
                 <!-- 分页开始 -->
@@ -280,7 +181,7 @@
                 </table>
                 <h3>
                   <input type="checkbox" checked="checked" id="checkbox_a0" class="chk_1">
-                  <label for="checkbox_a0"></label><a href="">设置为默认收货地址</a>
+                  <label for="checkbox_a0"></label><a href="javascript:">设置为默认收货地址</a>
                 </h3>
               </div>
               <input type="submit" value="保存" class="mylistcenter_btn"/>
@@ -301,39 +202,39 @@
                   </thead>
                   <tbody>
                   <tr>
-                    <td>刘德华</td>
-                    <td>沈阳市浑南区</td>
-                    <td><p class="table_set">万达公寓1602万达公寓1602万达公寓1602万达公寓1602万达公寓1602万达公寓1602</p></td>
-                    <td>000000</td>
-                    <td>15012345678</td>
+                    <td></td>
+                    <td></td>
+                    <td><p class="table_set"></p></td>
+                    <td></td>
+                    <td></td>
                     <td>
-                      <a href="">修改</a>|<a href="">删除</a>
+                      <a href="javascript:">修改</a>|<a href="javascript:">删除</a>
                     </td>
                     <td>
                       <div class="table_btn1 table_btn ">设为默认</div>
                     </td>
                   </tr>
                   <tr>
-                    <td>刘德华</td>
-                    <td>沈阳市浑南区</td>
-                    <td>万达公寓1602</td>
-                    <td>000000</td>
-                    <td>15012345678</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>
-                      <a href="">修改</a>|<a href="">删除</a>
+                      <a href="javascript:">修改</a>|<a href="javascript:">删除</a>
                     </td>
                     <td>
                       <div class="table_btn1  ">设为默认</div>
                     </td>
                   </tr>
                   <tr>
-                    <td>刘德华</td>
-                    <td>沈阳市浑南区</td>
-                    <td>万达公寓1602</td>
-                    <td>000000</td>
-                    <td>15012345678</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>
-                      <a href="">修改</a>|<a href="">删除</a>
+                      <a href="javascript:">修改</a>|<a href="javascript:">删除</a>
                     </td>
                     <td>
                       <div class="table_btn1  ">设为默认</div>
@@ -382,7 +283,7 @@
                   </table>
                 </div>
                 <input type="submit" value="同意协议并确认" class="mylistcenter_btn"/>
-                <div class="xieyi"><a href="">《英沈汽配支付服务协议》</a></div>
+                <div class="xieyi"><a href="javascript:">《英沈汽配支付服务协议》</a></div>
               </div>
             </li>
             <!--4-->

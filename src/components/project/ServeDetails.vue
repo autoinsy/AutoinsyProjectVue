@@ -90,10 +90,10 @@
         <div class="served_left_box_title">
           <ul>
             <li><a href="" class="title_color_li"> 商品介绍</a></li>
-            <li><a href=""> 规格与包装</a></li>
-            <li><a href=""> 售后保障</a></li>
-            <li><a href=""> 商品评价</a></li>
-            <li><a href=""> 本店好评商品</a></li>
+            <li><a href="javascript:"> 规格与包装</a></li>
+            <li><a href="javascript:"> 售后保障</a></li>
+            <li><a href="javascript:"> 商品评价</a></li>
+            <li><a href="javascript:"> 本店好评商品</a></li>
           </ul>
           <div class="served_r"><input type="button" value="加入购物车"/></div>
           <div class="clear"></div>
@@ -118,21 +118,6 @@
       <div class="right served_right_box">
         <div class="served_right_box_title">热门销售</div>
         <ul>
-          <li>
-            <img src="../../assets/images/03.jpg" width="178" height=""/>
-            <p>这里是标题这里是标题这里是标题</p>
-            <p>￥39.6</p>
-          </li>
-          <li>
-            <img src="../../assets/images/03.jpg" width="178" height=""/>
-            <p>这里是标题这里是标题这里是标题</p>
-            <p>￥39.6</p>
-          </li>
-          <li>
-            <img src="../../assets/images/03.jpg" width="178" height=""/>
-            <p>这里是标题这里是标题这里是标题</p>
-            <p>￥39.6</p>
-          </li>
           <li>
             <img src="../../assets/images/03.jpg" width="178" height=""/>
             <p>这里是标题这里是标题这里是标题</p>

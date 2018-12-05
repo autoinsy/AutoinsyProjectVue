@@ -11,28 +11,28 @@
             <dt class="secitem_brand">租金：</dt>
             <dd id="local">
               <a href="" class='select'>不限</a>
-              <a href="">500元以下</a>
-              <a href="">500-1000元</a>
-              <a href="">1000-2000元</a>
-              <a href="">2000-5000元</a>
+              <a href="javascript:">500元以下</a>
+              <a href="javascript:">500-1000元</a>
+              <a href="javascript:">1000-2000元</a>
+              <a href="javascript:">2000-5000元</a>
             </dd>
           </dl>
           <dl class="secitem">
             <dt class="secitem_brand">面积：</dt>
             <dd id="local">
               <a href="" class='select'>不限</a>
-              <a href="">10-30平</a>
-              <a href="">30-50平</a>
-              <a href="">50-80平</a>
-              <a href="">100平以上</a>
+              <a href="javascript:">10-30平</a>
+              <a href="javascript:">30-50平</a>
+              <a href="javascript:">50-80平</a>
+              <a href="javascript:">100平以上</a>
             </dd>
           </dl>
           <dl class="secitem">
             <dt class="secitem_brand">方式：</dt>
             <dd id="local">
               <a href="" class='select'>不限</a>
-              <a href="">汽配城出租</a>
-              <a href="">商户出租</a>
+              <a href="javascript:">汽配城出租</a>
+              <a href="javascript:">商户出租</a>
             </dd>
           </dl>
         </section>
@@ -95,38 +95,6 @@
           <div class="rent_title">热销旺铺</div>
           <div class="rent_li">
             <ul>
-              <li>
-                <div class="rent_img"><img src="../../assets/images/05.jpg" width="160" height="120"/></div>
-                <div class="rent_p">
-                  <p>铁西/贵和/盛世华庭</p>
-                  <p>两室 70平</p>
-                  <p><span>1300/月</span></p>
-                </div>
-              </li>
-              <li>
-                <div class="rent_img"><img src="../../assets/images/05.jpg" width="160" height="120"/></div>
-                <div class="rent_p">
-                  <p>铁西/贵和/盛世华庭</p>
-                  <p>两室 70平</p>
-                  <p><span>1300/月</span></p>
-                </div>
-              </li>
-              <li>
-                <div class="rent_img"><img src="../../assets/images/05.jpg" width="160" height="120"/></div>
-                <div class="rent_p">
-                  <p>铁西/贵和/盛世华庭</p>
-                  <p>两室 70平</p>
-                  <p><span>1300/月</span></p>
-                </div>
-              </li>
-              <li>
-                <div class="rent_img"><img src="../../assets/images/05.jpg" width="160" height="120"/></div>
-                <div class="rent_p">
-                  <p>铁西/贵和/盛世华庭</p>
-                  <p>两室 70平</p>
-                  <p><span>1300/月</span></p>
-                </div>
-              </li>
               <li>
                 <div class="rent_img"><img src="../../assets/images/05.jpg" width="160" height="120"/></div>
                 <div class="rent_p">
