@@ -2213,9 +2213,9 @@
     background-color: #ff7300;
     color: #fff;
     float: left;
-    width: 270px !important;
+    width: 300px !important;
     border: none;
-    padding-left: 30px;
+    /*padding-left: 30px !important;*/
 }
 .rec_ul li{
     height: 30px;
@@ -2319,12 +2319,15 @@
     float: left;
     margin: 40px 20px 40px 0;
     text-align: center;
+  line-height: 36px;
 }
 .rec_btn_1 li a{
     color: #999;
+  line-height: 36px;
 }
 .rec_btn_1 li a:hover{
     color: #ff7300;
+  line-height: 36px;
 }
 /**/
 .rec_b_box{

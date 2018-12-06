@@ -8,6 +8,7 @@
       <div class="rec_title">
         <p> 汽配城商户招聘职位</p>
         <router-link to='/module'><input type="button" value="我要发布" class="rec_btn"/></router-link>
+        <router-link to='resume/'><input type="button" value="+创造简历" class="rec_btn"/></router-link>
       </div>
       <div class="rec_list">
         <ul>

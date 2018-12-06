@@ -30,6 +30,7 @@ import TeachnicalDetails from '../components/project/TeachnicalDetails'
 import TechnicalAssistance from '../components/project/TechnicalAssistance'
 import indexDetail from '../components/project/index'
 import SHindex from '../components/project/SHindex'
+import resume from '../components/project/resume'
 
 // import footer from '../components/footer'
 // import Nav from '../components/Nav'
@@ -183,6 +184,11 @@ export default new Router({
           name: 'SHindex',
           path: '/SHindex',
           component: SHindex
+        },
+        {
+          name: 'resume',
+          path: '/resume',
+          component: resume
         },
       ]
     },
