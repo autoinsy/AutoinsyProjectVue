@@ -396,6 +396,9 @@
         loginulLi.eq(0).children('a').removeClass("activers");
         $(parent).next().css('display', 'block');
         loginulLi.eq(1).children('a').addClass("activers");
+      },
+      uploadImg: function (e) {
+
       }
     }
   }
@@ -404,3 +407,4 @@
 <style scoped>
 
 </style>
+
