@@ -16,8 +16,8 @@
     <!---->
     <div class="loginbtn">
       <ul>
-        <li><a <a href="javascript:"> href="javascript:" class="activer">个人注册</a></li>
-        <li><a <a href="javascript:"> href="javascript:">商家注册</a></li>
+        <li><a href="javascript:" class="activer">个人注册</a></li>
+        <li><a href="javascript:">商家注册</a></li>
       </ul>
     </div>
     <div class="loginbox">
@@ -141,8 +141,10 @@
                 <table width="0" border="0" cellspacing="0" cellpadding="0">
                   <tbody>
                   <tr>
-                    <td><em>*</em>
-                      <p>身份证号</p></td>
+                    <td>
+                      <em>*</em>
+                      <p>身份证号</p>
+                    </td>
                     <td>
                       <input name="phonenumber" autocomplete="off" type="text" style="color:#999" value=""
                              placeholder="请输入18位身份证号码"/>
@@ -150,32 +152,41 @@
                     </td>
                   </tr>
                   <tr>
-                    <td><em>*</em>
-                      <p>上传身份证照片</p></td>
+                    <td>
+                      <em>*</em>
+                      <p>上传身份证照片</p>
+                    </td>
                     <td style="position: relative">
-                      <input name="" autocomplete="off" type="text" style="color:#999" class="table_style" value=""
-                             placeholder="点击上传身份证正面照片"/>
-                      <input type="file" class="table_styles"/>
-                      <input name="" autocomplete="off" type="text" style="color:#999" class="table_style" value=""
-                             placeholder="点击上传身份证反面照片"/>
-                      <input type="file" class="table_stylesd"/>
+                      <div id="identifyCardImageFrontUrl">
+                        <span>上传正面照</span>
+                        <img src="" style="display: none"/>
+                        <input type="file" class=""/>
+                      </div>
+                      <div id="identifyCardImageBackUrl">
+                        <span>上传反面照</span>
+                        <img src="" style="display: none"/>
+                        <input type="file" class=""/>
+                      </div>
                     </td>
                   </tr>
                   <tr>
-                    <td><em>*</em>
-                      <p>营业执照号</p></td>
                     <td>
+                      <em>*</em>
+                      <p>营业执照号</p>
+                    </td>
+                    <td id="businessLicenceNumber">
                       <input name="" autocomplete="off" type="text" style="color:#999" value="" placeholder="请输入营业执照号码">
                       <span style="display:none;"><i>!</i><p></p></span>
                     </td>
                   </tr>
                   <tr>
-                    <td><em>*</em>
-                      <p>上传营业执照照片</p></td>
-                    <td style="position: relative">
-                      <input name="" autocomplete="off" type="text" style="color:#999" class="table_style" value=""
-                             placeholder="点击上传营业执正面照片"/>
-                      <input type="file" class="table_styles"/>
+                    <td>
+                      <em>*</em>
+                      <p>上传营业执照照片</p>
+                    </td>
+                    <td style="position: relative" id="businessLicenceImageUrl">
+                      <img src="" style="display: none"/>
+                      <input type="file" class=""/>
                     </td>
                   </tr>
                   </tbody>
@@ -270,7 +281,10 @@
         userName: '',
         password: '',
         msgCode: '',
-        code: ''
+        code: '',
+        lincese: '',
+        idCard0: '',
+        idCard1: '',
       }
     },
     methods: {
@@ -301,7 +315,7 @@
         param.append("userName", values[0]);
         param.append("password", values[1]);
         param.append("validateCode", values[2]);
-        param.append("type", values[3]);
+        param.append("type", 1);
         this.$axios({
           url: _this.HOME + '/user/registryUser',
           method: 'post',
@@ -319,7 +333,7 @@
         if (this.userName && this.password && this.msgCode && this.code) {
           let _this = this;
           let param = new URLSearchParams();
-          param.append("type", '1');
+          param.append("type", 0);
           param.append("validateCode", this.msgCode);
           param.append("password", this.password);
           param.append("userName", this.userName);
@@ -329,32 +343,31 @@
           for (let i = 0; i < trs.length; i++) {
             values[i] = $(trs[i]).children().eq(1).children('input').eq(0).val();
           }
-          // this.$axios({
-          //   url: _this.HOME + '/user/registryUser',
-          //   method: 'POST',
-          //   data: param
-          // }).then(res => {
-          //   if (Math.ceil(res.data.code) === 200) {
-          //     let data = new URLSearchParams();
-          //     // data.append("idCardNum", );
-          //     // data.append("licenceNum", );
-          //     // data.append("userName", );
-          //     // data.append("password", );
-          //     // data.append("idCard,", );
-          //     // data.append("lincence", );
-          //     _this.$axios({
-          //       url: _this.HOME + '',
-          //       method: 'post',
-          //       data: data
-          //     }).then(res => {
-          //       alert(res.data.message)
-          //     }).catch(e => {
-          //       console.log(e)
-          //     })
-          //   }
-          // }).catch(e => {
-          //   console.log(e)
-          // })
+          this.$axios({
+            url: _this.HOME + '/user/registryUser',
+            method: 'POST',
+            data: param
+          }).then(res => {
+            if (Math.ceil(res.data.code) === 200) {
+              let data = new URLSearchParams();
+              data.append("identifyCardImageFrontUrl", $('#identifyCardImageFrontUrl').attr('src'));
+              data.append("identifyCardImageBackUrl", $('#identifyCardImageBackUrl').attr('src'));
+              data.append("businessLicenceNumber", $('#businessLicenceNumber').children('input').val());
+              data.append("businessLicenceImageUrl", $('#businessLicenceImageUrl').attr('src'));
+              data.append("userCode", res.data.data);
+              _this.$axios({
+                url: _this.HOME + '/user/registrySeller',
+                method: 'post',
+                data: data
+              }).then(res => {
+                alert(res.data.message)
+              }).catch(e => {
+                console.log(e)
+              })
+            }
+          }).catch(e => {
+            console.log(e)
+          })
         } else {
           if (!confirm("上一步信息为空")) {
             for (let i = 0; i < 10; i++) {
@@ -397,9 +410,46 @@
         $(parent).next().css('display', 'block');
         loginulLi.eq(1).children('a').addClass("activers");
       },
-      uploadImg: function (e) {
-
-      }
+      uploadImg: function (event, data, previewId, index) {
+        console.log(event);
+        console.log(data);
+        console.log(previewId);
+        console.log(index);
+      },
+    },
+    mounted: function () {
+      let _this = this;
+      this.enroll();
+      this.$('input[type="file"]').fileinput({
+        language: 'zh',
+        uploadUrl: _this.HOME + "/user/upload",
+        showCancel: false,
+        showBrowse: false,
+        showPreview: true,
+        showCaption: false,
+        browseOnZoneClick: true,
+        dropZoneTitleClass: 'drop_zone_title',
+        fileActionSettings: {
+          showUpload: false,
+          showDownload: false,
+          showRemove: false,
+          showZoom: false,
+          showDrag: false,
+        },
+        previewZoomButtonIcons: {
+          prev: '<i class="glyphicon glyphicon-triangle-left"></i>',
+          next: '<i class="glyphicon glyphicon-triangle-right"></i>',
+          toggleheader: '<i class="glyphicon glyphicon-resize-vertical"></i>',
+          fullscreen: '<i class="glyphicon glyphicon-fullscreen"></i>',
+          borderless: '<i class="glyphicon glyphicon-resize-full"></i>',
+          close: '<i class="glyphicon glyphicon-remove"></i>'
+        },
+      }).on("fileuploaded", function (event, data, previewId, index) {
+        let successData = data.response.data;
+        let elementId = event.currentTarget.id;
+        let imgElements = $('#' + elementId).parent().parent().children('img');
+        $(imgElements).attr("src", successData);
+      })
     }
   }
 </script>

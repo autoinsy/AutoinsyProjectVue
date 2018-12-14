@@ -540,6 +540,12 @@
     border: 1px solid #dadada;
     text-align: center;
 }
+.drop_zone_title{
+  color: #aaa;
+  font-size: 1.6em;
+  padding: auto;
+  cursor: default;
+}
 .table_styles{
     width: 224px;
     height:136px;

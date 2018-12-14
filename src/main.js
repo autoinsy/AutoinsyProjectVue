@@ -23,11 +23,7 @@ Vue.config.productionTip = false;
 Vue.prototype.$ = $;
 Vue.prototype.$axios = $axios;
 Vue.prototype.HOME = '/web';
-$axios.create({
-  baseURL: 'http://47.93.195.248:8080/planform/api/',
-  headers: 'Access-Control-Allow-Origin:*'
-});
-// http://47.93.195.248:8080/planform/api/user/login?mobileNumber=17602438226&password=123456&rememberMe=0
+
 $.fn.fileinputLocales['zh'] = {
   fileSingle: '文件',
   filePlural: '个文件',
@@ -91,8 +87,8 @@ $.fn.fileinputLocales['zh'] = {
     uploadBatch: '批量上传',
     uploadExtra: '表单数据上传'
   },
-  dropZoneTitle: '拖拽文件到这里 &hellip;<br>支持多文件同时上传',
-  dropZoneClickTitle: '<br>(或点击{files}按钮选择文件)',
+  dropZoneTitle: '',
+  dropZoneClickTitle: '(点击{files}按钮选择文件)',
   fileActionSettings: {
     removeTitle: '删除文件',
     uploadTitle: '上传文件',
@@ -113,6 +109,11 @@ $.fn.fileinputLocales['zh'] = {
     close: '关闭当前预览'
   }
 };
+$axios.create({
+  baseURL: 'http://locahost:8082/planform/api/',
+  headers: 'Access-Control-Allow-Origin:*'
+});
+// http://47.93.195.248:8080/planform/api/user/login?mobileNumber=17602438226&password=123456&rememberMe=0
 new Vue({
   el: '#app',
   router,
