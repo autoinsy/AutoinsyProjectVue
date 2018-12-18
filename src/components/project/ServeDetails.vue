@@ -6,8 +6,7 @@
     <!---->
     <div class="centermy">
       <div class="rentd_title served_title">
-        <p>{{server}}</p>
-        <p>{{server.title}}</p>
+        <h1 class="served_left">{{server.title}}</h1>
         <p><span>{{server.publishTime}}</span></p>
       </div>
       <div class="rentd_top rentd_tops">
