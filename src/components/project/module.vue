@@ -87,7 +87,7 @@
                         <p>上传视频</p>
                       </td>
                       <td>
-                        <input id="uploadMP4" type="file" class="upimg" >
+                        <input id="uploadMP4" type="file" class="upimg">
                       </td>
                     </tr>
                     <tr>
@@ -329,102 +329,102 @@
             </li>
             <!--招聘-->
             <!--<li style="display:none;">-->
-              <!--<div class="module_peoject">-->
-                <!--<div class="module_box">-->
-                  <!--<p class="module_box_p">职位发布</p>-->
-                  <!--<table width="0" border="0" cellspacing="0" cellpadding="0">-->
-                    <!--<tbody>-->
-                    <!--&lt;!&ndash;招聘标题&ndash;&gt;-->
-                    <!--<tr>-->
-                      <!--<td>-->
-                        <!--<em>*</em>-->
-                        <!--<p>招聘标题</p>-->
-                      <!--</td>-->
-                      <!--<td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>-->
-                    <!--</tr>-->
-                    <!--&lt;!&ndash;商家地址&ndash;&gt;-->
-                    <!--<tr>-->
-                      <!--<td><em>*</em>-->
-                        <!--<p>商家地址</p></td>-->
-                      <!--<td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>-->
-                    <!--</tr>-->
-                    <!--&lt;!&ndash;岗位职责&ndash;&gt;-->
-                    <!--<tr>-->
-                      <!--<td><em>*</em>-->
-                        <!--<p>岗位职责</p></td>-->
-                      <!--<td>-->
-                        <!--<select class="select_box">-->
-                          <!--<option>销售</option>-->
-                        <!--</select>-->
-                      <!--</td>-->
-                    <!--</tr>-->
-                    <!--&lt;!&ndash;薪资范围（5000-10000）（下拉框）&ndash;&gt;-->
-                    <!--<tr>-->
-                      <!--<td>-->
-                        <!--<em>*</em>-->
-                        <!--<p>工资</p>-->
-                      <!--</td>-->
-                      <!--<td>-->
-                        <!--<select class="select_box">-->
-                          <!--<option>5000</option>-->
-                          <!--<option>5001-6000</option>-->
-                          <!--<option>6001-7000</option>-->
-                          <!--<option>7001-8000</option>-->
-                          <!--<option>8001-9000</option>-->
-                          <!--<option>9001-10000</option>-->
-                        <!--</select>-->
-                      <!--</td>-->
-                    <!--</tr>-->
-                    <!--&lt;!&ndash;任职要求&ndash;&gt;-->
-                    <!--<tr>-->
-                      <!--<td>-->
-                        <!--<em>*</em>-->
-                        <!--<p>任职要求</p>-->
-                      <!--</td>-->
-                      <!--<td>-->
-                        <!--<textarea class="textarea_box"></textarea>-->
-                      <!--</td>-->
-                    <!--</tr>-->
-                    <!--&lt;!&ndash;待遇&ndash;&gt;-->
-                    <!--<tr>-->
-                      <!--<td>-->
-                        <!--<em>*</em>-->
-                        <!--<p>待遇</p>-->
-                      <!--</td>-->
-                      <!--<td>-->
-                        <!--<input type="text" name="">-->
-                      <!--</td>-->
-                    <!--</tr>-->
-                    <!--&lt;!&ndash;人数范围（100-500人）（下拉框）&ndash;&gt;-->
-                    <!--<tr>-->
-                      <!--<td>-->
-                        <!--<em>*</em>-->
-                        <!--<p>任职要求</p>-->
-                      <!--</td>-->
-                      <!--<td>-->
-                        <!--<select class="select_box">-->
-                          <!--<option>0-100</option>-->
-                          <!--<option>100-200</option>-->
-                          <!--<option>200-300</option>-->
-                          <!--<option>300-400</option>-->
-                          <!--<option>400-500</option>-->
-                        <!--</select>-->
-                      <!--</td>-->
-                    <!--</tr>-->
-                    <!--</tbody>-->
-                  <!--</table>-->
-                <!--</div>-->
-                <!--<input type="button" value="发布" class="module_btn" @click="moduletanchu"/>-->
-              <!--</div>-->
-              <!--<div class="module_tanchu">-->
-                <!--<div class="module_tanchu_img">-->
-                  <!--<img src="../../assets/images/icon06.png"/>-->
-                  <!--<span>产品发布成功</span>-->
-                <!--</div>-->
-                <!--<p style="text-align: center;">-->
-                  <!--<router-link to='/ProductManagement'>如需查看发布成功的产品，请点击此链接</router-link>-->
-                <!--</p>-->
-              <!--</div>-->
+            <!--<div class="module_peoject">-->
+            <!--<div class="module_box">-->
+            <!--<p class="module_box_p">职位发布</p>-->
+            <!--<table width="0" border="0" cellspacing="0" cellpadding="0">-->
+            <!--<tbody>-->
+            <!--&lt;!&ndash;招聘标题&ndash;&gt;-->
+            <!--<tr>-->
+            <!--<td>-->
+            <!--<em>*</em>-->
+            <!--<p>招聘标题</p>-->
+            <!--</td>-->
+            <!--<td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>-->
+            <!--</tr>-->
+            <!--&lt;!&ndash;商家地址&ndash;&gt;-->
+            <!--<tr>-->
+            <!--<td><em>*</em>-->
+            <!--<p>商家地址</p></td>-->
+            <!--<td><input name="" autocomplete="off" type="text" style="color:#999" value=""></td>-->
+            <!--</tr>-->
+            <!--&lt;!&ndash;岗位职责&ndash;&gt;-->
+            <!--<tr>-->
+            <!--<td><em>*</em>-->
+            <!--<p>岗位职责</p></td>-->
+            <!--<td>-->
+            <!--<select class="select_box">-->
+            <!--<option>销售</option>-->
+            <!--</select>-->
+            <!--</td>-->
+            <!--</tr>-->
+            <!--&lt;!&ndash;薪资范围（5000-10000）（下拉框）&ndash;&gt;-->
+            <!--<tr>-->
+            <!--<td>-->
+            <!--<em>*</em>-->
+            <!--<p>工资</p>-->
+            <!--</td>-->
+            <!--<td>-->
+            <!--<select class="select_box">-->
+            <!--<option>5000</option>-->
+            <!--<option>5001-6000</option>-->
+            <!--<option>6001-7000</option>-->
+            <!--<option>7001-8000</option>-->
+            <!--<option>8001-9000</option>-->
+            <!--<option>9001-10000</option>-->
+            <!--</select>-->
+            <!--</td>-->
+            <!--</tr>-->
+            <!--&lt;!&ndash;任职要求&ndash;&gt;-->
+            <!--<tr>-->
+            <!--<td>-->
+            <!--<em>*</em>-->
+            <!--<p>任职要求</p>-->
+            <!--</td>-->
+            <!--<td>-->
+            <!--<textarea class="textarea_box"></textarea>-->
+            <!--</td>-->
+            <!--</tr>-->
+            <!--&lt;!&ndash;待遇&ndash;&gt;-->
+            <!--<tr>-->
+            <!--<td>-->
+            <!--<em>*</em>-->
+            <!--<p>待遇</p>-->
+            <!--</td>-->
+            <!--<td>-->
+            <!--<input type="text" name="">-->
+            <!--</td>-->
+            <!--</tr>-->
+            <!--&lt;!&ndash;人数范围（100-500人）（下拉框）&ndash;&gt;-->
+            <!--<tr>-->
+            <!--<td>-->
+            <!--<em>*</em>-->
+            <!--<p>任职要求</p>-->
+            <!--</td>-->
+            <!--<td>-->
+            <!--<select class="select_box">-->
+            <!--<option>0-100</option>-->
+            <!--<option>100-200</option>-->
+            <!--<option>200-300</option>-->
+            <!--<option>300-400</option>-->
+            <!--<option>400-500</option>-->
+            <!--</select>-->
+            <!--</td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+            <!--</table>-->
+            <!--</div>-->
+            <!--<input type="button" value="发布" class="module_btn" @click="moduletanchu"/>-->
+            <!--</div>-->
+            <!--<div class="module_tanchu">-->
+            <!--<div class="module_tanchu_img">-->
+            <!--<img src="../../assets/images/icon06.png"/>-->
+            <!--<span>产品发布成功</span>-->
+            <!--</div>-->
+            <!--<p style="text-align: center;">-->
+            <!--<router-link to='/ProductManagement'>如需查看发布成功的产品，请点击此链接</router-link>-->
+            <!--</p>-->
+            <!--</div>-->
             <!--</li>-->
           </ul>
         </div>
@@ -547,7 +547,8 @@
             '&productPlace=' + list[7] +
             '&goodsImagesList=' + list[8] +
             '&goodsPic=' + list[9] +
-            '&price=' + list[10],
+            '&price=' + list[10] +
+            '&userCode=' + sessionStorage.getItem("userCode"),
           method: 'POST'
         }).then(res => {
           if (Math.ceil(res.data.code) === 200) {

@@ -75,7 +75,10 @@
           data: param
         }).then(res => {
           if (Math.ceil(res.data.code) === 200){
-            alert(res.data.message)
+            alert(res.data.message);
+            if(res.data.data.isSeller === 1) {
+              sessionStorage.setItem("userCode", res.data.data.userId);
+            }
           } else {
             alert(res.data.message)
           }
