@@ -49,7 +49,7 @@
               <input type="button" value="其他付款方式"/>
             </div>
             <div class="pay_mima">
-              支付密码：<input type="text" />
+              支付密码：<input type="text"/>
               <a href="javascript:">忘记密码？</a>
             </div>
             <div class="pay_btn">
@@ -64,9 +64,9 @@
 </template>
 
 <script>
-    export default {
-        name: "Pay"
-    }
+  export default {
+    name: "Pay"
+  }
 </script>
 
 <style scoped>

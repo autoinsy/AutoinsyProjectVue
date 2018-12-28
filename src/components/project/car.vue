@@ -57,65 +57,38 @@
 
           </td>
         </tr>
-        <tr class="tr_t">
+        <tr class="tr_t" v-for="(cart, index) in cartList">
           <td class="td0">
             <input type="checkbox" class="checkbox_all left"/>
-            <img src="../../assets/images/04.jpg"/>
+            <img v-bind:src="cart.commodityImg"/>
             <div class="clear"></div>
           </td>
           <td class="td1" valign="top">
             <ul>
-              <li><p></p></li>
-              <li><p class="td1_p"></p></li>
+              <li>
+                <p>{{cart.commodityName}}</p>
+              </li>
+              <li>
+                <p class="td1_p"></p>
+              </li>
             </ul>
           </td>
           <td class="td2" valign="top">
-            <p>￥39.9</p>
+            <p>￥{{cart.goods.price}}</p>
           </td>
           <td class="td3" valign="top">
             <button ng-click="updatenum($index,-1)">-</button>
-            <input ng-model="good.Count" style="width: 25px;" />
+            <input ng-model="good.Count" style="width: 25px;" v-bind:value="cart.purchaseQuantity"/>
             <button ng-click="updatenum($index,+1)">+</button>
           </td>
           <td class="td4" valign="top">
-            <p>￥39.9</p>
+            <p>￥{{cart.goods.price * cart.purchaseQuantity}}</p>
           </td>
           <td class="td5" valign="top">
             <ul>
-              <li><a href="javascript:">删除</a> </li>
-              <li><a href="javascript:">移到我的关注</a> </li>
-              <li><a href="javascript:">加到我的关注</a> </li>
-            </ul>
-          </td>
-        </tr>
-        <tr class="tr_t">
-          <td class="td0">
-            <input type="checkbox" class="checkbox_all left"/>
-            <img src="../../assets/images/04.jpg"/>
-            <div class="clear"></div>
-          </td>
-          <td class="td1" valign="top">
-            <ul>
-              <li><p></p></li>
-              <li><p class="td1_p"></p></li>
-            </ul>
-          </td>
-          <td class="td2" valign="top">
-            <p>￥39.9</p>
-          </td>
-          <td class="td3" valign="top">
-            <button ng-click="updatenum($index,-1)">-</button>
-            <input ng-model="good.Count" style="width: 25px;" />
-            <button ng-click="updatenum($index,+1)">+</button>
-          </td>
-          <td class="td4" valign="top">
-            <p>￥39.9</p>
-          </td>
-          <td class="td5" valign="top">
-            <ul>
-              <li><a href="javascript:">删除</a> </li>
-              <li><a href="javascript:">移到我的关注</a> </li>
-              <li><a href="javascript:">加到我的关注</a> </li>
+              <li><a href="javascript:">删除</a></li>
+              <li><a href="javascript:">移到我的关注</a></li>
+              <li><a href="javascript:">加到我的关注</a></li>
             </ul>
           </td>
         </tr>
@@ -150,9 +123,34 @@
 </template>
 
 <script>
-    export default {
-        name: "car"
+  export default {
+    name: "car",
+    data() {
+      return {
+        cur: '',
+        cartList: [],
+        all: '',
+        allElement: ''
+      }
+    },
+    watch: {
+      $nextTick: function () {
+        console.log($('tbody').children('tr[class="tr_t"]'));
+        // .children('td[class="td4"]'));
+      }
+    },
+    mounted: function () {
+      let _this = this;
+      let userCode = sessionStorage.getItem("userCode");
+      this.$axios({
+        url: _this.HOME + '/cart/list?page=' + _this.cur + '&userCode=' + userCode
+      }).then(res => {
+        _this.cartList = res.data.data.content;
+        _this.all = res.data.data.totalPages;
+        _this.all = res.data.data.totalElements;
+      });
     }
+  }
 </script>
 
 <style scoped>

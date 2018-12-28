@@ -43,7 +43,10 @@
             </tr>
             </thead>
             <tbody>
-            <tr><td colspan="6"><p style="line-height: 40px;font-size: 16px; border-bottom: 1px dashed #7eb3ff;">店铺的名字</p></td></tr>
+            <tr>
+              <td colspan="6"><p style="line-height: 40px;font-size: 16px; border-bottom: 1px dashed #7eb3ff;">店铺的名字</p>
+              </td>
+            </tr>
             <tr>
               <td class="or1">
                 <div class="div_or1">
@@ -62,7 +65,7 @@
           </table>
         </div>
         <div class="order_line">
-          <table class="line_table" >
+          <table class="line_table">
             <tbody>
             <tr>
               <td rowspan="3" valign="top">
@@ -103,9 +106,9 @@
 </template>
 
 <script>
-    export default {
-        name: "OrderDetails"
-    }
+  export default {
+    name: "OrderDetails"
+  }
 </script>
 
 <style scoped>

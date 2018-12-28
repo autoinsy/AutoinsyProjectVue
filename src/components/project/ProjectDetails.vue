@@ -38,8 +38,8 @@
         <!--lb-->
         <div class="left project_box">
           <div class="project_title">
-            <p>这里是大标题这里是大标题这里是大标题这里是大标题</p>
-            <p><span>2018-10-16</span></p>
+            <p>{{goodInfo.name}}</p>
+            <p><span>{{goodInfo.publishTime}}</span></p>
           </div>
           <div id="wrap">
             <div id="top">
@@ -68,7 +68,7 @@
               </p>
             </div>
             <div id="bottom">
-              <p>价格： <font>￥ <span id='price'>5288</span>.00</font>
+              <p>价格： <font>￥ <span id='price'>{{goodInfo.price}}</span>.00</font>
               </p>
               <button>立即购买</button>
             </div>
@@ -78,9 +78,9 @@
           <div class="pro_list_title">这里是店铺的名字</div>
           <div class="pro_li">
             <ul>
-              <li><span>描述相符</span><span>5.00</span><span>↑</span><span>持平</span></li>
-              <li><span>发货速度</span><span>5.00</span><span>↑</span><span>持平</span></li>
-              <li><span>服务态度</span><span>5.00</span><span>↑</span><span>持平</span></li>
+              <li><span>描述相符</span><span>{{goodInfo.describeScore}}</span><span>↑</span><span>持平</span></li>
+              <li><span>发货速度</span><span>{{goodInfo.deliverySpeedScore}}</span><span>↑</span><span>持平</span></li>
+              <li><span>服务态度</span><span>{{goodInfo.serviceMannerScore}}</span><span>↑</span><span>持平</span></li>
             </ul>
             <div class="clear"></div>
           </div>
@@ -115,28 +115,28 @@
             <li><a href="javascript:"> 商品评价</a></li>
             <li><a href="javascript:"> 本店好评商品</a></li>
           </ul>
-          <div class="served_r"><input type="button" value="加入购物车"/> </div>
+          <div class="served_r">
+            <input @click="addToShoppingCart" class="btn btn-link" type="button" value="加入购物车"/>
+          </div>
           <div class="clear"></div>
         </div>
         <div class="served_top_box">
-          <p>品牌:XX牌</p>
+          <p>品牌:{{goodInfo.brand}}</p>
           <ul>
-            <li>商品名称：商品叫啥名</li>
-            <li>商品编号：12304563214</li>
+            <li>商品名称：{{goodInfo.name}}</li>
+            <li>商品编号：{{goodInfo.goodsCode}}</li>
             <li>店铺：这里是店铺的名字</li>
             <li>产品毛重：2.0KG</li>
             <li>产品产地：中国大陆</li>
-            <li>类别：这里是类别</li>
+            <li>类别：{{goodInfo.mainType}} {{goodInfo.subType}}</li>
           </ul>
           <div class="clear"></div>
         </div>
         <div class="served_p">
-          <p>文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行
-            文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行
+          <p>
+            {{goodInfo.describe}}
           </p>
-          <p>文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行</p>
-          <p>文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行文字描述各种文字都行</p>
-          <img src="../../assets/images/03.jpg" width="790"/>
+          <img v-bind:src="goodInfo.goodsPic" width="790"/>
         </div>
       </div>
       <div class="right served_right_box">
@@ -171,72 +171,46 @@
 </template>
 
 <script>
-  // var mSpan = document.getElementById('model').getElementsByTagName('span');
-  // var cSpan = document.getElementById('color').getElementsByTagName('span');
-  // var rSpan = document.getElementById('rom').getElementsByTagName('span');
-  // var bSpan = document.getElementById('banben').getElementsByTagName('span');
-  // var aSpan = document.getElementsByTagName('span');
-  // var oModel = document.getElementById('model');
-  // var oRom = document.getElementById('rom');
-  // var oPrice = document.getElementById('price');
-  //
-  // mSpan[0].className = 'on';
-  // cSpan[0].className = 'on';
-  // rSpan[0].className = 'on';
-  // bSpan[0].className = 'on';
-  //
-  // for (var i=0;i<aSpan.length;i++ )
-  // {
-  //
-  //   aSpan[i].onclick = function(){
-  //     var siblings = this.parentNode.children;
-  //     for (var j=0;j<siblings.length;j++ )
-  //     {
-  //       siblings[j].className = '';
-  //     }
-  //     this.className = 'on';
-  //
-  //     if ( this.parentNode == oModel || this.parentNode == oRom )
-  //     {
-  //       price();
-  //     }
-  //   };
-  // };
-  //
-  // function price(){
-  //   var p1 = 0;
-  //   var p2 = 0;
-  //   for (var i=0;i<mSpan.length;i++ )
-  //   {
-  //     if ( mSpan[i].className == 'on' )
-  //     {
-  //       p1 = i?6088:5288;
-  //       break;
-  //     };
-  //   };
-  //   for (var i=0;i<rSpan.length;i++ )
-  //   {
-  //     if ( rSpan[i].className == 'on' )
-  //     {
-  //       switch ( i )
-  //       {
-  //         case 0:
-  //           p2 = 0;
-  //           break;
-  //         case 1:
-  //           p2 = 800;
-  //           break;
-  //         case 2:
-  //           p2 = 1600;
-  //           break;
-  //       }
-  //     }
-  //   };
-  //   oPrice.innerHTML = p1+p2;
-  // };
-    export default {
-        name: "ProjectDetails",
+  export default {
+    name: "ProjectDetails",
+    data() {
+      return {
+        goodsId: this.$route.query.goodsId,
+        goodInfo: '',
+      }
+    },
+    watch: {},
+    mounted: function () {
+      let _this = this;
+      this.$axios({
+        url: _this.HOME + '/goods/getGoodsInfo?goods_Id=' + this.goodsId,
+        method: 'post'
+      }).then(res => {
+        _this.goodInfo = res.data.data;
+      })
+    },
+    methods: {
+      addToShoppingCart: function () {
+        let userCode = sessionStorage.getItem("userCode");
+        let _this = this;
+        if (userCode) {
+          this.$axios({
+            url: _this.HOME + '/cart/add',
+            method: 'post',
+            data: _this.qs.stringify({
+              "userCode": userCode,
+              "goodCode": _this.goodInfo.goodsCode,
+              "purchaseQuantity": 1,
+            })
+          }).then(res => {
+            alert(res.data.message);
+          })
+        } else {
+          alert("您还没有登录，请登录后再加入购物车。")
+        }
+      }
     }
+  }
 </script>
 
 <style scoped>

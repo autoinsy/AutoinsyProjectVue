@@ -3,6 +3,7 @@ import App from './App'
 import router from './router'
 import $ from 'jquery'
 import $axios from 'axios'
+import qs from 'qs'
 import 'jquery-page/jquery.page'
 import 'carousel/index'
 import 'jquery-easing/dist/jquery.easing.1.3.umd'
@@ -23,6 +24,7 @@ Vue.config.productionTip = false;
 Vue.prototype.$ = $;
 Vue.prototype.$axios = $axios;
 Vue.prototype.HOME = '/web';
+Vue.prototype.qs = qs;
 
 $.fn.fileinputLocales['zh'] = {
   fileSingle: '文件',

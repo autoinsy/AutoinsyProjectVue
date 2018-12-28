@@ -27,26 +27,6 @@
         </div>
         <!--侧导航 over-->
         <div id="jiaodian">
-          <!--<div id="slideBox" class="slideBox">-->
-          <!--<div class="hd">-->
-          <!--<ul>-->
-          <!--<li class="">1</li>-->
-          <!--<li class="">2</li>-->
-          <!--<li class="on">3</li>-->
-          <!--</ul>-->
-          <!--</div>-->
-          <!--<div class="bd">-->
-          <!--<ul>-->
-          <!--<li style="display: none;"><a href="javascript:"><img src="../../assets/images/01.jpg"></a></li>-->
-          <!--<li style="display: none;"><a href="javascript:"><img src="../../assets/images/02.jpg"></a></li>-->
-          <!--<li style="display: list-item;"><a href="javascript:"><img src="../../assets/images/03.jpg"></a></li>-->
-          <!--</ul>-->
-          <!--</div>-->
-          <!--&lt;!&ndash; 下面是前/后按钮代码&ndash;&gt;-->
-          <!--<a class="prev" href="javascript:void(0)"></a>-->
-          <!--<a class="next" href="javascript:void(0)"></a>-->
-          <!--</div>-->
-          <!--lb-->
           <div class="slide" v-on:mouseover="stop()" v-on:mouseout="move()">
             <div class="slideshow">
               <transition-group tag="ul" name="image">
@@ -107,12 +87,14 @@
               <ul class="picList"
                   style="width: 746px; left: 0px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
                 <li style="float: left;" v-for="good in goods">
-                  <div class="pic"><a href="javascript:"><img v-bind:src="good.goodsPic"></a></div>
+                  <div class="pic">
+                    <a href="javascript:"><img v-bind:src="good.goodsPic"></a>
+                  </div>
                   <div class="title">
-                    <a href="javascript:">
+                    <router-link :to="{path: '/ProjectDetails', query: {goodsId: good.goodsId}}">
                       <p>{{good.describe}}</p>
                       <p class="coler_7">${{good.price}}</p>
-                    </a>
+                    </router-link>
                   </div>
                 </li>
               </ul>
@@ -134,8 +116,6 @@
         </div>
         <div class="picScroll-lefts">
           <div class="hd">
-            <!--<a class="next" href="javascript:void(0)"></a>-->
-            <!--<a class="prev" href="javascript:void(0)"></a>-->
           </div>
           <div class="bd">
             <div class="tempWrap" style="overflow:hidden; position:relative; width:746px">
