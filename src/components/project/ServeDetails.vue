@@ -17,13 +17,16 @@
                 <li>
                   <div class="served_li">
                     <ul>
-                      <li>服务区域：<div v-for="area in server.serviceArea">{{area}}</div> </li>
+                      <li>服务区域：
+                        <div v-for="area in server.serviceArea">{{area}}</div>
+                      </li>
                     </ul>
                   </div>
                 </li>
                 <li>
-                  <div class="left">
-                    <img src="../../assets/images/17.jpg" class="chatA"/><span style="display: none">{{server.qq}}</span>
+                  <div class="left" @click="module">
+                    <img src="../../assets/images/17.jpg" class="chatA"/><span
+                    style="display: none">{{server.qq}}</span>
                   </div>
                   <div class="left ml10">
                     <img src="../../assets/images/18.jpg"/><span style="display: none">{{server.weichat}}</span>
@@ -120,68 +123,6 @@
         <div class="clear"></div>
       </div>
       <!--中间内容 over-->
-      <div class="chatQ">
-        <div class="chatbg">
-          <div class="chatbai">
-            <div class="left">
-              <div class="chattitle">名字</div>
-              <div class="chattab">
-                  <ul>
-                    <li class="chattabactive"><img src="../../assets/images/message_press.png" height="32" width="32"/></li>
-                    <li><img src="../../assets/images/btn2.png" height="32" width="32"/></li>
-                  </ul>
-              </div>
-              <div class="chatleft">
-                <ul>
-                  <li>
-                    <div class="left"><img src="../../assets/images/touxiang.jpg" height="59" width="61"/></div>
-                    <div class="left"><span>人名</span></div>
-                    <div class="right"><span>2019-1-3</span></div>
-                  </li>
-                  <li>
-                    <div class="left"><img src="../../assets/images/touxiang.jpg" height="59" width="61"/></div>
-                    <div class="left"><span>人名</span></div>
-                    <div class="right"><span>2019-1-3</span></div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="right">
-              <div class="chattitles">名字</div>
-              <div class="chatbox">
-                <ul class="chatboxnewsList">
-                  <li>
-                    <div class="chatboxnesHead"><img src="../../assets/images/6.jpg" height="300" width="533"/></div>
-                    <div class="chatboxnews"><img class="jiao" src="../../assets/images/talk.png">1
-                    </div>
-                  </li>
-                  <li>
-                    <div class="chatboxanswerHead"><img src="../../assets/images/tou.jpg"></div>
-                    <div class="chatboxanswers"><img class="jiao" src="../../assets/images/TIM图片20170926103645_03_02 (1).png">你好</div>
-                  </li>
-                </ul>
-              </div>
-              <div class="chatfoot">
-                <div class="biaoqing">
-                  <div class="footTop">
-                    <ul>
-                      <li><img src="../../assets/images/TIM图片20170926103645_31.png" height="19" width="20"/></li>
-                      <li class="ExP"><img src="../../assets/images/TIM图片20170926103645_33.png"></li>
-                      <li><img src="../../assets/images/TIM图片20170926103645_35.png"></li>
-                      <li><img src="../../assets/images/TIM图片20170926103645_37.png"></li>
-                      <li><img src="../../assets/images/TIM图片20170926103645_39.png"></li>
-                    </ul>
-                    <div class="clear"></div>
-                  </div>
-                </div>
-                <textarea class="chatinput"></textarea>
-                <input type="submit" class="chatbtn"/>
-              </div>
-            </div>
-            <div class="clear"></div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -192,6 +133,8 @@
     data() {
       return {
         server: '',
+        height: document.body.clientHeight,
+        width: document.body.clientWidth,
       }
     },
     mounted: function () {
@@ -204,13 +147,14 @@
         _this.server = res.data.data;
         console.log(_this.server)
       })
+      $('.chatQ').attr('style', 'min-height: ' + _this.height + '; min-width: ' + _this.width)
     },
     methods: {
       module: function () {
         let _this = this;
-        this.$('.chatA').click(function () {
-          _this.$(".chatQ").hide().show();
-        });
+        this.$emit("showTalkAbout");
+
+        // $(".chatQ").hide().show();
       },
     }
   }
@@ -221,6 +165,7 @@
     display: list-item;
     text-align: -webkit-match-parent;
   }
+
   .served_top_box p {
     text-align: left;
   }
@@ -246,7 +191,8 @@
     float: left !important;
     padding: 0 5px !important;
   }
-  .served_list li{
+
+  .served_list li {
     width: 100%;
     float: left;
     text-align: left;

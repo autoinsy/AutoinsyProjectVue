@@ -11,9 +11,9 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      // '/web' :'http://47.93.195.248:8080/planform/api/'
+      '/web' :'http://47.93.195.248:8080/api/'
       // '/web' :'http://localhost:8084/api/'
-      '/web' :'http://192.168.1.229:8084/api/'
+      // '/web' :'http://192.168.1.229:8084/api/'
     },
 
     // Various Dev Server settings

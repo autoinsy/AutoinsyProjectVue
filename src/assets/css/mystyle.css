@@ -4010,7 +4010,7 @@ em, i, u {
   font-family: 微软雅黑;
 }
 .chatQ{
-  display: none;
+  /*display: none;*/
 }
 .chatbg{
   width: 100%;
@@ -4029,6 +4029,7 @@ em, i, u {
   margin: 0 auto;
   padding: 70px;
   position:relative;
+  margin-top: 30px;
 }
 .chattitle{
   width: 300px;
@@ -4057,7 +4058,7 @@ em, i, u {
 }
 .chatleft{
   width: 300px;
-  height: 719px;
+  height: 600px;
   background-color: #fae2d6;
   border: 4px solid #f2ffff;
 }
@@ -4072,6 +4073,13 @@ em, i, u {
 .chatleft ul li img{
   margin-right: 20px;
 }
+.chatclose{
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  right:20px;
+  top:20px;
+}
 /**/
 .chattitles{
   width: 740px;
@@ -4084,7 +4092,7 @@ em, i, u {
 }
 .chatbox{
   width: 740px;
-  height: 620px;
+  height: 505px;
   background-color: #ffeee4;
   padding-top: 20px;
   padding-right: 15px;
