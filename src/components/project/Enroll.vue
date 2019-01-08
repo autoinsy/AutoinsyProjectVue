@@ -416,6 +416,9 @@
         console.log(previewId);
         console.log(index);
       },
+      registNIM: function () {
+
+      }
     },
     mounted: function () {
       let _this = this;

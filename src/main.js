@@ -15,6 +15,7 @@ import 'bootstrap-fileinput/css/fileinput.css'
 import './assets/js/jquery.flexslider'
 import './assets/js/mag'
 import './assets/js/my-js-style.js'
+import SDK from './assets/js/NIM_Web_NIM_v5.6.0'
 import './assets/css/index.css'
 import './assets/css/mystyle.css'
 import './assets/css/reset.css'
@@ -25,6 +26,8 @@ Vue.prototype.$ = $;
 Vue.prototype.$axios = $axios;
 Vue.prototype.HOME = '/web';
 Vue.prototype.qs = qs;
+Vue.prototype.nim = SDK;
+
 
 $.fn.fileinputLocales['zh'] = {
   fileSingle: '文件',
