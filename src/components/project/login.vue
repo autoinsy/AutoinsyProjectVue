@@ -55,6 +55,7 @@
 </template>
 
 <script>
+  import md5 from '../../assets/js/md5'
   export default {
     name: "login",
     data() {
@@ -77,6 +78,7 @@
           if (Math.ceil(res.data.code) === 200){
             alert(res.data.message);
             if(res.data.data.isSeller === 0) {
+              sessionStorage.setItem("token", md5($('#pwd').val()));
               sessionStorage.setItem("userCode", res.data.data.userCode);
             }
           } else {
