@@ -35,8 +35,36 @@
           <li v-for="ornament in ornamentList">
             <router-link :to="{path:'/ornamentDetail', query: {id: ornament.ornamentId}}">
               <img :src="ornament.ornamentImagesSet[0].ornamentImages">
-              <span></span>
+              <p>
+                  <span style="color: #ff7300;">
+                  ￥<span style="font-size: 24px">{{ornament.price}}</span>
+                  </span>
+              </p>
+              <p>{{ornament.ornamentName}}</p>
+              <p>
+                <span style="color: #ff7300;">0</span> 条评价
+              </p>
+              <p>店铺的名字</p>
+              <p>
+                <img src="../../assets/images/22.jpg"/>
+              </p>
             </router-link>
+            <div class="proul">
+              <ul>
+                <li>
+                  <a href="javascript:"> 对比</a>
+                </li>
+                <li>
+                  <a href="javascript:"> 关注</a>
+                </li>
+                <li v-bind:value="good.goodsCode">
+                  <button class="btn-link" @click="addToShoppingCart">
+                    <img src="../../assets/images/7.png" style="margin-right: 10px"/>
+                    加入购物车
+                  </button>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
         <div class="clear"></div>
@@ -90,6 +118,26 @@
             }
           }
         }
+      },
+      addToShoppingCart: function (e) {
+        // let goodCode = $(e.target).parent().attr("value");
+        // let userCode = sessionStorage.getItem("userCode");
+        // let _this = this;
+        // if (userCode) {
+        //   this.$axios({
+        //     url: _this.HOME + '/cart/add',
+        //     method: 'post',
+        //     data: _this.qs.stringify({
+        //       "userCode": userCode,
+        //       "goodCode": goodCode,
+        //       "purchaseQuantity": 0,
+        //     })
+        //   }).then(res => {
+        //     alert(res.data.message);
+        //   })
+        // } else {
+        //   alert("您还没有登录，请登录后再加入购物车。")
+        // }
       }
     }
   }

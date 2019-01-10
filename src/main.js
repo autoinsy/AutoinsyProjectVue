@@ -12,6 +12,7 @@ import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-fileinput/js/fileinput'
 import 'bootstrap-fileinput/css/fileinput.css'
+import videoPlayer from 'vue-video-player'
 import './assets/js/jquery.flexslider'
 import './assets/js/mag'
 import './assets/js/my-js-style.js'
@@ -28,6 +29,8 @@ Vue.prototype.HOME = '/web';
 Vue.prototype.qs = qs;
 Vue.prototype.nim = SDK;
 
+require('vue-video-player/src/custom-theme.css');
+Vue.use(videoPlayer);
 
 $.fn.fileinputLocales['zh'] = {
   fileSingle: '文件',

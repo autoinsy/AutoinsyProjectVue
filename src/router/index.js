@@ -33,6 +33,7 @@ import ProjectDetails         from '../components/details/ProjectDetails'
 import RecruitmentDetails     from '../components/details/RecruitmentDetails'
 import RentDetails            from '../components/details/RentDetails'
 import ServeDetails           from '../components/details/ServeDetails'
+import ornamentDetail           from '../components/details/OrnamentDetail'
 
 // import footer from '../components/footer'
 // import Nav from '../components/Nav'
@@ -198,6 +199,11 @@ export default new Router({
           name: 'ornament',
           path: '/ornament',
           component: ornament
+        },
+        {
+          name: 'ornamentDetail',
+          path: '/ornamentDetail',
+          component: ornamentDetail
         },
       ]
     },
