@@ -12,6 +12,7 @@ import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-fileinput/js/fileinput'
 import 'bootstrap-fileinput/css/fileinput.css'
+import 'video.js'
 import videoPlayer from 'vue-video-player'
 import './assets/js/jquery.flexslider'
 import './assets/js/mag'
@@ -121,10 +122,9 @@ $axios.create({
   baseURL: 'http://locahost:8082/planform/api/',
   headers: 'Access-Control-Allow-Origin:*'
 });
-// http://47.93.195.248:8080/planform/api/user/login?mobileNumber=17602438226&password=123456&rememberMe=0
 new Vue({
   el: '#app',
   router,
-  components: {App},
+  components: {App, videoPlayer},
   template: '<App/>'
 });

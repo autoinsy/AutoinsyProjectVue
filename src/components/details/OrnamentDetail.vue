@@ -15,10 +15,13 @@
             <p class="prev prevnone"></p>
             <div class="middle_box">
               <ul class="middle">
-                <!--<video-player>-->
-                  <!--videoUrl-->
-                <!--</video-player>-->
-                <li v-for="(ornamentImage, index) in ornamentDetail.ornamentImagesSet"><img :src="ornamentImage.ornamentImages" alt=""></li>
+                <li v-if="ornamentDetail.videoUrl">
+                  <video autoplay controls>
+                    <source :src="ornamentDetail.videoUrl" type="video/mp4"/>
+                  </video>
+                </li>
+                <li v-for="(ornamentImage, index) in ornamentDetail.ornamentImagesSet"><img
+                  :src="ornamentImage.ornamentImages" alt=""></li>
               </ul>
             </div>
             <p class="next "></p>
@@ -31,7 +34,6 @@
             </div>
           </div>
         </div>
-        <!--lb-->
         <div class="left project_box">
           <div class="project_title">
             <p>{{ornamentDetail.ornamentName}}</p>
@@ -53,9 +55,9 @@
           <div class="pro_list_title">这里是店铺的名字</div>
           <div class="pro_li">
             <ul>
-              <li><span>描述相符</span><span>{{goodInfo.describeScore}}</span><span>↑</span><span>持平</span></li>
-              <li><span>发货速度</span><span>{{goodInfo.deliverySpeedScore}}</span><span>↑</span><span>持平</span></li>
-              <li><span>服务态度</span><span>{{goodInfo.serviceMannerScore}}</span><span>↑</span><span>持平</span></li>
+              <!--<li><span>描述相符</span><span>{{goodInfo.describeScore}}</span><span>↑</span><span>持平</span></li>-->
+              <!--<li><span>发货速度</span><span>{{goodInfo.deliverySpeedScore}}</span><span>↑</span><span>持平</span></li>-->
+              <!--<li><span>服务态度</span><span>{{goodInfo.serviceMannerScore}}</span><span>↑</span><span>持平</span></li>-->
             </ul>
             <div class="clear"></div>
           </div>
@@ -105,21 +107,36 @@
     name: "OrnamentDetail",
     data() {
       return {
-        ornamentDetail: ''
+        ornamentDetail: '',
+        videoOptions: {
+          source: {
+            type: "application/x-mpegURL",
+            // src: ornamentDetail.videoUrl,
+            src: 'http://22981js148.iask.in:41358/videos/Short videos/cbf1b8b089db4d34a6b7fbb7c4ddb8a9.mp4',
+            withCredentials: false
+          },
+          controls: false,
+          addTextTrack: false,
+          controlBar: false,
+          language: 'zh-CN',
+          live: true,
+          autoplay: true,
+          height: 540
+        }
       }
     },
     watch: {},
     mounted: function () {
       let _this = this;
-      this.$axios({
-        url: _this.HOME + '/ornament/showInfo',
-        method: 'POST',
-        data: _this.qs.stringify({
-          ornamentId: _this.$route.query.id
-        })
-      }).then(res => {
-        _this.ornamentDetail = res.data.data;
-      })
+      // this.$axios({
+      //   url: _this.HOME + '/ornament/showInfo',
+      //   method: 'POST',
+      //   data: _this.qs.stringify({
+      //     ornamentId: _this.$route.query.id
+      //   })
+      // }).then(res => {
+      //   _this.ornamentDetail = res.data.data;
+      // })
     },
     methods: {
       addToShoppingCart: function (e) {
