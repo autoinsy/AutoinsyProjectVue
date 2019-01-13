@@ -1,5 +1,5 @@
-!function (e, t) {
-  "object" == typeof exports && "object" == typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define([], t) : "object" == typeof exports ? exports.NIM = t() : e.NIM = t()
+! function (e, t) {
+  "object" == typeof exports && "object" == typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define([], t) : "object" == typeof exports ? exports.SDK = t() : e.SDK = t()
 }(window, function () {
   return function (e) {
     var t = {};
@@ -23,12 +23,12 @@
       return n.d(t, "a", t), t
     }, n.o = function (e, t) {
       return Object.prototype.hasOwnProperty.call(e, t)
-    }, n.p = "", n(n.s = 492)
+    }, n.p = "", n(n.s = 502)
   }([function (e, t, n) {
     "use strict";
-    var r, s = n(10), i = (r = s) && r.__esModule ? r : {default: r};
-    var o = n(84), a = n(72);
-    n(118);
+    var r, s = n(9), i = (r = s) && r.__esModule ? r : {default: r};
+    var o = n(73), a = n(67);
+    n(91);
     var c, u, l = n(11), m = l.getGlobal(), d = /\s+/;
     l.deduplicate = function (e) {
       var t = [];
@@ -139,6 +139,7 @@
         case"string":
           "" === t && (s = !0);
           break;
+        case"StrStrMap":
         case"object":
           Object.keys(t).length || (s = !0);
           break;
@@ -162,7 +163,10 @@
         return e.toLowerCase()
       })).indexOf(s) && (i = !1), s) {
         case"number":
-          isNaN(t) && (i = !1)
+          isNaN(t) && (i = !1);
+          break;
+        case"string":
+          "numeric or numeric string" === n.join("") && (i = !!/^[0-9]+$/.test(t))
       }
       i || l.onParamInvalidType(e, n, "", r)
     }, l.onParamInvalidType = function (e, t, n, r) {
@@ -283,7 +287,66 @@
       return !!l.undef(e[t]) && (e[t] = n, !0)
     }, e.exports = l
   }, , , , , function (e, t, n) {
-    var r = n(40)("wks"), s = n(28), i = n(7).Symbol, o = "function" == typeof i;
+    "use strict";
+    var r = {
+      info: {
+        hash: "af8ed7e88a082fbb75005d2566cc8fd38f199f5d",
+        shortHash: "af8ed7e8",
+        version: "5.9.1",
+        sdkVersion: "52",
+        nrtcVersion: "4.4.0",
+        nrtcSdkVersion: "1",
+        protocolVersion: 1
+      },
+      agentVersion: "2.8.0.906",
+      lbsUrl: "https://lbs.netease.im/lbs/webconf.jsp",
+      roomserver: "roomserver.netease.im",
+      connectTimeout: 8e3,
+      xhrTimeout: 8e3,
+      socketTimeout: 8e3,
+      reconnectionDelay: 1600,
+      reconnectionDelayMax: 8e3,
+      reconnectionJitter: .01,
+      reconnectiontimer: null,
+      heartbeatInterval: 8e3,
+      cmdTimeout: 8e3,
+      defaultReportUrl: "https://dr.netease.im/1.gif",
+      isWeixinApp: !1,
+      isNodejs: !1,
+      isRN: !1,
+      PUSHTOKEN: "",
+      PUSHCONFIG: {},
+      CLIENTTYPE: 16,
+      PushPermissionAsked: !1,
+      iosPushConfig: null,
+      androidPushConfig: null,
+      netDetectAddr: "https://roomserver-dev.netease.im/v1/sdk/detect/local",
+      weixinNetcall: {
+        checkSumUrl: "https://nrtc.netease.im/demo/getChecksum.action",
+        getChannelInfoUrl: "https://nrtc.netease.im/nrtc/getChannelInfos.action"
+      },
+      formatSocketUrl: function (e) {
+        var t = e.url, n = e.secure ? "https" : "http";
+        return -1 === t.indexOf("http") ? n + "://" + t : t
+      },
+      uploadUrl: "https://nos.netease.com",
+      replaceUrl: "https://{bucket}-nosdn.netease.im/{object}",
+      downloadHost: "nos.netease.com",
+      downloadUrl: "https://{bucket}-nosdn.netease.im/{object}",
+      httpsEnabled: !1,
+      threshold: 0,
+      genUploadUrl: function (e) {
+        return r.uploadUrl + "/" + e
+      },
+      genDownloadUrl: function (e, t) {
+        var n = e.bucket, s = (e.tag, e.expireSec), i = +new Date, o = s ? "&survivalTime=" + s : "",
+          a = r.replaceUrl + "?createTime=" + i + o;
+        return /^http/.test(a) ? r.httpsEnabled && (a = a.replace("http", "https")) : a = r.httpsEnabled ? "https://" + a : "http://" + a, a.replace("{bucket}", n).replace("{object}", t)
+      }
+    };
+    e.exports = r
+  }, function (e, t, n) {
+    var r = n(41)("wks"), s = n(28), i = n(8).Symbol, o = "function" == typeof i;
     (e.exports = function (e) {
       return r[e] || (r[e] = o && i[e] || (o ? i : s)("Symbol." + e))
     }).store = r
@@ -295,53 +358,23 @@
     "number" == typeof __g && (__g = n)
   }, function (e, t, n) {
     "use strict";
-    var r = {
-      info: {
-        hash: "87d7cd4b9772755089cd0ef5dafcf4692f369fb0",
-        shortHash: "87d7cd4",
-        version: "5.6.0",
-        sdkVersion: "52",
-        nrtcVersion: "4.2.0",
-        nrtcSdkVersion: "1",
-        protocolVersion: 1
-      },
-      agentVersion: "2.8.0.906",
-      lbsUrl: "https://lbs.netease.im/lbs/webconf.jsp",
-      roomserver: "roomserver.netease.im",
-      connectTimeout: 1e4,
-      xhrTimeout: 1e4,
-      socketTimeout: 1e4,
-      reconnectionDelay: 800,
-      reconnectionDelayMax: 1e4,
-      reconnectionJitter: .01,
-      heartbeatInterval: 5e3,
-      cmdTimeout: 1e4,
-      defaultReportUrl: "https://dr.netease.im/1.gif",
-      isWeixinApp: !1,
-      isNodejs: !1,
-      isRN: !1,
-      PUSHTOKEN: "",
-      PUSHCONFIG: {},
-      CLIENTTYPE: 16,
-      formatSocketUrl: function (e) {
-        var t = e.url, n = e.secure ? "https" : "http";
-        return -1 === t.indexOf("http") ? n + "://" + t : t
-      },
-      uploadUrl: "https://nos.netease.com",
-      replaceUrl: "https://{bucket}.nosdn.127.net/{object}",
-      downloadHost: "nos.netease.com",
-      downloadUrl: "https://{bucket}.nosdn.127.net/{object}",
-      httpsEnabled: !1,
-      genUploadUrl: function (e) {
-        return r.uploadUrl + "/" + e
-      },
-      genDownloadUrl: function (e, t) {
-        var n = e.bucket, s = (e.tag, e.expireSec), i = +new Date, o = s ? "&survivalTime=" + s : "",
-          a = r.replaceUrl + "?createTime=" + i + o;
-        return /^http/.test(a) ? r.httpsEnabled && (a = a.replace("http", "https")) : a = r.httpsEnabled ? "https://" + a : "http://" + a, a.replace("{bucket}", n).replace("{object}", t)
-      }
-    };
-    e.exports = r
+    t.__esModule = !0;
+    var r = o(n(110)), s = o(n(100)),
+      i = "function" == typeof s.default && "symbol" == typeof r.default ? function (e) {
+        return typeof e
+      } : function (e) {
+        return e && "function" == typeof s.default && e.constructor === s.default && e !== s.default.prototype ? "symbol" : typeof e
+      };
+
+    function o(e) {
+      return e && e.__esModule ? e : {default: e}
+    }
+
+    t.default = "function" == typeof s.default && "symbol" === i(r.default) ? function (e) {
+      return void 0 === e ? "undefined" : i(e)
+    } : function (e) {
+      return e && "function" == typeof s.default && e.constructor === s.default && e !== s.default.prototype ? "symbol" : void 0 === e ? "undefined" : i(e)
+    }
   }, function (e, t, n) {
     "use strict";
     var r = Object.prototype.hasOwnProperty, s = "~";
@@ -435,27 +468,9 @@
     }, a.prefixed = s, a.EventEmitter = a, e.exports = a
   }, function (e, t, n) {
     "use strict";
-    t.__esModule = !0;
-    var r = o(n(108)), s = o(n(98)), i = "function" == typeof s.default && "symbol" == typeof r.default ? function (e) {
-      return typeof e
-    } : function (e) {
-      return e && "function" == typeof s.default && e.constructor === s.default && e !== s.default.prototype ? "symbol" : typeof e
-    };
-
-    function o(e) {
-      return e && e.__esModule ? e : {default: e}
-    }
-
-    t.default = "function" == typeof s.default && "symbol" === i(r.default) ? function (e) {
-      return void 0 === e ? "undefined" : i(e)
-    } : function (e) {
-      return e && "function" == typeof s.default && e.constructor === s.default && e !== s.default.prototype ? "symbol" : void 0 === e ? "undefined" : i(e)
-    }
-  }, function (e, t, n) {
-    "use strict";
     (function (e) {
       Object.defineProperty(t, "__esModule", {value: !0}), t.url2origin = t.uniqueID = t.off = t.removeEventListener = t.on = t.addEventListener = t.format = t.regWhiteSpace = t.regBlank = t.emptyFunc = t.f = t.emptyObj = t.o = void 0;
-      var r, s = n(10), i = (r = s) && r.__esModule ? r : {default: r};
+      var r, s = n(9), i = (r = s) && r.__esModule ? r : {default: r};
       t.getGlobal = o, t.detectCSSFeature = function (e) {
         var t = !1, n = "Webkit Moz ms O".split(" "), r = document.createElement("div"), s = null;
         e = e.toLowerCase(), void 0 !== r.style[e] && (t = !0);
@@ -473,12 +488,12 @@
         return "number" === v(e)
       }, t.isBoolean = function (e) {
         return "boolean" === v(e)
-      }, t.isArray = M, t.isFunction = T, t.isDate = k, t.isRegExp = function (e) {
+      }, t.isArray = M, t.isFunction = T, t.isDate = S, t.isRegExp = function (e) {
         return "regexp" === v(e)
       }, t.isError = function (e) {
         return "error" === v(e)
-      }, t.isnull = S, t.notnull = P, t.undef = I, t.notundef = C, t.exist = w, t.notexist = O, t.isObject = x, t.isEmpty = function (e) {
-        return O(e) || (b(e) || M(e)) && 0 === e.length
+      }, t.isnull = k, t.notnull = C, t.undef = P, t.notundef = I, t.exist = O, t.notexist = x, t.isObject = w, t.isEmpty = function (e) {
+        return x(e) || (b(e) || M(e)) && 0 === e.length
       }, t.containsNode = function (e, t) {
         if (e === t) return !0;
         for (; t.parentNode;) {
@@ -494,7 +509,7 @@
       }, t.remove = function (e) {
         e.parentNode && e.parentNode.removeChild(e)
       }, t.dataset = function (e, t, n) {
-        if (!w(n)) return e.getAttribute("data-" + t);
+        if (!O(n)) return e.getAttribute("data-" + t);
         e.setAttribute("data-" + t, n)
       }, t.target = function (e) {
         return e.target || e.srcElement
@@ -506,7 +521,7 @@
           (t = document.createElement("iframe")).name = e.name
         } else t = document.createElement("iframe");
         e.visible || (t.style.display = "none");
-        T(e.onload) && _(t, "load", function n(r) {
+        T(e.onload) && E(t, "load", function n(r) {
           if (!t.src) return;
           e.multi || R(t, "load", n);
           e.onload(r)
@@ -526,11 +541,11 @@
         }
         return n.length > 1 ? t : n[0]
       }, t.scrollTop = function (e) {
-        w(e) && (document.documentElement.scrollTop = document.body.scrollTop = e);
+        O(e) && (document.documentElement.scrollTop = document.body.scrollTop = e);
         return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
-      }, t.forOwn = F, t.mixin = j, t.isJSON = N, t.parseJSON = function e(t) {
+      }, t.forOwn = j, t.mixin = F, t.isJSON = U, t.parseJSON = function e(t) {
         try {
-          N(t) && (t = JSON.parse(t)), x(t) && F(t, function (n, r) {
+          U(t) && (t = JSON.parse(t)), w(t) && j(t, function (n, r) {
             switch (v(r)) {
               case"string":
               case"object":
@@ -553,19 +568,19 @@
       }, t.merge = function () {
         for (var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
         return n.forEach(function (t) {
-          j(e, t)
+          F(e, t)
         }), e
       }, t.fillUndef = function (e, t) {
-        return F(t, function (t, n) {
-          I(e[t]) && (e[t] = n)
+        return j(t, function (t, n) {
+          P(e[t]) && (e[t] = n)
         }), e
       }, t.checkWithDefault = function (e, t, n) {
         var r = e[t] || e[t.toLowerCase()];
-        O(r) && (r = n, e[t] = r);
+        x(r) && (r = n, e[t] = r);
         return r
       }, t.fetch = function (e, t) {
-        return F(e, function (n, r) {
-          w(t[n]) && (e[n] = t[n])
+        return j(e, function (n, r) {
+          O(t[n]) && (e[n] = t[n])
         }), e
       }, t.string2object = function () {
         var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
@@ -663,71 +678,71 @@
         return "function" === v(e)
       }
 
-      function k(e) {
+      function S(e) {
         return "date" === v(e)
       }
 
-      function S(e) {
+      function k(e) {
         return null === e
       }
 
-      function P(e) {
+      function C(e) {
         return null !== e
       }
 
-      function I(e) {
+      function P(e) {
         return void 0 === e
       }
 
-      function C(e) {
+      function I(e) {
         return void 0 !== e
       }
 
-      function w(e) {
-        return C(e) && P(e)
-      }
-
       function O(e) {
-        return I(e) || S(e)
+        return I(e) && C(e)
       }
 
       function x(e) {
-        return w(e) && "object" === v(e)
+        return P(e) || k(e)
+      }
+
+      function w(e) {
+        return O(e) && "object" === v(e)
       }
 
       var A = t.addEventListener = function (e, t, n) {
         e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
-      }, _ = t.on = A, E = t.removeEventListener = function (e, t, n) {
+      }, E = t.on = A, _ = t.removeEventListener = function (e, t, n) {
         e.removeEventListener ? e.removeEventListener(t, n, !1) : e.detachEvent && e.detachEvent("on" + t, n)
-      }, R = t.off = E;
+      }, R = t.off = _;
 
-      function F() {
+      function j() {
         var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
           t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function () {
           }, n = arguments[2];
         for (var r in e) e.hasOwnProperty(r) && t.call(n, r, e[r])
       }
 
-      function j(e, t) {
-        F(t, function (t, n) {
+      function F(e, t) {
+        j(t, function (t, n) {
           e[t] = n
         })
       }
 
-      var U;
-      t.uniqueID = (U = 0, function () {
-        return "" + U++
+      var N;
+      t.uniqueID = (N = 0, function () {
+        return "" + N++
       });
 
-      function N(e) {
+      function U(e) {
         return b(e) && 0 === e.indexOf("{") && e.lastIndexOf("}") === e.length - 1
       }
 
       function D(e, t, n) {
         if (!e) return "";
         var r = [];
-        return F(e, function (e, t) {
-          T(t) || (k(t) ? t = t.getTime() : M(t) ? t = t.join(",") : x(t) && (t = JSON.stringify(t)), n && (t = encodeURIComponent(t)), r.push(encodeURIComponent(e) + "=" + t))
+        return j(e, function (e, t) {
+          T(t) || (S(t) ? t = t.getTime() : M(t) ? t = t.join(",") : w(t) && (t = JSON.stringify(t)), n && (t = encodeURIComponent(t)), r.push(encodeURIComponent(e) + "=" + t))
         }), r.join(t || ",")
       }
 
@@ -744,7 +759,7 @@
       }
     }).call(this, n(30))
   }, function (e, t, n) {
-    var r = n(15), s = n(61), i = n(42), o = Object.defineProperty;
+    var r = n(15), s = n(62), i = n(43), o = Object.defineProperty;
     t.f = n(14) ? Object.defineProperty : function (e, t, n) {
       if (r(e), t = i(t, !0), r(n), s) try {
         return o(e, t, n)
@@ -773,7 +788,7 @@
       return e
     }
   }, function (e, t, n) {
-    var r = n(7), s = n(6), i = n(35), o = n(19), a = n(13), c = function (e, t, n) {
+    var r = n(8), s = n(7), i = n(36), o = n(19), a = n(13), c = function (e, t, n) {
       var u, l, m, d = e & c.F, p = e & c.G, f = e & c.S, g = e & c.P, h = e & c.B, y = e & c.W,
         v = p ? s : s[t] || (s[t] = {}), b = v.prototype, M = p ? r : f ? r[t] : (r[t] || {}).prototype;
       for (u in p && (n = t), n) (l = !d && M && void 0 !== M[u]) && a(v, u) || (m = l ? M[u] : n[u], v[u] = p && "function" != typeof M[u] ? n[u] : h && l ? i(m, r) : y && M[u] == m ? function (e) {
@@ -796,7 +811,7 @@
     };
     c.F = 1, c.G = 2, c.S = 4, c.P = 8, c.B = 16, c.W = 32, c.U = 64, c.R = 128, e.exports = c
   }, function (e, t, n) {
-    var r = n(58), s = n(43);
+    var r = n(59), s = n(44);
     e.exports = function (e) {
       return r(s(e))
     }
@@ -822,7 +837,7 @@
   }, function (e, t, n) {
     "use strict";
     (function (t) {
-      var r, s = n(10), i = (r = s) && r.__esModule ? r : {default: r};
+      var r, s = n(9), i = (r = s) && r.__esModule ? r : {default: r};
       var o = function () {
         var e = "object" === (void 0 === t ? "undefined" : (0, i.default)(t)) ? t : window, n = Math.pow(2, 53) - 1,
           r = /\bOpera/, s = Object.prototype, o = s.hasOwnProperty, a = s.toString;
@@ -867,12 +882,12 @@
           var c = s.navigator || {}, g = c.userAgent || "";
           n || (n = g);
           var h, y, v, b, M, T = o ? !!c.likeChrome : /\bChrome\b/.test(n) && !/internal|\n/i.test(a.toString()),
-            k = o ? "Object" : "ScriptBridgingProxyObject", S = o ? "Object" : "Environment",
-            P = o && s.java ? "JavaPackage" : m(s.java), I = o ? "Object" : "RuntimeObject",
-            C = /\bJava/.test(P) && s.java, w = C && m(s.environment) == S, O = C ? "a" : "α", x = C ? "b" : "β",
-            A = s.document || {}, _ = s.operamini || s.opera,
-            E = r.test(E = o && _ ? _["[[Class]]"] : m(_)) ? E : _ = null, R = n, F = [], j = null, U = n == g,
-            N = U && _ && "function" == typeof _.version && _.version(),
+            S = o ? "Object" : "ScriptBridgingProxyObject", k = o ? "Object" : "Environment",
+            C = o && s.java ? "JavaPackage" : m(s.java), P = o ? "Object" : "RuntimeObject",
+            I = /\bJava/.test(C) && s.java, O = I && m(s.environment) == k, x = I ? "a" : "α", w = I ? "b" : "β",
+            A = s.document || {}, E = s.operamini || s.opera,
+            _ = r.test(_ = o && E ? E["[[Class]]"] : m(E)) ? _ : E = null, R = n, j = [], F = null, N = n == g,
+            U = N && E && "function" == typeof E.version && E.version(),
             D = p([{label: "EdgeHTML", pattern: "Edge"}, "Trident", {
               label: "WebKit",
               pattern: "AppleWebKit"
@@ -979,25 +994,25 @@
             })
           }
 
-          if (D && (D = [D]), q && !B && (B = W([q])), (h = /\bGoogle TV\b/.exec(B)) && (B = h[0]), /\bSimulator\b/i.test(n) && (B = (B ? B + " " : "") + "Simulator"), "Opera Mini" == L && /\bOPiOS\b/.test(n) && F.push("running in Turbo/Uncompressed mode"), "IE" == L && /\blike iPhone OS\b/.test(n) ? (q = (h = t(n.replace(/like iPhone OS/, ""))).manufacturer, B = h.product) : /^iP/.test(B) ? (L || (L = "Safari"), H = "iOS" + ((h = / OS ([\d_]+)/i.exec(n)) ? " " + h[1].replace(/_/g, ".") : "")) : "Konqueror" != L || /buntu/i.test(H) ? q && "Google" != q && (/Chrome/.test(L) && !/\bMobile Safari\b/i.test(n) || /\bVita\b/.test(B)) || /\bAndroid\b/.test(H) && /^Chrome/.test(L) && /\bVersion\//i.test(n) ? (L = "Android Browser", H = /\bAndroid\b/.test(H) ? H : "Android") : "Silk" == L ? (/\bMobi/i.test(n) || (H = "Android", F.unshift("desktop mode")), /Accelerated *= *true/i.test(n) && F.unshift("accelerated")) : "PaleMoon" == L && (h = /\bFirefox\/([\d.]+)\b/.exec(n)) ? F.push("identifying as Firefox " + h[1]) : "Firefox" == L && (h = /\b(Mobile|Tablet|TV)\b/i.exec(n)) ? (H || (H = "Firefox OS"), B || (B = h[1])) : !L || (h = !/\bMinefield\b/i.test(n) && /\b(?:Firefox|Safari)\b/.exec(L)) ? (L && !B && /[\/,]|^[^(]+?\)/.test(n.slice(n.indexOf(h + "/") + 8)) && (L = null), (h = B || q || H) && (B || q || /\b(?:Android|Symbian OS|Tablet OS|webOS)\b/.test(H)) && (L = /[a-z]+(?: Hat)?/i.exec(/\bAndroid\b/.test(H) ? H : h) + " Browser")) : "Electron" == L && (h = (/\bChrome\/([\d.]+)\b/.exec(n) || 0)[1]) && F.push("Chromium " + h) : H = "Kubuntu", N || (N = p(["(?:Cloud9|CriOS|CrMo|Edge|FxiOS|IEMobile|Iron|Opera ?Mini|OPiOS|OPR|Raven|SamsungBrowser|Silk(?!/[\\d.]+$))", "Version", d(L), "(?:Firefox|Minefield|NetFront)"], function (e, t) {
+          if (D && (D = [D]), q && !B && (B = W([q])), (h = /\bGoogle TV\b/.exec(B)) && (B = h[0]), /\bSimulator\b/i.test(n) && (B = (B ? B + " " : "") + "Simulator"), "Opera Mini" == L && /\bOPiOS\b/.test(n) && j.push("running in Turbo/Uncompressed mode"), "IE" == L && /\blike iPhone OS\b/.test(n) ? (q = (h = t(n.replace(/like iPhone OS/, ""))).manufacturer, B = h.product) : /^iP/.test(B) ? (L || (L = "Safari"), H = "iOS" + ((h = / OS ([\d_]+)/i.exec(n)) ? " " + h[1].replace(/_/g, ".") : "")) : "Konqueror" != L || /buntu/i.test(H) ? q && "Google" != q && (/Chrome/.test(L) && !/\bMobile Safari\b/i.test(n) || /\bVita\b/.test(B)) || /\bAndroid\b/.test(H) && /^Chrome/.test(L) && /\bVersion\//i.test(n) ? (L = "Android Browser", H = /\bAndroid\b/.test(H) ? H : "Android") : "Silk" == L ? (/\bMobi/i.test(n) || (H = "Android", j.unshift("desktop mode")), /Accelerated *= *true/i.test(n) && j.unshift("accelerated")) : "PaleMoon" == L && (h = /\bFirefox\/([\d.]+)\b/.exec(n)) ? j.push("identifying as Firefox " + h[1]) : "Firefox" == L && (h = /\b(Mobile|Tablet|TV)\b/i.exec(n)) ? (H || (H = "Firefox OS"), B || (B = h[1])) : !L || (h = !/\bMinefield\b/i.test(n) && /\b(?:Firefox|Safari)\b/.exec(L)) ? (L && !B && /[\/,]|^[^(]+?\)/.test(n.slice(n.indexOf(h + "/") + 8)) && (L = null), (h = B || q || H) && (B || q || /\b(?:Android|Symbian OS|Tablet OS|webOS)\b/.test(H)) && (L = /[a-z]+(?: Hat)?/i.exec(/\bAndroid\b/.test(H) ? H : h) + " Browser")) : "Electron" == L && (h = (/\bChrome\/([\d.]+)\b/.exec(n) || 0)[1]) && j.push("Chromium " + h) : H = "Kubuntu", U || (U = p(["(?:Cloud9|CriOS|CrMo|Edge|FxiOS|IEMobile|Iron|Opera ?Mini|OPiOS|OPR|Raven|SamsungBrowser|Silk(?!/[\\d.]+$))", "Version", d(L), "(?:Firefox|Minefield|NetFront)"], function (e, t) {
             return e || (RegExp(t + "(?:-[\\d.]+/|(?: for [\\w-]+)?[ /-])([\\d.]+[^ ();/_-]*)", "i").exec(n) || 0)[1] || null
-          })), (h = ("iCab" == D && parseFloat(N) > 3 ? "WebKit" : /\bOpera\b/.test(L) && (/\bOPR\b/.test(n) ? "Blink" : "Presto")) || /\b(?:Midori|Nook|Safari)\b/i.test(n) && !/^(?:Trident|EdgeHTML)$/.test(D) && "WebKit" || !D && /\bMSIE\b/i.test(n) && ("Mac OS" == H ? "Tasman" : "Trident") || "WebKit" == D && /\bPlayStation\b(?! Vita\b)/i.test(L) && "NetFront") && (D = [h]), "IE" == L && (h = (/; *(?:XBLWP|ZuneWP)(\d+)/i.exec(n) || 0)[1]) ? (L += " Mobile", H = "Windows Phone " + (/\+$/.test(h) ? h : h + ".x"), F.unshift("desktop mode")) : /\bWPDesktop\b/i.test(n) ? (L = "IE Mobile", H = "Windows Phone 8.x", F.unshift("desktop mode"), N || (N = (/\brv:([\d.]+)/.exec(n) || 0)[1])) : "IE" != L && "Trident" == D && (h = /\brv:([\d.]+)/.exec(n)) && (L && F.push("identifying as " + L + (N ? " " + N : "")), L = "IE", N = h[1]), U) {
-            if (b = "global", M = null != (v = s) ? (0, i.default)(v[b]) : "number", /^(?:boolean|number|string|undefined)$/.test(M) || "object" == M && !v[b]) m(h = s.runtime) == k ? (L = "Adobe AIR", H = h.flash.system.Capabilities.os) : m(h = s.phantom) == I ? (L = "PhantomJS", N = (h = h.version || null) && h.major + "." + h.minor + "." + h.patch) : "number" == typeof A.documentMode && (h = /\bTrident\/(\d+)/i.exec(n)) ? (N = [N, A.documentMode], (h = +h[1] + 4) != N[1] && (F.push("IE " + N[1] + " mode"), D && (D[1] = ""), N[1] = h), N = "IE" == L ? String(N[1].toFixed(1)) : N[0]) : "number" == typeof A.documentMode && /^(?:Chrome|Firefox)\b/.test(L) && (F.push("masking as " + L + " " + N), L = "IE", N = "11.0", D = ["Trident"], H = "Windows"); else if (C && (R = (h = C.lang.System).getProperty("os.arch"), H = H || h.getProperty("os.name") + " " + h.getProperty("os.version")), w) {
+          })), (h = ("iCab" == D && parseFloat(U) > 3 ? "WebKit" : /\bOpera\b/.test(L) && (/\bOPR\b/.test(n) ? "Blink" : "Presto")) || /\b(?:Midori|Nook|Safari)\b/i.test(n) && !/^(?:Trident|EdgeHTML)$/.test(D) && "WebKit" || !D && /\bMSIE\b/i.test(n) && ("Mac OS" == H ? "Tasman" : "Trident") || "WebKit" == D && /\bPlayStation\b(?! Vita\b)/i.test(L) && "NetFront") && (D = [h]), "IE" == L && (h = (/; *(?:XBLWP|ZuneWP)(\d+)/i.exec(n) || 0)[1]) ? (L += " Mobile", H = "Windows Phone " + (/\+$/.test(h) ? h : h + ".x"), j.unshift("desktop mode")) : /\bWPDesktop\b/i.test(n) ? (L = "IE Mobile", H = "Windows Phone 8.x", j.unshift("desktop mode"), U || (U = (/\brv:([\d.]+)/.exec(n) || 0)[1])) : "IE" != L && "Trident" == D && (h = /\brv:([\d.]+)/.exec(n)) && (L && j.push("identifying as " + L + (U ? " " + U : "")), L = "IE", U = h[1]), N) {
+            if (b = "global", M = null != (v = s) ? (0, i.default)(v[b]) : "number", /^(?:boolean|number|string|undefined)$/.test(M) || "object" == M && !v[b]) m(h = s.runtime) == S ? (L = "Adobe AIR", H = h.flash.system.Capabilities.os) : m(h = s.phantom) == P ? (L = "PhantomJS", U = (h = h.version || null) && h.major + "." + h.minor + "." + h.patch) : "number" == typeof A.documentMode && (h = /\bTrident\/(\d+)/i.exec(n)) ? (U = [U, A.documentMode], (h = +h[1] + 4) != U[1] && (j.push("IE " + U[1] + " mode"), D && (D[1] = ""), U[1] = h), U = "IE" == L ? String(U[1].toFixed(1)) : U[0]) : "number" == typeof A.documentMode && /^(?:Chrome|Firefox)\b/.test(L) && (j.push("masking as " + L + " " + U), L = "IE", U = "11.0", D = ["Trident"], H = "Windows"); else if (I && (R = (h = I.lang.System).getProperty("os.arch"), H = H || h.getProperty("os.name") + " " + h.getProperty("os.version")), O) {
               try {
-                N = s.require("ringo/engine").version.join("."), L = "RingoJS"
+                U = s.require("ringo/engine").version.join("."), L = "RingoJS"
               } catch (e) {
                 (h = s.system) && h.global.system == s.system && (L = "Narwhal", H || (H = h[0].os || null))
               }
               L || (L = "Rhino")
-            } else "object" === (0, i.default)(s.process) && !s.process.browser && (h = s.process) && ("object" === (0, i.default)(h.versions) && ("string" == typeof h.versions.electron ? (F.push("Node " + h.versions.node), L = "Electron", N = h.versions.electron) : "string" == typeof h.versions.nw && (F.push("Chromium " + N, "Node " + h.versions.node), L = "NW.js", N = h.versions.nw)), L || (L = "Node.js", R = h.arch, H = h.platform, N = (N = /[\d.]+/.exec(h.version)) ? N[0] : null));
+            } else "object" === (0, i.default)(s.process) && !s.process.browser && (h = s.process) && ("object" === (0, i.default)(h.versions) && ("string" == typeof h.versions.electron ? (j.push("Node " + h.versions.node), L = "Electron", U = h.versions.electron) : "string" == typeof h.versions.nw && (j.push("Chromium " + U, "Node " + h.versions.node), L = "NW.js", U = h.versions.nw)), L || (L = "Node.js", R = h.arch, H = h.platform, U = (U = /[\d.]+/.exec(h.version)) ? U[0] : null));
             H = H && u(H)
           }
-          if (N && (h = /(?:[ab]|dp|pre|[ab]\d+pre)(?:\d+\+?)?$/i.exec(N) || /(?:alpha|beta)(?: ?\d)?/i.exec(n + ";" + (U && c.appMinorVersion)) || /\bMinefield\b/i.test(n) && "a") && (j = /b/i.test(h) ? "beta" : "alpha", N = N.replace(RegExp(h + "\\+?$"), "") + ("beta" == j ? x : O) + (/\d+\+?/.exec(h) || "")), "Fennec" == L || "Firefox" == L && /\b(?:Android|Firefox OS)\b/.test(H)) L = "Firefox Mobile"; else if ("Maxthon" == L && N) N = N.replace(/\.[\d.]+/, ".x"); else if (/\bXbox\b/i.test(B)) "Xbox 360" == B && (H = null), "Xbox 360" == B && /\bIEMobile\b/.test(n) && F.unshift("mobile mode"); else if (!/^(?:Chrome|IE|Opera)$/.test(L) && (!L || B || /Browser|Mobi/.test(L)) || "Windows CE" != H && !/Mobi/i.test(n)) if ("IE" == L && U) try {
-            null === s.external && F.unshift("platform preview")
+          if (U && (h = /(?:[ab]|dp|pre|[ab]\d+pre)(?:\d+\+?)?$/i.exec(U) || /(?:alpha|beta)(?: ?\d)?/i.exec(n + ";" + (N && c.appMinorVersion)) || /\bMinefield\b/i.test(n) && "a") && (F = /b/i.test(h) ? "beta" : "alpha", U = U.replace(RegExp(h + "\\+?$"), "") + ("beta" == F ? w : x) + (/\d+\+?/.exec(h) || "")), "Fennec" == L || "Firefox" == L && /\b(?:Android|Firefox OS)\b/.test(H)) L = "Firefox Mobile"; else if ("Maxthon" == L && U) U = U.replace(/\.[\d.]+/, ".x"); else if (/\bXbox\b/i.test(B)) "Xbox 360" == B && (H = null), "Xbox 360" == B && /\bIEMobile\b/.test(n) && j.unshift("mobile mode"); else if (!/^(?:Chrome|IE|Opera)$/.test(L) && (!L || B || /Browser|Mobi/.test(L)) || "Windows CE" != H && !/Mobi/i.test(n)) if ("IE" == L && N) try {
+            null === s.external && j.unshift("platform preview")
           } catch (e) {
-            F.unshift("embedded")
-          } else (/\bBlackBerry\b/.test(B) || /\bBB10\b/.test(n)) && (h = (RegExp(B.replace(/ +/g, " *") + "/([.\\d]+)", "i").exec(n) || 0)[1] || N) ? (H = ((h = [h, /BB10/.test(n)])[1] ? (B = null, q = "BlackBerry") : "Device Software") + " " + h[0], N = null) : this != l && "Wii" != B && (U && _ || /Opera/.test(L) && /\b(?:MSIE|Firefox)\b/i.test(n) || "Firefox" == L && /\bOS X (?:\d+\.){2,}/.test(H) || "IE" == L && (H && !/^Win/.test(H) && N > 5.5 || /\bWindows XP\b/.test(H) && N > 8 || 8 == N && !/\bTrident\b/.test(n))) && !r.test(h = t.call(l, n.replace(r, "") + ";")) && h.name && (h = "ing as " + h.name + ((h = h.version) ? " " + h : ""), r.test(L) ? (/\bIE\b/.test(h) && "Mac OS" == H && (H = null), h = "identify" + h) : (h = "mask" + h, L = E ? u(E.replace(/([a-z])([A-Z])/g, "$1 $2")) : "Opera", /\bIE\b/.test(h) && (H = null), U || (N = null)), D = ["Presto"], F.push(h)); else L += " Mobile";
-          (h = (/\bAppleWebKit\/([\d.]+\+?)/i.exec(n) || 0)[1]) && (h = [parseFloat(h.replace(/\.(\d)$/, ".0$1")), h], "Safari" == L && "+" == h[1].slice(-1) ? (L = "WebKit Nightly", j = "alpha", N = h[1].slice(0, -1)) : N != h[1] && N != (h[2] = (/\bSafari\/([\d.]+\+?)/i.exec(n) || 0)[1]) || (N = null), h[1] = (/\bChrome\/([\d.]+)/i.exec(n) || 0)[1], 537.36 == h[0] && 537.36 == h[2] && parseFloat(h[1]) >= 28 && "WebKit" == D && (D = ["Blink"]), U && (T || h[1]) ? (D && (D[1] = "like Chrome"), h = h[1] || ((h = h[0]) < 530 ? 1 : h < 532 ? 2 : h < 532.05 ? 3 : h < 533 ? 4 : h < 534.03 ? 5 : h < 534.07 ? 6 : h < 534.1 ? 7 : h < 534.13 ? 8 : h < 534.16 ? 9 : h < 534.24 ? 10 : h < 534.3 ? 11 : h < 535.01 ? 12 : h < 535.02 ? "13+" : h < 535.07 ? 15 : h < 535.11 ? 16 : h < 535.19 ? 17 : h < 536.05 ? 18 : h < 536.1 ? 19 : h < 537.01 ? 20 : h < 537.11 ? "21+" : h < 537.13 ? 23 : h < 537.18 ? 24 : h < 537.24 ? 25 : h < 537.36 ? 26 : "Blink" != D ? "27" : "28")) : (D && (D[1] = "like Safari"), h = (h = h[0]) < 400 ? 1 : h < 500 ? 2 : h < 526 ? 3 : h < 533 ? 4 : h < 534 ? "4+" : h < 535 ? 5 : h < 537 ? 6 : h < 538 ? 7 : h < 601 ? 8 : "8"), D && (D[1] += " " + (h += "number" == typeof h ? ".x" : /[.+]/.test(h) ? "" : "+")), "Safari" == L && (!N || parseInt(N) > 45) && (N = h)), "Opera" == L && (h = /\bzbov|zvav$/.exec(H)) ? (L += " ", F.unshift("desktop mode"), "zvav" == h ? (L += "Mini", N = null) : L += "Mobile", H = H.replace(RegExp(" *" + h + "$"), "")) : "Safari" == L && /\bChrome\b/.exec(D && D[1]) && (F.unshift("desktop mode"), L = "Chrome Mobile", N = null, /\bOS X\b/.test(H) ? (q = "Apple", H = "iOS 4.3+") : H = null), N && 0 == N.indexOf(h = /[\d.]+$/.exec(H)) && n.indexOf("/" + h + "-") > -1 && (H = f(H.replace(h, ""))), D && !/\b(?:Avant|Nook)\b/.test(L) && (/Browser|Lunascape|Maxthon/.test(L) || "Safari" != L && /^iOS/.test(H) && /\bSafari\b/.test(D[1]) || /^(?:Adobe|Arora|Breach|Midori|Opera|Phantom|Rekonq|Rock|Samsung Internet|Sleipnir|Web)/.test(L) && D[1]) && (h = D[D.length - 1]) && F.push(h), F.length && (F = ["(" + F.join("; ") + ")"]), q && B && B.indexOf(q) < 0 && F.push("on " + q), B && F.push((/^on /.test(F[F.length - 1]) ? "" : "on ") + B), H && (h = / ([\d.+]+)$/.exec(H), y = h && "/" == H.charAt(H.length - h[0].length - 1), H = {
+            j.unshift("embedded")
+          } else (/\bBlackBerry\b/.test(B) || /\bBB10\b/.test(n)) && (h = (RegExp(B.replace(/ +/g, " *") + "/([.\\d]+)", "i").exec(n) || 0)[1] || U) ? (H = ((h = [h, /BB10/.test(n)])[1] ? (B = null, q = "BlackBerry") : "Device Software") + " " + h[0], U = null) : this != l && "Wii" != B && (N && E || /Opera/.test(L) && /\b(?:MSIE|Firefox)\b/i.test(n) || "Firefox" == L && /\bOS X (?:\d+\.){2,}/.test(H) || "IE" == L && (H && !/^Win/.test(H) && U > 5.5 || /\bWindows XP\b/.test(H) && U > 8 || 8 == U && !/\bTrident\b/.test(n))) && !r.test(h = t.call(l, n.replace(r, "") + ";")) && h.name && (h = "ing as " + h.name + ((h = h.version) ? " " + h : ""), r.test(L) ? (/\bIE\b/.test(h) && "Mac OS" == H && (H = null), h = "identify" + h) : (h = "mask" + h, L = _ ? u(_.replace(/([a-z])([A-Z])/g, "$1 $2")) : "Opera", /\bIE\b/.test(h) && (H = null), N || (U = null)), D = ["Presto"], j.push(h)); else L += " Mobile";
+          (h = (/\bAppleWebKit\/([\d.]+\+?)/i.exec(n) || 0)[1]) && (h = [parseFloat(h.replace(/\.(\d)$/, ".0$1")), h], "Safari" == L && "+" == h[1].slice(-1) ? (L = "WebKit Nightly", F = "alpha", U = h[1].slice(0, -1)) : U != h[1] && U != (h[2] = (/\bSafari\/([\d.]+\+?)/i.exec(n) || 0)[1]) || (U = null), h[1] = (/\bChrome\/([\d.]+)/i.exec(n) || 0)[1], 537.36 == h[0] && 537.36 == h[2] && parseFloat(h[1]) >= 28 && "WebKit" == D && (D = ["Blink"]), N && (T || h[1]) ? (D && (D[1] = "like Chrome"), h = h[1] || ((h = h[0]) < 530 ? 1 : h < 532 ? 2 : h < 532.05 ? 3 : h < 533 ? 4 : h < 534.03 ? 5 : h < 534.07 ? 6 : h < 534.1 ? 7 : h < 534.13 ? 8 : h < 534.16 ? 9 : h < 534.24 ? 10 : h < 534.3 ? 11 : h < 535.01 ? 12 : h < 535.02 ? "13+" : h < 535.07 ? 15 : h < 535.11 ? 16 : h < 535.19 ? 17 : h < 536.05 ? 18 : h < 536.1 ? 19 : h < 537.01 ? 20 : h < 537.11 ? "21+" : h < 537.13 ? 23 : h < 537.18 ? 24 : h < 537.24 ? 25 : h < 537.36 ? 26 : "Blink" != D ? "27" : "28")) : (D && (D[1] = "like Safari"), h = (h = h[0]) < 400 ? 1 : h < 500 ? 2 : h < 526 ? 3 : h < 533 ? 4 : h < 534 ? "4+" : h < 535 ? 5 : h < 537 ? 6 : h < 538 ? 7 : h < 601 ? 8 : "8"), D && (D[1] += " " + (h += "number" == typeof h ? ".x" : /[.+]/.test(h) ? "" : "+")), "Safari" == L && (!U || parseInt(U) > 45) && (U = h)), "Opera" == L && (h = /\bzbov|zvav$/.exec(H)) ? (L += " ", j.unshift("desktop mode"), "zvav" == h ? (L += "Mini", U = null) : L += "Mobile", H = H.replace(RegExp(" *" + h + "$"), "")) : "Safari" == L && /\bChrome\b/.exec(D && D[1]) && (j.unshift("desktop mode"), L = "Chrome Mobile", U = null, /\bOS X\b/.test(H) ? (q = "Apple", H = "iOS 4.3+") : H = null), U && 0 == U.indexOf(h = /[\d.]+$/.exec(H)) && n.indexOf("/" + h + "-") > -1 && (H = f(H.replace(h, ""))), D && !/\b(?:Avant|Nook)\b/.test(L) && (/Browser|Lunascape|Maxthon/.test(L) || "Safari" != L && /^iOS/.test(H) && /\bSafari\b/.test(D[1]) || /^(?:Adobe|Arora|Breach|Midori|Opera|Phantom|Rekonq|Rock|Samsung Internet|Sleipnir|Web)/.test(L) && D[1]) && (h = D[D.length - 1]) && j.push(h), j.length && (j = ["(" + j.join("; ") + ")"]), q && B && B.indexOf(q) < 0 && j.push("on " + q), B && j.push((/^on /.test(j[j.length - 1]) ? "" : "on ") + B), H && (h = / ([\d.+]+)$/.exec(H), y = h && "/" == H.charAt(H.length - h[0].length - 1), H = {
             architecture: 32,
             family: h && !y ? H.replace(h[0], "") : H,
             version: h ? h[1] : null,
@@ -1005,56 +1020,53 @@
               var e = this.version;
               return this.family + (e && !y ? " " + e : "") + (64 == this.architecture ? " 64-bit" : "")
             }
-          }), (h = /\b(?:AMD|IA|Win|WOW|x86_|x)64\b/i.exec(R)) && !/\bi686\b/i.test(R) ? (H && (H.architecture = 64, H.family = H.family.replace(RegExp(" *" + h), "")), L && (/\bWOW64\b/i.test(n) || U && /\w(?:86|32)$/.test(c.cpuClass || c.platform) && !/\bWin64; x64\b/i.test(n)) && F.unshift("32-bit")) : H && /^OS X/.test(H.family) && "Chrome" == L && parseFloat(N) >= 39 && (H.architecture = 64), n || (n = null);
-          var $ = {};
-          return $.description = n, $.layout = D && D[0], $.manufacturer = q, $.name = L, $.prerelease = j, $.product = B, $.ua = n, $.version = L && N, $.os = H || {
+          }), (h = /\b(?:AMD|IA|Win|WOW|x86_|x)64\b/i.exec(R)) && !/\bi686\b/i.test(R) ? (H && (H.architecture = 64, H.family = H.family.replace(RegExp(" *" + h), "")), L && (/\bWOW64\b/i.test(n) || N && /\w(?:86|32)$/.test(c.cpuClass || c.platform) && !/\bWin64; x64\b/i.test(n)) && j.unshift("32-bit")) : H && /^OS X/.test(H.family) && "Chrome" == L && parseFloat(U) >= 39 && (H.architecture = 64), n || (n = null);
+          var J = {};
+          return J.description = n, J.layout = D && D[0], J.manufacturer = q, J.name = L, J.prerelease = F, J.product = B, J.ua = n, J.version = L && U, J.os = H || {
             architecture: null,
             family: null,
             version: null,
             toString: function () {
               return "null"
             }
-          }, $.parse = t, $.toString = function () {
+          }, J.parse = t, J.toString = function () {
             return this.description || ""
-          }, $.version && F.unshift(N), $.name && F.unshift(L), H && L && (H != String(H).split(" ")[0] || H != L.split(" ")[0] && !B) && F.push(B ? "(" + H + ")" : "on " + H), F.length && ($.description = F.join(" ")), $
+          }, J.version && j.unshift(U), J.name && j.unshift(L), H && L && (H != String(H).split(" ")[0] || H != L.split(" ")[0] && !B) && j.push(B ? "(" + H + ")" : "on " + H), j.length && (J.description = j.join(" ")), J
         }()
       }();
       e.exports = o
     }).call(this, n(30))
-  }, , function (e, t) {
+  }, function (e, t) {
     e.exports = {}
-  }, function (e, t, n) {
+  }, , function (e, t, n) {
     "use strict";
-    var r = n(50), s = n(66), i = n(25), o = n(8), a = n(0), c = a.undef, u = n(171), l = n(82).getInstance("IM"),
-      m = n(115);
+    var r = n(50), s = n(56), i = (n(25), n(5)), o = n(0), a = o.undef, c = n(171), u = n(84).getInstance("IM"),
+      l = n(117);
 
-    function d(e) {
-      a.verifyOptions(e, "appKey account token", "protocol::IMProtocol"), a.verifyCallback(e, ["onconnect", "onerror", "onwillreconnect", "ondisconnect", "onloginportschange", "onmyinfo", "onblacklist", "onmutelist", "onfriends", "onusers", "onrobots", "onteams", "onsessions", "onroamingmsgs", "onofflinemsgs", "onofflinefiltermsgs", "onroamingsysmsgs", "onofflinesysmsgs", "onofflinefiltersysmsgs", "onofflinecustomsysmsgs", "onofflinefiltercustomsysmsgs", "onbroadcastmsg", "onbroadcastmsgs", "onsysmsgunread", "onsyncdone", "onteammembers", "onsyncteammembersdone", "onmsg", "onsysmsg", "oncustomsysmsg", "onupdatemyinfo", "onupdateuser", "onupdateteammember", "onCreateTeam", "onUpdateTeam", "onAddTeamMembers", "onRemoveTeamMembers", "onUpdateTeamManagers", "onDismissTeam", "onTransferTeam", "onUpdateTeamMembersMute", "onTeamMsgReceipt", "onupdatesession", "onupdatesysmsgunread", "onupdatesysmsg", "onsynccreateteam", "onsyncmarkinblacklist", "onsyncmarkinmutelist", "onsyncfriendaction", "shouldIgnoreNotification", "shouldCountNotifyUnread", "onPushNotificationMultiportConfig", "onPushNotificationMultiportConfigUpdate", "onpushevents"], "protocol::IMProtocol"), this.db = e.api.db = new r({logger: e.logger}), s.call(this, e)
+    function m(e) {
+      o.verifyOptions(e, "appKey account token", "protocol::IMProtocol"), o.verifyCallback(e, ["onconnect", "onerror", "onwillreconnect", "ondisconnect", "onloginportschange", "onmyinfo", "onblacklist", "onmutelist", "onfriends", "onusers", "onrobots", "onteams", "onsessions", "onroamingmsgs", "onofflinemsgs", "onofflinefiltermsgs", "onroamingsysmsgs", "onofflinesysmsgs", "onofflinefiltersysmsgs", "onofflinecustomsysmsgs", "onofflinefiltercustomsysmsgs", "onbroadcastmsg", "onbroadcastmsgs", "onsysmsgunread", "onsyncdone", "onteammembers", "onsyncteammembersdone", "onmsg", "onsysmsg", "oncustomsysmsg", "onupdatemyinfo", "onupdateuser", "onupdateteammember", "onCreateTeam", "onUpdateTeam", "onAddTeamMembers", "onRemoveTeamMembers", "onUpdateTeamManagers", "onDismissTeam", "onTransferTeam", "onUpdateTeamMembersMute", "onTeamMsgReceipt", "onupdatesession", "onupdatesysmsgunread", "onupdatesysmsg", "onsynccreateteam", "onsyncmarkinblacklist", "onsyncmarkinmutelist", "onsyncfriendaction", "shouldIgnoreNotification", "shouldCountNotifyUnread", "onPushNotificationMultiportConfig", "onPushNotificationMultiportConfigUpdate", "onpushevents"], "protocol::IMProtocol"), this.db = e.api.db = new r({logger: e.logger}), s.call(this, e)
     }
 
-    var p = s.fn, f = d.fn = d.prototype = Object.create(p);
-    f.init = function () {
-      p.init.call(this), this.socketUrls = [], this.parser = l, this.syncing = !0, this.hasSynced = !1, this.hasSyncedTeamMembers = !1, this.syncPromiseArray = [], this.syncResult = {}, this.syncTeamMembersPromiseArray = [], this.syncTeamMembersResult = {}, this.timetags = {}, this.sysMsgUnread = m.completeUnread({}), this.resetUnsettledMsgs(), this.resetUnsettledSysMsgs(), this.msgPromise = Promise.resolve(), this.sysMsgPromise = Promise.resolve(), this.sessionSet = {}, this.msgReceiptTasks = {}, this.userSet = {}, this.pushNotificationMultiportConfig = u.getDefaultConfig()
-    }, f.reset = function () {
-      p.reset.call(this);
+    var d = s.fn, p = m.fn = m.prototype = Object.create(d);
+    p.init = function () {
+      d.init.call(this), this.socketUrls = [], this.parser = u, this.syncing = !0, this.hasSynced = !1, this.hasSyncedTeamMembers = !1, this.syncPromiseArray = [], this.syncResult = {}, this.syncTeamMembersPromiseArray = [], this.syncTeamMembersResult = {}, this.timetags = {}, this.sysMsgUnread = l.completeUnread({}), this.resetUnsettledMsgs(), this.resetUnsettledSysMsgs(), this.msgPromise = Promise.resolve(), this.sysMsgPromise = Promise.resolve(), this.sessionSet = {}, this.msgReceiptTasks = {}, this.userSet = {}, this.pushNotificationMultiportConfig = c.getDefaultConfig()
+    }, p.reset = function () {
+      d.reset.call(this);
       var e = this.options;
-      this.db.reset(e.db), c(e.lbsUrl) && (e.lbsUrl = o.lbsUrl), this.resetAutoMarkRead()
-    }, f.resetAutoMarkRead = function () {
+      this.db.reset(e.db), a(e.lbsUrl) && (e.lbsUrl = i.lbsUrl), this.resetAutoMarkRead()
+    }, p.resetAutoMarkRead = function () {
       var e = this.options;
-      a.verifyBooleanWithDefault(e, "autoMarkRead", !0, "", "protocol::resetAutoMarkRead")
-    }, f.resetUnsettledMsgs = function () {
+      o.verifyBooleanWithDefault(e, "autoMarkRead", !0, "", "protocol::resetAutoMarkRead")
+    }, p.resetUnsettledMsgs = function () {
       this.unhandledMsgs = [], this.unupdatedMsgs = []
-    }, f.resetUnsettledSysMsgs = function () {
+    }, p.resetUnsettledSysMsgs = function () {
       this.unhandledSysMsgs = [], this.unupdatedSysMsgs = []
-    }, f.packetFromSync = function (e) {
+    }, p.packetFromSync = function (e) {
       return !e.obj || !!e.obj.sync
-    }, f.onCustomError = function (e, t) {
-      var n = i.customError(e, t), r = t.message || "未知错误";
-      this.onMiscError(r, n)
-    }, e.exports = d, n(478), n(477), n(476), n(470), n(468), n(467), n(466), n(465), n(464), n(463), n(462), n(461), n(460), n(459), n(458), n(457), n(456)
+    }, e.exports = m, n(456), n(455), n(454), n(448), n(446), n(445), n(444), n(443), n(442), n(441), n(440), n(439), n(438), n(437), n(436), n(435), n(434)
   }, function (e, t, n) {
     "use strict";
-    var r, s = n(10), i = (r = s) && r.__esModule ? r : {default: r};
+    var r, s = n(9), i = (r = s) && r.__esModule ? r : {default: r};
 
     function o(e, t) {
       var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
@@ -1091,6 +1103,8 @@
       811: "强推列表中帐号数量超限",
       812: "群被禁言",
       813: "因群数量限制，部分拉人成功",
+      814: "禁止使用群组消息已读服务",
+      815: "群管理员人数上限",
       997: "协议已失效",
       998: "解包错误",
       999: "打包错误",
@@ -1199,7 +1213,7 @@
       return "Symbol(".concat(void 0 === e ? "" : e, ")_", (++n + r).toString(36))
     }
   }, function (e, t, n) {
-    var r = n(59), s = n(39);
+    var r = n(60), s = n(40);
     e.exports = Object.keys || function (e) {
       return r(e, s)
     }
@@ -1216,7 +1230,7 @@
     e.exports = n
   }, function (e, t, n) {
     "use strict";
-    var r = n(49), s = n(24), i = n(8), o = n(455), a = n(82).getInstance("IM");
+    var r = n(46), s = n(24), i = n(5), o = n(433), a = n(84).getInstance("IM");
 
     function c(e) {
       return this.subType = "im", this.nosScene = e.nosScene || "im", this.nosSurvivalTime = e.nosSurvivalTime, e.Protocol = s, e.Message = o, e.constructor = c, this.init(e)
@@ -1226,14 +1240,14 @@
       return "NIM-account-" + e.account
     };
     var u = c.fn = c.prototype = Object.create(r.prototype);
-    c.info = u.info = i.info, e.exports = c, n(445), n(444), n(443), n(442), n(441), n(440), n(439), n(438), n(437), n(436), n(435), n(434), n(433), n(432), n(431), n(430), n(429)
+    c.info = u.info = i.info, e.exports = c, n(423), n(422), n(421), n(420), n(419), n(418), n(417), n(416), n(415), n(414), n(413), n(412), n(411), n(410), n(409), n(408), n(407)
   }, function (e, t) {
     var n = {}.toString;
     e.exports = function (e) {
       return n.call(e).slice(8, -1)
     }
-  }, function (e, t, n) {
-    var r = n(12).f, s = n(13), i = n(5)("toStringTag");
+  }, , function (e, t, n) {
+    var r = n(12).f, s = n(13), i = n(6)("toStringTag");
     e.exports = function (e, t, n) {
       e && !s(e = n ? e : e.prototype, i) && r(e, i, {configurable: !0, value: t})
     }
@@ -1264,22 +1278,22 @@
   }, function (e, t) {
     t.f = Object.getOwnPropertySymbols
   }, function (e, t, n) {
-    var r = n(7), s = n(6), i = n(34), o = n(38), a = n(12).f;
+    var r = n(8), s = n(7), i = n(35), o = n(39), a = n(12).f;
     e.exports = function (e) {
       var t = s.Symbol || (s.Symbol = i ? {} : r.Symbol || {});
       "_" == e.charAt(0) || e in t || a(t, e, {value: o.f(e)})
     }
   }, function (e, t, n) {
-    t.f = n(5)
+    t.f = n(6)
   }, function (e, t) {
     e.exports = "constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")
   }, function (e, t, n) {
-    var r = n(7), s = r["__core-js_shared__"] || (r["__core-js_shared__"] = {});
+    var r = n(8), s = r["__core-js_shared__"] || (r["__core-js_shared__"] = {});
     e.exports = function (e) {
       return s[e] || (s[e] = {})
     }
   }, function (e, t, n) {
-    var r = n(40)("keys"), s = n(28);
+    var r = n(41)("keys"), s = n(28);
     e.exports = function (e) {
       return r[e] || (r[e] = s(e))
     }
@@ -1303,35 +1317,10 @@
     e.exports = function (e) {
       return isNaN(e = +e) ? 0 : (e > 0 ? r : n)(e)
     }
-  }, , function (e, t, n) {
-    var r = n(43);
-    e.exports = function (e) {
-      return Object(r(e))
-    }
-  }, function (e, t, n) {
-    var r = n(15), s = n(104), i = n(39), o = n(41)("IE_PROTO"), a = function () {
-    }, c = function () {
-      var e, t = n(52)("iframe"), r = i.length;
-      for (t.style.display = "none", n(75).appendChild(t), t.src = "javascript:", (e = t.contentWindow.document).open(), e.write("<script>document.F=Object<\/script>"), e.close(), c = e.F; r--;) delete c.prototype[i[r]];
-      return c()
-    };
-    e.exports = Object.create || function (e, t) {
-      var n;
-      return null !== e ? (a.prototype = r(e), n = new a, a.prototype = null, n[o] = e) : n = c(), void 0 === t ? n : s(n, t)
-    }
   }, function (e, t, n) {
     "use strict";
-    var r = n(106)(!0);
-    n(62)(String, "String", function (e) {
-      this._t = String(e), this._i = 0
-    }, function () {
-      var e, t = this._t, n = this._i;
-      return n >= t.length ? {value: void 0, done: !0} : (e = r(t, n), this._i += e.length, {value: e, done: !1})
-    })
-  }, function (e, t, n) {
-    "use strict";
-    var r, s = n(10), i = (r = s) && r.__esModule ? r : {default: r};
-    var o = n(9), a = n(0), c = a.notundef, u = n(261), l = n(8);
+    var r, s = n(9), i = (r = s) && r.__esModule ? r : {default: r};
+    var o = n(10), a = n(0), c = a.notundef, u = n(260), l = n(5);
 
     function m() {
     }
@@ -1373,8 +1362,6 @@
         done: function (r) {
           n.logger.warn("ApiBase::destroy: instance destroyed ..."), Object.getOwnPropertyNames(n).forEach(function (e) {
             delete n[e]
-          }), Object.keys(n.__proto__).forEach(function (e) {
-            delete n.__proto__[e]
           }), d && (delete d[t], d[t] = null), e.done instanceof Function && e.done(r)
         }
       })
@@ -1419,6 +1406,16 @@
     }, p.cbAndSendCmd = function (e, t) {
       var n = this.processCallbackPromise(t);
       return this.sendCmd(e, t), n
+    }, p.sendCmdUsePromise = function (e, t) {
+      var n = this;
+      return new Promise(function (r, s) {
+        n.sendCmd(e, t, function (e, t, n) {
+          if (e) s(e); else {
+            var i = a.merge({}, t, n);
+            r(i)
+          }
+        })
+      })
     }, m.use = function (e, t) {
       e && e.install && a.isFunction(e.install) && e.install(this, t)
     }, m.rmAllInstances = function () {
@@ -1426,17 +1423,42 @@
       d = {}
     }, p.logout = function (e) {
       this.protocol.shouldReconnect = !1, this.protocol.doLogout = !0, this.processCallback(e), this.sendCmd("logout", e, e.callback)
-    }, e.exports = m, n(260), n(259), n(256), n(255), n(254), n(253)
+    }, e.exports = m, n(259), n(258), n(255), n(254), n(253), n(252), n(251)
+  }, function (e, t, n) {
+    var r = n(44);
+    e.exports = function (e) {
+      return Object(r(e))
+    }
+  }, function (e, t, n) {
+    var r = n(15), s = n(106), i = n(40), o = n(42)("IE_PROTO"), a = function () {
+    }, c = function () {
+      var e, t = n(52)("iframe"), r = i.length;
+      for (t.style.display = "none", n(76).appendChild(t), t.src = "javascript:", (e = t.contentWindow.document).open(), e.write("<script>document.F=Object<\/script>"), e.close(), c = e.F; r--;) delete c.prototype[i[r]];
+      return c()
+    };
+    e.exports = Object.create || function (e, t) {
+      var n;
+      return null !== e ? (a.prototype = r(e), n = new a, a.prototype = null, n[o] = e) : n = c(), void 0 === t ? n : s(n, t)
+    }
   }, function (e, t, n) {
     "use strict";
-    var r = n(491);
-    r.fn = r.prototype, e.exports = r, n(488), n(487), n(486), n(485), n(484), n(483), n(482), n(481), n(480), n(479)
+    var r = n(108)(!0);
+    n(63)(String, "String", function (e) {
+      this._t = String(e), this._i = 0
+    }, function () {
+      var e, t = this._t, n = this._i;
+      return n >= t.length ? {value: void 0, done: !0} : (e = r(t, n), this._i += e.length, {value: e, done: !1})
+    })
   }, function (e, t, n) {
     "use strict";
-    var r = n(65), s = n(136), i = n(135);
+    var r = n(469);
+    r.fn = r.prototype, e.exports = r, n(466), n(465), n(464), n(463), n(462), n(461), n(460), n(459), n(458), n(457)
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(66), s = n(136), i = n(135);
     r.json = s, r.upload = i, e.exports = r
   }, function (e, t, n) {
-    var r = n(18), s = n(7).document, i = r(s) && r(s.createElement);
+    var r = n(18), s = n(8).document, i = r(s) && r(s.createElement);
     e.exports = function (e) {
       return i ? s.createElement(e) : {}
     }
@@ -1460,8 +1482,8 @@
       }
     }, e.exports = s
   }, function (e, t, n) {
-    n(101);
-    for (var r = n(7), s = n(19), i = n(23), o = n(5)("toStringTag"), a = "CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,DOMTokenList,DataTransferItemList,FileList,HTMLAllCollection,HTMLCollection,HTMLFormElement,HTMLSelectElement,MediaList,MimeTypeArray,NamedNodeMap,NodeList,PaintRequestList,Plugin,PluginArray,SVGLengthList,SVGNumberList,SVGPathSegList,SVGPointList,SVGStringList,SVGTransformList,SourceBufferList,StyleSheetList,TextTrackCueList,TextTrackList,TouchList".split(","), c = 0; c < a.length; c++) {
+    n(103);
+    for (var r = n(8), s = n(19), i = n(22), o = n(6)("toStringTag"), a = "CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,DOMTokenList,DataTransferItemList,FileList,HTMLAllCollection,HTMLCollection,HTMLFormElement,HTMLSelectElement,MediaList,MimeTypeArray,NamedNodeMap,NodeList,PaintRequestList,Plugin,PluginArray,SVGLengthList,SVGNumberList,SVGPathSegList,SVGPointList,SVGStringList,SVGTransformList,SourceBufferList,StyleSheetList,TextTrackCueList,TextTrackList,TouchList".split(","), c = 0; c < a.length; c++) {
       var u = a[c], l = r[u], m = l && l.prototype;
       m && !m[o] && s(m, o, u), i[u] = i.Array
     }
@@ -1471,7 +1493,139 @@
       return e
     }
   }, function (e, t, n) {
-    var r = n(27), s = n(26), i = n(17), o = n(42), a = n(13), c = n(61), u = Object.getOwnPropertyDescriptor;
+    "use strict";
+    var r = n(0), s = n(5), i = n(25);
+
+    function o(e) {
+      r.undef(e.secure) && (e.secure = !0), this.options = r.copy(e), this.init(), this.connect()
+    }
+
+    var a = o.fn = o.prototype;
+    a.init = function () {
+      this.logger = this.options.logger, this.cmdTaskArray = [], this.timerMap = {}, this.cmdCallbackMap = {}, this.cmdContentMap = {}, this.initConnect(), this.reset()
+    }, a.reset = function () {
+      this.resetConnect()
+    }, a.setOptions = function (e) {
+      var t = this.options, n = Object.keys(t), s = n.indexOf("account");
+      -1 !== s && n.splice(s, 1), e = r.filterObj(e, n), this.options = r.merge(t, e), this.reset()
+    }, a.sendCmd = function (e) {
+      var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "", n = arguments[2];
+      this.heartbeat(), "heartbeat" !== e && this.logger.warn("protocol::sendCmd: " + e, t);
+      var r, s = e, i = (e = this.parser.createCmd(e, t)).SER;
+      t = t || {}, this.cmdContentMap[i] = t, t.single && (delete t.single, 1 === (r = Object.keys(t)).length && (this.cmdContentMap[i] = t[r[0]])), t.NOTSTORE && ((r = t.NOTSTORE.split(" ")).forEach(function (e) {
+        delete t[e]
+      }), delete t.NOTSTORE), (n = n || t.callback) && (this.cmdCallbackMap[i] = n), this.cmdTaskArray.push({
+        cmdName: s,
+        cmd: JSON.stringify(e)
+      }), this.startCmdTaskTimer()
+    }, a.startCmdTaskTimer = function () {
+      var e = this;
+      e.cmdTaskTimer || (e.cmdTaskTimer = setTimeout(function () {
+        var t = e.cmdTaskArray.shift();
+        e.cmdTaskTimer = null, t && e.executeCmdTask(t), e.cmdTaskArray.length && e.startCmdTaskTimer()
+      }, 0))
+    }, a.executeCmdTask = function (e) {
+      var t = e.cmdName, n = e.cmd, r = (n = JSON.parse(n)).SER;
+      this.isFrequencyControlled(t) ? (this.logger.warn("protocol::executeCmdTask: " + t + " hit freq control"), this.markCallbackInvalid(r, i.newFrequencyControlError({
+        callFunc: "protocol::executeCmdTask",
+        message: t + " hit freq control"
+      }))) : this.isConnected() ? ("heartbeat" !== t && this.logger.log("protocol::sendCmd: " + t + " " + JSON.stringify(n)), this.doSendCmd(n)) : (this.logger.warn("protocol::executeCmdTask: " + t + " not connected"), this.markCallbackInvalid(r, i.newSocketStateError({
+        callFunc: "protocol::executeCmdTask",
+        message: t + " not connected"
+      })))
+    }, a.isFrequencyControlled = function (e) {
+      var t = this.frequencyControlMap && this.frequencyControlMap[e];
+      if (t) {
+        if (Date.now() < t.from + t.duration) return !0;
+        delete this.frequencyControlMap[e]
+      }
+    }, a.doSendCmd = function (e) {
+      var t = this, n = e.SER;
+      t.timerMap[n] = setTimeout(function () {
+        t.markCallbackInvalid(n, i.newTimeoutError({
+          callFunc: "protocol::doSendCmd",
+          message: "ser " + n + " Timeout Error"
+        }))
+      }, s.cmdTimeout);
+      try {
+        t.socket.send(JSON.stringify(e))
+      } catch (e) {
+        t.markCallbackInvalid(n, i.newSocketStateError({
+          callFunc: "protocol::doSendCmd",
+          message: "ser " + n + " socketSendJson Error"
+        })), t.onDisconnect(!0, "protocol::doSendCmd:socketSendJson")
+      }
+    }, a.getObjWithSer = function (e) {
+      var t = this.cmdContentMap[e];
+      return delete this.cmdContentMap[e], t && r.copy(t)
+    }, a.getCallbackWithSer = function (e) {
+      var t = this.cmdCallbackMap[e];
+      return t && !t.isImSyncDataCb && delete this.cmdCallbackMap[e], t
+    }, a.getTimerWithSer = function (e) {
+      var t = this.timerMap[e];
+      return delete this.timerMap[e], t
+    }, a.clearTimerWithSer = function (e) {
+      var t = this.getTimerWithSer(e);
+      t && clearTimeout(t)
+    }, a.markCallbackInvalid = function (e, t) {
+      this.getObjWithSer(e), this.clearTimerWithSer(e);
+      var n = this.getCallbackWithSer(e);
+      if (n) {
+        var r = n.options;
+        setTimeout(function () {
+          n(t || i.newUnknownError({ser: e}), r)
+        }, 0)
+      }
+    }, a.markAllCallbackInvalid = function (e) {
+      var t = this;
+      Object.keys(this.cmdCallbackMap).forEach(function (n) {
+        t.markCallbackInvalid(n, e)
+      })
+    }, a.getPacketObj = function (e) {
+      var t = null;
+      if (e && e.raw) {
+        var n = e.raw.ser;
+        r.notundef(n) && (t = this.getObjWithSer(n))
+      }
+      return t
+    }, a.callPacketAckCallback = function (e) {
+      var t = this;
+      if (e && e.raw) {
+        var n = e.raw.ser;
+        if (r.notundef(n)) {
+          t.clearTimerWithSer(n);
+          var s = t.getCallbackWithSer(n);
+          s && (e.promise ? e.promise.then(function () {
+            s(e.error, e.obj)
+          }, function (r) {
+            r.callFunc = "protocol::callPacketAckCallback", r.message = "Resp Promoise Error: cmd: " + e.cmd + ", ser: " + n;
+            var o = i.customError("CALLBACK_ACK_ERR", r);
+            t.logger.error("protocol::callPacketAckCallback: promise error " + JSON.stringify(r)), s(o, e.obj, e.content)
+          }) : s(e.error, e.obj, e.content))
+        }
+      }
+    }, a.onMessage = function (e) {
+      this.heartbeat();
+      var t = this.parser.parseResponse(e);
+      t.notFound && this.logger.warn("protocol::onMessage: packet not found " + JSON.stringify(t)), t.error ? (t.error.message = t.cmd + " error: " + t.error.message, this.logger.error("protocol::onMessage: packet error " + JSON.stringify(t.error))) : t.content || "heartbeat" === t.cmd || this.logger.warn("protocol::onMessage: packet.content undefined " + JSON.stringify(t)), t.frequencyControlDuration && (this.logger.error("protocol::onMessage: server freq control " + JSON.stringify(t.cmd)), this.frequencyControlMap = this.frequencyControlMap || {}, this.frequencyControlMap[t.cmd] = {
+        from: +new Date,
+        duration: t.frequencyControlDuration
+      }), t.obj = this.getPacketObj(t), "heartbeat" !== t.cmd && "getClientAntispam" !== t.cmd && this.logger.log("protocol::recvCmd: " + t.cmd + " " + t.rawStr);
+      var n = "process" + r.capFirstLetter(t.service);
+      this[n] ? ("heartbeat" !== t.cmd && this.logger.warn("protocol::recvCmd: " + t.cmd + " " + n, t.content), "syncDone" === t.cmd ? this.cmdCallbackMap[t.raw.ser] && this.cmdCallbackMap[t.raw.ser].isImSyncDataCb && (this[n](t), this.cmdCallbackMap[t.raw.ser].isImSyncDataCb = !1) : this[n](t)) : this.logger.warn("protocol::onMessage: " + n + " not found"), this.callPacketAckCallback(t)
+    }, a.onMiscError = function (e, t, n) {
+      t && this.notifyError(e, t, n)
+    }, a.onCustomError = function (e, t) {
+      var n = i.customError(e, t), r = t.message || "未知错误";
+      this.onMiscError(r, n)
+    }, a.notifyError = function (e, t, n) {
+      this.isConnected() && (this.logger.error((e || "") + " " + this.name, t, n), this.options.onerror(t, n))
+    }, a.emitAPI = function (e) {
+      var t = e.type, n = e.obj;
+      this.api.emit(t, n)
+    }, e.exports = o, n(250), n(248), n(247), n(246), n(245)
+  }, function (e, t, n) {
+    var r = n(27), s = n(26), i = n(17), o = n(43), a = n(13), c = n(62), u = Object.getOwnPropertyDescriptor;
     t.f = n(14) ? u : function (e, t) {
       if (e = i(e), t = o(t, !0), c) try {
         return u(e, t)
@@ -1480,7 +1634,7 @@
       if (a(e, t)) return s(!r.f.call(e, t), e[t])
     }
   }, function (e, t, n) {
-    var r = n(59), s = n(39).concat("length", "prototype");
+    var r = n(60), s = n(40).concat("length", "prototype");
     t.f = Object.getOwnPropertyNames || function (e) {
       return r(e, s)
     }
@@ -1490,7 +1644,7 @@
       return "String" == r(e) ? e.split("") : Object(e)
     }
   }, function (e, t, n) {
-    var r = n(13), s = n(17), i = n(103)(!1), o = n(41)("IE_PROTO");
+    var r = n(13), s = n(17), i = n(105)(!1), o = n(42)("IE_PROTO");
     e.exports = function (e, t) {
       var n, a = s(e), c = 0, u = [];
       for (n in a) n != o && r(a, n) && u.push(n);
@@ -1509,14 +1663,14 @@
     })
   }, function (e, t, n) {
     "use strict";
-    var r = n(34), s = n(16), i = n(60), o = n(19), a = n(23), c = n(105), u = n(33), l = n(74), m = n(5)("iterator"),
+    var r = n(35), s = n(16), i = n(61), o = n(19), a = n(22), c = n(107), u = n(34), l = n(75), m = n(6)("iterator"),
       d = !([].keys && "next" in [].keys()), p = function () {
         return this
       };
     e.exports = function (e, t, n, f, g, h, y) {
       c(n, t, f);
       var v, b, M, T = function (e) {
-          if (!d && e in I) return I[e];
+          if (!d && e in P) return P[e];
           switch (e) {
             case"keys":
             case"values":
@@ -1527,21 +1681,21 @@
           return function () {
             return new n(this, e)
           }
-        }, k = t + " Iterator", S = "values" == g, P = !1, I = e.prototype, C = I[m] || I["@@iterator"] || g && I[g],
-        w = C || T(g), O = g ? S ? T("entries") : w : void 0, x = "Array" == t && I.entries || C;
-      if (x && (M = l(x.call(new e))) !== Object.prototype && M.next && (u(M, k, !0), r || "function" == typeof M[m] || o(M, m, p)), S && C && "values" !== C.name && (P = !0, w = function () {
-        return C.call(this)
-      }), r && !y || !d && !P && I[m] || o(I, m, w), a[t] = w, a[k] = p, g) if (v = {
-        values: S ? w : T("values"),
-        keys: h ? w : T("keys"),
-        entries: O
-      }, y) for (b in v) b in I || i(I, b, v[b]); else s(s.P + s.F * (d || P), t, v);
+        }, S = t + " Iterator", k = "values" == g, C = !1, P = e.prototype, I = P[m] || P["@@iterator"] || g && P[g],
+        O = I || T(g), x = g ? k ? T("entries") : O : void 0, w = "Array" == t && P.entries || I;
+      if (w && (M = l(w.call(new e))) !== Object.prototype && M.next && (u(M, S, !0), r || "function" == typeof M[m] || o(M, m, p)), k && I && "values" !== I.name && (C = !0, O = function () {
+        return I.call(this)
+      }), r && !y || !d && !C && P[m] || o(P, m, O), a[t] = O, a[S] = p, g) if (v = {
+        values: k ? O : T("values"),
+        keys: h ? O : T("keys"),
+        entries: x
+      }, y) for (b in v) b in P || i(P, b, v[b]); else s(s.P + s.F * (d || C), t, v);
       return v
     }
   }, function (e, t, n) {
     "use strict";
     t.__esModule = !0;
-    var r, s = n(88), i = (r = s) && r.__esModule ? r : {default: r};
+    var r, s = n(89), i = (r = s) && r.__esModule ? r : {default: r};
     t.default = i.default || function (e) {
       for (var t = 1; t < arguments.length; t++) {
         var n = arguments[t];
@@ -1672,144 +1826,45 @@
       var t = a[e];
       t && t.req.abort()
     }, e.exports = d
-  }, function (e, t, n) {
-    "use strict";
-    var r = n(0), s = n(8), i = n(25);
-
-    function o(e) {
-      r.undef(e.secure) && (e.secure = !0), this.options = r.copy(e), this.init(), this.connect()
+  }, function (e, t) {
+    e.exports = function (e, t) {
+      var n = t.split(".");
+      for (; n.length;) {
+        var r = n.shift(), s = !1;
+        if ("?" == r[r.length - 1] && (r = r.slice(0, -1), s = !0), !(e = e[r]) && s) return e
+      }
+      return e
     }
-
-    var a = o.fn = o.prototype;
-    a.init = function () {
-      this.logger = this.options.logger, this.cmdTaskArray = [], this.timerMap = {}, this.cmdCallbackMap = {}, this.cmdContentMap = {}, this.initConnect(), this.reset()
-    }, a.reset = function () {
-      this.resetConnect()
-    }, a.setOptions = function (e) {
-      var t = this.options, n = Object.keys(t), s = n.indexOf("account");
-      -1 !== s && n.splice(s, 1), e = r.filterObj(e, n), this.options = r.merge(t, e), this.reset()
-    }, a.sendCmd = function (e) {
-      var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "", n = arguments[2];
-      this.heartbeat(), "heartbeat" !== e && this.logger.warn("protocol::sendCmd: " + e, t);
-      var r, s = e, i = (e = this.parser.createCmd(e, t)).SER;
-      t = t || {}, this.cmdContentMap[i] = t, t.single && (delete t.single, 1 === (r = Object.keys(t)).length && (this.cmdContentMap[i] = t[r[0]])), t.NOTSTORE && ((r = t.NOTSTORE.split(" ")).forEach(function (e) {
-        delete t[e]
-      }), delete t.NOTSTORE), (n = n || t.callback) && (this.cmdCallbackMap[i] = n), this.cmdTaskArray.push({
-        cmdName: s,
-        cmd: JSON.stringify(e)
-      }), this.startCmdTaskTimer()
-    }, a.startCmdTaskTimer = function () {
-      var e = this;
-      e.cmdTaskTimer || (e.cmdTaskTimer = setTimeout(function () {
-        var t = e.cmdTaskArray.shift();
-        e.cmdTaskTimer = null, t && e.executeCmdTask(t), e.cmdTaskArray.length && e.startCmdTaskTimer()
-      }, 0))
-    }, a.executeCmdTask = function (e) {
-      var t = e.cmdName, n = e.cmd, r = (n = JSON.parse(n)).SER;
-      this.isFrequencyControlled(t) ? (this.logger.warn("protocol::executeCmdTask: " + t + " hit freq control"), this.markCallbackInvalid(r, i.newFrequencyControlError({
-        callFunc: "protocol::executeCmdTask",
-        message: t + " hit freq control"
-      }))) : this.isConnected() ? (this.logger.log("protocol::sendCmd: " + t + " " + JSON.stringify(n)), this.doSendCmd(n)) : (this.logger.warn("protocol::executeCmdTask: " + t + " not connected"), this.markCallbackInvalid(r, i.newSocketStateError({
-        callFunc: "protocol::executeCmdTask",
-        message: t + " not connected"
-      })))
-    }, a.isFrequencyControlled = function (e) {
-      var t = this.frequencyControlMap && this.frequencyControlMap[e];
-      if (t) {
-        if (Date.now() < t.from + t.duration) return !0;
-        delete this.frequencyControlMap[e]
-      }
-    }, a.doSendCmd = function (e) {
-      var t = this, n = e.SER;
-      t.timerMap[n] = setTimeout(function () {
-        t.markCallbackInvalid(n, i.newTimeoutError({
-          callFunc: "protocol::doSendCmd",
-          message: "ser " + n + " Timeout Error"
-        }))
-      }, s.cmdTimeout);
-      try {
-        t.socket.send(JSON.stringify(e))
-      } catch (e) {
-        t.markCallbackInvalid(n, i.newSocketStateError({
-          callFunc: "protocol::doSendCmd",
-          message: "ser " + n + " socketSendJson Error"
-        })), t.onDisconnect(!0, "protocol::doSendCmd:socketSendJson")
-      }
-    }, a.getObjWithSer = function (e) {
-      var t = this.cmdContentMap[e];
-      return delete this.cmdContentMap[e], t && r.copy(t)
-    }, a.getCallbackWithSer = function (e) {
-      var t = this.cmdCallbackMap[e];
-      return delete this.cmdCallbackMap[e], t
-    }, a.getTimerWithSer = function (e) {
-      var t = this.timerMap[e];
-      return delete this.timerMap[e], t
-    }, a.clearTimerWithSer = function (e) {
-      var t = this.getTimerWithSer(e);
-      t && clearTimeout(t)
-    }, a.markCallbackInvalid = function (e, t) {
-      this.getObjWithSer(e), this.clearTimerWithSer(e);
-      var n = this.getCallbackWithSer(e);
-      if (n) {
-        var r = n.options;
-        setTimeout(function () {
-          n(t || i.newUnknownError({ser: e}), r)
-        }, 0)
-      }
-    }, a.markAllCallbackInvalid = function (e) {
-      var t = this;
-      Object.keys(this.cmdCallbackMap).forEach(function (n) {
-        t.markCallbackInvalid(n, e)
-      })
-    }, a.getPacketObj = function (e) {
-      var t = null;
-      if (e && e.raw) {
-        var n = e.raw.ser;
-        r.notundef(n) && (t = this.getObjWithSer(n))
-      }
-      return t
-    }, a.callPacketAckCallback = function (e) {
-      var t = this;
-      if (e && e.raw) {
-        var n = e.raw.ser;
-        if (r.notundef(n)) {
-          t.clearTimerWithSer(n);
-          var s = t.getCallbackWithSer(n);
-          s && (e.promise ? e.promise.then(function () {
-            s(e.error, e.obj)
-          }, function (r) {
-            r.callFunc = "protocol::callPacketAckCallback", r.message = "Resp Promoise Error: cmd: " + e.cmd + ", ser: " + n;
-            var o = i.customError("CALLBACK_ACK_ERR", r);
-            t.logger.error("protocol::callPacketAckCallback: promise error " + JSON.stringify(r)), s(o, e.obj, e.content)
-          }) : s(e.error, e.obj, e.content))
-        }
-      }
-    }, a.onMessage = function (e) {
-      this.heartbeat();
-      var t = this.parser.parseResponse(e);
-      t.notFound && this.logger.warn("protocol::onMessage: packet not found " + JSON.stringify(t)), t.error ? (t.error.message = t.cmd + " error: " + t.error.message, this.logger.error("protocol::onMessage: packet error " + JSON.stringify(t.error))) : t.content || "heartbeat" === t.cmd || this.logger.warn("protocol::onMessage: packet.content undefined " + JSON.stringify(t)), t.frequencyControlDuration && (this.logger.error("protocol::onMessage: server freq control " + JSON.stringify(t.cmd)), this.frequencyControlMap = this.frequencyControlMap || {}, this.frequencyControlMap[t.cmd] = {
-        from: +new Date,
-        duration: t.frequencyControlDuration
-      }), t.obj = this.getPacketObj(t), "heartbeat" !== t.cmd && "getClientAntispam" !== t.cmd && this.logger.log("protocol::recvCmd: " + t.cmd + " " + t.rawStr);
-      var n = "process" + r.capFirstLetter(t.service);
-      this[n] ? (this.logger.warn("protocol::recvCmd: " + t.cmd + " " + n, t.content), this[n](t)) : this.logger.warn("protocol::onMessage: " + n + " not found"), this.callPacketAckCallback(t)
-    }, a.onMiscError = function (e, t, n) {
-      t && this.notifyError(e, t, n)
-    }, a.notifyError = function (e, t, n) {
-      this.isConnected() && (this.logger.error((e || "") + " " + this.name, t, n), this.options.onerror(t, n))
-    }, a.emitAPI = function (e) {
-      var t = e.type, n = e.obj;
-      this.api.emit(t, n)
-    }, e.exports = o, n(252), n(250), n(249), n(248)
   }, function (e, t, n) {
-    var r = n(44), s = Math.min;
+    var r = n(45), s = Math.min;
     e.exports = function (e) {
       return e > 0 ? s(r(e), 9007199254740991) : 0
     }
-  }, , , , function (e, t, n) {
+  }, , , function (e, t, n) {
     "use strict";
-    var r, s = n(10), i = (r = s) && r.__esModule ? r : {default: r};
-    var o = n(0), a = o.undef, c = o.notundef, u = o.exist, l = n(116), m = n(177), d = "#%@all@%#",
+    var r, s = n(9), i = (r = s) && r.__esModule ? r : {default: r}, o = n(81);
+    var a = n(0), c = a.notundef, u = a.exist, l = n(118), m = n(177), d = m.typeMap;
+
+    function p(e) {
+      e.resend ? (a.verifyOptions(e, "idClient", "msg::Message"), this.idClient = e.idClient) : this.idClient = a.guid(), this.type = d[e.type], this.resend = e.resend ? 1 : 0, c(e.custom) && ("object" === (0, i.default)(e.custom) ? (this.logger.info("model::Message: custom should be JsonString, auto transfer"), this.custom = JSON.stringify(e.custom)) : this.custom = "" + e.custom), c(e.text) && (this.body = "" + e.text), c(e.body) && (this.body = "" + e.body), c(e.yidunEnable) && (this.yidunEnable = e.yidunEnable ? 1 : 0), c(e.antiSpamUsingYidun) && (this.antiSpamUsingYidun = e.antiSpamUsingYidun ? 1 : 0), c(e.antiSpamContent) && ("object" === (0, i.default)(e.antiSpamContent) ? (this.logger.info("model::Message: antiSpamContent should be JsonString, auto transfer"), this.antiSpamContent = JSON.stringify(e.antiSpamContent)) : this.antiSpamContent = "" + e.antiSpamContent), c(e.antiSpamBusinessId) && ("object" === (0, i.default)(e.antiSpamBusinessId) ? (this.logger.info("model::Message: antiSpamBusinessId should be JsonString, auto transfer"), this.antiSpamBusinessId = JSON.stringify(e.antiSpamBusinessId)) : this.antiSpamBusinessId = "" + e.antiSpamBusinessId), c(e.skipHistory) && (this.skipHistory = e.skipHistory ? 1 : 0), c(e.highPriority) && (this.highPriority = e.highPriority ? 1 : 0), c(e.clientAntiSpam) && (this.clientAntiSpam = e.clientAntiSpam ? 1 : 0)
+    }
+
+    p.validTypes = m.validTypes, a.merge(p.prototype, m.prototype), p.getType = m.getType, p.reverse = function (e) {
+      var t = a.filterObj(e, "chatroomId idClient from fromNick fromAvatar fromCustom userUpdateTime custom status");
+      return c(t.fromAvatar) && (t.fromAvatar = (0, o.genPrivateUrl)(t.fromAvatar)), t = a.merge(t, {
+        fromClientType: l.reverseType(e.fromClientType),
+        time: +e.time,
+        type: p.getType(e),
+        text: u(e.body) ? e.body : "",
+        resend: 1 == +e.resend
+      }), c(t.userUpdateTime) && (t.userUpdateTime = +t.userUpdateTime), t.status = t.status || "success", t
+    }, p.setExtra = function (e, t) {
+      m.setFlow(e, t)
+    }, e.exports = p
+  }, function (e, t, n) {
+    "use strict";
+    var r, s = n(9), i = (r = s) && r.__esModule ? r : {default: r};
+    var o = n(0), a = o.undef, c = o.notundef, u = o.exist, l = n(118), m = n(177), d = "#%@all@%#",
       p = {p2p: 0, team: 1}, f = {0: "p2p", 1: "team"}, g = Object.keys(p), h = m.typeMap, y = m.validTypes;
 
     function v(e) {
@@ -1880,25 +1935,39 @@
       return v.getLastMsg(e).time
     }, v.validScenes = g, v.validTypes = y, e.exports = v
   }, function (e, t) {
-    e.exports = function (e, t) {
-      var n = t.split(".");
-      for (; n.length;) {
-        var r = n.shift(), s = !1;
-        if ("?" == r[r.length - 1] && (r = r.slice(0, -1), s = !0), !(e = e[r]) && s) return e
+    e.exports = function e(t, n) {
+      "use strict";
+      var r, s, i = /(^([+\-]?(?:0|[1-9]\d*)(?:\.\d*)?(?:[eE][+\-]?\d+)?)?$|^0x[0-9a-f]+$|\d+)/gi, o = /(^[ ]*|[ ]*$)/g,
+        a = /(^([\w ]+,?[\w ]+)?[\w ]+,?[\w ]+\d+:\d+(:\d+)?[\w ]?|^\d{1,4}[\/\-]\d{1,4}[\/\-]\d{1,4}|^\w+, \w+ \d+, \d{4})/,
+        c = /^0x[0-9a-f]+$/i, u = /^0/, l = function (t) {
+          return e.insensitive && ("" + t).toLowerCase() || "" + t
+        }, m = l(t).replace(o, "") || "", d = l(n).replace(o, "") || "",
+        p = m.replace(i, "\0$1\0").replace(/\0$/, "").replace(/^\0/, "").split("\0"),
+        f = d.replace(i, "\0$1\0").replace(/\0$/, "").replace(/^\0/, "").split("\0"),
+        g = parseInt(m.match(c), 16) || 1 !== p.length && m.match(a) && Date.parse(m),
+        h = parseInt(d.match(c), 16) || g && d.match(a) && Date.parse(d) || null;
+      if (h) {
+        if (g < h) return -1;
+        if (g > h) return 1
       }
-      return e
+      for (var y = 0, v = Math.max(p.length, f.length); y < v; y++) {
+        if (r = !(p[y] || "").match(u) && parseFloat(p[y]) || p[y] || 0, s = !(f[y] || "").match(u) && parseFloat(f[y]) || f[y] || 0, isNaN(r) !== isNaN(s)) return isNaN(r) ? 1 : -1;
+        if (typeof r != typeof s && (r += "", s += ""), r < s) return -1;
+        if (r > s) return 1
+      }
+      return 0
     }
   }, function (e, t) {
   }, function (e, t, n) {
-    var r = n(13), s = n(46), i = n(41)("IE_PROTO"), o = Object.prototype;
+    var r = n(13), s = n(47), i = n(42)("IE_PROTO"), o = Object.prototype;
     e.exports = Object.getPrototypeOf || function (e) {
       return e = s(e), r(e, i) ? e[i] : "function" == typeof e.constructor && e instanceof e.constructor ? e.constructor.prototype : e instanceof Object ? o : null
     }
   }, function (e, t, n) {
-    var r = n(7).document;
+    var r = n(8).document;
     e.exports = r && r.documentElement
   }, , , function (e, t, n) {
-    var r = n(32), s = n(5)("toStringTag"), i = "Arguments" == r(function () {
+    var r = n(32), s = n(6)("toStringTag"), i = "Arguments" == r(function () {
       return arguments
     }());
     e.exports = function (e) {
@@ -1912,7 +1981,186 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(8), s = {
+    var r = {
+      link: {id: 1, heartbeat: 2},
+      sync: {id: 5, sync: 1, syncTeamMembers: 2},
+      misc: {
+        id: 6,
+        getSimpleNosToken: 1,
+        getNosToken: 2,
+        notifyUploadLog: 3,
+        uploadSdkLogUrl: 4,
+        audioToText: 5,
+        processImage: 6,
+        getNosTokenTrans: 7,
+        notifyTransLog: 8,
+        fetchFile: 9,
+        fetchFileList: 10,
+        removeFile: 11,
+        getClientAntispam: 17,
+        fileQuickTransfer: 18
+      },
+      avSignal: {
+        id: 15,
+        signalingCreate: 1,
+        signalingDelay: 2,
+        signalingClose: 3,
+        signalingJoin: 4,
+        signalingLeave: 5,
+        signalingInvite: 6,
+        signalingCancel: 7,
+        signalingReject: 8,
+        signalingAccept: 9,
+        signalingControl: 10,
+        signalingNotify: 11,
+        signalingMutilClientSyncNotify: 12,
+        signalingUnreadMessageSyncNotify: 13,
+        signalingChannelsSyncNotify: 14
+      }
+    }, s = {
+      heartbeat: {sid: r.link.id, cid: r.link.heartbeat},
+      getSimpleNosToken: {sid: r.misc.id, cid: r.misc.getSimpleNosToken, params: [{type: "int", name: "num"}]},
+      getNosToken: {
+        sid: r.misc.id,
+        cid: r.misc.getNosToken,
+        params: [{type: "String", name: "responseBody"}, {type: "Property", name: "nosToken", entity: "nosToken"}]
+      },
+      uploadSdkLogUrl: {sid: r.misc.id, cid: r.misc.uploadSdkLogUrl, params: [{type: "string", name: "url"}]},
+      audioToText: {sid: r.misc.id, cid: r.misc.audioToText, params: [{type: "Property", name: "audioToText"}]},
+      processImage: {
+        sid: r.misc.id,
+        cid: r.misc.processImage,
+        params: [{type: "String", name: "url"}, {type: "PropertyArray", name: "imageOps", entity: "imageOp"}]
+      },
+      getClientAntispam: {
+        sid: r.misc.id,
+        cid: r.misc.getClientAntispam,
+        params: [{type: "Property", name: "clientAntispam"}]
+      },
+      fileQuickTransfer: {
+        sid: r.misc.id,
+        cid: r.misc.fileQuickTransfer,
+        params: [{type: "Property", name: "fileQuickTransfer"}]
+      },
+      getNosTokenTrans: {
+        sid: r.misc.id,
+        cid: r.misc.getNosTokenTrans,
+        params: [{type: "Property", name: "transToken"}]
+      },
+      fetchFile: {sid: r.misc.id, cid: r.misc.fetchFile, params: [{type: "String", name: "docId"}]},
+      fetchFileList: {sid: r.misc.id, cid: r.misc.fetchFileList, params: [{type: "Property", name: "fileListParam"}]},
+      removeFile: {sid: r.misc.id, cid: r.misc.removeFile, params: [{type: "String", name: "docId"}]},
+      signalingCreate: {
+        sid: r.avSignal.id,
+        cid: r.avSignal.signalingCreate,
+        params: [{type: "Property", name: "avSignalTag"}]
+      },
+      signalingDelay: {
+        sid: r.avSignal.id,
+        cid: r.avSignal.signalingDelay,
+        params: [{type: "Property", name: "avSignalTag"}]
+      },
+      signalingClose: {
+        sid: r.avSignal.id,
+        cid: r.avSignal.signalingClose,
+        params: [{type: "Property", name: "avSignalTag"}]
+      },
+      signalingJoin: {
+        sid: r.avSignal.id,
+        cid: r.avSignal.signalingJoin,
+        params: [{type: "Property", name: "avSignalTag"}]
+      },
+      signalingLeave: {
+        sid: r.avSignal.id,
+        cid: r.avSignal.signalingLeave,
+        params: [{type: "Property", name: "avSignalTag"}]
+      },
+      signalingInvite: {
+        sid: r.avSignal.id,
+        cid: r.avSignal.signalingInvite,
+        params: [{type: "Property", name: "avSignalTag"}]
+      },
+      signalingCancel: {
+        sid: r.avSignal.id,
+        cid: r.avSignal.signalingCancel,
+        params: [{type: "Property", name: "avSignalTag"}]
+      },
+      signalingReject: {
+        sid: r.avSignal.id,
+        cid: r.avSignal.signalingReject,
+        params: [{type: "Property", name: "avSignalTag"}]
+      },
+      signalingAccept: {
+        sid: r.avSignal.id,
+        cid: r.avSignal.signalingAccept,
+        params: [{type: "Property", name: "avSignalTag"}]
+      },
+      signalingControl: {
+        sid: r.avSignal.id,
+        cid: r.avSignal.signalingControl,
+        params: [{type: "Property", name: "avSignalTag"}]
+      }
+    };
+    e.exports = {
+      idMap: r,
+      cmdConfig: s,
+      packetConfig: {
+        "1_2": {service: "link", cmd: "heartbeat"},
+        "6_1": {
+          service: "misc",
+          cmd: "getSimpleNosToken",
+          response: [{type: "PropertyArray", name: "nosTokens", entity: "nosToken"}]
+        },
+        "6_2": {service: "misc", cmd: "getNosToken", response: [{type: "Property", name: "nosToken"}]},
+        "6_3": {service: "misc", cmd: "notifyUploadLog"},
+        "6_5": {service: "misc", cmd: "audioToText", response: [{type: "String", name: "text"}]},
+        "6_6": {service: "misc", cmd: "processImage", response: [{type: "String", name: "url"}]},
+        "6_7": {
+          service: "misc",
+          cmd: "getNosTokenTrans",
+          response: [{type: "Property", name: "nosToken"}, {type: "String", name: "docId"}]
+        },
+        "6_8": {service: "misc", cmd: "notifyTransLog", response: [{type: "Property", name: "transInfo"}]},
+        "6_9": {service: "misc", cmd: "fetchFile", response: [{type: "Property", name: "info", entity: "transInfo"}]},
+        "6_10": {
+          service: "misc",
+          cmd: "fetchFileList",
+          response: [{type: "PropertyArray", name: "list", entity: "transInfo"}, {type: "Number", name: "totalCount"}]
+        },
+        "6_11": {service: "misc", cmd: "removeFile", response: [{type: "String", name: "res"}]},
+        "6_17": {service: "misc", cmd: "getClientAntispam", response: [{type: "Property", name: "clientAntispam"}]},
+        "6_18": {service: "misc", cmd: "fileQuickTransfer", response: [{type: "Property", name: "fileQuickTransfer"}]},
+        "15_1": {service: "avSignal", cmd: "signalingCreate", response: [{type: "Property", name: "avSignalTag"}]},
+        "15_2": {service: "avSignal", cmd: "signalingDelay", response: [{type: "Property", name: "avSignalTag"}]},
+        "15_3": {service: "avSignal", cmd: "signalingClose", response: [{type: "Property", name: "avSignalTag"}]},
+        "15_4": {service: "avSignal", cmd: "signalingJoin", response: [{type: "Property", name: "avSignalTag"}]},
+        "15_5": {service: "avSignal", cmd: "signalingLeave", response: []},
+        "15_6": {service: "avSignal", cmd: "signalingInvite", response: []},
+        "15_7": {service: "avSignal", cmd: "signalingCancel", response: []},
+        "15_8": {service: "avSignal", cmd: "signalingReject", response: []},
+        "15_9": {service: "avSignal", cmd: "signalingAccept", response: []},
+        "15_10": {service: "avSignal", cmd: "signalingControl", response: []},
+        "15_11": {service: "avSignal", cmd: "signalingNotify", response: [{type: "Property", name: "avSignalTag"}]},
+        "15_12": {
+          service: "avSignal",
+          cmd: "signalingMutilClientSyncNotify",
+          response: [{type: "Property", name: "avSignalTag"}]
+        },
+        "15_13": {
+          service: "avSignal",
+          cmd: "signalingUnreadMessageSyncNotify",
+          response: [{type: "PropertyArray", name: "avSignalTag"}]
+        },
+        "15_14": {
+          service: "avSignal",
+          cmd: "signalingChannelsSyncNotify",
+          response: [{type: "PropertyArray", name: "avSignalTag"}]
+        }
+      }
+    }
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(5), s = {
       genUrlSep: function (e) {
         return -1 === (e = "" + e).indexOf("?") ? "?imageView&" : "&"
       }, url2object: function (e) {
@@ -1961,7 +2209,7 @@
     e.exports = s
   }, , , function (e, t, n) {
     "use strict";
-    var r = n(0), s = r.undef, i = n(25), o = n(170), a = n(247), c = n(246), u = n(245), l = n(244), m = n(243);
+    var r = n(0), s = r.undef, i = n(25), o = n(170), a = n(244), c = n(243), u = n(242), l = n(241), m = n(240);
 
     function d(e) {
       this.mixin(e)
@@ -1985,11 +2233,11 @@
           return g
       }
     }, d.prototype.createCmd = (p = 1, function (e, t) {
-      var n = this, r = this.configMap.cmdConfig[e];
-      return e = {
+      var n = this, r = this.configMap.cmdConfig[e], i = "heartbeat" === e ? 0 : p++;
+      return i > 32767 && (i = 1, p = 2), e = {
         SID: r.sid,
         CID: r.cid,
-        SER: "heartbeat" === e ? 0 : p++
+        SER: i
       }, r.params && (e.Q = [], r.params.forEach(function (r) {
         var i = r.type, o = r.name, a = r.entity, c = t[o];
         if (!s(c)) {
@@ -2118,32 +2366,9 @@
         c.unshift({w: e, d: escape(t)})
       }
     }, e.exports = i
-  }, function (e, t) {
-    e.exports = function e(t, n) {
-      "use strict";
-      var r, s, i = /(^([+\-]?(?:0|[1-9]\d*)(?:\.\d*)?(?:[eE][+\-]?\d+)?)?$|^0x[0-9a-f]+$|\d+)/gi, o = /(^[ ]*|[ ]*$)/g,
-        a = /(^([\w ]+,?[\w ]+)?[\w ]+,?[\w ]+\d+:\d+(:\d+)?[\w ]?|^\d{1,4}[\/\-]\d{1,4}[\/\-]\d{1,4}|^\w+, \w+ \d+, \d{4})/,
-        c = /^0x[0-9a-f]+$/i, u = /^0/, l = function (t) {
-          return e.insensitive && ("" + t).toLowerCase() || "" + t
-        }, m = l(t).replace(o, "") || "", d = l(n).replace(o, "") || "",
-        p = m.replace(i, "\0$1\0").replace(/\0$/, "").replace(/^\0/, "").split("\0"),
-        f = d.replace(i, "\0$1\0").replace(/\0$/, "").replace(/^\0/, "").split("\0"),
-        g = parseInt(m.match(c), 16) || 1 !== p.length && m.match(a) && Date.parse(m),
-        h = parseInt(d.match(c), 16) || g && d.match(a) && Date.parse(d) || null;
-      if (h) {
-        if (g < h) return -1;
-        if (g > h) return 1
-      }
-      for (var y = 0, v = Math.max(p.length, f.length); y < v; y++) {
-        if (r = !(p[y] || "").match(u) && parseFloat(p[y]) || p[y] || 0, s = !(f[y] || "").match(u) && parseFloat(f[y]) || f[y] || 0, isNaN(r) !== isNaN(s)) return isNaN(r) ? 1 : -1;
-        if (typeof r != typeof s && (r += "", s += ""), r < s) return -1;
-        if (r > s) return 1
-      }
-      return 0
-    }
   }, function (e, t, n) {
     "use strict";
-    var r = n(29), s = n(36), i = n(27), o = n(46), a = n(58), c = Object.assign;
+    var r = n(29), s = n(37), i = n(27), o = n(47), a = n(59), c = Object.assign;
     e.exports = !c || n(20)(function () {
       var e = {}, t = {}, n = Symbol(), r = "abcdefghijklmnopqrst";
       return e[n] = 7, r.split("").forEach(function (e) {
@@ -2155,11 +2380,11 @@
     } : c
   }, function (e, t, n) {
     var r = n(16);
-    r(r.S + r.F, "Object", {assign: n(85)})
+    r(r.S + r.F, "Object", {assign: n(86)})
   }, function (e, t, n) {
-    n(86), e.exports = n(6).Object.assign
+    n(87), e.exports = n(7).Object.assign
   }, function (e, t, n) {
-    e.exports = {default: n(87), __esModule: !0}
+    e.exports = {default: n(88), __esModule: !0}
   }, function (e, t, n) {
     "use strict";
     var r = n(0), s = r.notundef, i = r.fillPropertyWithDefault, o = {0: "normal", 1: "owner", 2: "manager"};
@@ -2211,11 +2436,21 @@
       return t.type = "owner", t
     }, e.exports = a
   }, function (e, t, n) {
-    n(37)("observable")
+    "use strict";
+    var r = n(5);
+    "undefined" != typeof window && (window.console || r.isWeixinApp || (window.console = {
+      log: function () {
+      }, info: function () {
+      }, warn: function () {
+      }, error: function () {
+      }
+    }))
   }, function (e, t, n) {
-    n(37)("asyncIterator")
+    n(38)("observable")
   }, function (e, t, n) {
-    var r = n(17), s = n(57).f, i = {}.toString,
+    n(38)("asyncIterator")
+  }, function (e, t, n) {
+    var r = n(17), s = n(58).f, i = {}.toString,
       o = "object" == typeof window && window && Object.getOwnPropertyNames ? Object.getOwnPropertyNames(window) : [];
     e.exports.f = function (e) {
       return o && "[object Window]" == i.call(e) ? function (e) {
@@ -2232,7 +2467,7 @@
       return "Array" == r(e)
     }
   }, function (e, t, n) {
-    var r = n(29), s = n(36), i = n(27);
+    var r = n(29), s = n(37), i = n(27);
     e.exports = function (e) {
       var t = r(e), n = s.f;
       if (n) for (var o, a = n(e), c = i.f, u = 0; a.length > u;) c.call(e, o = a[u++]) && t.push(o);
@@ -2267,67 +2502,67 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(7), s = n(13), i = n(14), o = n(16), a = n(60), c = n(95).KEY, u = n(20), l = n(40), m = n(33), d = n(28),
-      p = n(5), f = n(38), g = n(37), h = n(94), y = n(93), v = n(15), b = n(18), M = n(17), T = n(42), k = n(26),
-      S = n(47), P = n(92), I = n(56), C = n(12), w = n(29), O = I.f, x = C.f, A = P.f, _ = r.Symbol, E = r.JSON,
-      R = E && E.stringify, F = p("_hidden"), j = p("toPrimitive"), U = {}.propertyIsEnumerable,
-      N = l("symbol-registry"), D = l("symbols"), L = l("op-symbols"), B = Object.prototype, q = "function" == typeof _,
-      H = r.QObject, W = !H || !H.prototype || !H.prototype.findChild, $ = i && u(function () {
-        return 7 != S(x({}, "a", {
+    var r = n(8), s = n(13), i = n(14), o = n(16), a = n(61), c = n(97).KEY, u = n(20), l = n(41), m = n(34), d = n(28),
+      p = n(6), f = n(39), g = n(38), h = n(96), y = n(95), v = n(15), b = n(18), M = n(17), T = n(43), S = n(26),
+      k = n(48), C = n(94), P = n(57), I = n(12), O = n(29), x = P.f, w = I.f, A = C.f, E = r.Symbol, _ = r.JSON,
+      R = _ && _.stringify, j = p("_hidden"), F = p("toPrimitive"), N = {}.propertyIsEnumerable,
+      U = l("symbol-registry"), D = l("symbols"), L = l("op-symbols"), B = Object.prototype, q = "function" == typeof E,
+      H = r.QObject, W = !H || !H.prototype || !H.prototype.findChild, J = i && u(function () {
+        return 7 != k(w({}, "a", {
           get: function () {
-            return x(this, "a", {value: 7}).a
+            return w(this, "a", {value: 7}).a
           }
         })).a
       }) ? function (e, t, n) {
-        var r = O(B, t);
-        r && delete B[t], x(e, t, n), r && e !== B && x(B, t, r)
-      } : x, J = function (e) {
-        var t = D[e] = S(_.prototype);
+        var r = x(B, t);
+        r && delete B[t], w(e, t, n), r && e !== B && w(B, t, r)
+      } : w, V = function (e) {
+        var t = D[e] = k(E.prototype);
         return t._k = e, t
-      }, V = q && "symbol" == typeof _.iterator ? function (e) {
+      }, X = q && "symbol" == typeof E.iterator ? function (e) {
         return "symbol" == typeof e
       } : function (e) {
-        return e instanceof _
-      }, X = function (e, t, n) {
-        return e === B && X(L, t, n), v(e), t = T(t, !0), v(n), s(D, t) ? (n.enumerable ? (s(e, F) && e[F][t] && (e[F][t] = !1), n = S(n, {enumerable: k(0, !1)})) : (s(e, F) || x(e, F, k(1, {})), e[F][t] = !0), $(e, t, n)) : x(e, t, n)
-      }, z = function (e, t) {
+        return e instanceof E
+      }, $ = function (e, t, n) {
+        return e === B && $(L, t, n), v(e), t = T(t, !0), v(n), s(D, t) ? (n.enumerable ? (s(e, j) && e[j][t] && (e[j][t] = !1), n = k(n, {enumerable: S(0, !1)})) : (s(e, j) || w(e, j, S(1, {})), e[j][t] = !0), J(e, t, n)) : w(e, t, n)
+      }, K = function (e, t) {
         v(e);
-        for (var n, r = h(t = M(t)), s = 0, i = r.length; i > s;) X(e, n = r[s++], t[n]);
+        for (var n, r = h(t = M(t)), s = 0, i = r.length; i > s;) $(e, n = r[s++], t[n]);
         return e
-      }, K = function (e) {
-        var t = U.call(this, e = T(e, !0));
-        return !(this === B && s(D, e) && !s(L, e)) && (!(t || !s(this, e) || !s(D, e) || s(this, F) && this[F][e]) || t)
+      }, z = function (e) {
+        var t = N.call(this, e = T(e, !0));
+        return !(this === B && s(D, e) && !s(L, e)) && (!(t || !s(this, e) || !s(D, e) || s(this, j) && this[j][e]) || t)
       }, G = function (e, t) {
         if (e = M(e), t = T(t, !0), e !== B || !s(D, t) || s(L, t)) {
-          var n = O(e, t);
-          return !n || !s(D, t) || s(e, F) && e[F][t] || (n.enumerable = !0), n
+          var n = x(e, t);
+          return !n || !s(D, t) || s(e, j) && e[j][t] || (n.enumerable = !0), n
         }
-      }, Y = function (e) {
-        for (var t, n = A(M(e)), r = [], i = 0; n.length > i;) s(D, t = n[i++]) || t == F || t == c || r.push(t);
-        return r
       }, Q = function (e) {
+        for (var t, n = A(M(e)), r = [], i = 0; n.length > i;) s(D, t = n[i++]) || t == j || t == c || r.push(t);
+        return r
+      }, Y = function (e) {
         for (var t, n = e === B, r = A(n ? L : M(e)), i = [], o = 0; r.length > o;) !s(D, t = r[o++]) || n && !s(B, t) || i.push(D[t]);
         return i
       };
-    q || (a((_ = function () {
-      if (this instanceof _) throw TypeError("Symbol is not a constructor!");
+    q || (a((E = function () {
+      if (this instanceof E) throw TypeError("Symbol is not a constructor!");
       var e = d(arguments.length > 0 ? arguments[0] : void 0), t = function (n) {
-        this === B && t.call(L, n), s(this, F) && s(this[F], e) && (this[F][e] = !1), $(this, e, k(1, n))
+        this === B && t.call(L, n), s(this, j) && s(this[j], e) && (this[j][e] = !1), J(this, e, S(1, n))
       };
-      return i && W && $(B, e, {configurable: !0, set: t}), J(e)
+      return i && W && J(B, e, {configurable: !0, set: t}), V(e)
     }).prototype, "toString", function () {
       return this._k
-    }), I.f = G, C.f = X, n(57).f = P.f = Y, n(27).f = K, n(36).f = Q, i && !n(34) && a(B, "propertyIsEnumerable", K, !0), f.f = function (e) {
-      return J(p(e))
-    }), o(o.G + o.W + o.F * !q, {Symbol: _});
+    }), P.f = G, I.f = $, n(58).f = C.f = Q, n(27).f = z, n(37).f = Y, i && !n(35) && a(B, "propertyIsEnumerable", z, !0), f.f = function (e) {
+      return V(p(e))
+    }), o(o.G + o.W + o.F * !q, {Symbol: E});
     for (var Z = "hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","), ee = 0; Z.length > ee;) p(Z[ee++]);
-    for (var te = w(p.store), ne = 0; te.length > ne;) g(te[ne++]);
+    for (var te = O(p.store), ne = 0; te.length > ne;) g(te[ne++]);
     o(o.S + o.F * !q, "Symbol", {
       for: function (e) {
-        return s(N, e += "") ? N[e] : N[e] = _(e)
+        return s(U, e += "") ? U[e] : U[e] = E(e)
       }, keyFor: function (e) {
-        if (!V(e)) throw TypeError(e + " is not a symbol!");
-        for (var t in N) if (N[t] === e) return t
+        if (!X(e)) throw TypeError(e + " is not a symbol!");
+        for (var t in U) if (U[t] === e) return t
       }, useSetter: function () {
         W = !0
       }, useSimple: function () {
@@ -2335,28 +2570,28 @@
       }
     }), o(o.S + o.F * !q, "Object", {
       create: function (e, t) {
-        return void 0 === t ? S(e) : z(S(e), t)
+        return void 0 === t ? k(e) : K(k(e), t)
       },
-      defineProperty: X,
-      defineProperties: z,
+      defineProperty: $,
+      defineProperties: K,
       getOwnPropertyDescriptor: G,
-      getOwnPropertyNames: Y,
-      getOwnPropertySymbols: Q
-    }), E && o(o.S + o.F * (!q || u(function () {
-      var e = _();
+      getOwnPropertyNames: Q,
+      getOwnPropertySymbols: Y
+    }), _ && o(o.S + o.F * (!q || u(function () {
+      var e = E();
       return "[null]" != R([e]) || "{}" != R({a: e}) || "{}" != R(Object(e))
     })), "JSON", {
       stringify: function (e) {
         for (var t, n, r = [e], s = 1; arguments.length > s;) r.push(arguments[s++]);
-        if (n = t = r[1], (b(t) || void 0 !== e) && !V(e)) return y(t) || (t = function (e, t) {
-          if ("function" == typeof n && (t = n.call(this, e, t)), !V(t)) return t
-        }), r[1] = t, R.apply(E, r)
+        if (n = t = r[1], (b(t) || void 0 !== e) && !X(e)) return y(t) || (t = function (e, t) {
+          if ("function" == typeof n && (t = n.call(this, e, t)), !X(t)) return t
+        }), r[1] = t, R.apply(_, r)
       }
-    }), _.prototype[j] || n(19)(_.prototype, j, _.prototype.valueOf), m(_, "Symbol"), m(Math, "Math", !0), m(r.JSON, "JSON", !0)
+    }), E.prototype[F] || n(19)(E.prototype, F, E.prototype.valueOf), m(E, "Symbol"), m(Math, "Math", !0), m(r.JSON, "JSON", !0)
   }, function (e, t, n) {
-    n(96), n(73), n(91), n(90), e.exports = n(6).Symbol
+    n(98), n(74), n(93), n(92), e.exports = n(7).Symbol
   }, function (e, t, n) {
-    e.exports = {default: n(97), __esModule: !0}
+    e.exports = {default: n(99), __esModule: !0}
   }, function (e, t) {
     e.exports = function (e, t) {
       return {value: t, done: !!e}
@@ -2366,20 +2601,20 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(100), s = n(99), i = n(23), o = n(17);
-    e.exports = n(62)(Array, "Array", function (e, t) {
+    var r = n(102), s = n(101), i = n(22), o = n(17);
+    e.exports = n(63)(Array, "Array", function (e, t) {
       this._t = o(e), this._i = 0, this._k = t
     }, function () {
       var e = this._t, t = this._k, n = this._i++;
       return !e || n >= e.length ? (this._t = void 0, s(1)) : s(0, "keys" == t ? n : "values" == t ? e[n] : [n, e[n]])
     }, "values"), i.Arguments = i.Array, r("keys"), r("values"), r("entries")
   }, function (e, t, n) {
-    var r = n(44), s = Math.max, i = Math.min;
+    var r = n(45), s = Math.max, i = Math.min;
     e.exports = function (e, t) {
       return (e = r(e)) < 0 ? s(e + t, 0) : i(e, t)
     }
   }, function (e, t, n) {
-    var r = n(17), s = n(67), i = n(102);
+    var r = n(17), s = n(68), i = n(104);
     e.exports = function (e) {
       return function (t, n, o) {
         var a, c = r(t), u = s(c.length), l = i(o, u);
@@ -2398,14 +2633,14 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(47), s = n(26), i = n(33), o = {};
-    n(19)(o, n(5)("iterator"), function () {
+    var r = n(48), s = n(26), i = n(34), o = {};
+    n(19)(o, n(6)("iterator"), function () {
       return this
     }), e.exports = function (e, t, n) {
       e.prototype = r(o, {next: s(1, n)}), i(e, t + " Iterator")
     }
   }, function (e, t, n) {
-    var r = n(44), s = n(43);
+    var r = n(45), s = n(44);
     e.exports = function (e) {
       return function (t, n) {
         var i, o, a = String(s(t)), c = r(n), u = a.length;
@@ -2413,15 +2648,84 @@
       }
     }
   }, function (e, t, n) {
-    n(48), n(54), e.exports = n(38).f("iterator")
+    n(49), n(54), e.exports = n(39).f("iterator")
   }, function (e, t, n) {
-    e.exports = {default: n(107), __esModule: !0}
+    e.exports = {default: n(109), __esModule: !0}
   }, function (e, t, n) {
-    var r = n(78), s = n(5)("iterator"), i = n(23);
-    e.exports = n(6).getIteratorMethod = function (e) {
+    var r = n(79), s = n(6)("iterator"), i = n(22);
+    e.exports = n(7).getIteratorMethod = function (e) {
       if (null != e) return e[s] || e["@@iterator"] || i[r(e)]
     }
-  }, , , , , function (e, t, n) {
+  }, , , , function (e, t, n) {
+    "use strict";
+    var r = n(56), s = n(0), i = s.undef, o = s.notundef, a = n(5), c = n(84).getInstance("Chatroom"), u = n(230),
+      l = n(168);
+
+    function m(e) {
+      s.verifyOptions(e, "appKey account chatroomId chatroomAddresses", "protocol::ChatroomProtocol"), e.isAnonymous || s.verifyOptions(e, "token", "protocol::ChatroomProtocol"), s.verifyParamType("chatroomAddresses", e.chatroomAddresses, "array", "protocol::ChatroomProtocol"), s.verifyCallback(e, "onconnect onerror onwillreconnect ondisconnect onmsg onmsgs onrobots", "protocol::ChatroomProtocol"), r.call(this, e)
+    }
+
+    var d = r.fn, p = m.fn = m.prototype = Object.create(d);
+    p.init = function () {
+      d.init.call(this), this.parser = c, this.syncResult = {}, this.timetags = {}, this.msgBuffer = []
+    }, p.reset = function () {
+      var e = this;
+      d.reset.call(e);
+      var t = e.options;
+      i(t.msgBufferInterval) && (t.msgBufferInterval = 300), s.verifyParamType("msgBufferInterval", t.msgBufferInterval, "number", "protocol::ChatroomProtocol.reset"), i(t.msgBufferSize) && (t.msgBufferSize = 500), s.verifyParamType("msgBufferSize", t.msgBufferSize, "number", "protocol::ChatroomProtocol.reset"), o(t.chatroomAddresses) && (e.socketUrls = t.chatroomAddresses.map(function (t) {
+        return a.formatSocketUrl({url: t, secure: e.options.secure})
+      }), e.socketUrlsBackup = e.socketUrls.slice(0))
+    }, p.processChatroom = function (e) {
+      switch (e.cmd) {
+        case"login":
+          e.error || (e.obj = {chatroom: u.reverse(e.content.chatroom), member: l.reverse(e.content.chatroomMember)});
+          break;
+        case"kicked":
+          this.onKicked(e);
+          break;
+        case"logout":
+          break;
+        case"sendMsg":
+          this.onSendMsg(e);
+          break;
+        case"msg":
+          this.onMsg(e);
+          break;
+        case"getChatroomMembers":
+          this.onChatroomMembers(e);
+          break;
+        case"getHistoryMsgs":
+          this.onHistoryMsgs(e);
+          break;
+        case"markChatroomMember":
+          this.onMarkChatroomMember(e);
+          break;
+        case"closeChatroom":
+          break;
+        case"getChatroom":
+          this.onChatroom(e);
+          break;
+        case"updateChatroom":
+          break;
+        case"updateMyChatroomMemberInfo":
+          delete e.obj.chatroomMember;
+          break;
+        case"getChatroomMembersInfo":
+          this.onChatroomMembersInfo(e);
+          break;
+        case"kickChatroomMember":
+        case"updateChatroomMemberTempMute":
+          break;
+        case"queueList":
+          e.error || (e.obj = e.content);
+          break;
+        case"syncRobot":
+          this.onSyncRobot(e)
+      }
+    }, p.onChatroom = function (e) {
+      e.error || (e.obj.chatroom = u.reverse(e.content.chatroom))
+    }, e.exports = m, n(403), n(402), n(401), n(400)
+  }, function (e, t, n) {
     "use strict";
     var r = n(0);
 
@@ -2446,8 +2750,8 @@
     }, e.exports = s
   }, function (e, t, n) {
     "use strict";
-    var r, s = n(10), i = (r = s) && r.__esModule ? r : {default: r};
-    var o = n(0), a = o.undef, c = o.notundef, u = n(82).getInstance("IM"), l = n(117), m = n(89),
+    var r, s = n(9), i = (r = s) && r.__esModule ? r : {default: r};
+    var o = n(0), a = o.undef, c = o.notundef, u = n(84).getInstance("IM"), l = n(119), m = n(90),
       d = {customP2p: 100, customTeam: 101, deleteMsgP2p: 7, deleteMsgTeam: 8}, p = {
         0: "applyTeam",
         1: "rejectTeamApply",
@@ -2543,7 +2847,7 @@
     function b(e) {
       switch (r.verifyOptions(e, "action", "team::Team"), e.action) {
         case"create":
-          r.verifyOptions(e, "teamId", !1, "team::Team"), r.verifyOptions(e, "type name", "team::Team"), r.verifyParamValid("type", e.type, p, "team::Team");
+          r.verifyOptions(e, "teamId", !1, "team::Team"), r.verifyOptions(e, "type name", "team::Team"), r.verifyParamValid("type", e.type, p, "team::Team"), s(e.level) && (r.verifyParamType("level", e.level, "number", "team::Team"), this.level = e.level);
           break;
         case"update":
           r.verifyOptions(e, "teamId", "team::Team"), r.verifyOptions(e, "type", !1, "team::Team")
@@ -2576,19 +2880,9 @@
         r = i(e, "updateTeamMode", "manager"), s = i(e, "updateCustomMode", "manager"), o = i(e, "avatar", "");
       return t || n || r || s || o
     }, e.exports = b
-  }, function (e, t, n) {
+  }, , , , , , , , , function (e, t, n) {
     "use strict";
-    var r = n(8);
-    "undefined" != typeof window && (window.console || r.isWeixinApp || (window.console = {
-      log: function () {
-      }, info: function () {
-      }, warn: function () {
-      }, error: function () {
-      }
-    }))
-  }, , , , , , , , , , , , function (e, t, n) {
-    "use strict";
-    var r = n(79), s = n(71), i = n(0), o = n(8);
+    var r = n(81), s = n(71), i = n(0), o = n(5);
 
     function a(e) {
       switch (i.notundef(e.type) ? i.verifyFileType(e.type, "msg::FileMessage") : e.type = "file", i.verifyOptions(e, "file", "msg::FileMessage"), i.verifyOptions(e.file, "url ext size md5", !0, "file.", "msg::FileMessage"), e.type) {
@@ -2608,10 +2902,55 @@
       var t = s.reverse(e);
       return e.attach = e.attach ? "" + e.attach : "", t.file = e.attach ? JSON.parse(e.attach) : {}, t.file.url = (0, r.genPrivateUrl)(t.file.url), "audio" === t.type && (t.file.mp3Url = t.file.url + "?audioTrans&type=mp3"), o.httpsEnabled && (t.file.url = t.file.url.replace("http", "https")), t
     }, e.exports = a;
-    var c = n(453), u = n(452), l = n(451)
+    var c = n(397), u = n(396), l = n(395)
   }, function (e, t, n) {
     "use strict";
-    var r = n(79), s = n(0), i = {unknown: 0, male: 1, female: 2}, o = {0: "unknown", 1: "male", 2: "female"};
+    var r = n(46), s = n(115), i = n(5), o = n(230), a = n(399), c = n(0), u = c.verifyOptions, l = c.verifyParamType,
+      m = n(84).getInstance("Chatroom");
+
+    function d(e) {
+      return this.subType = "chatroom", this.nosScene = e.nosScene || "chatroom", this.nosSurvivalTime = e.nosSurvivalTime, e.Protocol = s, e.Message = a, e.constructor = d, e.isAnonymous && (e.account = e.account || "nimanon_" + c.guid(), e.isAnonymous = 1, c.verifyOptions(e, "chatroomNick", "api::Chatroom"), e.chatroomAvatar = e.chatroomAvatar || " "), this.init(e)
+    }
+
+    d.Protocol = s, d.parser = m, d.use = r.use, d.getInstance = function (e) {
+      return e.isAnonymous && (e.account = e.account || "nimanon_" + c.guid(), e.isAnonymous = 1, c.verifyOptions(e, "chatroomNick", "api::Chatroom.getInstance"), e.chatroomAvatar = e.chatroomAvatar || " "), r.getInstance.call(this, e)
+    }, d.genInstanceName = function (e) {
+      return c.verifyOptions(e, "chatroomId", "api::Chatroom.genInstanceName"), "Chatroom-account-" + e.account + "-chatroomId-" + e.chatroomId
+    };
+    var p = d.fn = d.prototype = Object.create(r.prototype);
+    d.info = p.info = i.info, p.getChatroom = function (e) {
+      this.processCallback(e), this.sendCmd("getChatroom", e)
+    }, p.updateChatroom = function (e) {
+      u(e, "chatroom needNotify", "api::updateChatroom"), l("needNotify", e.needNotify, "boolean"), this.processCustom(e), this.processCallback(e), e.chatroom = new o(e.chatroom), this.sendCmd("updateChatroom", e)
+    }, p.closeChatroom = function (e) {
+      this.processCustom(e), this.processCallback(e), this.sendCmd("closeChatroom", e)
+    }, e.exports = d, n(389), n(388), n(387)
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(81), s = n(72), i = n(0), o = n(5);
+
+    function a(e) {
+      switch (i.notundef(e.type) ? i.verifyFileType(e.type, "msg::FileMessage") : e.type = "file", i.verifyOptions(e, "file", "msg::FileMessage"), i.verifyOptions(e.file, "url ext size md5", !0, "file.", "msg::FileMessage"), e.type) {
+        case"image":
+          c.verifyFile(e.file, "msg::FileMessage");
+          break;
+        case"audio":
+          u.verifyFile(e.file, "msg::FileMessage");
+          break;
+        case"video":
+          l.verifyFile(e.file, "msg::FileMessage")
+      }
+      s.call(this, e), this.attach = JSON.stringify(e.file)
+    }
+
+    a.prototype = Object.create(s.prototype), a.reverse = function (e) {
+      var t = s.reverse(e);
+      return e.attach = e.attach ? "" + e.attach : "", t.file = e.attach ? JSON.parse(e.attach) : {}, t.file.url = (0, r.genPrivateUrl)(t.file.url), "audio" === t.type && (t.file.mp3Url = t.file.url + "?audioTrans&type=mp3"), o.httpsEnabled && (t.file.url = t.file.url.replace("http", "https")), t
+    }, e.exports = a;
+    var c = n(431), u = n(430), l = n(429)
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(81), s = n(0), i = {unknown: 0, male: 1, female: 2}, o = {0: "unknown", 1: "male", 2: "female"};
 
     function a(e) {
       s.merge(this, e), s.notundef(this.gender) && (s.verifyParamValid("gender", this.gender, a.validGenders, "user::User"), this.gender = i[this.gender]), s.notundef(this.email) && "" !== this.email && s.verifyEmail("email", this.email, "user::User"), s.notundef(this.birth) && "" !== this.birth && s.verifyBirth("birth", this.birth, "user::User"), s.notundef(this.tel) && "" !== this.tel && s.verifyTel("tel", this.tel, "user::User")
@@ -2626,7 +2965,7 @@
       })
     }, a.validGenders = Object.keys(i), e.exports = a
   }, function (e, t, n) {
-    var r = n(5)("iterator"), s = !1;
+    var r = n(6)("iterator"), s = !1;
     try {
       var i = [7][r]();
       i.return = function () {
@@ -2651,7 +2990,7 @@
       return n
     }
   }, function (e, t, n) {
-    var r = n(23), s = n(5)("iterator"), i = Array.prototype;
+    var r = n(22), s = n(6)("iterator"), i = Array.prototype;
     e.exports = function (e) {
       return void 0 !== e && (r.Array === e || i[s] === e)
     }
@@ -2667,13 +3006,13 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(65);
+    var r = n(66);
     e.exports = function (e, t) {
       return t.method = "POST", t.headers = t.headers || {}, t.headers["Content-Type"] = "multipart/form-data", t.timeout = 0, t.type = t.type || "json", r(e, t)
     }
   }, function (e, t, n) {
     "use strict";
-    var r, s, i = n(11), o = n(65), a = (r = /json/i, s = /post/i, function (e, t) {
+    var r, s, i = n(11), o = n(66), a = (r = /json/i, s = /post/i, function (e, t) {
       var n = (t = t || {}).data = t.data || {}, a = t.headers = t.headers || {},
         c = i.checkWithDefault(a, "Accept", "application/json"),
         u = i.checkWithDefault(a, "Content-Type", "application/json");
@@ -2682,7 +3021,7 @@
     e.exports = a
   }, function (e, t, n) {
     "use strict";
-    var r = n(11), s = n(83), i = n(64), o = {};
+    var r = n(11), s = n(85), i = n(65), o = {};
 
     function a(e) {
       this.init(), i.call(this, e)
@@ -2736,7 +3075,7 @@
     }, e.exports = a
   }, function (e, t, n) {
     "use strict";
-    var r = n(11), s = n(64), i = n(83), o = "NEJ-UPLOAD-RESULT:", a = {};
+    var r = n(11), s = n(65), i = n(85), o = "NEJ-UPLOAD-RESULT:", a = {};
 
     function c(e) {
       this.init(), s.call(this, e)
@@ -2902,7 +3241,7 @@
     }(this || {})
   }, function (e, t, n) {
     "use strict";
-    var r = n(11), s = n(64);
+    var r = n(11), s = n(65);
 
     function i(e) {
       e.onuploading && this.on("uploading", e.onuploading), s.call(this, e)
@@ -2943,91 +3282,13 @@
     }, e.exports = i
   }, function (e, t, n) {
     "use strict";
-    n(175).polyfill(), n(8).isBrowser = !0
+    n(175).polyfill(), n(5).isBrowser = !0
   }, , , , , , , , function (e, t) {
     e.exports = function (e) {
       var t = n.call(e);
       return "[object Function]" === t || "function" == typeof e && "[object RegExp]" !== t || "undefined" != typeof window && (e === window.setTimeout || e === window.alert || e === window.confirm || e === window.prompt)
     };
     var n = Object.prototype.toString
-  }, function (e, t, n) {
-    "use strict";
-    var r = {
-      link: {id: 1, heartbeat: 2},
-      misc: {
-        id: 6,
-        getSimpleNosToken: 1,
-        getNosToken: 2,
-        notifyUploadLog: 3,
-        uploadSdkLogUrl: 4,
-        audioToText: 5,
-        processImage: 6,
-        getNosTokenTrans: 7,
-        notifyTransLog: 8,
-        fetchFile: 9,
-        fetchFileList: 10,
-        removeFile: 11,
-        getClientAntispam: 17
-      }
-    }, s = {
-      heartbeat: {sid: r.link.id, cid: r.link.heartbeat},
-      getSimpleNosToken: {sid: r.misc.id, cid: r.misc.getSimpleNosToken, params: [{type: "int", name: "num"}]},
-      getNosToken: {
-        sid: r.misc.id,
-        cid: r.misc.getNosToken,
-        params: [{type: "String", name: "responseBody"}, {type: "Property", name: "nosToken", entity: "nosToken"}]
-      },
-      uploadSdkLogUrl: {sid: r.misc.id, cid: r.misc.uploadSdkLogUrl, params: [{type: "string", name: "url"}]},
-      audioToText: {sid: r.misc.id, cid: r.misc.audioToText, params: [{type: "Property", name: "audioToText"}]},
-      processImage: {
-        sid: r.misc.id,
-        cid: r.misc.processImage,
-        params: [{type: "String", name: "url"}, {type: "PropertyArray", name: "imageOps", entity: "imageOp"}]
-      },
-      getClientAntispam: {
-        sid: r.misc.id,
-        cid: r.misc.getClientAntispam,
-        params: [{type: "Property", name: "clientAntispam"}]
-      },
-      getNosTokenTrans: {
-        sid: r.misc.id,
-        cid: r.misc.getNosTokenTrans,
-        params: [{type: "Property", name: "transToken"}]
-      },
-      fetchFile: {sid: r.misc.id, cid: r.misc.fetchFile, params: [{type: "String", name: "docId"}]},
-      fetchFileList: {sid: r.misc.id, cid: r.misc.fetchFileList, params: [{type: "Property", name: "fileListParam"}]},
-      removeFile: {sid: r.misc.id, cid: r.misc.removeFile, params: [{type: "String", name: "docId"}]}
-    };
-    e.exports = {
-      idMap: r,
-      cmdConfig: s,
-      packetConfig: {
-        "1_2": {service: "link", cmd: "heartbeat"},
-        "6_1": {
-          service: "misc",
-          cmd: "getSimpleNosToken",
-          response: [{type: "PropertyArray", name: "nosTokens", entity: "nosToken"}]
-        },
-        "6_2": {service: "misc", cmd: "getNosToken", response: [{type: "Property", name: "nosToken"}]},
-        "6_3": {service: "misc", cmd: "notifyUploadLog"},
-        "6_5": {service: "misc", cmd: "audioToText", response: [{type: "String", name: "text"}]},
-        "6_6": {service: "misc", cmd: "processImage", response: [{type: "String", name: "url"}]},
-        "6_7": {
-          service: "misc",
-          cmd: "getNosTokenTrans",
-          response: [{type: "Property", name: "nosToken"}, {type: "String", name: "docId"}]
-        },
-        "6_8": {service: "misc", cmd: "notifyTransLog", response: [{type: "Property", name: "transInfo"}]},
-        "6_9": {service: "misc", cmd: "fetchFile", response: [{type: "Property", name: "info", entity: "transInfo"}]},
-        "6_10": {
-          service: "misc",
-          cmd: "fetchFileList",
-          response: [{type: "PropertyArray", name: "list", entity: "transInfo"}, {type: "Number", name: "totalCount"}]
-        },
-        "6_11": {service: "misc", cmd: "removeFile", response: [{type: "String", name: "res"}]},
-        "6_17": {service: "misc", cmd: "getClientAntispam", response: [{type: "Property", name: "clientAntispam"}]}
-      }
-    }
   }, function (module, exports, __webpack_require__) {
     (function (global, module) {
       var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
@@ -3563,7 +3824,7 @@
                 this.acks[e.ackId] && (this.acks[e.ackId].apply(this, e.args), delete this.acks[e.ackId]);
                 break;
               case"error":
-                e.advice ? this.socket.onError(e) : "unauthorized" == e.reason ? this.$emit("connect_failed", e.reason) : this.$emit("error", e.reason)
+                console.error("SocketIO on packet error: ", e), e.advice ? this.socket.onError(e) : "unauthorized" === e.reason ? this.$emit("connect_failed", e.reason) : this.$emit("error", e.reason)
             }
           }, r.prototype.send = function () {
             this.namespace.flags[this.name] = !0, this.namespace.send.apply(this.namespace, arguments)
@@ -3694,7 +3955,44 @@
           return io
         }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), void 0 === __WEBPACK_AMD_DEFINE_RESULT__ || (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)
       }()
-    }).call(this, __webpack_require__(30), __webpack_require__(251)(module))
+    }).call(this, __webpack_require__(30), __webpack_require__(249)(module))
+  }, function (e, t, n) {
+    "use strict";
+    var r = {
+      1: "ROOM_CLOSE",
+      2: "ROOM_JOIN",
+      3: "INVITE",
+      4: "CANCEL_INVITE",
+      5: "REJECT",
+      6: "ACCEPT",
+      7: "LEAVE",
+      8: "CONTROL"
+    }, s = {1: "accid", 2: "uid", 3: "createTime", 4: "expireTime", 5: "web_uid"}, i = {
+      10404: "ROOM_NOT_EXISTS",
+      10405: "ROOM_HAS_EXISTS",
+      10406: "ROOM_MEMBER_NOT_EXISTS",
+      10407: "ROOM_MEMBER_HAS_EXISTS",
+      10408: "INVITE_NOT_EXISTS",
+      10409: "INVITE_HAS_REJECT",
+      10410: "INVITE_HAS_ACCEPT",
+      10201: "PEER_NIM_OFFLINE",
+      10202: "PEER_PUSH_OFFLINE",
+      10419: "ROOM_MEMBER_EXCEED",
+      10420: "ROOM_MEMBER_HAS_EXISTS_OTHER_CLIENT",
+      10417: "UID_CONFLICT"
+    };
+    e.exports = {
+      parseAvSignalType: function (e) {
+        return r[e] || e
+      }, parseAvSignalMember: function (e) {
+        var t = {};
+        return Object.keys(e).forEach(function (n) {
+          t[s[n]] = e[n]
+        }), t
+      }, parseAvSignalError: function (e) {
+        return e.message = i[e.code] || e.message || e, e
+      }
+    }
   }, function (e, t, n) {
     "use strict";
     var r = n(0), s = {stripmeta: 0, blur: 2, quality: 3, crop: 4, rotate: 5, thumbnail: 7, interlace: 9}, i = {
@@ -3767,10 +4065,27 @@
       }
     };
     e.exports = i
-  }, , , , , , , , , , , , , , , function (e, t, n) {
+  }, , , , , , , , , , , , , , function (e, t, n) {
     "use strict";
-    var r = n(21), s = n(241), i = n(151), o = n(84), a = n(72), c = n(0), u = n(173), l = n(153), m = n(51),
-      d = n(235), p = n(234);
+    var r = n(81), s = n(0), i = s.notundef,
+      o = {"-2": "unset", "-1": "restricted", 0: "common", 1: "owner", 2: "manager", 3: "guest", 4: "anonymous"};
+
+    function a(e) {
+      i(e.nick) && (this.nick = "" + e.nick), i(e.avatar) && (this.avatar = "" + e.avatar), i(e.custom) && (this.custom = "" + e.custom)
+    }
+
+    a.reverse = function (e) {
+      var t = s.copy(e);
+      return i(t.chatroomId) && (t.chatroomId = "" + t.chatroomId), i(t.avatar) && (t.avatar = (0, r.genPrivateUrl)(t.avatar)), i(t.type) && (t.type = o[t.type]), i(t.level) && (t.level = +t.level), i(t.online) && (t.online = 1 == +t.online), i(t.enterTime) && (t.enterTime = +t.enterTime), i(t.guest) && (t.guest = 1 == +t.guest), i(t.blacked) && (t.blacked = 1 == +t.blacked), i(t.gaged) && (t.gaged = 1 == +t.gaged), i(t.valid) && (t.valid = 1 == +t.valid), i(t.updateTime) && (t.updateTime = +t.updateTime), i(t.tempMuted) ? t.tempMuted = 1 == +t.tempMuted : t.tempMuted = !1, i(t.tempMuteDuration) ? t.tempMuteDuration = +t.tempMuteDuration : t.tempMuteDuration = 0, t.online || delete t.enterTime, t.guest && (t.type = "guest", delete t.valid), "common" !== t.type && delete t.level, delete t.guest, t
+    }, a.reverseMembers = function (e) {
+      return e.map(function (e) {
+        return a.reverse(e)
+      })
+    }, a.validTypes = Object.keys(o), a.typeReverseMap = o, e.exports = a
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(21), s = n(238), i = n(150), o = n(73), a = n(67), c = n(0), u = n(173), l = n(153), m = n(51),
+      d = n(232), p = n(231);
     e.exports = function (e) {
       c.merge(e, {
         platform: r,
@@ -3788,7 +4103,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(0), s = n(150), i = r.merge({}, s.idMap, {
+    var r = n(0), s = n(80), i = r.merge({}, s.idMap, {
       auth: {id: 2, login: 3, kicked: 5, logout: 6, multiPortLogin: 7, kick: 8},
       user: {
         id: 3,
@@ -4302,11 +4617,19 @@
         cmd: "syncMarkSessionAck",
         response: [{type: "Number", name: "scene"}, {type: "String", name: "to"}, {type: "Number", name: "timetag"}]
       },
-      "8_1": {service: "team", cmd: "createTeam", response: [{type: "Property", name: "team"}]},
+      "8_1": {
+        service: "team",
+        cmd: "createTeam",
+        response: [{type: "Property", name: "team"}, {type: "StrArray", name: "abortedAccidList"}]
+      },
       "8_2": {service: "team", cmd: "sendTeamMsg", response: [{type: "Property", name: "msg"}]},
       "8_3": {service: "team", cmd: "teamMsg", response: [{type: "Property", name: "msg"}]},
       "8_4": {service: "team", cmd: "teamMsgs", response: [{type: "PropertyArray", name: "msgs", entity: "msg"}]},
-      "8_5": {service: "team", cmd: "addTeamMembers"},
+      "8_5": {
+        service: "team",
+        cmd: "addTeamMembers",
+        response: [{type: "long", name: "time"}, {type: "StrArray", name: "abortedAccidList"}]
+      },
       "8_6": {service: "team", cmd: "removeTeamMembers"},
       "8_7": {
         service: "team",
@@ -4645,22 +4968,22 @@
         var h, y, v, b, M = void 0;
 
         function T(e, t) {
-          var n = this, r = new this.constructor(P);
-          void 0 === r[S] && L(r);
+          var n = this, r = new this.constructor(C);
+          void 0 === r[k] && L(r);
           var s = n._state;
           if (s) {
             var i = arguments[s - 1];
             a(function () {
-              return N(s, r, i, n._result)
+              return U(s, r, i, n._result)
             })
-          } else j(n, r, e, t);
+          } else F(n, r, e, t);
           return r
         }
 
-        function k(e) {
+        function S(e) {
           if (e && "object" == typeof e && e.constructor === this) return e;
-          var t = new this(P);
-          return _(t, e), t
+          var t = new this(C);
+          return E(t, e), t
         }
 
         m ? M = function () {
@@ -4679,29 +5002,29 @@
             return p()
           }
         }() : p();
-        var S = Math.random().toString(36).substring(2);
+        var k = Math.random().toString(36).substring(2);
 
-        function P() {
+        function C() {
         }
 
-        var I = void 0, C = 1, w = 2, O = {error: null};
+        var P = void 0, I = 1, O = 2, x = {error: null};
 
-        function x(e) {
+        function w(e) {
           try {
             return e.then
           } catch (e) {
-            return O.error = e, O
+            return x.error = e, x
           }
         }
 
         function A(t, n, r) {
-          n.constructor === t.constructor && r === T && n.constructor.resolve === k ? function (e, t) {
-            t._state === C ? R(e, t._result) : t._state === w ? F(e, t._result) : j(t, void 0, function (t) {
-              return _(e, t)
+          n.constructor === t.constructor && r === T && n.constructor.resolve === S ? function (e, t) {
+            t._state === I ? R(e, t._result) : t._state === O ? j(e, t._result) : F(t, void 0, function (t) {
+              return E(e, t)
             }, function (t) {
-              return F(e, t)
+              return j(e, t)
             })
-          }(t, n) : r === O ? (F(t, O.error), O.error = null) : void 0 === r ? R(t, n) : e(r) ? function (e, t, n) {
+          }(t, n) : r === x ? (j(t, x.error), x.error = null) : void 0 === r ? R(t, n) : e(r) ? function (e, t, n) {
             a(function (e) {
               var r = !1, s = function (e, t, n, r) {
                 try {
@@ -4710,78 +5033,78 @@
                   return e
                 }
               }(n, t, function (n) {
-                r || (r = !0, t !== n ? _(e, n) : R(e, n))
+                r || (r = !0, t !== n ? E(e, n) : R(e, n))
               }, function (t) {
-                r || (r = !0, F(e, t))
+                r || (r = !0, j(e, t))
               }, e._label);
-              !r && s && (r = !0, F(e, s))
+              !r && s && (r = !0, j(e, s))
             }, e)
           }(t, n, r) : R(t, n)
         }
 
-        function _(e, t) {
+        function E(e, t) {
           var n, r;
-          e === t ? F(e, new TypeError("You cannot resolve a promise with itself")) : (r = typeof(n = t), null === n || "object" !== r && "function" !== r ? R(e, t) : A(e, t, x(t)))
+          e === t ? j(e, new TypeError("You cannot resolve a promise with itself")) : (r = typeof(n = t), null === n || "object" !== r && "function" !== r ? R(e, t) : A(e, t, w(t)))
         }
 
-        function E(e) {
-          e._onerror && e._onerror(e._result), U(e)
+        function _(e) {
+          e._onerror && e._onerror(e._result), N(e)
         }
 
         function R(e, t) {
-          e._state === I && (e._result = t, e._state = C, 0 !== e._subscribers.length && a(U, e))
+          e._state === P && (e._result = t, e._state = I, 0 !== e._subscribers.length && a(N, e))
         }
 
-        function F(e, t) {
-          e._state === I && (e._state = w, e._result = t, a(E, e))
+        function j(e, t) {
+          e._state === P && (e._state = O, e._result = t, a(_, e))
         }
 
-        function j(e, t, n, r) {
+        function F(e, t, n, r) {
           var s = e._subscribers, i = s.length;
-          e._onerror = null, s[i] = t, s[i + C] = n, s[i + w] = r, 0 === i && e._state && a(U, e)
+          e._onerror = null, s[i] = t, s[i + I] = n, s[i + O] = r, 0 === i && e._state && a(N, e)
         }
 
-        function U(e) {
+        function N(e) {
           var t = e._subscribers, n = e._state;
           if (0 !== t.length) {
-            for (var r = void 0, s = void 0, i = e._result, o = 0; o < t.length; o += 3) r = t[o], s = t[o + n], r ? N(n, r, s, i) : s(i);
+            for (var r = void 0, s = void 0, i = e._result, o = 0; o < t.length; o += 3) r = t[o], s = t[o + n], r ? U(n, r, s, i) : s(i);
             e._subscribers.length = 0
           }
         }
 
-        function N(t, n, r, s) {
+        function U(t, n, r, s) {
           var i = e(r), o = void 0, a = void 0, c = void 0, u = void 0;
           if (i) {
             if ((o = function (e, t) {
               try {
                 return e(t)
               } catch (e) {
-                return O.error = e, O
+                return x.error = e, x
               }
-            }(r, s)) === O ? (u = !0, a = o.error, o.error = null) : c = !0, n === o) return void F(n, new TypeError("A promises callback cannot return that same promise."))
+            }(r, s)) === x ? (u = !0, a = o.error, o.error = null) : c = !0, n === o) return void j(n, new TypeError("A promises callback cannot return that same promise."))
           } else o = s, c = !0;
-          n._state !== I || (i && c ? _(n, o) : u ? F(n, a) : t === C ? R(n, o) : t === w && F(n, o))
+          n._state !== P || (i && c ? E(n, o) : u ? j(n, a) : t === I ? R(n, o) : t === O && j(n, o))
         }
 
         var D = 0;
 
         function L(e) {
-          e[S] = D++, e._state = void 0, e._result = void 0, e._subscribers = []
+          e[k] = D++, e._state = void 0, e._result = void 0, e._subscribers = []
         }
 
         var B = function () {
           function e(e, t) {
-            this._instanceConstructor = e, this.promise = new e(P), this.promise[S] || L(this.promise), r(t) ? (this.length = t.length, this._remaining = t.length, this._result = new Array(this.length), 0 === this.length ? R(this.promise, this._result) : (this.length = this.length || 0, this._enumerate(t), 0 === this._remaining && R(this.promise, this._result))) : F(this.promise, new Error("Array Methods must be provided an Array"))
+            this._instanceConstructor = e, this.promise = new e(C), this.promise[k] || L(this.promise), r(t) ? (this.length = t.length, this._remaining = t.length, this._result = new Array(this.length), 0 === this.length ? R(this.promise, this._result) : (this.length = this.length || 0, this._enumerate(t), 0 === this._remaining && R(this.promise, this._result))) : j(this.promise, new Error("Array Methods must be provided an Array"))
           }
 
           return e.prototype._enumerate = function (e) {
-            for (var t = 0; this._state === I && t < e.length; t++) this._eachEntry(e[t], t)
+            for (var t = 0; this._state === P && t < e.length; t++) this._eachEntry(e[t], t)
           }, e.prototype._eachEntry = function (e, t) {
             var n = this._instanceConstructor, r = n.resolve;
-            if (r === k) {
-              var s = x(e);
-              if (s === T && e._state !== I) this._settledAt(e._state, t, e._result); else if ("function" != typeof s) this._remaining--, this._result[t] = e; else if (n === q) {
-                var i = new n(P);
+            if (r === S) {
+              var s = w(e);
+              if (s === T && e._state !== P) this._settledAt(e._state, t, e._result); else if ("function" != typeof s) this._remaining--, this._result[t] = e; else if (n === q) {
+                var i = new n(C);
                 A(i, e, s), this._willSettleAt(i, t)
               } else this._willSettleAt(new n(function (t) {
                 return t(e)
@@ -4789,29 +5112,29 @@
             } else this._willSettleAt(r(e), t)
           }, e.prototype._settledAt = function (e, t, n) {
             var r = this.promise;
-            r._state === I && (this._remaining--, e === w ? F(r, n) : this._result[t] = n), 0 === this._remaining && R(r, this._result)
+            r._state === P && (this._remaining--, e === O ? j(r, n) : this._result[t] = n), 0 === this._remaining && R(r, this._result)
           }, e.prototype._willSettleAt = function (e, t) {
             var n = this;
-            j(e, void 0, function (e) {
-              return n._settledAt(C, t, e)
+            F(e, void 0, function (e) {
+              return n._settledAt(I, t, e)
             }, function (e) {
-              return n._settledAt(w, t, e)
+              return n._settledAt(O, t, e)
             })
           }, e
         }();
         var q = function () {
           function e(t) {
-            this[S] = D++, this._result = this._state = void 0, this._subscribers = [], P !== t && ("function" != typeof t && function () {
+            this[k] = D++, this._result = this._state = void 0, this._subscribers = [], C !== t && ("function" != typeof t && function () {
               throw new TypeError("You must pass a resolver function as the first argument to the promise constructor")
             }(), this instanceof e ? function (e, t) {
               try {
                 t(function (t) {
-                  _(e, t)
+                  E(e, t)
                 }, function (t) {
-                  F(e, t)
+                  j(e, t)
                 })
               } catch (t) {
-                F(e, t)
+                j(e, t)
               }
             }(this, t) : function () {
               throw new TypeError("Failed to construct 'Promise': Please use the 'new' operator, this object constructor cannot be called as a function.")
@@ -4842,9 +5165,9 @@
           }) : new t(function (e, t) {
             return t(new TypeError("You must pass an array to race."))
           })
-        }, q.resolve = k, q.reject = function (e) {
-          var t = new this(P);
-          return F(t, e), t
+        }, q.resolve = S, q.reject = function (e) {
+          var t = new this(C);
+          return j(t, e), t
         }, q._setScheduler = function (e) {
           o = e
         }, q._setAsap = function (e) {
@@ -4907,7 +5230,19 @@
       var t = e.type;
       return i[t] || t
     }, e.exports = s
-  }, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , function (e, t, n) {
+  }, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , function (e, t, n) {
+    "use strict";
+    var r = n(0), s = r.notundef, i = r.undef;
+
+    function o(e) {
+      s(e.name) && (this.name = "" + e.name), s(e.announcement) && (this.announcement = "" + e.announcement), s(e.broadcastUrl) && (this.broadcastUrl = "" + e.broadcastUrl), s(e.custom) && (this.custom = "" + e.custom), s(e.queuelevel) && (this.queuelevel = parseInt(e.queuelevel))
+    }
+
+    o.reverse = function (e) {
+      var t = r.copy(e);
+      return i(t.announcement) && (t.announcement = ""), i(t.broadcastUrl) && (t.broadcastUrl = ""), i(t.custom) && (t.custom = ""), s(t.createTime) && (t.createTime = +t.createTime), s(t.updateTime) && (t.updateTime = +t.updateTime), s(t.onlineMemberNum) && (t.onlineMemberNum = +t.onlineMemberNum), s(t.mute) && (t.mute = "1" === t.mute), t
+    }, e.exports = o
+  }, function (e, t, n) {
     "use strict";
     var r = n(53);
     e.exports = function (e) {
@@ -4915,7 +5250,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r, s = n(10), i = (r = s) && r.__esModule ? r : {default: r};
+    var r, s = n(9), i = (r = s) && r.__esModule ? r : {default: r};
 
     function o(e) {
       var t = this, n = e.url || null;
@@ -4926,7 +5261,7 @@
         warn: 3,
         error: 4
       }[e.level] || 0, t.logCache = [], t.logNum = 1, t.timeInterval = 5e3, window.onerror = function (e, n, r, s, i) {
-        t.error.call(t, i)
+        t.error(i)
       }, setInterval(function () {
         t.logCache.length > 0 && n && t.postLogs(n, t.logCache)
       }, t.timeInterval)
@@ -4987,7 +5322,7 @@
       return e.replace(/\s*$/, "")
     }
   }, function (e, t, n) {
-    var r = n(238), s = n(237);
+    var r = n(235), s = n(234);
     e.exports = function (e) {
       if (!e) return {};
       var t = {};
@@ -5003,7 +5338,7 @@
     }).call(this, n(30))
   }, function (e, t, n) {
     "use strict";
-    var r = n(240), s = n(149), i = n(239), o = n(236);
+    var r = n(237), s = n(149), i = n(236), o = n(233);
 
     function a(e, t, n) {
       var r = e;
@@ -5120,6 +5455,7 @@
         24: "browser",
         26: "session",
         32: "deviceInfo",
+        38: "customTag",
         112: "isReactNative",
         1000: "token"
       },
@@ -5173,6 +5509,7 @@
         14: "bindTime"
       },
       clientAntispam: {1: "version", 2: "md5", 3: "nosurl", 4: "thesaurus"},
+      fileQuickTransfer: {1: "md5", 2: "url", 3: "size", 4: "threshold"},
       transToken: {1: "name", 2: "type", 3: "transType", 4: "size", 5: "extra", 6: "body"},
       transInfo: {
         1: "docId",
@@ -5189,6 +5526,31 @@
         12: "flag"
       },
       fileListParam: {1: "fromDocId", 2: "limit"},
+      avSignalTag: {
+        1: "type",
+        2: "channelName",
+        3: "channelId",
+        4: "channelCreateTime",
+        5: "channelExpireTime",
+        6: "creator",
+        7: "ext",
+        8: "channelInValid",
+        10: "from",
+        11: "to",
+        12: "requestId",
+        13: "needPush",
+        14: "pushTitle",
+        15: "pushContent",
+        16: "pushPayload",
+        17: "needBadge",
+        18: "members",
+        19: "attach",
+        20: "attachExt",
+        21: "isSave",
+        22: "msgid",
+        23: "uid",
+        24: "time"
+      },
       login: {
         1: "appKey",
         2: "account",
@@ -5275,7 +5637,8 @@
         session: 26,
         deviceInfo: 32,
         isReactNative: 112,
-        token: 1e3
+        token: 1e3,
+        customTag: 38
       },
       nosToken: {objectName: 1, token: 2, bucket: 3, expireTime: 4, expireSec: 7, tag: 8},
       audioToText: {url: 2},
@@ -5327,6 +5690,7 @@
         bindTime: 14
       },
       clientAntispam: {version: 1, md5: 2, nosurl: 3, thesaurus: 4},
+      fileQuickTransfer: {md5: 1, url: 2, size: 3, threshold: 4},
       transToken: {name: 1, type: 2, transType: 3, size: 4, extra: 5, body: 6},
       transInfo: {
         docId: 1,
@@ -5343,6 +5707,31 @@
         flag: 12
       },
       fileListParam: {fromDocId: 1, limit: 2},
+      avSignalTag: {
+        type: 1,
+        channelName: 2,
+        channelId: 3,
+        channelCreateTime: 4,
+        channelExpireTime: 5,
+        creator: 6,
+        ext: 7,
+        channelInValid: 8,
+        from: 10,
+        to: 11,
+        requestId: 12,
+        needPush: 13,
+        pushTitle: 14,
+        pushContent: 15,
+        pushPayload: 16,
+        needBadge: 17,
+        members: 18,
+        attach: 19,
+        attachExt: 20,
+        isSave: 21,
+        msgid: 22,
+        uid: 23,
+        time: 24
+      },
       login: {
         appKey: 1,
         account: 2,
@@ -5413,7 +5802,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(0), s = n(150), i = r.merge({}, s.idMap, {
+    var r = n(0), s = n(80), i = r.merge({}, s.idMap, {
       chatroom: {
         id: 13,
         login: 2,
@@ -5436,7 +5825,8 @@
         queueList: 22,
         peak: 23,
         queueDrop: 24,
-        queueInit: 25
+        queueInit: 25,
+        queueChange: 26
       }, user: {id: 3, syncRobot: 16}
     }), o = r.merge({}, s.cmdConfig, {
       login: {
@@ -5516,6 +5906,14 @@
       peak: {sid: i.chatroom.id, cid: i.chatroom.peak},
       queueDrop: {sid: i.chatroom.id, cid: i.chatroom.queueDrop},
       queueInit: {sid: i.chatroom.id, cid: i.chatroom.queueInit, params: [{type: "int", name: "limit"}]},
+      queueChange: {
+        sid: i.chatroom.id,
+        cid: i.chatroom.queueChange,
+        params: [{type: "StrStrMap", name: "elementMap"}, {type: "bool", name: "needNotify"}, {
+          type: "string",
+          name: "notifyExt"
+        }]
+      },
       syncRobot: {sid: i.user.id, cid: i.user.syncRobot, params: [{type: "long", name: "timetag"}]}
     }), a = r.merge({}, s.packetConfig, {
       "4_10": {service: "notify"},
@@ -5573,7 +5971,8 @@
         response: [{type: "String", name: "elementKey"}, {type: "String", name: "elementValue"}]
       },
       "13_24": {service: "chatroom", cmd: "queueDrop"},
-      "13_25": {service: "chatroom", cmd: "queueInit"}
+      "13_25": {service: "chatroom", cmd: "queueInit"},
+      "13_26": {service: "chatroom", cmd: "queueChange", response: [{type: "StrArray", name: "elementKeyArray"}]}
     });
     e.exports = {idMap: i, cmdConfig: o, packetConfig: a}
   }, function (e, t, n) {
@@ -5629,6 +6028,7 @@
         14: "bindTime"
       },
       clientAntispam: {1: "version", 2: "md5", 3: "nosurl", 4: "thesaurus"},
+      fileQuickTransfer: {1: "md5", 2: "url", 3: "size", 4: "threshold"},
       transToken: {1: "name", 2: "type", 3: "transType", 4: "size", 5: "extra", 6: "body"},
       transInfo: {
         1: "docId",
@@ -5645,6 +6045,31 @@
         12: "flag"
       },
       fileListParam: {1: "fromDocId", 2: "limit"},
+      avSignalTag: {
+        1: "type",
+        2: "channelName",
+        3: "channelId",
+        4: "channelCreateTime",
+        5: "channelExpireTime",
+        6: "creator",
+        7: "ext",
+        8: "channelInValid",
+        10: "from",
+        11: "to",
+        12: "requestId",
+        13: "needPush",
+        14: "pushTitle",
+        15: "pushContent",
+        16: "pushPayload",
+        17: "needBadge",
+        18: "members",
+        19: "attach",
+        20: "attachExt",
+        21: "isSave",
+        22: "msgid",
+        23: "uid",
+        24: "time"
+      },
       login: {
         3: "clientType",
         4: "os",
@@ -5659,10 +6084,11 @@
         24: "browser",
         26: "session",
         32: "deviceInfo",
+        38: "customTag",
         112: "isReactNative",
         1000: "token"
       },
-      loginRes: {17: "lastLoginDeviceId", 102: "connectionId", 103: "ip", 104: "port", 106: "country"},
+      loginRes: {17: "lastLoginDeviceId", 38: "customTag", 102: "connectionId", 103: "ip", 104: "port", 106: "country"},
       loginPort: {
         3: "type",
         4: "os",
@@ -5670,6 +6096,7 @@
         13: "deviceId",
         19: "account",
         32: "deviceInfo",
+        38: "customTag",
         102: "connectionId",
         103: "ip",
         109: "time"
@@ -5692,6 +6119,7 @@
         18: "sessionAck",
         19: "robots",
         20: "broadcastMsgs",
+        21: "avSignal",
         100: "filterMsgs"
       },
       donnop: {1: "open"},
@@ -5916,6 +6344,7 @@
         bindTime: 14
       },
       clientAntispam: {version: 1, md5: 2, nosurl: 3, thesaurus: 4},
+      fileQuickTransfer: {md5: 1, url: 2, size: 3, threshold: 4},
       transToken: {name: 1, type: 2, transType: 3, size: 4, extra: 5, body: 6},
       transInfo: {
         docId: 1,
@@ -5932,6 +6361,31 @@
         flag: 12
       },
       fileListParam: {fromDocId: 1, limit: 2},
+      avSignalTag: {
+        type: 1,
+        channelName: 2,
+        channelId: 3,
+        channelCreateTime: 4,
+        channelExpireTime: 5,
+        creator: 6,
+        ext: 7,
+        channelInValid: 8,
+        from: 10,
+        to: 11,
+        requestId: 12,
+        needPush: 13,
+        pushTitle: 14,
+        pushContent: 15,
+        pushPayload: 16,
+        needBadge: 17,
+        members: 18,
+        attach: 19,
+        attachExt: 20,
+        isSave: 21,
+        msgid: 22,
+        uid: 23,
+        time: 24
+      },
       login: {
         clientType: 3,
         os: 4,
@@ -5947,9 +6401,10 @@
         session: 26,
         deviceInfo: 32,
         isReactNative: 112,
-        token: 1e3
+        token: 1e3,
+        customTag: 38
       },
-      loginRes: {lastLoginDeviceId: 17, connectionId: 102, ip: 103, port: 104, country: 106},
+      loginRes: {lastLoginDeviceId: 17, customTag: 38, connectionId: 102, ip: 103, port: 104, country: 106},
       loginPort: {
         type: 3,
         os: 4,
@@ -5959,7 +6414,8 @@
         deviceInfo: 32,
         connectionId: 102,
         ip: 103,
-        time: 109
+        time: 109,
+        customTag: 38
       },
       aosPushInfo: {pushType: 110, hasTokenPreviously: 111},
       sync: {
@@ -5979,6 +6435,7 @@
         sessionAck: 18,
         robots: 19,
         broadcastMsgs: 20,
+        avSignal: 21,
         filterMsgs: 100
       },
       donnop: {open: 1},
@@ -6152,7 +6609,115 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(66).fn, s = n(152);
+    var r = n(56).fn, s = n(0), i = n(151);
+    r.processAvSignal = function (e) {
+      switch (console.log(e, "avSignal..."), e.cmd) {
+        case"signalingCreate":
+        case"signalingDelay":
+        case"signalingClose":
+        case"signalingJoin":
+        case"signalingLeave":
+        case"signalingInvite":
+        case"signalingCancel":
+        case"signalingReject":
+        case"signalingAccept":
+        case"signalingControl":
+        case"signalingSyncMsgRead":
+          break;
+        case"signalingNotify":
+          this.onSignalingNotify(e);
+          break;
+        case"signalingMutilClientSyncNotify":
+          this.onSignalingMutilClientSyncNotify(e);
+          break;
+        case"signalingUnreadMessageSyncNotify":
+          this.onSignalingUnreadMessageSyncNotify(e);
+          break;
+        case"signalingChannelsSyncNotify":
+          this.onSignalingMembersSyncNotify(e);
+          break;
+        default:
+          this.logger.log("avSignal::unhandled cmd:", e.cmd)
+      }
+    };
+    var o = function () {
+      var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      if (e.needPush && (e.needPush = "1" === e.needPush), e.needBadge && (e.needBadge = "1" === e.needBadge), e.channelInValid && (e.channelInValid = "1" === e.channelInValid), e.attach) {
+        var t = JSON.parse(e.attach);
+        e.eventType = i.parseAvSignalType(t.type)
+      }
+      if (e.members) {
+        var n = JSON.parse(e.members);
+        e.members = n.map(function (e) {
+          return i.parseAvSignalMember(e)
+        })
+      }
+      return e
+    };
+    r.onSignalingNotify = function (e) {
+      if (e.error) {
+        var t = e.error;
+        this.logger.error("protocal::avSignal:onSignalingNotify error", t), this.emitAPI({
+          type: "error",
+          error: t
+        }), this.options.onerror(t)
+      } else {
+        e.raw && e.raw.r && e.raw.r.length && e.content && e.content.avSignalTag && (e.content.avSignalTag.msgid = e.raw.r[0]);
+        var n = e.content;
+        n = Array.isArray(n) ? n.map(function (e) {
+          return o(e)
+        }) : o(n), this.emitAPI({
+          type: "signalingNotify",
+          obj: n
+        }), s.isFunction(this.options.onSignalingNotify) && this.options.onSignalingNotify(n)
+      }
+    }, r.onSignalingMutilClientSyncNotify = function (e) {
+      if (e.error) {
+        var t = e.error;
+        this.logger.error("protocal::avSignal:onSignalingMutilClientSyncNotify error", t), this.emitAPI({
+          type: "error",
+          error: t
+        }), this.options.onerror(t)
+      } else this.emitAPI({
+        type: "signalingMutilClientSyncNotify",
+        obj: e.content
+      }), s.isFunction(this.options.onSignalingMutilClientSyncNotify) && this.options.onSignalingMutilClientSyncNotify(e.content)
+    }, r.onSignalingUnreadMessageSyncNotify = function (e) {
+      if (e.error) {
+        var t = e.error;
+        this.logger.error("protocal::avSignal:onSignalingUnreadMessageSyncNotify error", t), this.emitAPI({
+          type: "error",
+          error: t
+        }), this.options.onerror(t)
+      } else {
+        var n = e.content.avSignalTag;
+        Array.isArray(n) && (n = n.map(function (e) {
+          return o(e)
+        })), this.emitAPI({
+          type: "signalingUnreadMessageSyncNotify",
+          obj: n
+        }), s.isFunction(this.options.onSignalingUnreadMessageSyncNotify) && this.options.onSignalingUnreadMessageSyncNotify(n)
+      }
+    }, r.onSignalingMembersSyncNotify = function (e) {
+      if (e.error) {
+        var t = e.error;
+        this.logger.error("protocal::avSignal:onSignalingMembersSyncNotify error", t), this.emitAPI({
+          type: "error",
+          error: t
+        }), this.options.onerror(t)
+      } else {
+        var n = e.content.avSignalTag;
+        Array.isArray(n) || (n = [n]), n = n.map(function (e) {
+          return o(e)
+        }), this.emitAPI({
+          type: "signalingChannelsSyncNotify",
+          obj: n
+        }), s.isFunction(this.options.onSignalingMembersSyncNotify) && this.options.onSignalingMembersSyncNotify(n)
+      }
+    }
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(56).fn, s = n(152);
     r.processMisc = function (e) {
       switch (e.cmd) {
         case"getSimpleNosToken":
@@ -6184,7 +6749,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(66).fn, s = n(8);
+    var r = n(56).fn, s = n(5);
     r.processLink = function (e) {
       e.cmd
     }, r.startHeartbeat = function () {
@@ -6200,8 +6765,8 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r, s = n(63), i = (r = s) && r.__esModule ? r : {default: r};
-    var o, a = n(66).fn, c = n(25), u = n(21), l = n(116), m = n(53), d = n(8), p = n(0), f = p.notundef;
+    var r, s = n(64), i = (r = s) && r.__esModule ? r : {default: r};
+    var o, a = n(56).fn, c = n(25), u = n(21), l = n(118), m = n(53), d = n(5), p = n(0), f = p.notundef;
     a.login = function () {
       var e = this;
       Promise.resolve().then(function () {
@@ -6226,7 +6791,8 @@
         clientType: d.CLIENTTYPE || 16,
         session: this.sdkSession,
         deviceId: m.deviceId,
-        isReactNative: d.isRN ? 1 : 0
+        isReactNative: d.isRN ? 1 : 0,
+        customTag: e.customTag || ""
       }
     }, a.onLogin = function (e, t) {
       this.loginResult = t, e ? this.onAuthError(e, "link::onLogin") : (this.startHeartbeat(), this.afterLogin(t))
@@ -6268,7 +6834,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(66).fn, s = n(25), i = n(172), o = n(151), a = n(8), c = n(0);
+    var r = n(56).fn, s = n(25), i = n(172), o = n(150), a = n(5), c = n(0);
     r.initConnect = function () {
       this.socket = null, this.retryCount = 0, this.connecting = !1, this.shouldReconnect = !0, this.hasNotifyDisconnected = !1, this.doLogout = !1
     }, r.resetConnect = function () {
@@ -6279,7 +6845,7 @@
         jitter: a.reconnectionJitter
       })
     }, r.connect = function () {
-      if (this.isConnected()) this.logger.warn("link::connect: already connected"); else if (this.connecting) this.logger.warn("link::connect: already connecting"); else if (this.connecting = !0, this.hasNotifyDisconnected = !1, this.socket) this.logger.info("link::connect: try connecting..."), this.socket.socket.connect(); else {
+      if (this.isConnected()) this.logger.warn("link::connect: already connected"); else if (this.connecting) this.logger.warn("link::connect: already connecting"); else if (this.connecting = !0, this.hasNotifyDisconnected = !1, this.socket) this.logger.info("link::connect: try connecting..."), this.socket.socket.connect(); else if (this.options.socketUrl && "string" == typeof this.options.socketUrl) this.connectToUrl(this.options.socketUrl); else {
         var e = this.getNextSocketUrl();
         e ? this.connectToUrl(e) : this.refreshSocketUrl()
       }
@@ -6330,7 +6896,12 @@
       this.api.reportLogs({event: "ws_connect_failed"}), this.onDisconnect(!1, "link::onConnectFailed")
     }, r.onError = function () {
       var e = arguments[0];
-      e && (this.api.reportLogs({event: "connect_timeout"}), this.onMiscError("连接错误", new s(e, "LINK_ERROR", {callFunc: "link::onError"}))), this.connecting = !1
+      if (e) {
+        if (this.api.reportLogs({event: "connect_timeout"}), void 0 !== e.x5ImgDecodeStatus) return;
+        if (Object.keys(e).length <= 0) return;
+        this.onMiscError("连接错误", new s(e, "LINK_ERROR", {callFunc: "link::onError"}))
+      }
+      this.connecting = !1
     }, r.onDisconnect = function () {
       var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -6347,9 +6918,11 @@
           e.logger.warn("link::reconnect: force disconnect error:", t)
         }
         e.socket.socket.transport.onConnectionOver = function () {
-          e.doReconnect()
+          e.logger.log("link::reconnect: on connectionOver"), clearTimeout(e.reconnectTimer), e.doReconnect()
         }
-      } else e.logger.info("link::reconnect: on socket timeout"), e.doReconnect(); else e.notifyDisconnect()
+      } else clearTimeout(e.reconnectTimer), e.reconnectTimer = setTimeout(function () {
+        e.logger.info("link::reconnect: on socket timeout"), e.doReconnect()
+      }, 3e4); else e.notifyDisconnect()
     }, r.doReconnect = function () {
       var e = this;
       e.socket = null, e.connected && (e.autoconnect = !0), e.retryCount++, e.appLogin = 1;
@@ -6357,8 +6930,8 @@
       e.logger.info("link::reconnect: will retry after " + t + "ms, retryCount " + e.retryCount), e.options.onwillreconnect({
         retryCount: e.retryCount,
         duration: t
-      }), e.connectTimer = setTimeout(function () {
-        clearTimeout(e.connectTimer), e.connect()
+      }), clearTimeout(e.connectTimer), e.connectTimer = setTimeout(function () {
+        e.connect()
       }, t)
     }, r.notifyConnectError = function (e) {
       var t = s.newConnectError({message: e, callFunc: "link::notifyConnectError"});
@@ -6383,7 +6956,158 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(49).fn, s = n(0), i = n(51), o = n(8), a = n(21);
+    var r, s = n(9), i = (r = s) && r.__esModule ? r : {default: r};
+    var o = n(46).fn, a = n(0), c = n(80), u = n(151);
+    o.signalingCreate = function () {
+      var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, t = e.type, n = e.channelName,
+        r = e.ext;
+      return a.verifyOptions(e, "type", "api::signalling"), this.sendCmdUsePromise("signalingCreate", {
+        avSignalTag: {
+          type: t,
+          channelName: n,
+          ext: r
+        }
+      }).then(function (e) {
+        var t = e.avSignalTag;
+        return Promise.resolve(t)
+      }).catch(function (e) {
+        return Promise.reject(u.parseAvSignalError(e))
+      })
+    }, o.signalingDelay = function () {
+      var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      return a.verifyOptions(e, "channelId", "api::signalling"), this.sendCmdUsePromise("signalingDelay", {avSignalTag: e}).then(function (e) {
+        var t = e.avSignalTag;
+        return Promise.resolve(t)
+      }).catch(function (e) {
+        return Promise.reject(u.parseAvSignalError(e))
+      })
+    }, o.signalingClose = function () {
+      var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, t = e.offlineEnabled;
+      return a.verifyOptions(e, "channelId", "api::signalling"), this.sendCmdUsePromise("signalingClose", {avSignalTag: a.merge(e, {isSave: !0 === t ? 1 : 0})}).then(function (e) {
+        var t = e.avSignalTag;
+        return t.offlineEnabled = 1 === t.isSave, delete t.isSave, Promise.resolve(t)
+      }).catch(function (e) {
+        return Promise.reject(u.parseAvSignalError(e))
+      })
+    }, o.signalingJoin = function () {
+      var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, t = e.offlineEnabled;
+      return a.verifyOptions(e, "channelId", "api::signalling"), this.sendCmdUsePromise("signalingJoin", {avSignalTag: a.merge(e, {isSave: !0 === t ? 1 : 0})}).then(function (e) {
+        var t = e.avSignalTag, n = t.members;
+        return "string" == typeof t.members && (n = JSON.parse(t.members).map(function (e) {
+          return u.parseAvSignalMember(e)
+        })), t.members = n, Promise.resolve(t)
+      }).catch(function (e) {
+        return Promise.reject(u.parseAvSignalError(e))
+      })
+    }, o.signalingLeave = function () {
+      var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, t = e.offlineEnabled;
+      return a.verifyOptions(e, "channelId", "api::signalling"), this.sendCmdUsePromise("signalingLeave", {avSignalTag: a.merge(e, {isSave: !0 === t ? 1 : 0})}).then(function (e) {
+        var t = e.avSignalTag;
+        return t.offlineEnabled = 1 === t.isSave, delete t.isSave, Promise.resolve(t)
+      }).catch(function (e) {
+        return Promise.reject(u.parseAvSignalError(e))
+      })
+    }, o.signalingInvite = function () {
+      var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, t = e.account, n = e.offlineEnabled,
+        r = e.pushInfo, s = void 0 === r ? {} : r;
+      a.verifyOptions(e, "channelId requestId account", "api::signalling"), "object" === (0, i.default)(s.pushPayload) && (s.pushPayload = JSON.stringify(s.pushPayload));
+      var o = a.merge(e, s, {
+        to: t,
+        isSave: !0 === n ? 1 : 0,
+        needPush: !0 === s.needPush ? 1 : 0,
+        needBadge: !1 === s.needBadge ? 0 : 1
+      });
+      return this.sendCmdUsePromise("signalingInvite", {avSignalTag: o}).then(function (e) {
+        var t = e.avSignalTag;
+        return t.offlineEnabled = 1 === t.isSave, t.needBadge = 1 === t.needBadge, t.needPush = 1 === t.needPush, delete t.isSave, Promise.resolve(t)
+      }).catch(function (e) {
+        return Promise.reject(u.parseAvSignalError(e))
+      })
+    }, o.signalingCancel = function (e) {
+      var t = e.account, n = e.offlineEnabled;
+      return a.verifyOptions(e, "channelId requestId account", "api::signalling"), this.sendCmdUsePromise("signalingCancel", {
+        avSignalTag: a.merge(e, {
+          to: t,
+          isSave: !0 === n ? 1 : 0
+        })
+      }).then(function (e) {
+        var t = e.avSignalTag;
+        return t.offlineEnabled = 1 === t.isSave, delete t.isSave, Promise.resolve(t)
+      }).catch(function (e) {
+        return Promise.reject(u.parseAvSignalError(e))
+      })
+    }, o.signalingCall = function (e) {
+      var t = this, n = e.account, r = e.offlineEnabled, s = e.requestId;
+      a.verifyOptions(e, "type requestId account", "api::signalling");
+      var i = "";
+      return this.signalingCreate(e).catch(function (e) {
+        return e.code, Promise.reject(e)
+      }).then(function (n) {
+        t.logger.log("api::avSignal:signalingCall create:", n);
+        var s = {channelId: i = n.channelId, offlineEnabled: r, attachExt: e.attachExt || ""};
+        return e.uid && a.merge(s, {uid: e.uid}), t.signalingJoin(s)
+      }).then(function (o) {
+        t.logger.log("api::avSignal:signalingCall join:", o);
+        var a = {
+          channelId: i = o.channelId || i,
+          account: n,
+          requestId: s,
+          offlineEnabled: r,
+          attachExt: e.attachExt || "",
+          pushInfo: e.pushInfo || {}
+        };
+        return t.signalingInvite(a)
+      })
+    }, o.signalingReject = function (e) {
+      var t = e.account, n = e.offlineEnabled;
+      return a.verifyOptions(e, "channelId requestId account", "api::signalling"), this.sendCmdUsePromise("signalingReject", {
+        avSignalTag: a.merge(e, {
+          to: t,
+          isSave: !0 === n ? 1 : 0
+        })
+      }).then(function (e) {
+        var t = e.avSignalTag;
+        return t.offlineEnabled = 1 === t.isSave, delete t.isSave, Promise.resolve(t)
+      }).catch(function (e) {
+        return Promise.reject(u.parseAvSignalError(e))
+      })
+    }, o.signalingAccept = function (e) {
+      var t = e.account, n = e.offlineEnabled;
+      return a.verifyOptions(e, "channelId requestId account", "api::signalling"), this.sendCmdUsePromise("signalingAccept", {
+        avSignalTag: a.merge(e, {
+          to: t,
+          isSave: !0 === n ? 1 : 0
+        })
+      }).then(function (e) {
+        var t = e.avSignalTag;
+        return t.offlineEnabled = 1 === t.isSave, delete t.isSave, Promise.resolve(t)
+      }).catch(function (e) {
+        return Promise.reject(u.parseAvSignalError(e))
+      })
+    }, o.signalingControl = function (e) {
+      var t = e.account;
+      return a.verifyOptions(e, "channelId", "api::signalling"), this.sendCmdUsePromise("signalingControl", {avSignalTag: a.merge(e, t ? {to: t} : {})}).then(function (e) {
+        var t = e.avSignalTag;
+        return Promise.resolve(t)
+      }).catch(function (e) {
+        return Promise.reject(u.parseAvSignalError(e))
+      })
+    }, o.signalingSync = function () {
+      return this.sendCmdUsePromise("sync", {sync: {avSignal: 0}}).then(function (e) {
+        var t = e.avSignalTag;
+        return Promise.resolve(t)
+      }).catch(function (e) {
+        return Promise.reject(u.parseAvSignalError(e))
+      })
+    }, o.signalingMarkMsgRead = function () {
+      var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      a.verifyOptions(e, "msgid", "api::signalling");
+      var t = c.idMap.avSignal;
+      return this.sendCmdUsePromise("batchMarkRead", {sid: t.id, cid: t.signalingNotify, ids: e.msgid})
+    }
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(46).fn, s = n(0), i = n(51), o = n(5), a = n(21);
     (a = a || {}).name = a.name || "", a.version = a.version || "", r.reportLogs = function () {
       var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, t = this, n = t.options,
         r = o.ntServerAddress;
@@ -6413,8 +7137,8 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r, s = n(10), i = (r = s) && r.__esModule ? r : {default: r};
-    var o = n(0), a = n(49).fn;
+    var r, s = n(9), i = (r = s) && r.__esModule ? r : {default: r};
+    var o = n(0), a = n(46).fn;
 
     function c(e, t, n, r) {
       var s = !1, i = "";
@@ -6479,8 +7203,8 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r, s = n(10), i = (r = s) && r.__esModule ? r : {default: r}, o = n(79);
-    var a, c = n(0), u = n(49).fn;
+    var r, s = n(9), i = (r = s) && r.__esModule ? r : {default: r}, o = n(81);
+    var a, c = n(0), u = n(46).fn;
     u.viewImageSync = function (e) {
       var t = this.options;
       c.verifyOptions(e, "url", "nos::viewImageSync");
@@ -6549,7 +7273,7 @@
     })
   }, function (e, t, n) {
     "use strict";
-    var r, s = n(0), i = n(49).fn, o = n(152), a = n(154), c = n(25);
+    var r, s = n(0), i = n(46).fn, o = n(152), a = n(154), c = n(25);
     i.transDoc = function (e) {
       s.verifyOptions(e, "fileInput done", "nos::transDoc");
       try {
@@ -6924,8 +7648,8 @@
     }()
   }, function (e, t, n) {
     "use strict";
-    var r, s = n(10), i = (r = s) && r.__esModule ? r : {default: r};
-    var o = n(49).fn, a = n(0), c = n(258), u = n(25), l = n(8), m = n(154), d = n(257), p = n(153);
+    var r, s = n(9), i = (r = s) && r.__esModule ? r : {default: r};
+    var o = n(46).fn, a = n(0), c = n(257), u = n(25), l = n(5), m = n(154), d = n(256), p = n(153);
     o.sendText = function (e) {
       return this.processCallback(e), e.msg = new this.message.TextMessage(e), this.sendMsg(e)
     }, o.previewFile = function (e) {
@@ -6982,25 +7706,22 @@
         }
       }
 
-      if (l.isWeixinApp) a.verifyOptions(e, "filePath", "msg::_doPreviewFile"), wx.uploadFile({
-        url: r,
-        filePath: e.filePath,
-        name: "file",
-        formData: s,
-        fail: function (e) {
-          console.error("api::msg:upload file failed", e)
-        },
-        success: function (e) {
-          if (200 === e.statusCode) try {
-            o(null, JSON.parse(e.data))
-          } catch (t) {
-            console.error("parse wx upload file res error", t), o({
-              code: "PARSE_WX_UPLOAD_FILE_RES_ERROR",
-              str: e.data,
-              msg: e.errMsg
-            })
-          } else o({code: e.statusCode, msg: e.errMsg})
-        }
+      if (l.isWeixinApp) a.verifyOptions(e, "filePath", "msg::_doPreviewFile"), t.fileQuickTransfer(e, o, function () {
+        wx.uploadFile({
+          url: r, filePath: e.filePath, name: "file", formData: s, fail: function (e) {
+            console.error("api::msg:upload file failed", e)
+          }, success: function (e) {
+            if (200 === e.statusCode) try {
+              o(null, JSON.parse(e.data))
+            } catch (t) {
+              console.error("parse wx upload file res error", t), o({
+                code: "PARSE_WX_UPLOAD_FILE_RES_ERROR",
+                str: e.data,
+                msg: e.errMsg
+              })
+            } else o({code: e.statusCode, msg: e.errMsg})
+          }
+        })
       }); else if (l.isNodejs) {
         var c = {
           url: r, name: "file", formData: s, success: function (e) {
@@ -7021,7 +7742,9 @@
           if ("object" !== (0, i.default)(e.fileObject)) throw new u("Nodejs上传fileObject参数类型应如 {fileName:..,fileData:..} ");
           c.fileData = e.fileObject.fileData
         }
-        d.uploadFile(c)
+        t.fileQuickTransfer(e, o, function () {
+          d.uploadFile(c)
+        })
       } else if (l.isRN) {
         var p = {
           url: r, name: "file", formData: s, filePath: e.filePath, success: function (e) {
@@ -7037,8 +7760,45 @@
             console.error("api::msg:upload file failed", e)
           }
         };
-        d.uploadFile(p)
-      } else e.uploaddone = o, e.url = r, e.params = s, e.fileName = "file", new d(e)
+        t.fileQuickTransfer(e, o, function () {
+          d.uploadFile(p)
+        })
+      } else e.uploaddone = o, e.url = r, e.params = s, e.fileName = "file", t.fileQuickTransfer(e, o, function () {
+        return new d(e)
+      })
+    }, o.fileQuickTransfer = function (e, t, n) {
+      var r = this;
+      e = e || {}, t instanceof Function || (t = function () {
+      }), n instanceof Function || (n = function () {
+      });
+      var s = e.fastPass;
+      if (s) try {
+        s = JSON.parse(s), e.fastPass = s
+      } catch (e) {
+        r.protocol.logger.error("快传参数解析失败")
+      }
+      var i = e.fileInputName || e.name || e.blob && e.blob.name || "",
+        o = e.fileSize || e.size || e.blob && e.blob.size || 0, a = s ? ((s.md5 || e.digest || "") + "").trim() : "",
+        c = e.type || e.blob && e.blob.type;
+      if (a && o >= l.threshold) {
+        var u = !0, m = {name: i, md5: a, ext: i.slice(i.lastIndexOf(".") + 1), type: c};
+        switch (c) {
+          case"image":
+            s && s.w && s.h ? (m.w = s.w, m.h = s.h) : (u = !1, r.protocol.logger.error("快传 image 文件缺少参数 w 或 h"));
+            break;
+          case"video":
+            s && s.w && s.h && s.dur ? (m.w = s.w, m.h = s.h, m.dur = s.dur) : (u = !1, r.protocol.logger.error("快传 video 文件缺少参数 w 或 h 或 dur"));
+            break;
+          case"audio":
+            s && s.dur ? m.dur = s.dur : (u = !1, r.protocol.logger.error("快传 audio 文件缺少参数 dur"))
+        }
+        if (!u) return void n();
+        var d = {fileQuickTransfer: {md5: a}};
+        return o && (d.fileQuickTransfer.size = o), this.protocol.sendCmd("fileQuickTransfer", d, function (e, s, i) {
+          !e && i && i.fileQuickTransfer && i.fileQuickTransfer.url || (r.protocol.logger.error("misc::fileQuickTransfer: not found", e, s, i), n()), i && i.fileQuickTransfer && i.fileQuickTransfer.threshold && (l.threshold = i.fileQuickTransfer.threshold || 0), i && i.fileQuickTransfer && i.fileQuickTransfer.url && (m.size = o || i.fileQuickTransfer.size, m.url = i.fileQuickTransfer.url, t(e, m))
+        })
+      }
+      n()
     }, o.sendFile = function (e) {
       if (e.type || (e.type = "file"), a.verifyParamPresentJustOne(e, "dataURL blob fileInput file filePath wxFilePath fileObject", "msg::sendFile"), this.processCallback(e), e.filePath = e.filePath || e.wxFilePath, delete e.wxFilePath, e.dataURL) this._previewAndSendFile(e); else if (e.blob) this._previewAndSendFile(e); else if (e.fileInput) {
         if (e.fileInput = a.verifyFileInput(e.fileInput, "msg::sendFile"), e.fileInput.files && !e.fileInput.files.length) return void e.done(u.newNoFileError("请选择" + e.type + "文件", {
@@ -7161,7 +7921,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(49).fn;
+    var r = n(46).fn;
     r.isConnected = function () {
       return !!this.protocol && this.protocol.isConnected()
     }, r.connect = function () {
@@ -7236,7 +7996,355 @@
       return n
     };
     e.exports = i
-  }, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , function (e, t, n) {
+  }, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , function (e, t, n) {
+    "use strict";
+    var r = n(129).fn, s = n(0);
+    r.queueOffer = function (e) {
+      s.verifyOptions(e, "elementKey elementValue", "msg::queueOffer"), e.transient ? e.transient = !0 : e.transient = !1, this.processCallback(e), this.sendCmd("queueOffer", e, e.callback)
+    }, r.queuePoll = function () {
+      var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      e.elementKey = e.elementKey || "", this.processCallback(e), this.sendCmd("queuePoll", e, e.callback)
+    }, r.queueList = function (e) {
+      this.processCallback(e), this.sendCmd("queueList", e, e.callback)
+    }, r.peak = function (e) {
+      this.processCallback(e), this.sendCmd("peak", e, e.callback)
+    }, r.queueDrop = function (e) {
+      this.processCallback(e), this.sendCmd("queueDrop", e, e.callback)
+    }, r.queueChange = function (e) {
+      s.verifyOptions(e, "elementMap", "msg::queueOffer"), e.needNotify ? (e.needNotify = !0, s.verifyOptions(e, "notifyExt", "msg::queueOffer")) : e.needNotify = !1, this.processCallback(e), this.sendCmd("queueChange", e, e.callback)
+    }
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(0), s = r.undef, i = r.verifyOptions, o = r.verifyParamType, a = n(168), c = n(129).fn;
+    c.updateMyChatroomMemberInfo = function (e) {
+      i(e, "member needNotify", "member::updateMyChatroomMemberInfo"), o("needNotify", e.needNotify, "boolean", "member::updateMyChatroomMemberInfo"), e.needSave = e.needSave || !1, o("needSave", e.needSave, "boolean", "member::updateMyChatroomMemberInfo"), this.processCustom(e), this.processCallback(e), e.chatroomMember = new a(e.member), this.sendCmd("updateMyChatroomMemberInfo", e)
+    }, c.getChatroomMembers = function (e) {
+      i(e, "guest", "member::getChatroomMembers"), o("guest", e.guest, "boolean", "member::getChatroomMembers"), s(e.time) ? e.time = 0 : o("time", e.time, "number", "member::getChatroomMembers"), s(e.limit) ? e.limit = 100 : o("limit", e.limit, "number", "member::getChatroomMembers"), this.processCallback(e), e.type = e.guest ? 1 : 0, !e.guest && e.onlyOnline && (e.type = 2), this.sendCmd("getChatroomMembers", e)
+    }, c.getChatroomMembersInfo = function (e) {
+      i(e, "accounts", "member::getChatroomMembersInfo"), o("accounts", e.accounts, "array", "member::getChatroomMembersInfo"), this.processCallback(e), this.sendCmd("getChatroomMembersInfo", e)
+    }, c.markChatroomIdentity = function (e) {
+      i(e, "identity", "member::markChatroomIdentity"), e.type = {
+        manager: 1,
+        common: 2,
+        black: -1,
+        mute: -2
+      }[e.identity], delete e.identity, isNaN(e.type) ? i(e, "identity", 'member::markChatroomIdentity. The valid value of the identity is "manager" or "common" or "black" or "mute".') : this.markChatroomMember(e)
+    }, c.markChatroomManager = function (e) {
+      e.type = 1, this.markChatroomMember(e)
+    }, c.markChatroomCommonMember = function (e) {
+      e.type = 2, this.markChatroomMember(e)
+    }, c.markChatroomBlacklist = function (e) {
+      e.type = -1, this.markChatroomMember(e)
+    }, c.markChatroomGaglist = function (e) {
+      e.type = -2, this.markChatroomMember(e)
+    }, c.markChatroomMember = function (e) {
+      i(e, "account type isAdd", "member::markChatroomMember"), o("isAdd", e.isAdd, "boolean", "member::markChatroomMember"), s(e.level) ? e.level = 0 : o("level", e.level, "number", "member::markChatroomMember");
+      this.processCustom(e), this.processCallback(e), this.sendCmd("markChatroomMember", e)
+    }, c.kickChatroomMember = function (e) {
+      i(e, "account", "member::kickChatroomMember"), this.processCustom(e), this.processCallback(e), this.sendCmd("kickChatroomMember", e)
+    }, c.updateChatroomMemberTempMute = function (e) {
+      i(e, "account duration needNotify", "member::updateChatroomMemberTempMute"), o("duration", e.duration, "number", "member::updateChatroomMemberTempMute"), o("needNotify", e.needNotify, "boolean", "member::updateChatroomMemberTempMute"), this.processCustom(e), this.processCallback(e), this.sendCmd("updateChatroomMemberTempMute", e)
+    }, c.getRobotList = function (e) {
+      s(e.timetag) && (e.timetag = 0), this.processCallback(e), this.sendCmd("syncRobot", e)
+    }
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(0), s = r.undef, i = n(129).fn;
+    i.beforeSendMsg = function (e) {
+      e.cmd = "sendMsg"
+    };
+    var o = {text: 0, image: 1, audio: 2, video: 3, geo: 4, notification: 5, file: 6, tip: 10, robot: 11, custom: 100};
+    i.getHistoryMsgs = function (e) {
+      r.verifyOptions(e), s(e.timetag) ? e.timetag = 0 : r.verifyParamType("timetag", e.timetag, "number", "msg::getHistoryMsgs"), s(e.limit) ? e.limit = 100 : r.verifyParamType("limit", e.limit, "number", "msg::getHistoryMsgs"), s(e.reverse) ? e.reverse = !1 : r.verifyParamType("reverse", e.reverse, "boolean", "msg::getHistoryMsgs"), s(e.msgTypes) ? e.msgTypes = [] : Array.isArray(e.msgTypes) ? (e.msgTypes = e.msgTypes.map(function (e) {
+        return o[e]
+      }), e.msgTypes = e.msgTypes.filter(function (e) {
+        return "number" == typeof e
+      })) : "number" == typeof o[e.msgTypes] ? e.msgTypes = [o[e.msgTypes]] : e.msgTypes = [];
+      this.processCallback(e), this.sendCmd("getHistoryMsgs", e, function (t, n, r) {
+        Array.isArray(r) && (r = r.map(function (e) {
+          return o[e.type] && (e.type = o[e.type]), e
+        })), e.callback(t, n, r)
+      })
+    }
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(71), s = n(0), i = {welcome: "00", text: "01", link: "03"},
+      o = {"01": "text", "02": "image", "03": "answer", 11: "template"};
+
+    function a(e) {
+      s.verifyOptions(e, "content", "msg::RobotMessage");
+      var t = e.content;
+      switch (t.type) {
+        case"welcome":
+          s.undef(e.body) && (this.body = "欢迎消息");
+          break;
+        case"text":
+          s.verifyOptions(t, "content", "msg::RobotMessage"), s.undef(e.body) && (this.body = t.content);
+          break;
+        case"link":
+          s.verifyOptions(t, "target", "msg::RobotMessage")
+      }
+      t.type && (t.type = i[t.type]), t = {
+        param: t,
+        robotAccid: e.robotAccid
+      }, this.attach = JSON.stringify(t), e.type = "robot", r.call(this, e)
+    }
+
+    a.prototype = Object.create(r.prototype), a.reverse = function (e) {
+      var t = r.reverse(e);
+      if ("robot" === t.type) {
+        var n = JSON.parse(e.attach);
+        if (n.param && (n.param.type = o[n.param.type] || "unknown"), n.robotMsg) {
+          var i = (n = s.merge(n, n.robotMsg)).message;
+          "bot" === n.flag ? n.message = i.map(function (e) {
+            return e.type = o[e.type] || "unknown", e
+          }) : n.flag, delete n.robotMsg
+        }
+        t.content = n
+      }
+      return t
+    }, e.exports = a
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(71), s = n(0);
+
+    function i(e) {
+      s.verifyOptions(e, "tip", "msg::TipMessage"), e.type = "tip", r.call(this, e), this.attach = e.tip
+    }
+
+    i.prototype = Object.create(r.prototype), i.reverse = function (e) {
+      var t = r.reverse(e);
+      return t.tip = e.attach, t
+    }, e.exports = i
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(71), s = n(0);
+
+    function i(e) {
+      s.verifyOptions(e, "content", "msg::CustomMessage"), e.type = "custom", r.call(this, e), "string" != typeof e.content && (e.content = JSON.stringify(e.content)), this.attach = e.content
+    }
+
+    i.prototype = Object.create(r.prototype), i.reverse = function (e) {
+      var t = r.reverse(e);
+      return t.content = e.attach, t
+    }, e.exports = i
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(0).notundef, s = n(71), i = {
+      301: "memberEnter",
+      302: "memberExit",
+      303: "blackMember",
+      304: "unblackMember",
+      305: "gagMember",
+      306: "ungagMember",
+      307: "addManager",
+      308: "removeManager",
+      309: "addCommon",
+      310: "removeCommon",
+      311: "closeChatroom",
+      312: "updateChatroom",
+      313: "kickMember",
+      314: "addTempMute",
+      315: "removeTempMute",
+      316: "updateMemberInfo",
+      317: "updateQueue",
+      318: "muteRoom",
+      319: "unmuteRoom",
+      320: "batchUpdateQueue"
+    };
+
+    function o() {
+    }
+
+    o.prototype = Object.create(s.prototype), o.reverse = function (e) {
+      var t = s.reverse(e);
+      if (e.attach = e.attach ? "" + e.attach : "", e.attach) {
+        var n = JSON.parse(e.attach);
+        if (t.attach = {type: i[n.id]}, r(n.data)) {
+          var o = n.data;
+          if (r(o.operator) && (t.attach.from = o.operator), r(o.opeNick) && (t.attach.fromNick = o.opeNick), r(o.target) && (t.attach.to = o.target), r(o.tarNick) && (t.attach.toNick = o.tarNick), r(o.muteDuration) && (t.attach.duration = parseInt(o.muteDuration, 10)), "memberEnter" === t.attach.type && (r(o.muted) ? t.attach.gaged = 1 == +o.muted : t.attach.gaged = !1, r(o.tempMuted) ? t.attach.tempMuted = 1 == +o.tempMuted : t.attach.tempMuted = !1, r(o.muteTtl) ? t.attach.tempMuteDuration = +o.muteTtl : t.attach.tempMuteDuration = 0), r(o.ext) && (t.attach.custom = o.ext), r(o.queueChange)) {
+            var a = JSON.parse(o.queueChange);
+            switch (a._e) {
+              case"OFFER":
+                t.attach.queueChange = {type: "OFFER", elementKey: a.key, elementValue: a.content};
+                break;
+              case"POLL":
+                t.attach.queueChange = {type: "POLL", elementKey: a.key, elementValue: a.content};
+                break;
+              case"DROP":
+                t.attach.queueChange = {type: "DROP"};
+                break;
+              case"PARTCLEAR":
+              case"BATCH_UPDATE":
+                t.attach.queueChange = {type: a._e, elementKv: a.kvObject}
+            }
+          }
+        }
+      } else t.attach = {};
+      return t
+    }, e.exports = o
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(71), s = n(0);
+
+    function i(e) {
+      e.type = "geo", s.verifyOptions(e, "geo", "msg::GeoMessage"), s.verifyOptions(e.geo, "lng lat title", !0, "geo.", "msg::GeoMessage"), s.verifyParamType("geo.lng", e.geo.lng, "number", "msg::GeoMessage"), s.verifyParamType("geo.lat", e.geo.lat, "number", "msg::GeoMessage"), s.verifyParamType("geo.title", e.geo.title, "string", "msg::GeoMessage"), r.call(this, e), this.attach = JSON.stringify(e.geo)
+    }
+
+    i.prototype = Object.create(r.prototype), i.reverse = function (e) {
+      var t = r.reverse(e);
+      return e.attach = e.attach ? "" + e.attach : "", t.geo = e.attach ? JSON.parse(e.attach) : {}, t
+    }, e.exports = i
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(128), s = n(0);
+
+    function i() {
+    }
+
+    i.prototype = Object.create(r.prototype), i.verifyFile = function (e, t) {
+      s.verifyOptions(e, "dur w h", !0, "file.", t)
+    }, e.exports = i
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(128), s = n(0);
+
+    function i() {
+    }
+
+    i.prototype = Object.create(r.prototype), i.verifyFile = function (e, t) {
+      s.verifyOptions(e, "dur", !0, "file.", t)
+    }, e.exports = i
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(0), s = n(128);
+
+    function i() {
+    }
+
+    i.prototype = Object.create(s.prototype), i.verifyFile = function (e, t) {
+      r.verifyOptions(e, "w h", !0, "file.", t)
+    }, e.exports = i
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(71), s = n(0);
+
+    function i(e) {
+      s.verifyOptions(e, "text", "msg::TextMessage"), e.type = "text", r.call(this, e), this.attach = e.text, this.body = ""
+    }
+
+    i.prototype = Object.create(r.prototype), i.reverse = function (e) {
+      var t = r.reverse(e);
+      return t.text = e.attach, t
+    }, e.exports = i
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(0), s = function (e) {
+        this.account = e.account
+      }, i = s.prototype, o = i.Message = n(71), a = i.TextMessage = n(398), c = i.FileMessage = n(128),
+      u = i.GeoMessage = n(394), l = i.NotificationMessage = n(393), m = i.CustomMessage = n(392),
+      d = i.TipMessage = n(391), p = i.RobotMessage = n(390);
+    i.validTypes = o.validTypes, i.reverse = function (e) {
+      var t;
+      switch (o.getType(e)) {
+        case"text":
+          t = a.reverse(e);
+          break;
+        case"image":
+        case"audio":
+        case"video":
+        case"file":
+          t = c.reverse(e);
+          break;
+        case"geo":
+          t = u.reverse(e);
+          break;
+        case"notification":
+          t = l.reverse(e);
+          break;
+        case"custom":
+          t = m.reverse(e);
+          break;
+        case"tip":
+          t = d.reverse(e);
+          break;
+        case"robot":
+          t = p.reverse(e);
+          break;
+        default:
+          t = o.reverse(e)
+      }
+      return o.setExtra(t, this.account), t
+    }, i.reverseMsgs = function (e, t) {
+      var n, s, i = this;
+      return e.map(function (e) {
+        return e = i.reverse(e), t && ((n = t.modifyObj) && (e = r.merge(e, n)), s = t.mapper, r.isFunction(s) && (e = s(e))), e
+      })
+    }, e.exports = s
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(115).fn, s = n(168);
+    r.onChatroomMembersInfo = r.onChatroomMembers = function (e) {
+      e.error || (e.obj.members = s.reverseMembers(e.content.members))
+    }, r.onMarkChatroomMember = function (e) {
+      e.error || (e.obj.member = s.reverse(e.content.chatroomMember))
+    }, r.onSyncRobot = function (e) {
+      !e.error && this.options.onrobots ? this.options.onrobots(null, e.content) : this.ontions.onrobots(e.error, {})
+    }
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(115).fn, s = n(0);
+    r.completeMsg = function (e) {
+      e.chatroomId = this.chatroom.id, e.from = this.options.account, e.fromClientType = "Web", e.time || (e.time = +new Date)
+    }, r.onMsg = function (e) {
+      var t = this.message.reverse(e.content.msg);
+      this.checkMsgUnique(t) && (this.msgBuffer.push(t), this.msgFlushTimer || this.startMsgFlushTimer())
+    }, r.startMsgFlushTimer = function () {
+      var e = this, t = e.options;
+      e.msgFlushTimer = setTimeout(function () {
+        var n = e.msgBuffer.splice(0, t.msgBufferSize);
+        e.options.onmsgs(n), e.msgBuffer.length ? e.startMsgFlushTimer() : delete e.msgFlushTimer
+      }, t.msgBufferInterval)
+    }, r.checkMsgUnique = s.genCheckUniqueFunc("idClient"), r.onSendMsg = function (e) {
+      var t = e.obj.msg;
+      e.error ? t.status = "fail" : (t = e.content.msg).status = "success", t = this.message.reverse(t), e.obj = t
+    }, r.onHistoryMsgs = function (e) {
+      e.error || (e.obj || (e.obj = {}), e.obj.msgs = this.message.reverseMsgs(e.content.msgs))
+    }
+  }, function (e, t, n) {
+    "use strict";
+    var r = n(115).fn, s = n(53), i = n(0);
+    r.assembleLogin = function () {
+      var e = this.options;
+      this.sdkSession = this.genSessionKey();
+      var t = {
+        appKey: e.appKey,
+        account: e.account,
+        deviceId: s.deviceId,
+        chatroomId: e.chatroomId,
+        session: this.sdkSession,
+        appLogin: this.appLogin || 0
+      };
+      return {
+        type: 1,
+        login: t = i.merge(t, i.filterObj(e, "chatroomNick chatroomAvatar chatroomCustom chatroomEnterCustom isAnonymous")),
+        imLogin: this.assembleIMLogin()
+      }
+    }, r.afterLogin = function (e) {
+      var t = e.chatroom;
+      this.chatroom = t, this.notifyLogin()
+    }, r.kickedReasons = ["", "chatroomClosed", "managerKick", "samePlatformKick", "silentlyKick", "blacked"], r.kickedMessages = ["", "聊天室关闭了", "被房主或者管理员踢出", "不允许同一个帐号在多个地方同时登录", "悄悄被踢", "被拉黑了"]
+  }, function (e, t, n) {
+    "use strict";
+    n(115).fn.refreshSocketUrl = function () {
+      this.socketUrls = this.socketUrlsBackup.slice(0), this.logger.info("link::refreshSocketUrl"), this.connectToUrl(this.getNextSocketUrl())
+    }
+  }, function (e, t, n) {
+    "use strict";
+    n(141);
+    var r = n(129);
+    n(169)(r), e.exports = r
+  }, function (e, t, n) {
     "use strict";
     var r = n(0), s = r.notundef;
 
@@ -7252,7 +8360,7 @@
     var r = n(0), s = r.notundef, i = n(25);
 
     function o(e) {
-      if (r.verifyOptions(e, "type value", "event::MsgEvent"), r.verifyParamType("type", e.type, "number", "event::MsgEvent"), r.verifyParamMin("type", e.type, 1e5, "event::MsgEvent"), r.verifyParamType("value", e.value, "number", "event::MsgEvent"), this.type = e.type, this.value = e.value, this.idClient = r.guid(), s(e.custom) && (this.custom = "" + e.custom), this.validTime = e.validTime || 604800, r.verifyParamType("validTime", this.validTime, "number", "event::MsgEvent"), r.verifyParamMin("validTime", this.validTime, 60, "event::MsgEvent"), r.verifyParamMax("validTime", this.validTime, 604800, "event::MsgEvent"), s(e.broadcastType)) {
+      if (r.verifyOptions(e, "type value", "event::MsgEvent"), r.verifyParamType("type", e.type, "number", "event::MsgEvent"), r.verifyParamType("value", e.value, "number", "event::MsgEvent"), this.type = e.type, this.value = e.value, this.idClient = r.guid(), s(e.custom) && (this.custom = "" + e.custom), this.validTime = e.validTime || 604800, r.verifyParamType("validTime", this.validTime, "number", "event::MsgEvent"), r.verifyParamMin("validTime", this.validTime, 60, "event::MsgEvent"), r.verifyParamMax("validTime", this.validTime, 604800, "event::MsgEvent"), s(e.broadcastType)) {
         if (r.verifyParamType("broadcastType", e.broadcastType, "number", "event::MsgEvent"), [1, 2].indexOf(e.broadcastType) < 0) throw new i('参数错误"broadcastType":只能为1或2');
         this.broadcastType = e.broadcastType
       } else this.broadcastType = 2;
@@ -7272,8 +8380,8 @@
     }, e.exports = o
   }, function (e, t, n) {
     "use strict";
-    var r, s = n(10), i = (r = s) && r.__esModule ? r : {default: r};
-    var o = n(31).fn, a = n(0), c = n(428), u = n(427);
+    var r, s = n(9), i = (r = s) && r.__esModule ? r : {default: r};
+    var o = n(31).fn, a = n(0), c = n(406), u = n(405);
 
     function l(e) {
       return "object" === (void 0 === e ? "undefined" : (0, i.default)(e)) && (e.msgEventSubscribes ? e = e.msgEventSubscribes : e.msgEventSubscribe ? e = e.msgEventSubscribe : e.accounts ? e = e.accounts : e.msgEvent && (e = e.msgEvent).time && (e.time = +e.time), 1 === e.sync ? e.sync = !0 : 0 === e.sync && (e.sync = !1)), e
@@ -7389,14 +8497,14 @@
     "use strict"
   }, function (e, t, n) {
     "use strict";
-    var r = n(31).fn, s = n(0), i = n(8);
+    var r = n(31).fn, s = n(0), i = n(5);
     r.getChatroomAddress = function (e) {
       s.verifyOptions(e, "chatroomId", "chatroom::getChatroomAddress");
       e.isWeixinApp = i.isWeixinApp, this.processCallback(e), this.sendCmd("getChatroomAddress", e)
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(31).fn, s = n(0), i = s.undef, o = s.notundef, a = n(115);
+    var r = n(31).fn, s = n(0), i = s.undef, o = s.notundef, a = n(117);
     r.markSysMsgRead = function (e) {
       var t, n = this.db, r = Promise.resolve(), i = this.protocol;
       s.verifyOptions(e, "sysMsgs", "sysmsg::markSysMsgRead");
@@ -7479,7 +8587,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(31).fn, s = n(0), i = s.undef, o = s.notundef, a = n(53), c = n(114), u = n(115), l = n(25);
+    var r = n(31).fn, s = n(0), i = s.undef, o = s.notundef, a = n(53), c = n(116), u = n(117), l = n(25);
     r.beforeSendMsg = function (e) {
       var t, n = this.protocol, r = e.msg;
       switch (r.to === this.account && (r.fromDeviceId = a.deviceId), r.userUpdateTime = n.myInfo && n.myInfo.updateTime, r.getScene()) {
@@ -7701,6 +8809,19 @@
       }, function (e) {
         t = e, c()
       }) : c()
+    }, r.getLocalSession = function (e) {
+      var t, n = this.db, r = null;
+      if (s.verifyOptions(e, "sessionId", "scene::getLocalSession"), s.verifyParamType("sessionId", e.sessionId, "string", "scene::getLocalSession"), n.enable) return this.processCallback(e), void n.getSession(e.sessionId).then(function (e) {
+        e && (r = e), i()
+      }, function (e) {
+        t = e, i()
+      });
+
+      function i() {
+        e.done(t, r)
+      }
+
+      this.protocol.sessionSet && this.protocol.sessionSet[e.sessionId] && (r = this.protocol.sessionSet[e.sessionId]), i()
     }, r.updateLocalSession = function (e) {
       var t, n = this, r = n.db;
       s.verifyOptions(e, "id", "scene::updateLocalSession"), n.processCallback(e);
@@ -7743,7 +8864,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(31).fn, s = n(0), i = s.undef, o = n(117), a = n(89);
+    var r = n(31).fn, s = n(0), i = s.undef, o = n(119), a = n(90);
     r.createTeam = function (e) {
       s.verifyOptions(e, "type name", "team::createTeam"), i(e.accounts) ? e.accounts = [] : s.verifyParamType("accounts", e.accounts, "array", "team::createTeam"), e.action = "create", this.processPs(e), this.processCallback(e), e.team = new o(e);
       var t = {team: e.team, accounts: e.accounts.slice(0), ps: e.ps};
@@ -7844,6 +8965,20 @@
         timetag: n,
         NOTSTORE: "timetag"
       }, e.callback)
+    }, r.getTeamMemberByTeamIdAndAccount = function (e) {
+      var t = this, n = 0;
+      s.verifyParamType("teamId", e.teamId, "numeric or numeric string", "team::getTeamMemberByTeamIdAndAccount"), s.verifyOptions(e, "account", "team::getTeamMemberByTeamIdAndAccount"), t.processCallback(e), t.sendCmd("getTeamMembers", {
+        teamId: e.teamId,
+        timetag: n,
+        NOTSTORE: "timetag"
+      }, function (t, n, r) {
+        var s = {};
+        if (n && n.members && n.members.length) for (var i = 0; i < n.members.length; i++) if (n.members[i].account === e.account) {
+          s[e.account] = n.members[i];
+          break
+        }
+        e.callback(t, s, r)
+      })
     }, r.notifyForNewTeamMsg = function (e) {
       s.verifyOptions(e, "teamIds", "team::notifyForNewTeamMsg"), this.protocol.notifyForNewTeamMsg(e.teamIds).then(function (t) {
         e.done(null, t)
@@ -7923,7 +9058,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(31).fn, s = n(0), i = s.notundef, o = n(242);
+    var r = n(31).fn, s = n(0), i = s.notundef, o = n(239);
     r.friendRequest = function (e) {
       s.verifyOptions(e, "type account", "friend::friendRequest"), s.verifyParamValid("type", e.type, o.validTypes(), "friend::friendRequest"), this.processPs(e), this.processCallback(e);
       var t = {account: e.account, type: o.getByteFromType(e.type), ps: e.ps};
@@ -8034,7 +9169,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(31).fn, s = n(0), i = s.isArray, o = n(89);
+    var r = n(31).fn, s = n(0), i = s.isArray, o = n(90);
     r.mergeObjArray = function (e, t, n) {
       return e || (e = []), t ? (i(t) || (t = [t]), t.length ? (n = n || {}, s.mergeObjArray(e, t, n)) : e) : e
     }, r.cutObjArray = function (e, t, n) {
@@ -8120,7 +9255,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(71), s = n(0), i = {welcome: "00", text: "01", link: "03"},
+    var r = n(72), s = n(0), i = {welcome: "00", text: "01", link: "03"},
       o = {"01": "text", "02": "image", "03": "answer", 11: "template"};
 
     function a(e) {
@@ -8158,7 +9293,7 @@
     }, e.exports = a
   }, function (e, t, n) {
     "use strict";
-    var r = n(71), s = n(0);
+    var r = n(72), s = n(0);
 
     function i(e) {
       s.verifyOptions(e, "tip", "msg::TipMessage"), e.type = "tip", r.call(this, e), this.body = e.tip
@@ -8170,7 +9305,7 @@
     }, e.exports = i
   }, function (e, t, n) {
     "use strict";
-    var r = n(71), s = n(0);
+    var r = n(72), s = n(0);
 
     function i(e) {
       s.verifyOptions(e, "content", "msg::CustomMessage"), e.type = "custom", r.call(this, e), this.attach = e.content
@@ -8182,7 +9317,7 @@
     }, e.exports = i
   }, function (e, t, n) {
     "use strict";
-    var r = n(0).notundef, s = n(71), i = n(82).getInstance("IM"), o = n(117), a = n(131), c = {
+    var r = n(0).notundef, s = n(72), i = n(84).getInstance("IM"), o = n(119), a = n(131), c = {
       0: "addTeamMembers",
       1: "removeTeamMembers",
       2: "leaveTeam",
@@ -8218,7 +9353,7 @@
     }, e.exports = u
   }, function (e, t, n) {
     "use strict";
-    var r = n(71), s = n(0);
+    var r = n(72), s = n(0);
 
     function i(e) {
       e.type = "geo", s.verifyOptions(e, "geo", "msg::GeoMessage"), s.verifyOptions(e.geo, "lng lat title", !0, "geo.", "msg::GeoMessage"), s.verifyParamType("geo.lng", e.geo.lng, "number", "msg::GeoMessage"), s.verifyParamType("geo.lat", e.geo.lat, "number", "msg::GeoMessage"), s.verifyParamType("geo.title", e.geo.title, "string", "msg::GeoMessage"), r.call(this, e), this.attach = JSON.stringify(e.geo)
@@ -8260,7 +9395,7 @@
     }, e.exports = i
   }, function (e, t, n) {
     "use strict";
-    var r = n(71), s = n(0);
+    var r = n(72), s = n(0);
 
     function i(e) {
       s.verifyOptions(e, "text", "msg::TextMessage"), e.type = "text", r.call(this, e)
@@ -8273,9 +9408,9 @@
     "use strict";
     var r = n(0), s = function (e) {
         this.account = e.account
-      }, i = s.prototype, o = i.Message = n(71), a = i.TextMessage = n(454), c = i.FileMessage = n(130),
-      u = i.GeoMessage = n(450), l = i.NotificationMessage = n(449), m = i.CustomMessage = n(448),
-      d = i.TipMessage = n(447), p = i.RobotMessage = n(446);
+      }, i = s.prototype, o = i.Message = n(72), a = i.TextMessage = n(432), c = i.FileMessage = n(130),
+      u = i.GeoMessage = n(428), l = i.NotificationMessage = n(427), m = i.CustomMessage = n(426),
+      d = i.TipMessage = n(425), p = i.RobotMessage = n(424);
     i.validScenes = o.validScenes, i.validTypes = o.validTypes, i.reverse = function (e) {
       var t;
       switch (o.getType(e)) {
@@ -8391,6 +9526,8 @@
       var s = e.content.timetag;
       n.enable && (r = r.then(function () {
         return t.db.updateSessionAck(s)
+      }).catch(function (e) {
+        return t.logger.error("sessionAck::syncSessionAck: ", e), Promise.reject(e)
       })), r.cmd = "sessionAck", t.syncPromiseArray.push(r)
     }, r.onMarkSessionAck = function (e) {
       e.error || this.storeSessionAck(e.obj)
@@ -8435,7 +9572,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(24).fn, s = n(0), i = n(114), o = n(25);
+    var r = n(24).fn, s = n(0), i = n(116), o = n(25);
     r.mergeSession = function (e) {
       e = s.copyWithNull(e);
       var t = this.sessionSet, n = e.id, r = t[n];
@@ -8514,7 +9651,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(24).fn, s = n(0), i = n(115);
+    var r = n(24).fn, s = n(0), i = n(117);
     r.splitSysMsgs = function (e, t) {
       for (var n, r = e.length - 1; r >= 0; r--) n = e[r], i.isCustom(n) && (e.splice(r, 1), t.push(n))
     }, r.onOfflineSysMsgs = function (e, t) {
@@ -8529,6 +9666,8 @@
       if (r.length) {
         var c = n.putSysMsg(r, "offlineSysMsgs").then(function (e) {
           (r = e).length && (n.logger.info("sysmsg::onOfflineSysMsgs: ", o, r.length, r), n.syncResult[o] = n.syncResult[o] || [], n.syncResult[o] = n.syncResult[o].concat(r))
+        }).catch(function (e) {
+          return n.logger.error("sysMsg::onOfflineSysMsgs: ", e), Promise.reject(e)
         });
         c.cmd = "sysMsgs", n.syncPromiseArray.push(c)
       }
@@ -8634,7 +9773,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(24).fn, s = n(115), i = n(114), o = n(0);
+    var r = n(24).fn, s = n(117), i = n(116), o = n(0);
     r.onDeleteMsg = function (e) {
       var t = this.db;
       delete e.obj.sysMsg, e.error || (e.promise = this.deleteLocalMsg(e.obj.msg).then(function () {
@@ -8664,7 +9803,9 @@
         t.logger.info("msg::onDeleteMsgOfflineRoaming: on delete " + n, r), "offline" === n && t.markSysMsgRead(r);
         var i = e.content.timetag;
         t.timetags.deleteMsg = i, t.syncResult.deleteMsgTimetag = i;
-        var o = t.putSysMsg(r, "offlineSysMsgs");
+        var o = t.putSysMsg(r, "offlineSysMsgs").catch(function (e) {
+          return t.logger.error("msgDelete::onDeleteMsgOfflineRoaming: ", e), Promise.reject(e)
+        });
         o.cmd = "deleteMsgSysMsgs " + n, t.syncPromiseArray.push(o), t.syncResult.deleteMsgSysMsgs = t.syncResult.deleteMsgSysMsgs || [], t.syncResult.deleteMsgSysMsgs.push({
           type: n,
           sysMsgs: r
@@ -8723,6 +9864,8 @@
               e && n.cacheSyncedSession(e)
             })
           }
+        }).catch(function (e) {
+          return n.logger.error("msgReceipt::onOfflineMsgReceipt: ", e), Promise.reject(e)
         }) : u && i.push(e), o.push(t)
       }), (t = Promise.all(o).then(function () {
         if (r.enable) return r.updateMsgReceiptsTimetag(e.content.timetag)
@@ -8784,7 +9927,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(24).fn, s = n(0), i = s.undef, o = n(53), a = n(89), c = n(114), u = n(170);
+    var r = n(24).fn, s = n(0), i = s.undef, o = n(53), a = n(90), c = n(116), u = n(170);
     r.processMsg = function (e) {
       switch (e.cmd) {
         case"sendMsg":
@@ -8857,6 +10000,8 @@
           msgs: i,
           timetag: o
         }))
+      }).catch(function (e) {
+        return t.logger.error("msg::onRoamingMsgs: ", e), Promise.reject(e)
       });
       l.cmd = "roamingMsgs-" + c, t.syncPromiseArray.push(l)
     }, r.onOfflineMsgs = function (e, t) {
@@ -8878,6 +10023,8 @@
               msgs: u,
               timetag: t
             }))
+          }).catch(function (e) {
+            return n.logger.error("msg::onOfflineMsgs: ", e), Promise.reject(e)
           })).cmd = "offlineMsgs-" + e, n.syncPromiseArray.push(a)
         }
       }
@@ -8901,7 +10048,10 @@
       })
     }, r.onMsg = function (e, t) {
       var n = this.message.reverse(e.content.msg);
-      t && (n.filter = !0), this.syncing ? this.unhandledMsgs.push({type: "onMsg", msg: n}) : this.handleMsg(n)
+      t && (n.filter = !0), this.syncing ? (this.logger.log("msg::onMsg:is in syncing ..."), this.unhandledMsgs.push({
+        type: "onMsg",
+        msg: n
+      })) : this.handleMsg(n)
     }, r.onBroadcastMsgs = function (e) {
       var t = e.content.broadcastMsgs;
       t = t.sort(function (e, t) {
@@ -8922,9 +10072,9 @@
       t.markMsgRead(e), t.msgPromise = t.msgPromise.then(function () {
         return t.putMsg(e, "onMsg")
       }).then(function (r) {
-        return e = r[0], t.updateRoamingMsgTimetag(n)
+        return t.logger.log("msg::handleMsg:putMsg: ", e), e = r[0], t.updateRoamingMsgTimetag(n)
       }).then(function () {
-        if (e) return t.checkUserUpdate(e)
+        if (t.logger.log("msg::handleMsg:updateRoamingMsgTimetag: ", n, e), e) return t.checkUserUpdate(e)
       }).then(function () {
         if (e) {
           var n = e.type;
@@ -8951,7 +10101,7 @@
         "roamingMsgs" !== t && "offlineMsgs" !== t || n.cacheSyncedSession(e)
       }
 
-      return n.checkIgnore(e), a = (a = (a = a.then(function () {
+      return n.checkIgnore(e), n.logger.log("start"), a = (a = (a = a.then(function () {
         return o || n.options.autoMarkRead || "roamingMsgs" === t || !m || (n.sessionUnreadMsgs = n.sessionUnreadMsgs || {}, n.sessionUnreadMsgs[m.id] = n.sessionUnreadMsgs[m.id] || [], n.sessionUnreadMsgs[m.id] = n.sessionUnreadMsgs[m.id].concat(e.filter(function (e) {
           return n.options.shouldCountNotifyUnread(e)
         }))), o && "roamingMsgs" !== t && "offlineMsgs" !== t ? (n.logger.log("msg::putMsg:db.putMsg: ", m), r.putMsg(e)) : e
@@ -9050,13 +10200,24 @@
       this.unupdatedMsgs.push(e)
     }, r.onSendMsg = function (e, t) {
       var n = this, r = e.obj && e.obj.msg || e.content.msg;
-      n.completeMsg(r);
-      var s = e.error && 7101 === e.error.code;
-      e.error && !s || (r.idServer = e.content.msg.idServer, r.time = +e.content.msg.time), e.error ? r.status = "fail" : r.status = "success", r = n.message.reverse(r), t && (r.filter = !0), e.obj = r, n.syncing ? n.unupdatedMsgs.push(r) : n.msgPromise = Promise.all([n.msgPromise, e.obj.promise]).then(function (e) {
-        return e.length || (r.resend = !0), n.updateMsg(r).then(function () {
-          return n.options.syncSessionUnread && n.currSessionId === r.sessionId && n.api.resetSessionUnread(n.currSessionId), n.resolveMsgReceiptTask(r), r
+      if (e.obj) i(); else {
+        var s = n.db;
+        s && s.enable && s.getMsgByIdClient(r.idClient).then(function (e) {
+          e && (r = e, i())
+        }, function (e) {
+          i()
         })
-      })
+      }
+
+      function i() {
+        n.completeMsg(r);
+        var s = e.error && 7101 === e.error.code;
+        e.error && !s || (r.idServer = e.content.msg.idServer, r.time = +e.content.msg.time), e.error ? r.status = "fail" : r.status = "success", r = n.message.reverse(r), t && (r.filter = !0), e.obj = r, n.syncing ? n.unupdatedMsgs.push(r) : n.msgPromise = Promise.all([n.msgPromise, e.obj.promise]).then(function (e) {
+          return e.length || (r.resend = !0), n.updateMsg(r).then(function () {
+            return n.options.syncSessionUnread && n.currSessionId === r.sessionId && n.api.resetSessionUnread(n.currSessionId), n.resolveMsgReceiptTask(r), r
+          })
+        })
+      }
     }, r.updateLocalMsg = function (e) {
       var t = this.updateMsg(e);
       return this.msgPromise = this.msgPromise.then(function () {
@@ -9115,32 +10276,31 @@
         })
       }), e.resetUnsettledMsgs()
     }, r.onTeamNotificationMsg = function (e) {
-      var t = this.db, n = e.attach, r = n.type, s = e.from, i = e.to, o = e.time, a = n.team, c = n.account,
-        u = n.accounts;
-      switch (r) {
+      this.db;
+      var t = e.attach, n = t.type, r = e.from, s = e.to, i = e.time, o = t.team, a = t.account, c = t.accounts;
+      switch (n) {
         case"updateTeam":
-          if (!t.enable) return;
-          return a.updateTime = o, this.onUpdateTeam(a), t.updateTeam(a);
+          return o.updateTime = i, this.onUpdateTeam(o);
         case"addTeamMembers":
-          return this.onAddTeamMembers(e, a, u);
+          return this.onAddTeamMembers(e, o, c);
         case"removeTeamMembers":
-          return this.onRemoveTeamMembers(a, i, u);
+          return this.onRemoveTeamMembers(o, s, c);
         case"acceptTeamInvite":
-          return this.onAddTeamMembers(e, a, [s]);
+          return this.onAddTeamMembers(e, o, [r]);
         case"passTeamApply":
-          return this.onAddTeamMembers(e, a, [c]);
+          return this.onAddTeamMembers(e, o, [a]);
         case"addTeamManagers":
-          return this.updateTeamManagers(e, i, u, !0, o);
+          return this.updateTeamManagers(e, s, c, !0, i);
         case"removeTeamManagers":
-          return this.updateTeamManagers(e, i, u, !1, o);
+          return this.updateTeamManagers(e, s, c, !1, i);
         case"leaveTeam":
-          return this.onRemoveTeamMembers(a, i, [s]);
+          return this.onRemoveTeamMembers(o, s, [r]);
         case"dismissTeam":
-          return this.onDismissTeam(i, o);
+          return this.onDismissTeam(s, i);
         case"transferTeam":
-          return this.transferTeam(e, a, s, c);
+          return this.transferTeam(e, o, r, a);
         case"updateTeamMute":
-          return this.onUpdateTeamMembersMute(e, a, [c], n.mute)
+          return this.onUpdateTeamMembersMute(e, o, [a], t.mute)
       }
     }, r.onAddTeamMembers = function (e, t, n) {
       var r = this, i = r.db, o = t.teamId, c = a.assembleMembers(t, n);
@@ -9286,6 +10446,8 @@
           var a = e.content.timetag;
           n.timetags.donnop = a, r.enable && (o = o.then(function () {
             return n.db.updateDonnopTimetag(a)
+          }).catch(function (e) {
+            return n.logger.error("notify::onDonnop: ", e), Promise.reject(e)
           })), o.cmd = "donnop", n.syncPromiseArray.push(o)
         } else n.onPushNotificationMultiportConfigUpdate()
       }
@@ -9309,14 +10471,14 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(24).fn, s = n(0), i = s.objs2accounts, o = s.teams2ids, a = n(117), c = n(89);
+    var r = n(24).fn, s = n(0), i = s.objs2accounts, o = s.teams2ids, a = n(119), c = n(90);
     r.processTeam = function (e) {
       var t = e.error, n = void 0, r = void 0, s = void 0;
       switch (e.cmd) {
         case"createTeam":
           if (n = e.obj.team, t || (n = e.content.team), n = a.reverse(n), e.obj.team = n, s = c.assembleOwner(n), e.obj.owner = s, !t) {
             var i = {team: n, owner: s};
-            this.logger.info("team::processTeam: create team", i), this.options.onCreateTeam(i), this.onCreateTeam(n, s)
+            this.logger.info("team::processTeam: create team", i), this.onCreateTeam(n, s)
           }
           break;
         case"syncCreateTeam":
@@ -9404,7 +10566,7 @@
       }
     }, r.onCreateTeam = function (e, t) {
       var n = this.db;
-      n.enable && (n.putTeam(e), n.putTeamMembers(t))
+      n.enable && (n.putTeam(e), n.putTeamMembers(t)), this.options.onCreateTeam(e, t)
     }, r.onTeams = function (e) {
       e.content = e.content || {};
       var t, n = this, r = n.db, s = n.packetFromSync(e), i = e.content.teams || [], c = !0, u = [], l = [];
@@ -9437,6 +10599,8 @@
         }).then(void 0, function (e) {
           throw e.message = "merge teams data error", e.callFunc = "team::mergeData", g(e), e
         })) : (d(), m()))
+      }).catch(function (e) {
+        return n.logger.error("team::onTeams: ", e), Promise.reject(e)
       });
 
       function d() {
@@ -9452,11 +10616,11 @@
           e.error = null, a = !1
       }
       var m = new Promise(function (m, d) {
-        e.error ? s && d({
+        e.error ? s && (r.logger.error("team::onTeamMember: team error:", n, e.error), d({
           callFunc: "team::onTeamMembers",
           event: e.error,
           message: "teamId-" + n + " 获取群成员错误"
-        }) : (!function () {
+        })) : (!function () {
           a && o.forEach(function (e) {
             (e = c.reverse(e)).valid ? u.push(e) : l.push(e)
           });
@@ -9478,14 +10642,16 @@
       var t = this.db;
       t.enable && t.updateTeam(e)
     }, r.onSyncMyTeamMembers = function (e) {
-      var t = this.db, n = c.reverseMembers(e.content.teamMembers);
-      if (this.logger.info("team::onSyncMyTeamMembers:", n), t.enable) {
-        var r = t.putTeamMembers(n).then(function () {
-          return t.updateMyTeamMembersTimetag(e.content.timetag)
+      var t = this, n = t.db, r = c.reverseMembers(e.content.teamMembers);
+      if (t.logger.info("team::onSyncMyTeamMembers:", r), n.enable) {
+        var s = n.putTeamMembers(r).then(function () {
+          return n.updateMyTeamMembersTimetag(e.content.timetag)
+        }).catch(function (e) {
+          return t.logger.error("team::syncMyTeamMember: ", e), Promise.reject(e)
         });
-        r.cmd = "myTeamMembers", this.syncTeamMembersPromiseArray.push(r)
+        s.cmd = "myTeamMembers", t.syncTeamMembersPromiseArray.push(s)
       }
-      this.mergeMyTeamMembers(n)
+      t.mergeMyTeamMembers(r)
     }, r.mergeMyTeamMembers = function (e) {
       s.isArray(e) || (e = [e]);
       var t = this.myTeamMembersMap = this.myTeamMembersMap || {};
@@ -9529,7 +10695,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(24).fn, s = n(0), i = s.objs2accounts, o = n(242), a = n(131);
+    var r = n(24).fn, s = n(0), i = s.objs2accounts, o = n(239), a = n(131);
     r.processFriend = function (e) {
       var t = e.obj, n = e.content, r = e.error;
       switch (e.cmd) {
@@ -9584,6 +10750,8 @@
           }).then(void 0, function (e) {
             throw e._msg = "merge friends data error", h(e), e
           })) : (p(), d()))
+        }).catch(function (e) {
+          return n.logger.error("friend::onFriends: ", e), Promise.reject(e)
         });
 
       function p() {
@@ -9642,7 +10810,7 @@
     }, e.exports = s
   }, function (e, t, n) {
     "use strict";
-    var r = n(24).fn, s = n(0), i = s.objs2accounts, o = n(469), a = n(131);
+    var r = n(24).fn, s = n(0), i = s.objs2accounts, o = n(447), a = n(131);
     r.processUser = function (e) {
       var t, n = this, r = n.db, s = e.obj, i = e.error, o = e.content;
       switch (e.cmd) {
@@ -9689,6 +10857,8 @@
         }).then(void 0, function (e) {
           e.message = "db.mergeMyInfo error", e.callFunc = "user::onMyInfo", m(e)
         })) : (u(), e()))
+      }).catch(function (e) {
+        return t.logger.error("user::onMyInfo: ", e), Promise.reject(e)
       });
 
       function u() {
@@ -9723,6 +10893,8 @@
           }).then(void 0, function (e) {
             throw e.message = "merge relations data error", e.callFunc = "user::onRelations", v(e), e
           })) : (g(), f()))
+        }).catch(function (e) {
+          return t.logger.error("user::onRelations: ", e), Promise.reject(e)
         });
 
       function g() {
@@ -9753,7 +10925,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(35), s = n(16), i = n(46), o = n(134), a = n(133), c = n(67), u = n(471), l = n(109);
+    var r = n(36), s = n(16), i = n(47), o = n(134), a = n(133), c = n(68), u = n(449), l = n(111);
     s(s.S + s.F * !n(132)(function (e) {
       Array.from(e)
     }), "Array", {
@@ -9765,13 +10937,13 @@
       }
     })
   }, function (e, t, n) {
-    n(48), n(472), e.exports = n(6).Array.from
+    n(49), n(450), e.exports = n(7).Array.from
   }, function (e, t, n) {
-    e.exports = {default: n(473), __esModule: !0}
+    e.exports = {default: n(451), __esModule: !0}
   }, function (e, t, n) {
     "use strict";
     t.__esModule = !0;
-    var r, s = n(474), i = (r = s) && r.__esModule ? r : {default: r};
+    var r, s = n(452), i = (r = s) && r.__esModule ? r : {default: r};
     t.default = function (e) {
       if (Array.isArray(e)) {
         for (var t = 0, n = Array(e.length); t < e.length; t++) n[t] = e[t];
@@ -9781,9 +10953,9 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r, s = n(475), i = (r = s) && r.__esModule ? r : {default: r};
+    var r, s = n(453), i = (r = s) && r.__esModule ? r : {default: r};
     var o = n(24).fn, a = n(0), c = n(25), u = a.undef, l = a.objs2ids, m = a.objs2accounts, d = a.teams2ids,
-      p = n(114), f = a.getGlobal();
+      p = n(116), f = a.getGlobal();
     o.beforeSync = function () {
       var e = this.db;
       return e.enable ? e.clearSendingMsgs() : Promise.resolve()
@@ -9793,7 +10965,9 @@
       function s(t) {
         e.syncPromiseArray = [], e.syncResult = {}, e.syncTeamMembersPromiseArray = [], e.syncTeamMembersResult = {}, a.verifyBooleanWithDefault(n, "syncRelations syncFriends syncFriendUsers syncTeams syncRoamingMsgs syncMsgReceipts syncExtraTeamInfo", !0, "", "sync::syncData"), a.verifyBooleanWithDefault(n, "syncFilter syncTeamMembers", !1, "", "sync::syncData");
         var r = {};
-        t = t || {}, f._nimForceSyncIM && (e.logger.warn("sync::syncData: nimForceSyncIM"), delete t.teams, f._nimForceSyncIM = !1), r.myInfo = t.myInfo || 0, r.offlineMsgs = 0, n.syncRelations && (r.relations = t.relations || 0), n.syncFriends && (r.friends = t.friends || 0), n.syncFriendUsers && (r.friendUsers = t.friendUsers || 0), n.syncRobots && (r.robots = t.robots || 0), n.syncTeams && (r.teams = t.teams || 0), n.syncRoamingMsgs && (r.roamingMsgs = t.roamingMsgs || 0), n.syncMsgReceipts && (r.msgReceipts = t.msgReceipts || 0), n.syncExtraTeamInfo && (r.myTeamMembers = t.myTeamMembers || 0), n.syncSessionUnread && (r.sessionAck = t.sessionAck || 0), n.syncBroadcastMsgs && (r.broadcastMsgs = t.broadcastMsg || 0), r.donnop = t.donnop || 0, r.deleteMsg = t.deleteMsg || 0, n.syncFilter && (r.filterMsgs = 0), e.sendCmd("sync", {sync: r}, e.onSyncData.bind(e))
+        t = t || {}, f._nimForceSyncIM && (e.logger.warn("sync::syncData: nimForceSyncIM"), delete t.teams, f._nimForceSyncIM = !1), r.myInfo = t.myInfo || 0, r.offlineMsgs = 0, n.syncRelations && (r.relations = t.relations || 0), n.syncFriends && (r.friends = t.friends || 0), n.syncFriendUsers && (r.friendUsers = t.friendUsers || 0), n.syncRobots && (r.robots = t.robots || 0), n.syncTeams && (r.teams = t.teams || 0), n.syncRoamingMsgs && (r.roamingMsgs = t.roamingMsgs || 0), n.syncMsgReceipts && (r.msgReceipts = t.msgReceipts || 0), n.syncExtraTeamInfo && (r.myTeamMembers = t.myTeamMembers || 0), n.syncSessionUnread && (r.sessionAck = t.sessionAck || 0), n.syncBroadcastMsgs && (r.broadcastMsgs = t.broadcastMsg || 0), r.donnop = t.donnop || 0, r.deleteMsg = t.deleteMsg || 0, n.syncFilter && (r.filterMsgs = 0);
+        var s = e.onSyncData.bind(e);
+        s.isImSyncDataCb = !0, e.sendCmd("sync", {sync: r}, s)
       }
 
       e.notifyLogin(), e.syncing = !0, r ? e.beforeSync().then(function () {
@@ -9814,30 +10988,30 @@
           this.onSyncTeamMembersDone()
       }
     }, o.onSyncDone = function (e) {
-      var t, n, r, s, o, f, g, h, y, v, b, M, T, k, S, P, I, C, w, O, x, A, _ = this, E = _.db, R = E.enable,
-        F = _.options, j = _.syncPromiseArray, U = _.syncResult;
-      if (j && j.length) {
-        var N = j.filter(function (e) {
+      var t, n, r, s, o, f, g, h, y, v, b, M, T, S, k, C, P, I, O, x, w, A, E = this, _ = E.db, R = _.enable,
+        j = E.options, F = E.syncPromiseArray, N = E.syncResult;
+      if (F && F.length) {
+        var U = F.filter(function (e) {
           return "sessionAck" === e.cmd
         });
-        0 === N.length && N.push(Promise.resolve());
-        var D = j.filter(function (e) {
+        0 === U.length && U.push(Promise.resolve());
+        var D = F.filter(function (e) {
           return "sessionAck" !== e.cmd
         });
         0 === D.length && D.push(Promise.resolve()), Promise.all(D).then(function () {
-          return Promise.all(N)
+          return Promise.all(U)
         }, function (e) {
-          e.callFunc = "sync::onSyncDone", e.message = "afterSync syncNormalPromise 出错", _.onCustomError("SYNC_NORMAL_ERROR", e)
+          e.callFunc = "sync::onSyncDone", e.message = "afterSync syncNormalPromise 出错", E.onCustomError("SYNC_NORMAL_ERROR", e)
         }).then(L, function (e) {
-          e.callFunc = "sync::onSyncDone", e.message = "afterSync syncSessionAckPromise 出错", _.onCustomError("SYNC_SESSION_ACK_ERROR", e)
+          e.callFunc = "sync::onSyncDone", e.message = "afterSync syncSessionAckPromise 出错", E.onCustomError("SYNC_SESSION_ACK_ERROR", e)
         }).catch(function (e) {
-          _.syncData()
+          E.syncData()
         })
       } else L();
 
       function L() {
-        if (j) {
-          if (_.logger.info("sync::onSyncDone: after sync", a.promises2cmds(j)), j = [], n = U.blacklist || [], r = U.invalidBlacklist || [], s = U.mutelist || [], o = U.invalidMutelist || [], f = U.friends, g = U.invalidFriends || [], h = U.myInfo, y = U.users, v = U.teams, b = U.invalidTeams || [], M = U.sessions, T = U.msgReceipts, k = U.roamingMsgs, S = U.offlineMsgs, P = U.offlineFilterMsgs, C = U.offlineSysMsgs, w = U.offlineCustomSysMsgs, O = U.offlineFilterSysMsgs, x = U.offlineFilterCustomSysMsgs, U.broadcastMsgs, A = U.sysMsgUnread, M) {
+        if (F) {
+          if (E.logger.info("sync::onSyncDone: after sync", a.promises2cmds(F)), F = [], n = N.blacklist || [], r = N.invalidBlacklist || [], s = N.mutelist || [], o = N.invalidMutelist || [], f = N.friends, g = N.invalidFriends || [], h = N.myInfo, y = N.users, v = N.teams, b = N.invalidTeams || [], M = N.sessions, T = N.msgReceipts, S = N.roamingMsgs, k = N.offlineMsgs, C = N.offlineFilterMsgs, I = N.offlineSysMsgs, O = N.offlineCustomSysMsgs, x = N.offlineFilterSysMsgs, w = N.offlineFilterCustomSysMsgs, N.broadcastMsgs, A = N.sysMsgUnread, M) {
             var e = [];
             Object.keys(M).forEach(function (t) {
               e.push(M[t])
@@ -9848,115 +11022,133 @@
           var c = Promise.resolve();
           R && (c = function () {
             var e, t = [], n = [];
-            k && k.forEach(function (e) {
-              n = [].concat((0, i.default)(n), (0, i.default)(e.msgs))
-            });
             S && S.forEach(function (e) {
               n = [].concat((0, i.default)(n), (0, i.default)(e.msgs))
             });
-            return e = E.putMsg(n), t.push(e), Promise.all(t).then(function () {
+            k && k.forEach(function (e) {
+              n = [].concat((0, i.default)(n), (0, i.default)(e.msgs))
+            });
+            return e = _.putMsg(n), t.push(e), Promise.all(t).then(function () {
               return n
             })
           }().then(function (e) {
             var t = {};
             e.forEach(function (e) {
               var n = e.sessionId;
-              t[n] || (t[n] = !0, _.markUnreadByMsgsPromise(n))
+              t[n] || (t[n] = !0, E.markUnreadByMsgsPromise(n))
             })
           })), c.then(function () {
-            R && !_.hasSynced && (_.hasSynced = !0, function () {
-              F.syncRelations && (t = E.getRelations().then(function (e) {
+            R && !E.hasSynced && (E.hasSynced = !0, function () {
+              j.syncRelations && (t = _.getRelations().then(function (e) {
                 n = e[0], s = e[1], n.invalid = r, s.invalid = o
               }, function (e) {
                 return e._msg = "on relations error", e
-              }), j.push(t));
-              F.syncFriends && (t = E.getFriends().then(function (e) {
+              }).catch(function (e) {
+                return E.logger.error("sync::syncRelation: ", e), Promise.reject(e)
+              }), F.push(t));
+              j.syncFriends && (t = _.getFriends().then(function (e) {
                 (f = e).invalid = g
               }, function (e) {
                 return e._msg = "on friends error", e
-              }), j.push(t));
-              u(h) && (t = E.getUser(_.account).then(function (e) {
+              }).catch(function (e) {
+                return E.logger.error("sync::syncFriends: ", e), Promise.reject(e)
+              }), F.push(t));
+              u(h) && (t = _.getUser(E.account).then(function (e) {
                 h = e
               }, function (e) {
                 return e._msg = "on myInfo error", e
-              }), j.push(t));
-              F.syncFriendUsers && (t = E.getFriends().then(function (e) {
+              }).catch(function (e) {
+                return E.logger.error("sync::syncMyInfo: ", e), Promise.reject(e)
+              }), F.push(t));
+              j.syncFriendUsers && (t = _.getFriends().then(function (e) {
                 return e.map(function (e) {
                   return e.account
                 })
               }).then(function (e) {
-                return E.getUsers(e)
+                return _.getUsers(e)
               }).then(function (e) {
                 y = e
               }, function (e) {
                 return e._msg = "on users error", e
-              }), j.push(t));
-              F.syncTeams && (t = E.getTeams().then(function (e) {
+              }).catch(function (e) {
+                return E.logger.error("sync::syncFriendUser: ", e), Promise.reject(e)
+              }), F.push(t));
+              j.syncTeams && (t = _.getTeams().then(function (e) {
                 (v = e).invalid = b
               }, function (e) {
                 return e._msg = "on teams error", e
-              }), j.push(t));
-              t = E.getTeamMembersByAccount(_.account).then(function (e) {
-                _.mergeMyTeamMembers(e)
-              }), j.push(t), t = E.getDonnop().then(function (e) {
-                _.mergeDonnop(e)
-              }), j.push(t), t = E.getSessions().then(function (e) {
+              }).catch(function (e) {
+                return E.logger.error("sync::syncTeams: ", e), Promise.reject(e)
+              }), F.push(t));
+              t = _.getTeamMembersByAccount(E.account).then(function (e) {
+                E.mergeMyTeamMembers(e)
+              }).catch(function (e) {
+                return E.logger.error("sync::getTeamMembersByAccount: ", e), Promise.reject(e)
+              }), F.push(t), t = _.getDonnop().then(function (e) {
+                E.mergeDonnop(e)
+              }).catch(function (e) {
+                return E.logger.error("sync::donnop: ", e), Promise.reject(e)
+              }), F.push(t), t = _.getSessions().then(function (e) {
                 M = e
               }, function (e) {
                 return e._msg = "on sessions error", e
-              }), j.push(t), t = E.getSysMsgUnread().then(function (e) {
+              }).catch(function (e) {
+                return E.logger.error("sync::getSession: ", e), Promise.reject(e)
+              }), F.push(t), t = _.getSysMsgUnread().then(function (e) {
                 A = e
               }, function (e) {
                 return e._msg = "on sysMsgUnread error", e
-              }), j.push(t)
+              }).catch(function (e) {
+                return E.logger.error("sync::getSysMsgUnread: ", e), Promise.reject(e)
+              }), F.push(t)
             }());
-            var e = j.filter(function (e) {
+            var e = F.filter(function (e) {
               return "sessionAck" === e.cmd
             });
             0 === e.length && e.push(Promise.resolve());
-            var i = j.filter(function (e) {
+            var i = F.filter(function (e) {
               return "sessionAck" !== e.cmd
             });
             0 === i.length && i.push(Promise.resolve()), Promise.all(i).then(function () {
               return Promise.all(e)
             }).then(B).then(q, function (e) {
-              e.callFunc = "sync::onSyncDone", e.message = "taskAfterSync syncSessionAckPromise 出错", _.onCustomError("SYNC_SESSION_ACK_ERROR", e)
+              e.callFunc = "sync::onSyncDone", e.message = "taskAfterSync syncSessionAckPromise 出错", E.onCustomError("SYNC_SESSION_ACK_ERROR", e)
             })
           })
-        } else _.logger.warn("sync::onSyncDone: after sync --no promiseArray")
+        } else E.logger.warn("sync::onSyncDone: after sync --no promiseArray")
       }
 
       function B() {
-        _.logger.info("sync::onSyncDone: taskAfterSync"), function () {
-          if (U.deleteMsgSysMsgs) {
+        E.logger.info("sync::onSyncDone: taskAfterSync"), function () {
+          if (N.deleteMsgSysMsgs) {
             var e = {};
-            k && k.forEach(function (t) {
+            S && S.forEach(function (t) {
               e[t.sessionId] = t
             });
             var t = {};
-            S && S.forEach(function (e) {
+            k && k.forEach(function (e) {
               t[e.sessionId] = e
             });
-            var n = _.api;
-            U.deleteMsgSysMsgs.forEach(function (r) {
+            var n = E.api;
+            N.deleteMsgSysMsgs.forEach(function (r) {
               r.sysMsgs.forEach(function (r) {
                 var s = r.msg, i = s.sessionId;
                 [e, t].forEach(function (e) {
                   e[i] && (e[i].msgs = n.cutMsgs(e[i].msgs, s))
                 })
               })
-            }), E.enable || [k, S].forEach(function (e) {
+            }), _.enable || [S, k].forEach(function (e) {
               e && e.forEach(function (e) {
                 if (e.msgs.length) {
-                  var t = _.genSessionByMsgs(e.msgs);
-                  _.cacheSyncedSession(t), M = n.mergeSessions(M, t)
+                  var t = E.genSessionByMsgs(e.msgs);
+                  E.cacheSyncedSession(t), M = n.mergeSessions(M, t)
                 } else M = n.cutSessions(M, {id: e.sessionId})
               })
             })
           }
         }();
         var e = [];
-        return e.push(_.deleteMsgOfflineRoaming(U.deleteMsgSysMsgs, M)), Promise.all(e)
+        return e.push(E.deleteMsgOfflineRoaming(N.deleteMsgSysMsgs, M)), Promise.all(e)
       }
 
       function q() {
@@ -9965,27 +11157,27 @@
 
       function H() {
         var e, t, r = [];
-        n && (_.logger.info("sync::notifyDataAsync: on blacklist", m(n), n), F.onblacklist(n)), s && (_.logger.info("sync::notifyDataAsync: on mutelist", m(s), s), F.onmutelist(s)), f && (_.logger.info("sync::notifyDataAsync: on friends", m(f), f), F.onfriends(f)), h && (_.logger.info("sync::notifyDataAsync: on myInfo", h), _.myInfo = h, F.onmyinfo(a.copy(h))), y && (y.forEach(function (e) {
-          _.mergeUser(e)
-        }), _.logger.info("sync::notifyDataAsync: on users", m(y), y), F.onusers(y)), v && (_.logger.info("sync::notifyDataAsync: on teams", d(v), v), F.onteams(v)), T && (!_.hasSynced && M && M.length || _.hasSynced) && (M = _.mergeSessionAndMsgReceipts(M, T)), M && M.length && (M.forEach(function (e) {
-          _.syncResult.sessions && _.syncResult.sessions[e.id] && "number" == typeof _.syncResult.sessions[e.id].unread && (e.unread = _.syncResult.sessions[e.id].unread), _.mergeSession(e), p.trim(e)
-        }), _.logger.info("sync::notifyDataAsync: on sessions", l(M), M), F.onsessions(M)), k && k.forEach(function (e) {
-          r.push(e.timetag), (t = e.msgs).length && (_.logger.info("sync::notifyDataAsync: on roaming msgs", e.sessionId, t.length, t), F.onroamingmsgs(e))
-        }), S && S.forEach(function (e) {
-          r.push(e.timetag), (t = e.msgs).length && (_.logger.info("sync::notifyDataAsync: on offline msgs", e.sessionId, t.length, t), F.onofflinemsgs(e))
-        }), P && P.forEach(function (e) {
-          r.push(e.timetag), (t = e.msgs).length && (_.logger.info("sync::notifyDataAsync: on offline filter msgs", e.sessionId, t.length, t), F.onofflinefiltermsgs(t))
+        n && (E.logger.info("sync::notifyDataAsync: on blacklist", m(n), n), j.onblacklist(n)), s && (E.logger.info("sync::notifyDataAsync: on mutelist", m(s), s), j.onmutelist(s)), f && (E.logger.info("sync::notifyDataAsync: on friends", m(f), f), j.onfriends(f)), h && (E.logger.info("sync::notifyDataAsync: on myInfo", h), E.myInfo = h, j.onmyinfo(a.copy(h))), y && (y.forEach(function (e) {
+          E.mergeUser(e)
+        }), E.logger.info("sync::notifyDataAsync: on users", m(y), y), j.onusers(y)), v && (E.logger.info("sync::notifyDataAsync: on teams", d(v), v), j.onteams(v)), T && (!E.hasSynced && M && M.length || E.hasSynced) && (M = E.mergeSessionAndMsgReceipts(M, T)), M && M.length && (M.forEach(function (e) {
+          E.syncResult.sessions && E.syncResult.sessions[e.id] && "number" == typeof E.syncResult.sessions[e.id].unread && (e.unread = E.syncResult.sessions[e.id].unread), E.mergeSession(e), p.trim(e)
+        }), E.logger.info("sync::notifyDataAsync: on sessions", l(M), M), j.onsessions(M)), S && S.forEach(function (e) {
+          r.push(e.timetag), (t = e.msgs).length && (E.logger.info("sync::notifyDataAsync: on roaming msgs", e.sessionId, t.length, t), j.onroamingmsgs(e))
+        }), k && k.forEach(function (e) {
+          r.push(e.timetag), (t = e.msgs).length && (E.logger.info("sync::notifyDataAsync: on offline msgs", e.sessionId, t.length, t), j.onofflinemsgs(e))
+        }), C && C.forEach(function (e) {
+          r.push(e.timetag), (t = e.msgs).length && (E.logger.info("sync::notifyDataAsync: on offline filter msgs", e.sessionId, t.length, t), j.onofflinefiltermsgs(t))
         });
         var i = [], o = [];
-        U.deleteMsgSysMsgs && U.deleteMsgSysMsgs.forEach(function (e) {
+        N.deleteMsgSysMsgs && N.deleteMsgSysMsgs.forEach(function (e) {
           "roaming" === e.type ? i = i.concat(e.sysMsgs) : o = o.concat(e.sysMsgs)
-        }), i.length && (I = (I = I || []).concat(i)), o.length && (C = (C = C || []).concat(o)), I && (_.logger.info("sync::notifyDataAsync: on roaming sys msgs", I.length, I), F.onroamingsysmsgs(I)), C && (_.logger.info("sync::notifyDataAsync: on offline sys msgs", C.length, C), F.onofflinesysmsgs(C)), O && (_.logger.info("sync::notifyDataAsync: on offline filter sys msgs", O.length, O), F.onofflinefiltersysmsgs(O)), w && (_.logger.info("sync::notifyDataAsync: on offline custom sys msgs", w.length, w), F.onofflinecustomsysmsgs(w)), x && (_.logger.info("sync::notifyDataAsync: on offline filter custom sys msgs", x.length, x), F.onofflinefiltercustomsysmsgs(x)), A && (A = a.merge({}, _.sysMsgUnread, A), _.sysMsgUnread = a.merge({}, A), _.logger.info("sync::notifyDataAsync: on sysMsgUnread", A), F.onsysmsgunread(A));
-        var c = _.getPushNotificationMultiportConfig();
-        _.logger.info("sync::notifyDataAsync: on pushNotificationMultiportConfig", c), F.onPushNotificationMultiportConfig(c), r.length ? (e = Math.max.apply(Math, r), _.updateRoamingMsgTimetag(e).then(W, W)) : W(), _.syncPromiseArray = null, _.syncResult = null
+        }), i.length && (P = (P = P || []).concat(i)), o.length && (I = (I = I || []).concat(o)), P && (E.logger.info("sync::notifyDataAsync: on roaming sys msgs", P.length, P), j.onroamingsysmsgs(P)), I && (E.logger.info("sync::notifyDataAsync: on offline sys msgs", I.length, I), j.onofflinesysmsgs(I)), x && (E.logger.info("sync::notifyDataAsync: on offline filter sys msgs", x.length, x), j.onofflinefiltersysmsgs(x)), O && (E.logger.info("sync::notifyDataAsync: on offline custom sys msgs", O.length, O), j.onofflinecustomsysmsgs(O)), w && (E.logger.info("sync::notifyDataAsync: on offline filter custom sys msgs", w.length, w), j.onofflinefiltercustomsysmsgs(w)), A && (A = a.merge({}, E.sysMsgUnread, A), E.sysMsgUnread = a.merge({}, A), E.logger.info("sync::notifyDataAsync: on sysMsgUnread", A), j.onsysmsgunread(A));
+        var c = E.getPushNotificationMultiportConfig();
+        E.logger.info("sync::notifyDataAsync: on pushNotificationMultiportConfig", c), j.onPushNotificationMultiportConfig(c), r.length ? (e = Math.max.apply(Math, r), E.updateRoamingMsgTimetag(e).then(W, W)) : W(), E.syncPromiseArray = null, E.syncResult = null
       }
 
       function W() {
-        if (_.processUnsettledMsgs(), _.processUnsettledSysMsgs(), _.syncing = !1, F.onsyncdone(), F.syncTeamMembers && v && v.length) throw new c("sync team members api deprecated!")
+        if (E.processUnsettledMsgs(), E.processUnsettledSysMsgs(), E.syncing = !1, j.onsyncdone(), j.syncTeamMembers && v && v.length) throw new c("sync team members api deprecated!")
       }
     }, o.syncTeamMembers = function (e) {
       var t, n, r = this;
@@ -10050,21 +11242,22 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(24).fn, s = n(116);
+    var r = n(24).fn, s = n(118);
     r.assembleLogin = function () {
       var e = this.assembleIMLogin();
-      return this.addPushInfo ? this.addPushInfo(e) : Promise.resolve({login: e})
+      return this.addPushInfo instanceof Function ? this.addPushInfo(e) : Promise.resolve({login: e})
     }, r.afterLogin = function () {
-      this.initPush && this.initPush();
-      var e = this, t = e.db;
+      var e = this;
+      this.initPush instanceof Function && this.initPush();
+      var t = this.db;
       if (t.enable) {
-        var n = e.account;
-        e.options.appendAppKeyForDBName && (n += "-" + e.options.appKey), e.db.init(n).then(function () {
+        var n = this.account;
+        this.options.appendAppKeyForDBName && (n += "-" + this.options.appKey), this.db.init(n).then(function () {
           e.syncData()
         }, function (n) {
           e.logger.warn("link::afterLogin: no db", n), t.reset(!1), e.syncData()
         })
-      } else e.logger.info("link::afterLogin: no db"), e.syncData()
+      } else this.logger.info("link::afterLogin: no db"), this.syncData()
     }, r.processAuth = function (e) {
       switch (e.cmd) {
         case"login":
@@ -10098,7 +11291,7 @@
     }, r.kickedReasons = ["", "samePlatformKick", "serverKick", "otherPlatformKick", "silentlyKick"], r.kickedMessages = ["", "不允许同一个帐号在多个地方同时登录", "被服务器踢了", "被其它端踢了", "悄悄被踢"]
   }, function (e, t, n) {
     "use strict";
-    var r = n(24).fn, s = n(8), i = n(0), o = n(51);
+    var r = n(24).fn, s = n(5), i = n(0), o = n(51);
     r.refreshSocketUrl = function () {
       var e = this, t = e.options, n = s.info, r = t.lbsUrl;
 
@@ -10125,11 +11318,11 @@
         }), e.onDisconnect(!1, "link::refreshSocketUrl")
       }
 
-      r = r + i.genUrlSep(r) + "k=" + t.appKey + "&id=" + t.account + "&sv=" + n.sdkVersion + "&pv=" + n.protocolVersion, e.logger.info("link::refreshSocketUrl: ajax " + r), s.isWeixinApp ? (r = r.replace(/:\d+/, ""), wx.request({
+      r = r + i.genUrlSep(r) + "k=" + t.appKey + "&id=" + t.account + "&sv=" + n.sdkVersion + "&pv=" + n.protocolVersion, e.logger.info("link::refreshSocketUrl: ajax " + r), s.isWeixinApp ? wx.request({
         url: r,
         success: a,
         fail: c
-      })) : o(r, {
+      }) : o(r, {
         proxyUrl: i.url2origin(r) + "/lbs/res/cors/nej_proxy_frame.html",
         timeout: s.xhrTimeout,
         onload: a,
@@ -10271,7 +11464,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(50).fn, s = n(0), i = n(8);
+    var r = n(50).fn, s = n(0), i = n(5);
     r.putMsg = function (e) {
       return s.isArray(e) || (e = [e]), !e.length || e[0].filter ? Promise.resolve() : (e = e.filter(function (e) {
         return !e.ignore
@@ -10405,7 +11598,7 @@
     }
   }, function (e, t, n) {
     "use strict";
-    var r = n(50).fn, s = n(0), i = n(25), o = n(117), a = n(89);
+    var r = n(50).fn, s = n(0), i = n(25), o = n(119), a = n(90);
 
     function c(e) {
       return e.valid && e.validToCurrentUser
@@ -10732,7 +11925,7 @@
   }, function (e, t, n) {
     "use strict";
     (function (r) {
-      var s, i, o = n(10), a = (i = o) && i.__esModule ? i : {default: i};
+      var s, i, o = n(9), a = (i = o) && i.__esModule ? i : {default: i};
       !function (i, o) {
         var c,
           u = (i = void 0 !== i ? i : "undefined" != typeof self ? self : void 0 !== r ? r : {}).IDBKeyRange || i.webkitIDBKeyRange,
@@ -10869,26 +12062,26 @@
           }, b = function (e, t, n) {
             var r = this, s = !1, i = !1, o = function (r, o, c, d, p, f, g) {
               return new Promise(function (y, v) {
-                var b = s || i ? m : l, M = t.transaction(e, b), T = M.objectStore(e), k = n ? T.index(n) : T,
-                  S = r ? u[r].apply(null, o) : null, P = [], I = [S], C = 0;
-                p = p || null, f = f || [], "count" !== c && I.push(d || "next");
-                var w = !!s && Object.keys(s);
-                k[c].apply(k, I).onsuccess = function (e) {
+                var b = s || i ? m : l, M = t.transaction(e, b), T = M.objectStore(e), S = n ? T.index(n) : T,
+                  k = r ? u[r].apply(null, o) : null, C = [], P = [k], I = 0;
+                p = p || null, f = f || [], "count" !== c && P.push(d || "next");
+                var O = !!s && Object.keys(s);
+                S[c].apply(S, P).onsuccess = function (e) {
                   var t = e.target.result;
-                  if ((void 0 === t ? "undefined" : (0, a.default)(t)) === (0, a.default)(0)) P = t; else if (t) if (null !== p && p[0] > C) C = p[0], t.advance(p[0]); else if (null !== p && C >= p[0] + p[1]) ; else {
+                  if ((void 0 === t ? "undefined" : (0, a.default)(t)) === (0, a.default)(0)) C = t; else if (t) if (null !== p && p[0] > I) I = p[0], t.advance(p[0]); else if (null !== p && I >= p[0] + p[1]) ; else {
                     var n = !0, r = "value" in t ? t.value : t.key;
                     f.forEach(function (e) {
                       e && e.length && (2 === e.length ? n = n && r[e[0]] === e[1] : h(e[0]) && (n = n && e[0].apply(void 0, [r])))
-                    }), n && (C++, P.push(g(r)), i ? t.delete() : s && (r = function (e) {
-                      for (var t = 0; t < w.length; t++) {
-                        var n = w[t], r = s[n];
+                    }), n && (I++, C.push(g(r)), i ? t.delete() : s && (r = function (e) {
+                      for (var t = 0; t < O.length; t++) {
+                        var n = O[t], r = s[n];
                         r instanceof Function && (r = r(e)), e[n] = r
                       }
                       return e
                     }(r), t.update(r))), t.continue()
                   }
                 }, M.oncomplete = function () {
-                  y(P)
+                  y(C)
                 }, M.onerror = function (e) {
                   v(e)
                 }, M.onabort = function (e) {
@@ -10911,11 +12104,11 @@
                   filter: b,
                   asc: M,
                   desc: T,
-                  distinct: k,
-                  modify: S,
+                  distinct: S,
+                  modify: k,
                   limit: e,
-                  map: P,
-                  remove: I
+                  map: C,
+                  remove: P
                 }
               }, v = function e(t) {
                 return (t = !!y(t) || !!t) && (r = "openKeyCursor"), {
@@ -10924,11 +12117,11 @@
                   filter: b,
                   asc: M,
                   desc: T,
-                  distinct: k,
-                  modify: S,
+                  distinct: S,
+                  modify: k,
                   limit: p,
-                  map: P,
-                  remove: I
+                  map: C,
+                  remove: P
                 }
               }, b = function e() {
                 return a.push(Array.prototype.slice.call(arguments, 0, 2)), {
@@ -10938,11 +12131,11 @@
                   filter: e,
                   asc: M,
                   desc: T,
-                  distinct: k,
-                  modify: S,
+                  distinct: S,
+                  modify: k,
                   limit: p,
-                  map: P,
-                  remove: I
+                  map: C,
+                  remove: P
                 }
               }, M = function e(t) {
                 return t = !!y(t) || !!t, n = t ? "next" : "prev", {
@@ -10952,11 +12145,11 @@
                   filter: b,
                   asc: e,
                   desc: T,
-                  distinct: k,
-                  modify: S,
+                  distinct: S,
+                  modify: k,
                   limit: p,
-                  map: P,
-                  remove: I
+                  map: C,
+                  remove: P
                 }
               }, T = function e(t) {
                 return t = !!y(t) || !!t, n = t ? "prev" : "next", {
@@ -10966,13 +12159,13 @@
                   filter: b,
                   asc: M,
                   desc: e,
-                  distinct: k,
-                  modify: S,
+                  distinct: S,
+                  modify: k,
                   limit: p,
-                  map: P,
-                  remove: I
+                  map: C,
+                  remove: P
                 }
-              }, k = function e(t) {
+              }, S = function e(t) {
                 return t = !!y(t) || !!t, l = t, {
                   execute: m,
                   count: d,
@@ -10981,12 +12174,12 @@
                   asc: M,
                   desc: T,
                   distinct: e,
-                  modify: S,
+                  modify: k,
                   limit: p,
-                  map: P,
-                  remove: I
+                  map: C,
+                  remove: P
                 }
-              }, S = function e(t) {
+              }, k = function e(t) {
                 return s = t, {
                   execute: m,
                   count: d,
@@ -10994,13 +12187,13 @@
                   filter: b,
                   asc: M,
                   desc: T,
-                  distinct: k,
+                  distinct: S,
                   modify: e,
                   limit: p,
-                  map: P,
-                  remove: I
+                  map: C,
+                  remove: P
                 }
-              }, P = function e(t) {
+              }, C = function e(t) {
                 return h(t) && (u = t), {
                   execute: m,
                   count: d,
@@ -11008,13 +12201,13 @@
                   filter: b,
                   asc: M,
                   desc: T,
-                  distinct: k,
-                  modify: S,
+                  distinct: S,
+                  modify: k,
                   limit: p,
                   map: e,
-                  remove: I
+                  remove: P
                 }
-              }, I = function e(t) {
+              }, P = function e(t) {
                 return t = !!y(t) || !!t, i = t, {
                   execute: m,
                   count: d,
@@ -11022,10 +12215,10 @@
                   filter: b,
                   asc: M,
                   desc: T,
-                  distinct: k,
-                  modify: S,
+                  distinct: S,
+                  modify: k,
                   limit: p,
-                  map: P,
+                  map: C,
                   remove: e
                 }
               };
@@ -11036,11 +12229,11 @@
                 filter: b,
                 asc: M,
                 desc: T,
-                distinct: k,
-                modify: S,
+                distinct: S,
+                modify: k,
                 limit: p,
-                map: P,
-                remove: I
+                map: C,
+                remove: P
               }
             };
             "only bound upperBound lowerBound".split(" ").forEach(function (e) {
@@ -11056,7 +12249,7 @@
           }, M = function (e, t, n, r) {
             var s = e.target.result, i = new v(s, t);
             return T[t] = s, Promise.resolve(i)
-          }, T = {}, k = {
+          }, T = {}, S = {
             version: "0.10.2", open: function (e) {
               var t;
               return new Promise(function (n, r) {
@@ -11107,14 +12300,14 @@
               })
             }
           };
-        void 0 !== e && void 0 !== e.exports ? e.exports = k : void 0 === (s = function () {
-          return k
+        void 0 !== e && void 0 !== e.exports ? e.exports = S : void 0 === (s = function () {
+          return S
         }.call(t, n, t, e)) || (e.exports = s)
       }(window)
     }).call(this, n(30))
   }, function (e, t, n) {
     "use strict";
-    var r = n(21), s = n(72), i = n(490), o = n(489), a = n(0), c = n(173), u = n(25), l = u.newSupportDBError,
+    var r = n(21), s = n(67), i = n(468), o = n(467), a = n(0), c = n(173), u = n(25), l = u.newSupportDBError,
       m = u.noDBError, d = !1;
 
     function p(e) {
@@ -11186,6 +12379,8 @@
             n.push(e.server.clear(t))
           }), n.length) return Promise.all(n).then(function () {
             e.logger.log("db::clear: " + e.name)
+          }).catch(function (t) {
+            return e.logger.error("db::clear: ", t), Promise.reject(t)
           })
         }) : Promise.resolve() : Promise.reject(l({callFunc: "db::clear"}))
       })
@@ -11252,6 +12447,11 @@
     "use strict";
     n(141);
     var r = n(31);
+    n(169)(r), e.exports = r
+  }, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , function (e, t, n) {
+    "use strict";
+    n(141);
+    var r = {NIM: n(470), Chatroom: n(404)};
     n(169)(r), e.exports = r
   }])
 });

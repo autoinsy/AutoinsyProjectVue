@@ -1,16 +1,19 @@
 <template>
-  <div class="chatQ">
+  <div v-if="token" class="chatQ">
     <div class="chatbg">
       <div class="chatbai">
-        <div class="chatclose" data-dismiss="modal" @click="closeTalk"><img src="../../assets/images/close.png"
-                                                                            height="36" width="36"/></div>
+        <div class="chatclose" data-dismiss="modal" @click="closeTalk">
+          <img src="../../assets/images/close.png" height="36" width="36"/></div>
         <div class="left">
           <div class="chattitle">名字</div>
           <div class="chattab">
             <ul>
-              <li class="chattabactive"><img src="../../assets/images/message_press.png" height="32" width="32"/>
+              <li class="chattabactive">
+                <img src="../../assets/images/message_press.png" height="32" width="32"/>
               </li>
-              <li><img src="../../assets/images/btn2.png" height="32" width="32"/></li>
+              <li>
+                <img src="../../assets/images/btn2.png" height="32" width="32"/>
+              </li>
             </ul>
           </div>
           <div class="chatleft">
@@ -65,6 +68,9 @@
         <div class="clear"></div>
       </div>
     </div>
+  </div>
+  <div v-else>
+    <h1 class="bg-danger">您尚未登录</h1>
   </div>
 </template>
 
@@ -325,51 +331,13 @@
 
       },
     },
+    data() {
+      return{
+        token: sessionStorage.getItem("token"),
+      }
+    },
     mounted: function () {
       let _this = this;
-      this.nim.NIM.getInstance({
-        // 初始化SDK
-        // debug: true
-        appKey: 'appKey',
-        account: 'account',
-        token: 'token',
-        onconnect: _this.onConnect,
-        onerror: _this.onError,
-        onwillreconnect: _this.onWillReconnect,
-        ondisconnect: _this.onDisconnect,
-        // 多端
-        onloginportschange: _this.onLoginPortsChange,
-        // 用户关系
-        onblacklist: _this.onBlacklist,
-        onsyncmarkinblacklist: _this.onMarkInBlacklist,
-        onmutelist: _this.onMutelist,
-        onsyncmarkinmutelist: _this.onMarkInMutelist,
-        // 好友关系
-        onfriends: _this.onFriends,
-        onsyncfriendaction: _this.onSyncFriendAction,
-        // 用户名片
-        onmyinfo: _this.onMyInfo,
-        onupdatemyinfo: _this.onUpdateMyInfo,
-        onusers: _this.onUsers,
-        onupdateuser: _this.onUpdateUser,
-        // 会话
-        onsessions: _this.onSessions,
-        onupdatesession: _this.onUpdateSession,
-        // 消息
-        onroamingmsgs: _this.onRoamingMsgs,
-        onofflinemsgs: _this.onOfflineMsgs,
-        onmsg: _this.onMsg,
-        // 系统通知
-        onofflinesysmsgs: _this.onOfflineSysMsgs,
-        onsysmsg: _this.onSysMsg,
-        onupdatesysmsg: _this.onUpdateSysMsg,
-        onsysmsgunread: _this.onSysMsgUnread,
-        onupdatesysmsgunread: _this.onUpdateSysMsgUnread,
-        onofflinecustomsysmsgs: _this.onOfflineCustomSysMsgs,
-        oncustomsysmsg: _this.onCustomSysMsg,
-        // 同步完成
-        onsyncdone: _this.onSyncDone
-      })
     }
   }
 </script>

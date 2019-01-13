@@ -14,21 +14,30 @@ import 'bootstrap-fileinput/js/fileinput'
 import 'bootstrap-fileinput/css/fileinput.css'
 import 'video.js'
 import videoPlayer from 'vue-video-player'
+import store from './vuex/store'
 import './assets/js/jquery.flexslider'
 import './assets/js/mag'
 import './assets/js/my-js-style.js'
-import SDK from './assets/js/NIM_Web_NIM_v5.6.0'
 import './assets/css/index.css'
 import './assets/css/mystyle.css'
 import './assets/css/reset.css'
 import './assets/css/retable-f721744060.css'
 
+const load = require('load-script');
+
+load('/js/NIM_Web_SDK_v5.9.1.js', (err, script) => {
+  if (err) {
+    console.log('LOAD NIM ERR:', err)
+  } else {
+    console.log('LOAD NIM SUCCESS:', script.src)
+  }
+});
+
 Vue.config.productionTip = false;
 Vue.prototype.$ = $;
 Vue.prototype.$axios = $axios;
-Vue.prototype.HOME = '/web';
+Vue.prototype.HOME = '/api';
 Vue.prototype.qs = qs;
-Vue.prototype.nim = SDK;
 
 require('vue-video-player/src/custom-theme.css');
 Vue.use(videoPlayer);
@@ -125,6 +134,7 @@ $axios.create({
 new Vue({
   el: '#app',
   router,
+  store,
   components: {App, videoPlayer},
   template: '<App/>'
 });

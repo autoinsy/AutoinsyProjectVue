@@ -55,7 +55,9 @@
 </template>
 
 <script>
-  import md5 from '../../assets/js/md5'
+  import md5 from '../../assets/js/im/utils/md5'
+  import cookie from '../../assets/js/im/utils/cookie'
+
   export default {
     name: "login",
     data() {
@@ -80,6 +82,10 @@
             if(res.data.data.isSeller === 0) {
               sessionStorage.setItem("token", md5($('#pwd').val()));
               sessionStorage.setItem("userCode", res.data.data.userCode);
+              cookie.setCookie('uid', res.data.data.userCode);
+              cookie.setCookie('sdktoken', md5($('#pwd').val()));
+              console.log(this.$store.dispatch('connect'));
+              // _this.$router.push('/')
             }
           } else {
             alert(res.data.message)
@@ -94,6 +100,7 @@
         console.log(this.isChecked)
       }
     }
+
   }
 </script>
 <style scoped>
