@@ -274,6 +274,11 @@
 </template>
 
 <script>
+  import md5 from '../../assets/js/im/utils/md5'
+  import cookie from '../../assets/js/im/utils/cookie'
+  import config from '../../assets/js/im/configs'
+  import util from '../../assets/js/im/utils'
+
   export default {
     name: "Enroll",
     data() {
@@ -417,7 +422,15 @@
         console.log(index);
       },
       registNIM: function () {
-
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', `${config.postUrl}/createDemoUser`, true);
+        xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+        xhr.setRequestHeader('appkey', config.appkey);
+        xhr.send(util.object2query({
+          username: this.account,
+          password: sdktoken,
+          nickname: this.nickname,
+        }))
       }
     },
     mounted: function () {

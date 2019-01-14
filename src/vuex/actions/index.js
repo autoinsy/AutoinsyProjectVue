@@ -19,7 +19,30 @@ import {markSysMsgRead, resetSysMsgs, markCustomSysMsgRead} from './sysMsgs'
 import {sendChatroomMsg, sendChatroomFileMsg, getChatroomHistoryMsgs} from './chatroomMsgs'
 import {initChatroomInfos, getChatroomInfo, getChatroomMembers, clearChatroomMembers} from './chatroomInfos'
 import {allChartData, temporaryData} from './other'
-import {onTeams, onCreateTeam, onTeamMembers, onSyncTeamMembersDone, onUpdateTeamMember, getTeamMembers, getUser, getTeam, createNormalTeam, createAdvancedTeam, acceptTeamInvite, rejectTeamInvite} from './teams'
+import {
+  onTeams,
+  onCreateTeam,
+  onTeamMembers,
+  onSyncTeamMembersDone,
+  onUpdateTeamMember,
+  getTeamMembers,
+  getUser,
+  getTeam,
+  createNormalTeam,
+  createAdvancedTeam,
+  acceptTeamInvite,
+  rejectTeamInvite
+} from './teams'
+
+const load = require('load-script');
+//E:\workwpace\AutoinsyProjectVue\static\nim
+load('static/nim/NIM_Web_SDK_v5.9.1.js', (err, script) => {
+  if (err) {
+    console.log('LOAD NIM ERR:', err)
+  } else {
+    console.log('LOAD NIM SUCCESS:', script);
+  }
+});
 
 function connectNim({state, commit, dispatch}, obj) {
   let {force} = Object.assign({}, obj)
@@ -59,7 +82,7 @@ function connectChatroom({state, commit, dispatch}, obj) {
 }
 
 export default {
-  updateRefreshState ({commit}) {
+  updateRefreshState({commit}) {
     commit('updateRefreshState')
   },
 
@@ -70,7 +93,7 @@ export default {
   hideFullscreenImg,
 
   // 连接sdk请求，false表示强制重连
-  connect (store, obj) {
+  connect(store, obj) {
     let {type} = Object.assign({}, obj)
     // type 可为 nim chatroom
     type = type || 'nim'
@@ -85,7 +108,7 @@ export default {
   },
 
   // 用户触发的登出逻辑
-  logout ({state, commit}) {
+  logout({state, commit}) {
     cookie.delCookie('uid')
     cookie.delCookie('sdktoken')
     if (state.nim) {

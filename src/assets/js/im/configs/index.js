@@ -4,7 +4,7 @@ export default {
   // 用户的appkey
   appkey: '79ea13331a8944016d7d6c98f437f0c3',
   // 用于在web demo中注册账号异步请求demo 服务器中使用
-  // postUrl: 'https://app.netease.im',
+  postUrl: 'https://api.netease.im/nimserver',
 
   // 用户自定义的登录注册地址
   loginUrl: 'login',

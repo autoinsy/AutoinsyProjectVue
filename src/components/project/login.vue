@@ -80,10 +80,10 @@
           if (Math.ceil(res.data.code) === 200){
             alert(res.data.message);
             if(res.data.data.isSeller === 0) {
-              sessionStorage.setItem("token", md5($('#pwd').val()));
+              sessionStorage.setItem("token", $('#pwd').val());
               sessionStorage.setItem("userCode", res.data.data.userCode);
               cookie.setCookie('uid', res.data.data.userCode);
-              cookie.setCookie('sdktoken', md5($('#pwd').val()));
+              cookie.setCookie('sdktoken', $('#pwd').val());
               console.log(this.$store.dispatch('connect'));
               // _this.$router.push('/')
             }

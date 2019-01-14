@@ -23,16 +23,6 @@ import './assets/css/mystyle.css'
 import './assets/css/reset.css'
 import './assets/css/retable-f721744060.css'
 
-const load = require('load-script');
-
-load('/js/NIM_Web_SDK_v5.9.1.js', (err, script) => {
-  if (err) {
-    console.log('LOAD NIM ERR:', err)
-  } else {
-    console.log('LOAD NIM SUCCESS:', script.src)
-  }
-});
-
 Vue.config.productionTip = false;
 Vue.prototype.$ = $;
 Vue.prototype.$axios = $axios;
@@ -133,8 +123,8 @@ $axios.create({
 });
 new Vue({
   el: '#app',
-  router,
   store,
+  router,
   components: {App, videoPlayer},
   template: '<App/>'
 });
