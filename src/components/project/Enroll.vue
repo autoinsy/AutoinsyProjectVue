@@ -51,7 +51,7 @@
                 <input name="passwords" class="samllinput" autocomplete="off" type="text" style="color:#999" value=""
                        placeholder="请输入验证码">
                 <span style="display:none;"><i>!</i><p>该验证码错误</p></span>
-                <input class="samllinputs" autocomplete="off" type="button" value="获取验证码">
+                <input class="samllinputs" autocomplete="off" type="button" value="获取验证码" @click="sendSMSCode">
               </td>
             </tr>
             <tr>
@@ -274,8 +274,6 @@
 </template>
 
 <script>
-  import md5 from '../../assets/js/im/utils/md5'
-  import cookie from '../../assets/js/im/utils/cookie'
   import config from '../../assets/js/im/configs'
   import util from '../../assets/js/im/utils'
 
@@ -431,7 +429,20 @@
           password: sdktoken,
           nickname: this.nickname,
         }))
-      }
+      },
+      sendSMSCode: function (e) {
+        let trs = $(e.target).parent().parent().parent();
+        let phoneNumber = $(trs).children().eq(0).children().children('input[name="phonenumber"]').val();
+        let _this = this;
+        this.$axios({
+          url: _this.HOME + '/user/sendCode?phoneNum=' + phoneNumber,
+          method: 'POST'
+        }).then(res => {
+          if (Math.ceil(res.data.code) === 200) {
+            alert('发送成功')
+          }
+        })
+      },
     },
     mounted: function () {
       let _this = this;

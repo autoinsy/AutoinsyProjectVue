@@ -3,28 +3,28 @@
     <div class="chatbg">
       <div class="chatbai">
         <div class="chatclose" data-dismiss="modal" @click="closeTalk">
-          <img src="../../assets/images/close.png" height="36" width="36"/></div>
+          <img src="../../../assets/images/close.png" height="36" width="36"/></div>
         <div class="left">
           <div class="chattitle">名字</div>
           <div class="chattab">
             <ul>
               <li class="chattabactive">
-                <img src="../../assets/images/message_press.png" height="32" width="32"/>
+                <img src="../../../assets/images/message_press.png" height="32" width="32"/>
               </li>
               <li>
-                <img src="../../assets/images/btn2.png" height="32" width="32"/>
+                <img src="../../../assets/images/btn2.png" height="32" width="32"/>
               </li>
             </ul>
           </div>
           <div class="chatleft">
             <ul>
               <li>
-                <div class="left"><img src="../../assets/images/touxiang.jpg" height="59" width="61"/></div>
+                <div class="left"><img src="../../../assets/images/touxiang.jpg" height="59" width="61"/></div>
                 <div class="left"><span>人名</span></div>
                 <div class="right"><span>2019-1-3</span></div>
               </li>
               <li>
-                <div class="left"><img src="../../assets/images/touxiang.jpg" height="59" width="61"/></div>
+                <div class="left"><img src="../../../assets/images/touxiang.jpg" height="59" width="61"/></div>
                 <div class="left"><span>人名</span></div>
                 <div class="right"><span>2019-1-3</span></div>
               </li>
@@ -36,14 +36,14 @@
           <div class="chatbox">
             <ul class="chatboxnewsList">
               <li>
-                <div class="chatboxnesHead"><img src="../../assets/images/6.jpg" height="300" width="533"/></div>
-                <div class="chatboxnews"><img class="jiao" src="../../assets/images/talk.png">1
+                <div class="chatboxnesHead"><img src="../../../assets/images/6.jpg" height="300" width="533"/></div>
+                <div class="chatboxnews"><img class="jiao" src="../../../assets/images/talk.png">1
                 </div>
               </li>
               <li>
-                <div class="chatboxanswerHead"><img src="../../assets/images/tou.jpg"></div>
+                <div class="chatboxanswerHead"><img src="../../../assets/images/tou.jpg"></div>
                 <div class="chatboxanswers"><img class="jiao"
-                                                 src="../../assets/images/TIM图片20170926103645_03_02 (1).png">你好
+                                                 src="../../../assets/images/TIM图片20170926103645_03_02%20(1).png">你好
                 </div>
               </li>
             </ul>
@@ -52,17 +52,30 @@
             <div class="biaoqing">
               <div class="footTop">
                 <ul>
-                  <li><img src="../../assets/images/TIM图片20170926103645_31.png" height="19" width="20"/></li>
-                  <li class="ExP"><img src="../../assets/images/TIM图片20170926103645_33.png"></li>
-                  <li><img src="../../assets/images/TIM图片20170926103645_35.png"></li>
-                  <li><img src="../../assets/images/TIM图片20170926103645_37.png"></li>
-                  <li><img src="../../assets/images/TIM图片20170926103645_39.png"></li>
+                  <li><img src="../../../assets/images/TIM图片20170926103645_31.png" height="19" width="20"/></li>
+                  <li class="ExP"><img src="../../../assets/images/TIM图片20170926103645_33.png"></li>
+                  <li><img src="../../../assets/images/TIM图片20170926103645_35.png"></li>
+                  <li><img src="../../../assets/images/TIM图片20170926103645_37.png"></li>
+                  <li><img src="../../../assets/images/TIM图片20170926103645_39.png"></li>
                 </ul>
                 <div class="clear"></div>
               </div>
             </div>
-            <textarea class="chatinput"></textarea>
-            <input type="submit" class="chatbtn"/>
+            <div class="m-chat-main" id="m-chat-main">
+              <chat-list
+                type="session"
+                :msglist="msglist"
+                :userInfos="userInfos"
+                :myInfo="myInfo"
+                @msgs-loaded="msgsLoaded"
+              ></chat-list>
+            </div>
+            <chat-editor
+              style="position: absolute;bottom: 0px"
+              type="session"
+              :scene="scene"
+              :to="to"
+            ></chat-editor>
           </div>
         </div>
         <div class="clear"></div>
@@ -75,8 +88,14 @@
 </template>
 
 <script>
+  import ChatEditor from './ChatEditor'
+  import ChatList from './ChatList'
+
   export default {
     name: "TalkAbout",
+    components: {
+      ChatEditor, ChatList
+    },
     methods: {
       closeTalk: function () {
         this.$emit("showTalkAbout")
@@ -330,6 +349,35 @@
       onSyncDone: function () {
 
       },
+      enterHistory () {
+        this.$router.push({
+          path: `/im_web/chatHistory/${this.sessionId}`
+        })
+      },
+      onClickBack () {
+        // location.href = '#/contacts'
+        window.history.go(-1)
+      },
+      msgsLoaded () {
+        pageUtil.scrollChatListDown()
+      },
+      enterNameCard () {
+        if (/^p2p-/.test(this.sessionId)) {
+          let account = this.sessionId.replace(/^p2p-/, '')
+          if (account === this.$store.state.userUID) {
+            this.$router.push({
+              path: `/im_web/general`
+            })
+            return
+          }
+          this.$router.push({path: `/im_web/namecard/${account}`})
+        }
+      },
+      enterTeamInfo(){
+        let account = this.sessionId.replace(/^team-/, '')
+        console.log(account)
+        this.$router.push({path: `/im_web/teamInfo/${account}`})
+      }
     },
     data() {
       return{
@@ -338,7 +386,44 @@
     },
     mounted: function () {
       let _this = this;
-    }
+    },
+    computed: {
+      sessionId () {
+        let sessionId = this.$route.params.sessionId;
+        console.log('sessionId', sessionId);
+        return sessionId;
+      },
+      sessionName () {
+        let sessionId = this.sessionId;
+        let user = null;
+        if (/^p2p-/.test(sessionId)) {
+          user = sessionId.replace(/^p2p-/, '');
+          if (user === this.$store.state.userUID) {
+            return '我的手机'
+          }
+          let userInfo = this.userInfos[user] || {};
+          return util.getFriendAlias(userInfo)
+        } else if (/^team-/.test(sessionId)) {
+          return '群'
+        }
+      },
+      scene () {
+        console.log('scene', util.parseSession(this.sessionId).scene);
+        return util.parseSession(this.sessionId).scene
+      },
+      to () {
+        return util.parseSession(this.sessionId).to
+      },
+      myInfo () {
+        return this.$store.state.myInfo
+      },
+      userInfos () {
+        return this.$store.state.userInfos
+      },
+      msglist () {
+        return this.$store.state.currSessionMsgs
+      }
+    },
   }
 </script>
 
