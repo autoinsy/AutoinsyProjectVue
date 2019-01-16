@@ -29,15 +29,6 @@
             </dd>
           </dl>
         </div>
-        <!--<script type="text/javascript">-->
-        <!--$(".sousuo span[name=cateswitch]").each(function () {-->
-        <!--$(this).toggle(function () {-->
-        <!--$(this).removeClass('b1').addClass('b2').text('收起').prev('.s_ul').children().slice(5).show();-->
-        <!--}, function () {-->
-        <!--$(this).removeClass('b2').addClass('b1').text('展开').prev('.s_ul').children().slice(5).hide();-->
-        <!--});-->
-        <!--});-->
-        <!--</script>-->
         <section id="selection">
           <dl class="secitem">
             <dt class="secitem_brand">服务区域 ：</dt>
@@ -77,7 +68,7 @@
           </div>
           <div id="infolist" class="cleft">
             <table id="jingzhun" class="small-tbimg ac_container" cellspacing="0" cellpadding="0">
-              <tr  data-sign="" class="ac_item">
+              <tr data-sign="" class="ac_item">
                 <td class="img">
                   <div class="ac_linkurl">
                     <router-link to='/ServeDetails'>
@@ -87,21 +78,22 @@
                 </td>
                 <td class="t">
                   <router-link to='ServeDetails'>
-                  <div class="tdiv">
-                    <router-link to='/ServeDetails' class="t ac_linkurl" >全沈阳<b>汽修</b> 修理 换配件 清洗 修理 换配件 清洗 修理 换配件 清洗
-                      <span class='tu'>[5图]</span>
-                      <span class="jingpin">精</span>
-                    </router-link>
-                    <div class="item-desc">
-                      沈阳全区域每个街道都有师傅 十分钟上门维修
+                    <div class="tdiv">
+                      <router-link to='/ServeDetails' class="t ac_linkurl">全沈阳<b>汽修</b> 修理 换配件 清洗 修理 换配件 清洗 修理 换配件 清洗
+                        <span class='tu'>[5图]</span>
+                        <span class="jingpin">精</span>
+                      </router-link>
+                      <div class="item-desc">
+                        沈阳全区域每个街道都有师傅 十分钟上门维修
+                      </div>
+                      <p class="seller">
+                        <router-link to='/ServeDetails' class='sellername ac_linkurl' rel="nofollow">辽宁XXX服务有限公司
+                        </router-link>
+                      </p>
+                      <p class="item-tags">
+                        <span class="async-tags"></span>
+                      </p>
                     </div>
-                    <p class="seller">
-                      <router-link to='/ServeDetails' class='sellername ac_linkurl' rel="nofollow">辽宁XXX服务有限公司 </router-link>
-                    </p>
-                    <p class="item-tags">
-                      <span class="async-tags"></span>
-                    </p>
-                  </div>
                   </router-link>
                 </td>
                 <td class="vertop">
@@ -112,7 +104,7 @@
                   </div>
                 </td>
               </tr>
-              <tr  data-sign="" class="ac_item">
+              <tr data-sign="" class="ac_item">
                 <td class="img">
                   <div class="ac_linkurl">
                     <a href="javascript:">
@@ -122,7 +114,7 @@
                 </td>
                 <td class="t">
                   <div class="tdiv">
-                    <a href='' class="t ac_linkurl"name='31996204049709'>
+                    <a href='' class="t ac_linkurl" name='31996204049709'>
                       <span class='tu'></span>
                       <span class="jingpin"></span>
                     </a>
@@ -186,9 +178,9 @@
   //     //console.log(p);
   //   }
   // });
-    export default {
-        name: "Serve"
-    }
+  export default {
+    name: "Serve"
+  }
 </script>
 
 <style scoped>

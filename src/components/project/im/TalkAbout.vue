@@ -1,5 +1,5 @@
 <template>
-  <div v-if="token" class="chatQ">
+  <div class="chatQ">
     <div class="chatbg">
       <div class="chatbai">
         <div class="chatclose" data-dismiss="modal" @click="closeTalk">
@@ -42,8 +42,9 @@
               </li>
               <li>
                 <div class="chatboxanswerHead"><img src="../../../assets/images/tou.jpg"></div>
-                <div class="chatboxanswers"><img class="jiao"
-                                                 src="../../../assets/images/TIM图片20170926103645_03_02%20(1).png">你好
+                <div class="chatboxanswers">
+                  <img class="jiao" src="../../../assets/images/TIM图片20170926103645_03_02 (1).png">
+                  你好
                 </div>
               </li>
             </ul>
@@ -82,14 +83,12 @@
       </div>
     </div>
   </div>
-  <div v-else>
-    <h1 class="bg-danger">您尚未登录</h1>
-  </div>
 </template>
 
 <script>
   import ChatEditor from './ChatEditor'
   import ChatList from './ChatList'
+  import util from '../../../assets/js/im/utils'
 
   export default {
     name: "TalkAbout",
@@ -386,6 +385,10 @@
     },
     mounted: function () {
       let _this = this;
+      if(!this.token) {
+        this.$router.push({path: '/login'});
+        alert("您尚未登录！")
+      }
     },
     computed: {
       sessionId () {

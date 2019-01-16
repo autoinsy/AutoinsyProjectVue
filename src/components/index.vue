@@ -18,7 +18,7 @@
   import myNav from '@/components/Nav'
   import TopNav from '@/components/TopNav'
   import indexDetail from '@/components/project/index.vue'
-  import talkAbout from '@/components/project/TalkAbout.vue'
+  import talkAbout from '@/components/project/im/TalkAbout.vue'
 
   export default {
     name: "index",
