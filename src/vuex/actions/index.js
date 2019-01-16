@@ -45,13 +45,14 @@ load('static/nim/NIM_Web_SDK_v5.9.1.js', (err, script) => {
 });
 
 function connectNim({state, commit, dispatch}, obj) {
-  let {force} = Object.assign({}, obj)
+  let {force} = Object.assign({}, obj);
   // 操作为内容页刷新页面，此时无nim实例
+  alert(state);
   if (!state.nim || force) {
     let loginInfo = {
       uid: cookie.readCookie('uid'),
       sdktoken: cookie.readCookie('sdktoken'),
-    }
+    };
     if (!loginInfo.uid) {
       // 无cookie，直接跳转登录页
       pageUtil.turnPage('无历史登录记录，请重新登录', 'login')

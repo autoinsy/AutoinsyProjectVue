@@ -149,56 +149,12 @@
       }
     },
     computed: {
-      sessionId() {
-        let sessionId = this.$route.params.sessionId;
-        console.log('sessionId', sessionId);
-        return sessionId;
-      },
-      sessionName() {
-        let sessionId = this.sessionId;
-        let user = null;
-        if (/^p2p-/.test(sessionId)) {
-          user = sessionId.replace(/^p2p-/, '');
-          if (user === this.$store.state.userUID) {
-            return '我的手机'
-          }
-          let userInfo = this.userInfos[user] || {};
-          return util.getFriendAlias(userInfo)
-        } else if (/^team-/.test(sessionId)) {
-          return '群'
-        }
-      },
-      scene() {
-        console.log('scene', util.parseSession(this.sessionId).scene);
-        return util.parseSession(this.sessionId).scene
-      },
-      to() {
-        return util.parseSession(this.sessionId).to
-      },
-      myInfo() {
-        return this.$store.state.myInfo
-      },
-      userInfos() {
-        return this.$store.state.userInfos
-      },
-      msglist() {
-        return this.$store.state.currSessionMsgs
-      },
-      sysMsgUnread() {
-        let temp = this.$store.state.sysMsgUnread;
-        let sysMsgUnread = temp.addFriend || 0;
-        let customSysMsgUnread = this.$store.state.customSysMsgUnread;
-        return sysMsgUnread + customSysMsgUnread
-      },
-      myPhoneId() {
-        return `${this.$store.state.userUID}`
-      },
       sessionList() {
         return this.$store.state.sessionList.filter(item => {
           item.name = '';
           item.avatar = '';
           if (item.scene === 'p2p') {
-            let userInfo = null;
+            let userInfo = null; 4
             if (item.to !== this.myPhoneId) {
               userInfo = this.userInfos[item.to]
             } else {
@@ -224,7 +180,52 @@
           }
           return item
         });
-      }
+      },
+      sessionId() {
+        let sessionId = this.$route.params.sessionId;
+        console.log('sessionId', sessionId);
+        return sessionId;
+      },
+      sessionName() {
+        let sessionId = this.sessionId;
+        let user = null;
+        if (/^p2p-/.test(sessionId)) {
+          user = sessionId.replace(/^p2p-/, '');
+          if (user === this.$store.state.userUID) {
+            return '我的手机'
+          }
+          let userInfo = this.userInfos[user] || {};
+          return util.getFriendAlias(userInfo)
+        } else if (/^team-/.test(sessionId)) {
+          return '群'
+        }
+      },
+      scene() {
+        console.log(util.parseSession(this.sessionId));
+        console.log('scene', util.parseSession(this.sessionId).scene);
+        return util.parseSession(this.sessionId).scene
+      },
+      to() {
+        return util.parseSession(this.sessionId).to
+      },
+      myInfo() {
+        return this.$store.state.myInfo
+      },
+      userInfos() {
+        return this.$store.state.userInfos
+      },
+      msglist() {
+        return this.$store.state.currSessionMsgs
+      },
+      sysMsgUnread() {
+        let temp = this.$store.state.sysMsgUnread;
+        let sysMsgUnread = temp.addFriend || 0;
+        let customSysMsgUnread = this.$store.state.customSysMsgUnread;
+        return sysMsgUnread + customSysMsgUnread
+      },
+      myPhoneId() {
+        return `${this.$store.state.userUID}`
+      },
     },
   }
 </script>

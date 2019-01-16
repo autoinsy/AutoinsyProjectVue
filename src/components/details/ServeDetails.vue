@@ -25,8 +25,8 @@
                 </li>
                 <li>
                   <div class="left" @click="module">
-                    <img src="../../assets/images/17.jpg" class="chatA"/><span
-                    style="display: none">{{server.qq}}</span>
+                    <img src="../../assets/images/17.jpg" class="chatA"/>
+                    <span style="display: none">{{server.qq}}</span>
                   </div>
                   <div class="left ml10">
                     <img src="../../assets/images/18.jpg"/><span style="display: none">{{server.weichat}}</span>

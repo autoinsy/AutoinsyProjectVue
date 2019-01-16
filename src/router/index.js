@@ -16,6 +16,7 @@ import TeachnicalDetails      from '../components/project/TeachnicalDetails'
 import TechnicalAssistance    from '../components/project/TechnicalAssistance'
 import SHindex                from '../components/project/SHindex'
 import resume                 from '../components/project/resume'
+import talkAbout                 from '../components/project/im/TalkAbout'
 
 import MotorPartsTown         from '../components/tables/MotorPartsTown'
 import News                   from '../components/tables/News'
@@ -207,5 +208,10 @@ export default new Router({
         },
       ]
     },
+    {
+      path: '/talkAbout',
+      name: 'talkAbout',
+      component: talkAbout,
+    }
   ]
 })
