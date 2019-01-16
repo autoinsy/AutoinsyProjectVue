@@ -3,11 +3,11 @@
 import {formatUserInfo} from './userInfo'
 
 export function resetSearchResult ({state, commit}) {
-  commit('updateSearchlist', {
+  commit('updateSearchList', {
     type: 'user',
     list: []
   })
-  commit('updateSearchlist', {
+  commit('updateSearchList', {
     type: 'team',
     list: []
   })
@@ -26,7 +26,7 @@ export function searchUsers ({state, commit}, obj) {
         alert(error)
         return
       }
-      commit('updateSearchlist', {
+      commit('updateSearchList', {
         type: 'user',
         list: users
       })

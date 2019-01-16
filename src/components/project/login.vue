@@ -55,8 +55,7 @@
 </template>
 
 <script>
-  import md5 from '../../assets/js/im/utils/md5'
-  import cookie from '../../assets/js/im/utils/cookie'
+  import cookie from './im/utils/cookie'
 
   export default {
     name: "login",

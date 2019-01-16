@@ -1,8 +1,8 @@
 /*eslint-disable*/
 
 import store from '../store'
-import config from '../../assets/js/im/configs'
-import util from '../../assets/js/im/utils'
+import config from '../../components/project/im/configs'
+import util from '../../components/project/im/utils'
 
 export function onRoamingMsgs (obj) {
   store.commit('updateMsgs', obj.msgs)

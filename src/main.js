@@ -118,7 +118,7 @@ $.fn.fileinputLocales['zh'] = {
   }
 };
 $axios.create({
-  baseURL: 'http://locahost:8082/planform/api/',
+  baseURL: 'http://192.168.1.229:7036/',
   headers: 'Access-Control-Allow-Origin:*'
 });
 new Vue({

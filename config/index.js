@@ -12,8 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       // '/web' :'http://47.93.195.248:8084/api/'
-      '/api' :'http://localhost:8084/'
-      // '/web' :'http://192.168.1.229:8084/api/'
+      '/api' :'http://192.168.1.229:7036/'
     },
 
     // Various Dev Server settings

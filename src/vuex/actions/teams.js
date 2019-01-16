@@ -30,7 +30,7 @@ export function onUpdateTeamMember({state, commit}, teamMember) {
 }
 
 export function onTeamMembers(obj) {
-  console.log('onTeamMembers:收到群成员', obj)
+  console.log('onTeamMembers:收到群成员', obj);
   store.commit('teamMembers', obj)
 }
 

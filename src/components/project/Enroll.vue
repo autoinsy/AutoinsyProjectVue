@@ -274,8 +274,8 @@
 </template>
 
 <script>
-  import config from '../../assets/js/im/configs'
-  import util from '../../assets/js/im/utils'
+  import config from './im/configs'
+  import util from './im/utils'
 
   export default {
     name: "Enroll",

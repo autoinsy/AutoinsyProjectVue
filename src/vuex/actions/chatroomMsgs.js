@@ -1,6 +1,6 @@
 /*eslint-disable*/
 import store from '../store'
-import config from '../../assets/js/im/configs'
+import config from '../../components/project/im/configs'
 
 export function onChatroomMsgs (msgs) {
   if (!Array.isArray(msgs)) {

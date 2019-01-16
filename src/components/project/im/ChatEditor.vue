@@ -36,7 +36,7 @@
 <script>
   /*eslint-disable*/
   import ChatEmoji from './ChatEmoji'
-  import config from '../../../assets/js/im/configs'
+  import config from './configs'
 
   export default {
     components: {

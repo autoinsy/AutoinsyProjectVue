@@ -20,9 +20,9 @@
 <script type="text/javascript">
   /*eslint-disable*/
 
-  import util from '../../../assets/js/im/utils'
-  import config from '../../../assets/js/im/configs'
-  import emojiObj from '../../../assets/js/im/configs/emoji'
+  import util from './utils'
+  import config from './configs'
+  import emojiObj from './configs/emoji'
   import ChatItem from './ChatItem'
 
   export default {

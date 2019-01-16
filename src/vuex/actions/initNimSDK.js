@@ -3,9 +3,9 @@
  */
 /*eslint-disable*/
 
-import config from '../../assets/js/im/configs'
-import pageUtil from '../../assets/js/im/utils/page'
-import util from '../../assets/js/im/utils'
+import config from '../../components/project/im/configs'
+import pageUtil from '../../components/project/im/utils/page'
+import util from '../../components/project/im/utils'
 import store from '../store'
 import {onFriends, onSyncFriendAction} from './friends'
 import {onBlacklist, onMarkInBlacklist} from './blacks'

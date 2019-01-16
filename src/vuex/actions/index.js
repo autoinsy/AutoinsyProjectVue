@@ -3,8 +3,8 @@
 
 /*eslint-disable*/
 
-import cookie from '../../assets/js/im/utils/cookie'
-import pageUtil from '../../assets/js/im/utils/page'
+import cookie from '../../components/project/im/utils/cookie'
+import pageUtil from '../../components/project/im/utils/page'
 
 /* 导出actions方法 */
 import {showLoading, hideLoading, showFullscreenImg, hideFullscreenImg} from './widgetUi'

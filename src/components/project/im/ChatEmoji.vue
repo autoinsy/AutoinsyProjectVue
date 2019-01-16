@@ -14,7 +14,7 @@
 <script>
   /*eslint-disable*/
 
-  import emojiObj from '../../../assets/js/im/configs/emoji'
+  import emojiObj from './configs/emoji'
 
 function genEmojiList (type, emojiList) {
   let result = {}

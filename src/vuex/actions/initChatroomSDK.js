@@ -3,7 +3,7 @@
  */
 /*eslint-disable*/
 
-import config from '../../assets/js/im/configs'
+import config from '../../components/project/im/configs'
 import { onChatroomMsgs } from './chatroomMsgs'
 
 // 切换聊天室之前需要断开连接，原因是移动端不断累积连接实例，消息并发较大时会有性能问题
@@ -22,7 +22,7 @@ export function initChatroomSDK ({ state, commit, dispatch }, obj) {
         chatroomAddresses: address,
         onconnect: function onChatroomConnect (chatroom) {
           dispatch('hideLoading')
-          commit('setCurrChatroom', chatroomId)
+          commit('setCurrChatRoom', chatroomId)
         },
         onerror: function onChatroomError (error, obj) {
           dispatch('hideLoading')
