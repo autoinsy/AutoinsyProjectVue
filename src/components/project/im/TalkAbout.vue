@@ -1,34 +1,39 @@
 <template>
   <div class="chatQ">
     <div class="chatbg">
-      <div class="chatbai">
+      <Row class="chatbai">
         <div class="chatclose" data-dismiss="modal" @click="closeTalk">
-          <img src="../../../assets/images/close.png" height="36" width="36"/></div>
-        <div class="left">
-          <div class="chattitle">名字</div>
-          <div class="chattab">
-            <ul>
-              <li class="chattabactive">
-                <img src="../../../assets/images/message_press.png" height="32" width="32"/>
-              </li>
-              <li>
-                <img src="../../../assets/images/btn2.png" height="32" width="32"/>
-              </li>
-            </ul>
-          </div>
-          <div class="chatleft">
-            <ul>
-              <li v-for="(session,index) in sessionList"
-                  :key="session.id"
-                  @click.native="enterChat(session)">
-                <div class="left"><img src="../../../assets/images/touxiang.jpg" height="59" width="61"/></div>
-                <div class="left"><span>{{session.name}}</span></div>
-                <div class="right"><span>2019-1-3</span></div>
-              </li>
-            </ul>
-          </div>
+          <img src="../../../assets/images/close.png" height="36" width="36"/>
         </div>
-        <div class="right">
+        <Col span="6" class="bg-white m-r-20 left">
+          <Menu v-if="menuOpen" mode="horizontal" theme="light" active-name="1">
+            <Menu-item name="1" @click.native="goToLink('/talk/session')">
+              <Icon type="ios-paper"></Icon>
+              最近联系
+            </Menu-item>
+            <Menu-item name="2" @click.native="goToLink('/talk/contacts')">
+              <Icon type="ios-people"></Icon>
+              联系人
+            </Menu-item>
+            <Menu-item name="3" @click.native="searchFriend">
+              <Icon type="ios-search"></Icon>
+              搜索好友
+            </Menu-item>
+          </Menu>
+          <Input v-if="searchOpen"
+                 v-model="searchText"
+                 icon="search"
+                 placeholder="请输入好友名称..."
+                 @keyup.enter.native="enterSearch"
+                 @keyup.esc.native="enterEsc"
+                 style="width:385px"
+                 onblur="upperCase()"
+          ></Input>
+          <div>
+            <router-view name="tabsWrapper"></router-view>
+          </div>
+        </Col>
+        <Col span="16" class="right">
           <div class="chattitles">名字</div>
           <div class="chatbox">
             <ul class="chatboxnewsList">
@@ -60,24 +65,24 @@
               </div>
             </div>
             <div class="m-chat-main" id="m-chat-main">
-              <chat-list
-                type="session"
-                :msglist="msglist"
-                :userInfos="userInfos"
-                :myInfo="myInfo"
-                @msgs-loaded="msgsLoaded"
-              ></chat-list>
+              <!--<chat-list-->
+              <!--type="session"-->
+              <!--:msglist="msglist"-->
+              <!--:userInfos="userInfos"-->
+              <!--:myInfo="myInfo"-->
+              <!--@msgs-loaded="msgsLoaded"-->
+              <!--&gt;</chat-list>-->
+              <!--</div>-->
+              <!--<chat-editor-->
+              <!--style="position: absolute;bottom: 0px"-->
+              <!--type="session"-->
+              <!--:scene="scene"-->
+              <!--:to="to"-->
+              <!--&gt;</chat-editor>-->
             </div>
-            <chat-editor
-              style="position: absolute;bottom: 0px"
-              type="session"
-              :scene="scene"
-              :to="to"
-            ></chat-editor>
           </div>
-        </div>
-        <div class="clear"></div>
-      </div>
+        </Col>
+      </Row>
     </div>
   </div>
 </template>
@@ -94,13 +99,16 @@
       ChatEditor, ChatList
     },
     methods: {
+      goToLink(link) {
+        this.$router.push(`${link}`)
+      },
       closeTalk: function () {
         this.$emit("showTalkAbout")
       },
       enterSysMsgs() {
         if (this.hideDelBtn())
           return
-        this.$router.push({path: '/im_web/sysmsgs'})
+        this.$router.push({path: '/im_web/sysMsgs'})
 
       },
       enterChat(session) {
@@ -134,11 +142,18 @@
           return true
         }
         return false
-      }
+      },
+      searchFriend() {
+        this.menuOpen = !this.menuOpen
+        this.searchOpen = !this.searchOpen
+      },
     },
     data() {
       return {
         token: sessionStorage.getItem("token"),
+        menuOpen: true,
+        searchOpen: false,
+        searchText: '',
       }
     },
     mounted: function () {
@@ -150,11 +165,12 @@
     },
     computed: {
       sessionList() {
+        console.log(this.$store);
         return this.$store.state.sessionList.filter(item => {
           item.name = '';
           item.avatar = '';
           if (item.scene === 'p2p') {
-            let userInfo = null; 4
+            let userInfo = null;
             if (item.to !== this.myPhoneId) {
               userInfo = this.userInfos[item.to]
             } else {
@@ -201,9 +217,8 @@
         }
       },
       scene() {
-        console.log(util.parseSession(this.sessionId));
-        console.log('scene', util.parseSession(this.sessionId).scene);
-        return util.parseSession(this.sessionId).scene
+        return null
+        // return util.parseSession(this.sessionId).scene
       },
       to() {
         return util.parseSession(this.sessionId).to

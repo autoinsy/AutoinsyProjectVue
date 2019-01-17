@@ -25,7 +25,7 @@
 
 <script>
   /*eslint-disable*/
-  import ChatList from './components/ChatList'
+  import ChatList from './ChatList'
   import util from './utils'
   import pageUtil from './utils/page'
 

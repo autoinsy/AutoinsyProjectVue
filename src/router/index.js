@@ -16,7 +16,18 @@ import TeachnicalDetails      from '../components/project/TeachnicalDetails'
 import TechnicalAssistance    from '../components/project/TechnicalAssistance'
 import SHindex                from '../components/project/SHindex'
 import resume                 from '../components/project/resume'
-import talkAbout                 from '../components/project/im/TalkAbout'
+
+import talkAbout              from '../components/project/im/TalkAbout'
+import session from '../components/project/im/session'
+import contacts from '../components/project/im/Contacts'
+import chat from '../components/project/im/Chat'
+import chatHistory from '../components/project/im/ChatHistory'
+import sysMsgs from '../components/project/im/SysMsgs'
+import nameCard from '../components/project/im/NameCard'
+import nameCardRemark from '../components/project/im/NameCardRemark'
+import general from '../components/project/im/General'
+import searchUser from '../components/project/im/SearchUser'
+import teamInfo from '../components/project/im/teamInfo'
 
 import MotorPartsTown         from '../components/tables/MotorPartsTown'
 import News                   from '../components/tables/News'
@@ -209,9 +220,101 @@ export default new Router({
       ]
     },
     {
-      path: '/talkAbout',
-      name: 'talkAbout',
+      path: '/talk',
+      name: 'talk',
       component: talkAbout,
+      redirect: '/talk/sysMsgs',
+      meta: { requiresAuth: true },
+      children: [
+        {
+          path: '/talk/session',
+          name: 'session',
+          components: {
+            default: talkAbout,
+            tabsWrapper: session,
+          },
+        },
+        {
+          path: '/talk/contacts',
+          name: 'contacts',
+          components: {
+            default: talkAbout,
+            tabsWrapper: contacts,
+          },
+        },
+        {
+          path: '/talk/searchUser/:searchText',
+          name: 'searchUser',
+          components: {
+            default: talkAbout,
+            contentWrapper: searchUser,
+          },
+        },
+        {
+          path: '/talk/chat/:sessionId',
+          name: 'chat',
+          components: {
+            default: talkAbout,
+            tabsWrapper: session,
+            contentWrapper: chat,
+          },
+        },
+        {
+          path: '/talk/chatHistory/:sessionId',
+          name: 'chatHistory',
+          components: {
+            default: talkAbout,
+            tabsWrapper: session,
+            contentWrapper: chatHistory,
+          },
+        },
+        {
+          path: '/talk/sysMsgs',
+          name: 'sysMsgs',
+          components: {
+            default: talkAbout,
+            tabsWrapper: session,
+            contentWrapper: sysMsgs,
+          },
+        },
+        {
+          path: '/talk/nameCard/:userId',
+          name: 'nameCard',
+          components: {
+            default: talkAbout,
+            tabsWrapper: session,
+            contentWrapper: nameCard,
+          },
+        },
+        {
+          path: '/talk/teamInfo/:teamId',
+          name: 'teamInfo',
+          components: {
+            default: talkAbout,
+            tabsWrapper: session,
+            contentWrapper: teamInfo,
+          },
+        },
+        {
+          path: '/talk/nameCardRemark/:userId',
+          name: 'nameCardRemark',
+          components: {
+            default: talkAbout,
+            tabsWrapper: session,
+            contentWrapper: nameCardRemark,
+          },
+        },
+        {
+          path: '/talk/general',
+          name: 'general',
+          components: {
+            default: talkAbout,
+            tabsWrapper: session,
+            contentWrapper: general,
+          },
+        },
+      ],
+
     }
   ]
 })

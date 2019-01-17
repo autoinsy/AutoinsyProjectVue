@@ -4,6 +4,7 @@ import router from './router'
 import $ from 'jquery'
 import $axios from 'axios'
 import qs from 'qs'
+import iView from 'iview'
 import 'jquery-page/jquery.page'
 import 'carousel/index'
 import 'jquery-easing/dist/jquery.easing.1.3.umd'
@@ -22,6 +23,7 @@ import './assets/css/index.css'
 import './assets/css/mystyle.css'
 import './assets/css/reset.css'
 import './assets/css/retable-f721744060.css'
+import 'iview/dist/styles/iview.css'   // 使用 CSS
 
 Vue.config.productionTip = false;
 Vue.prototype.$ = $;
@@ -31,6 +33,14 @@ Vue.prototype.qs = qs;
 
 require('vue-video-player/src/custom-theme.css');
 Vue.use(videoPlayer);
+Vue.use(iView);
+router.beforeEach((to, from, next) => {
+  iView.LoadingBar.start();
+  next()
+});
+router.afterEach(() => {
+  iView.LoadingBar.finish()
+});
 
 $.fn.fileinputLocales['zh'] = {
   fileSingle: '文件',

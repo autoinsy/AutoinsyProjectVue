@@ -3,8 +3,9 @@
     <Row>
       <Col>
       <Menu theme="light" active-name="1" width="100%">
-        <Menu-item @click.native="enterMyChat" name="1">
-          <div><img class="icon" slot="icon" width="24" :src="myPhoneIcon">
+        <Menu-item name="1" @click.native="enterMyChat">
+          <div>
+            <img class="icon" slot="icon" width="24" :src="myPhoneIcon">
             我的手机
           </div>
         </Menu-item>
@@ -110,18 +111,18 @@
       enterSysMsgs () {
         if (this.hideDelBtn())
           return
-        this.$router.push({path: '/im_web/sysmsgs'})
+        this.$router.push({path: '/talk/sysMsgs'})
 
       },
       enterChat (session) {
         if (this.hideDelBtn())
           return
         if (session && session.id)
-          this.$router.push({path: `/im_web/chat/${session.id}`})
+          this.$router.push({path: `/talk/chat/${session.id}`})
       },
       enterMyChat () {
         // 我的手机页面
-        this.$router.push({path: `/im_web/chat/p2p-${this.myPhoneId}`})
+        this.$router.push({path: `/talk/chat/p2p-${this.myPhoneId}`})
       },
       deleteSession () {
         if (this.delSessionId !== null) {
