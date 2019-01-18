@@ -145,16 +145,12 @@
         method: 'post'
       }).then(res => {
         _this.server = res.data.data;
-        console.log(_this.server)
       })
       $('.chatQ').attr('style', 'min-height: ' + _this.height + '; min-width: ' + _this.width)
     },
     methods: {
-      module: function () {
-        let _this = this;
-        this.$emit("showTalkAbout");
-
-        // $(".chatQ").hide().show();
+      module: function (e) {
+        this.$router.push({path: "/talk", query: this.server});
       },
     }
   }

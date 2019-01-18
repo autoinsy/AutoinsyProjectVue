@@ -17,7 +17,7 @@ import TechnicalAssistance    from '../components/project/TechnicalAssistance'
 import SHindex                from '../components/project/SHindex'
 import resume                 from '../components/project/resume'
 
-import talkAbout              from '../components/project/im/TalkAbout'
+import talkAbout              from '../components/project/Talk'
 import session from '../components/project/im/session'
 import contacts from '../components/project/im/Contacts'
 import chat from '../components/project/im/Chat'

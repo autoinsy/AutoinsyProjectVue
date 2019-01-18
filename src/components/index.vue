@@ -50,7 +50,6 @@
     methods: {
       showTalkAbout: function () {
         this.show = !this.show;
-        console.log(!this.show);
       }
     }
   }

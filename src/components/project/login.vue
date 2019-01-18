@@ -83,7 +83,7 @@
               sessionStorage.setItem("userCode", res.data.data.userCode);
               cookie.setCookie('uid', res.data.data.userCode);
               cookie.setCookie('sdktoken', $('#pwd').val());
-              console.log(this.$store.dispatch('connect'));
+              this.$store.dispatch('connect');
               _this.$router.push('/')
             }
           } else {

@@ -113,7 +113,7 @@
       },
       enterChat(session) {
         if (this.hideDelBtn())
-          return
+          return;
         if (session && session.id)
           this.$router.push({path: `/im_web/chat/${session.id}`})
       },
@@ -154,6 +154,7 @@
         menuOpen: true,
         searchOpen: false,
         searchText: '',
+        query: '',
       }
     },
     mounted: function () {
@@ -162,6 +163,7 @@
         this.$router.push({path: '/login'});
         alert("您尚未登录！")
       }
+      this.query = this.$route.query
     },
     computed: {
       sessionList() {

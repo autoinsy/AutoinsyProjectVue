@@ -27,12 +27,6 @@
               <img class="icon" slot="icon" width="24" :src="session.avatar">
               <span>{{session.name}}-{{session.lastMsgShow}}</span>
               <span v-show="session.unread > 0" class="u-unread">{{session.unread}}</span>
-            <!-- <span
-                class="u-tag-del"
-                :class="{active: delSessionId===session.id}"
-                @click="deleteSession"
-              >
-              </span>-->
             </div>
           </Menu-item>
         </Menu-group>
@@ -42,7 +36,6 @@
   </div>
 </template>
 <script>
-  /*eslint-disable*/
   import config from './configs/index'
   import util from "./utils";
 
@@ -57,9 +50,9 @@
     },
     computed: {
       sysMsgUnread () {
-        let temp = this.$store.state.sysMsgUnread
-        let sysMsgUnread = temp.addFriend || 0
-        let customSysMsgUnread = this.$store.state.customSysMsgUnread
+        let temp = this.$store.state.sysMsgUnread;
+        let sysMsgUnread = temp.addFriend || 0;
+        let customSysMsgUnread = this.$store.state.customSysMsgUnread;
         return sysMsgUnread + customSysMsgUnread
       },
       userInfos () {
@@ -110,13 +103,13 @@
     methods: {
       enterSysMsgs () {
         if (this.hideDelBtn())
-          return
+          return;
         this.$router.push({path: '/talk/sysMsgs'})
 
       },
       enterChat (session) {
         if (this.hideDelBtn())
-          return
+          return;
         if (session && session.id)
           this.$router.push({path: `/talk/chat/${session.id}`})
       },
@@ -131,8 +124,8 @@
       },
       showDelBtn (vNode) {
         if (vNode && vNode.data && vNode.data.attrs) {
-          this.delSessionId = vNode.data.attrs.sessionId
-          this.stopBubble = true
+          this.delSessionId = vNode.data.attrs.sessionId;
+          this.stopBubble = true;
           setTimeout(() => {
             this.stopBubble = false
           }, 20)
@@ -141,7 +134,7 @@
       hideDelBtn () {
         if (this.delSessionId !== null && !this.stopBubble) {
           // 用于判断是否前置状态是显示删除按钮
-          this.delSessionId = null
+          this.delSessionId = null;
           return true
         }
         return false
