@@ -17,12 +17,10 @@
     ></chat-item>
   </ul>
 </template>
+
 <script type="text/javascript">
   /*eslint-disable*/
 
-  import util from './utils'
-  import config from './configs'
-  import emojiObj from './configs/emoji'
   import ChatItem from './ChatItem'
 
   export default {
@@ -34,36 +32,36 @@
       canLoadMore: [String, Boolean],
       msglist: {
         type: Array,
-        default () {
+        default() {
           return []
         }
       },
       userInfos: {
         type: Object,
-        default () {
+        default() {
           return {}
         }
       },
       myInfo: {
         type: Object,
-        default () {
+        default() {
           return {}
         }
       }
     },
-    data () {
+    data() {
       return {
         isFullImgShow: false,
         msgLoadedTimer: null
       }
     },
     methods: {
-      showFullImg (src) {
+      showFullImg(src) {
         this.$store.dispatch('showFullscreenImg', {
           src
         })
       },
-      msgLoaded () {
+      msgLoaded() {
         clearTimeout(this.msgLoadedTimer)
         this.msgLoadedTimer = setTimeout(() => {
           this.$emit('msgs-loaded')
@@ -74,7 +72,7 @@
 </script>
 
 <style type="scss">
-  #chat-list{
+  #chat-list {
     height: 580px;
   }
 

@@ -14,21 +14,21 @@
                   @keyup.enter="sendTextMsg"
         ></textarea>
       </span>
-        <div class="u-editor-icons" style="top: 20px;">
+      <div class="u-editor-icons" style="top: 20px;">
 
         <span class="u-editor-icon" @click.stop="showEmoji">
           <i class="u-icon-img"><img :src="icon1"></i>
         </span>
-          <span v-if="type==='session'" class="u-editor-icon" @change="sendFileMsg">
+        <span v-if="type==='session'" class="u-editor-icon" @change="sendFileMsg">
           <i class="u-icon-img"><img :src="icon2"></i>
           <input type="file" ref="fileToSent">
         </span>
-          <span class="u-editor-icon" @click.stop="sendPlayMsg">
+        <span class="u-editor-icon" @click.stop="sendPlayMsg">
           <i class="u-icon-img"><img :src="icon3"></i>
         </span>
-          <span class="u-editor-send" @click="sendTextMsg">send</span>
-        </div>
+        <span class="u-editor-send" @click="sendTextMsg">send</span>
       </div>
+    </div>
 
   </div>
 </template>
@@ -42,7 +42,7 @@
     components: {
       ChatEmoji
     },
-    updated () {
+    updated() {
       window.document.body.addEventListener('click', () => {
         this.isEmojiShown = false
       })
@@ -52,7 +52,7 @@
       scene: String,
       to: String
     },
-    data () {
+    data() {
       return {
         isEmojiShown: false,
         msgToSent: '',
@@ -62,7 +62,7 @@
       }
     },
     methods: {
-      sendTextMsg () {
+      sendTextMsg() {
         if (/^\s*$/.test(this.msgToSent)) {
           this.$vux.alert.show({
             title: '请不要刷屏'
@@ -77,7 +77,7 @@
         if (this.type === 'session') {
           this.$store.dispatch('sendMsg', {
             type: 'text',
-            scene: this.scene,
+            scene: 'p2p',
             to: this.to,
             text: this.msgToSent
           })
@@ -89,12 +89,12 @@
         }
         this.msgToSent = ''
       },
-      sendPlayMsg () {
+      sendPlayMsg() {
         // 发送猜拳消息
         if (this.type === 'session') {
           this.$store.dispatch('sendMsg', {
             type: 'custom',
-            scene: this.scene,
+            scene: 'p2p',
             to: this.to,
             pushContent: '[猜拳]',
             content: {
@@ -117,12 +117,12 @@
           })
         }
       },
-      sendFileMsg () {
+      sendFileMsg() {
         let ipt = this.$refs.fileToSent
         if (ipt.value) {
           if (this.type === 'session') {
             this.$store.dispatch('sendFileMsg', {
-              scene: this.scene,
+              scene: 'p2p',
               to: this.to,
               fileInput: ipt
             })
@@ -133,13 +133,13 @@
           }
         }
       },
-      showEmoji () {
+      showEmoji() {
         this.isEmojiShown = true
       },
-      hideEmoji () {
+      hideEmoji() {
         this.isEmojiShown = false
       },
-      addEmoji (emojiName) {
+      addEmoji(emojiName) {
         this.msgToSent += emojiName
         this.hideEmoji()
       }

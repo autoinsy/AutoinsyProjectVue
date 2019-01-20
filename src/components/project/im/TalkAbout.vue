@@ -65,20 +65,19 @@
               </div>
             </div>
             <div class="m-chat-main" id="m-chat-main">
-              <!--<chat-list-->
-              <!--type="session"-->
-              <!--:msglist="msglist"-->
-              <!--:userInfos="userInfos"-->
-              <!--:myInfo="myInfo"-->
-              <!--@msgs-loaded="msgsLoaded"-->
-              <!--&gt;</chat-list>-->
+              <chat-list
+                type="session"
+                :msglist="msglist"
+                :userInfos="userInfos"
+                :myInfo="myInfo"
+                @msgs-loaded="msgsLoaded"
+              ></chat-list>
               <!--</div>-->
-              <!--<chat-editor-->
-              <!--style="position: absolute;bottom: 0px"-->
-              <!--type="session"-->
-              <!--:scene="scene"-->
-              <!--:to="to"-->
-              <!--&gt;</chat-editor>-->
+              <chat-editor
+                style="position: absolute;bottom: 0px"
+                type="session"
+                :to="to"
+              ></chat-editor>
             </div>
           </div>
         </Col>
@@ -218,12 +217,8 @@
           return '群'
         }
       },
-      scene() {
-        return null
-        // return util.parseSession(this.sessionId).scene
-      },
       to() {
-        return util.parseSession(this.sessionId).to
+        return this.$route.query.seller;
       },
       myInfo() {
         return this.$store.state.myInfo

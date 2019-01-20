@@ -150,7 +150,7 @@
     },
     methods: {
       module: function (e) {
-        this.$router.push({path: "/talk", query: this.server});
+        this.$router.push({path: "/talk", query: {seller: this.server}});
       },
     }
   }

@@ -104,25 +104,24 @@
                   </div>
                 </td>
               </tr>
-              <tr data-sign="" class="ac_item">
+              <tr data-sign="" v-for="service in serviceList" class="ac_item">
                 <td class="img">
                   <div class="ac_linkurl">
                     <a href="javascript:">
-                      <img src="../../assets/images/05.jpg"/>
+                      <img v-if="service.serviceImagesSet.length > 0" :src="service.serviceImagesSet[0].serviceImagesUrl"/>
                     </a>
                   </div>
                 </td>
                 <td class="t">
                   <div class="tdiv">
-                    <a href='' class="t ac_linkurl" name='31996204049709'>
-                      <span class='tu'></span>
+                    <router-link :to='{path: "/ServeDetails", query: {serverId: service.serviceID}}' class="t ac_linkurl">{{service.serviceArea}}
+                      <span class='tu'>{{service.serviceImagesSet.length}}图</span>
                       <span class="jingpin"></span>
-                    </a>
+                    </router-link>
                     <div class="item-desc">
-
                     </div>
                     <p class="seller">
-                      <a href='' class='sellername ac_linkurl' rel="nofollow"></a>
+                      <router-link :to='{path: "/talk", query:{seller: service.contacts}}' class='sellername ac_linkurl' rel="nofollow"></router-link>
                     </p>
                     <p class="item-tags">
                       <span class="async-tags"></span>
@@ -131,9 +130,9 @@
                 </td>
                 <td class="vertop">
                   <div class="yuyue_vertop ac_linkurl " data-id='31996204049709'>
-                                    <span class='cont_Pa'>
-                                        <a href='javascript:;' class='click_btn'>联系商家</a>
-                                    </span>
+                    <span class='cont_Pa'>
+                      <router-link :to='{path: "/talk", query:{seller: service.contacts}}' class='sellername ac_linkurl' rel="nofollow"></router-link>
+                    </span>
                   </div>
                 </td>
               </tr>
@@ -171,15 +170,25 @@
 </template>
 
 <script>
-  // $(".tcdPageCode").createPage({
-  //   pageCount:20,
-  //   current:1,
-  //   backFn:function(p){
-  //     //console.log(p);
-  //   }
-  // });
   export default {
-    name: "Serve"
+    name: "Serve",
+    data() {
+      return {
+        cur: 0,
+        allTotalPage: 0,
+        serviceList: [],
+      }
+    },
+    mounted: function () {
+      let _this = this;
+      this.$axios({
+        url: _this.HOME + '/service/list?page=' + _this.cur
+      }).then(res => {
+        console.log(res);
+        _this.serviceList = res.data.data.content;
+        _this.allTotalPage = res.data.data.allTotalPages
+      })
+    },
   }
 </script>
 
