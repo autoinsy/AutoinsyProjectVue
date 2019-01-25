@@ -99,10 +99,10 @@ export function revocateMsg ({state, commit}, msg) {
 
 // 发送普通消息
 export function sendMsg ({state, commit}, obj) {
-  const nim = state.nim
-  obj = obj || {}
-  let type = obj.type || ''
-  store.dispatch('showLoading')
+  const nim = state.nim;
+  obj = obj || {};
+  let type = obj.type || '';
+  store.dispatch('showLoading');
   switch (type) {
     case 'text':
       nim.sendText({
@@ -110,8 +110,8 @@ export function sendMsg ({state, commit}, obj) {
         to: obj.to,
         text: obj.text,
         done: onSendMsgDone
-      })
-      break
+      });
+      break;
     case 'custom':
       nim.sendCustomMsg({
         scene: obj.scene,

@@ -1,21 +1,11 @@
 <template>
   <div class="m-chat-editor">
-    <chat-emoji
-      v-bind:type="type"
-      v-bind:scene="scene"
-      v-bind:to="to"
-      v-show="isEmojiShown"
-      v-on:add-emoji="addEmoji"
-      v-on:hide-emoji="hideEmoji"
-    ></chat-emoji>
+    <chat-emoji v-bind:type="type" v-bind:scene="scene" v-bind:to="to" v-show="isEmojiShown" v-on:add-emoji="addEmoji" v-on:hide-emoji="hideEmoji"></chat-emoji>
     <div class="m-chat-editor-main">
-<span class="u-editor-input">
-        <textarea v-model="msgToSent"
-                  @keyup.enter="sendTextMsg"
-        ></textarea>
+      <span class="u-editor-input">
+        <textarea v-model="msgToSent" @keyup.enter="sendTextMsg"></textarea>
       </span>
       <div class="u-editor-icons" style="top: 20px;">
-
         <span class="u-editor-icon" @click.stop="showEmoji">
           <i class="u-icon-img"><img :src="icon1"></i>
         </span>
@@ -26,7 +16,7 @@
         <span class="u-editor-icon" @click.stop="sendPlayMsg">
           <i class="u-icon-img"><img :src="icon3"></i>
         </span>
-        <span class="u-editor-send" @click="sendTextMsg">send</span>
+        <span class="u-editor-send" @click="sendTextMsg">发送</span>
       </div>
     </div>
 
@@ -78,7 +68,7 @@
           this.$store.dispatch('sendMsg', {
             type: 'text',
             scene: 'p2p',
-            to: this.to,
+            to: '15002472583',
             text: this.msgToSent
           })
         } else if (this.type === 'chatroom') {
