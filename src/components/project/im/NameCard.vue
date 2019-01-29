@@ -57,7 +57,7 @@
     },
     computed: {
       account () {
-        return this.$route.params.userId
+        return this.$route.params.userInfo
       },
       userInfo () {
         let info = this.$store.state.userInfos[this.account] || {}
@@ -70,7 +70,7 @@
       },
       /*
        * account () {
-       return this.$route.params.userId
+       return this.$route.params.userInfo
        },
        userInfo () {
        let info = this.$store.state.userInfos[this.account] || {}

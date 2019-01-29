@@ -276,6 +276,7 @@
 <script>
   import config from './im/configs'
   import util from './im/utils'
+  import cookie from './im/utils/cookie'
 
   export default {
     name: "Enroll",
@@ -325,7 +326,7 @@
           data: param
         }).then(res => {
           if (Math.ceil(res.data.code) === 200) {
-
+            this.registNIM();
           }
           alert(res.data.message)
         }).catch(e => {
@@ -363,7 +364,10 @@
                 method: 'post',
                 data: data
               }).then(res => {
-                alert(res.data.message)
+                alert(res.data.message);
+                if (res.data.code) {
+                  this.registNIM();
+                }
               }).catch(e => {
                 console.log(e)
               })
@@ -420,6 +424,7 @@
         console.log(index);
       },
       registNIM: function () {
+        const sdktoken = this.md5(this.password);
         const xhr = new XMLHttpRequest();
         xhr.open('POST', `${config.postUrl}/createDemoUser`, true);
         xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
@@ -428,7 +433,26 @@
           username: this.account,
           password: sdktoken,
           nickname: this.nickname,
-        }))
+        }));
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              const data = JSON.parse(xhr.responseText);
+              if (data.res === 200) {
+                cookie.setCookie('uid', this.account);
+                cookie.setCookie('sdktoken', sdktoken);
+                location.href = config.homeUrl
+              } else if (data.res === 414) {
+                this.errorMsg = data.errmsg
+              } else {
+                this.errorMsg = data.errmsg
+              }
+            } else {
+              this.errorMsg = '网络断开或其他未知错误'
+            }
+            this.$forceUpdate()
+          }
+        }
       },
       sendSMSCode: function (e) {
         let trs = $(e.target).parent().parent().parent();

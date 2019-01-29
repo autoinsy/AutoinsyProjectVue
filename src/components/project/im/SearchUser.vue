@@ -7,7 +7,7 @@
     </Row>
     <Card style="width: 300px;margin: 20px"
           @click.native="enterCard(user.link)"
-          :userId="index"
+          :userInfo="index"
           :key="user.account"
           v-for="(user, index) in searchList">
       <p slot="title" class="tc" style="height: 70px">
