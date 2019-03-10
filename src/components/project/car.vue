@@ -61,7 +61,6 @@
           <td class="td0">
             <input type="checkbox" class="checkbox_all left"/>
             <img v-bind:src="cart.commodityImg"/>
-            <div class="clear"></div>
           </td>
           <td class="td1" valign="top">
             <ul>
@@ -74,15 +73,15 @@
             </ul>
           </td>
           <td class="td2" valign="top">
-            <p>￥{{cart.goods.price}}</p>
+            <p>￥{{cart.price}}</p>
           </td>
           <td class="td3" valign="top">
-            <button ng-click="updatenum($index,-1)">-</button>
-            <input ng-model="good.Count" style="width: 25px;" v-bind:value="cart.purchaseQuantity"/>
-            <button ng-click="updatenum($index,+1)">+</button>
+            <button @click="updatenum(0)">-</button>
+            <input style="width: 25px;" v-bind:value="cart.purchaseQuantity"/>
+            <button @click="updatenum(1)">+</button>
           </td>
           <td class="td4" valign="top">
-            <p>￥{{cart.goods.price * cart.purchaseQuantity}}</p>
+            <p>￥{{cart.price * cart.purchaseQuantity}}</p>
           </td>
           <td class="td5" valign="top">
             <ul>
@@ -110,7 +109,7 @@
 
           </td>
           <td class="td4 td4_zi">
-            总价：<span>￥39.9</span>
+            总价：<span>￥{{count}}</span>
           </td>
           <td class="td5">
             <input type="button" value="结算" class="td5_btn"/>
@@ -127,10 +126,11 @@
     name: "car",
     data() {
       return {
-        cur: '',
+        cur: 0,
         cartList: [],
         all: '',
-        allElement: ''
+        allElement: '',
+        count: 0.00
       }
     },
     watch: {
@@ -140,15 +140,44 @@
       }
     },
     mounted: function () {
-      let _this = this;
-      let userCode = sessionStorage.getItem("userCode");
-      this.$axios({
-        url: _this.HOME + '/cart/list?page=' + _this.cur + '&userCode=' + userCode
-      }).then(res => {
-        _this.cartList = res.data.data.content;
-        _this.all = res.data.data.totalPages;
-        _this.all = res.data.data.totalElements;
-      });
+      this.list();
+    },
+    methods: {
+      computeCount() {
+        let cartList = this.cartList;
+        for (let i = 0; i < cartList.length; i++) {
+          let cart = cartList[i];
+          this.count += cart.price * cart.purchaseQuantity;
+        }
+      },
+      list() {
+        let _this = this;
+        let userCode = sessionStorage.getItem("userCode");
+        if (userCode) {
+          this.$axios({
+            url: _this.HOME + '/cart/list?page=' + _this.cur + '&userCode=' + userCode
+          }).then(res => {
+            _this.cartList = res.data.data.content;
+            _this.all = res.data.data.totalPages;
+            _this.allElement = res.data.data.totalElements;
+            _this.computeCount();
+          });
+        } else {
+          alert("您尚未登录，请在之后跳转的登录页面登录。");
+          this.$router.push("/login")
+        }
+      },
+      updatenum(num, e, $index) {
+        if (this.quantity > 0) {
+          if ($(e.target).index() === 2) {
+            this.quantity++;
+          } else if ($(e.target).index() === 0) {
+            this.quantity--;
+          }
+        } else {
+          alert("商品数量不能为0")
+        }
+      }
     }
   }
 </script>

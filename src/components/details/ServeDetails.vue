@@ -47,7 +47,7 @@
                 </li>
               </ul>
               <div class="clear"></div>
-              <input type="button" value="查看电话号码" class="rentd_title_btn"/>
+              <input type="button" value="查看电话号码" class="rentd_title_btn" @click="showTelphone"/>
             </div>
             <div class="right served_p" style="width: auto;">
               <p style="font-size: 30px;color: #ff7300;">3小时/工时</p>
@@ -152,6 +152,9 @@
       module: function (e) {
         this.$router.push({path: "/talk", query: {seller: this.server}});
       },
+      showTelphone(e) {
+        $(e.target).val(this.server.mobilePhoneNo);
+      }
     }
   }
 </script>

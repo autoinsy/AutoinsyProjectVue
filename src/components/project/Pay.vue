@@ -23,10 +23,9 @@
           <ul>
             <li><img src="../../assets/images/21.jpg"/></li>
             <li>
-              <p>这里是文字这里是文字这里是文字这里是文字这里是文字这里是文字这里是文字</p>
               <p>卖家昵称：骆驼祥子</p>
             </li>
-            <li><span style="color: #ff7300; font-size: 24px;">￥39.6</span></li>
+            <li><span style="color: #ff7300; font-size: 24px;">￥{{$route.query.count}}</span></li>
           </ul>
           <div class="clear"></div>
           <div class="pay_b">

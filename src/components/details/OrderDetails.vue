@@ -44,22 +44,27 @@
             </thead>
             <tbody>
             <tr>
-              <td colspan="6"><p style="line-height: 40px;font-size: 16px; border-bottom: 1px dashed #7eb3ff;">店铺的名字</p>
+              <td colspan="6"><p style="line-height: 40px;font-size: 16px; border-bottom: 1px dashed #7eb3ff;">
+                {{project.sellerName}}</p>
               </td>
             </tr>
             <tr>
               <td class="or1">
                 <div class="div_or1">
-                  <img src="../../assets/images/02.jpg" width="51" height="51"/>
-                  <p>这块是店铺的名字</p>
-                  <p>这块是简介描述哦这块是简介描述哦</p>
+                  <img :src="project.goodsPic" width="51" height="51"/>
+                  <p>{{project.sellerName}}</p>
+                  <p>{{project.describe}}</p>
                 </div>
               </td>
-              <td class="or2">雨刮器</td>
-              <td class="or3">378.00</td>
-              <td class="or4">1</td>
+              <td class="or2">{{project.name}}</td>
+              <td class="or3">{{project.price}}</td>
+              <td class="or4">
+                <button @click="updatenum">-</button>
+                <input style="width: 25px;" v-bind:value="quantity"/>
+                <button @click="updatenum">+</button>
+              </td>
               <td class="or5">包邮</td>
-              <td class="or6">378.00</td>
+              <td class="or6">{{project.price * quantity}}</td>
             </tr>
             </tbody>
           </table>
@@ -80,7 +85,7 @@
               <td></td>
             </tr>
             <tr>
-              <td colspan="2" style="border-bottom: none; text-align: right">店铺合计（含运费）：<span>￥399.9</span></td>
+              <td colspan="2" style="border-bottom: none; text-align: right">店铺合计（含运费）：<span>￥{{count}}</span></td>
             </tr>
             </tbody>
           </table>
@@ -97,7 +102,7 @@
         </div>
         <div class="order_send">
           <router-link to='/car'>返回购物车</router-link>
-          <input type="button" value="提交支付" class="order_send_btn"/>
+          <input type="button" value="提交支付" class="order_send_btn" @click="orderToPay"/>
         </div>
       </div>
     </div>
@@ -107,7 +112,46 @@
 
 <script>
   export default {
-    name: "OrderDetails"
+    name: "OrderDetails",
+    data() {
+      return {
+        project: {},
+        quantity: 1,
+        count: 0
+      }
+    },
+    watch: {
+      quantity() {
+        if (this.quantity <= 0) {
+          alert("商品数量不能为0");
+          this.quantity = 1;
+        }
+      }
+    },
+    mounted() {
+      this.project = this.$route.query.project;
+      this.count = (this.project.price * this.quantity) + 15;
+    },
+    methods: {
+      listAddress() {
+        let _this = this;
+
+      },
+      orderToPay() {
+        this.$router.push({path: '/Pay', query: {'count': this.count, 'sellerName': this.project.sellerName}});
+      },
+      updatenum(e) {
+        if (this.quantity > 0) {
+          if ($(e.target).index() === 2) {
+            this.quantity++;
+          } else if ($(e.target).index() === 0) {
+            this.quantity--;
+          }
+        } else {
+           alert("商品数量不能为0")
+        }
+      }
+    }
   }
 </script>
 

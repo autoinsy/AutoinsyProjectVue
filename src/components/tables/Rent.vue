@@ -59,7 +59,7 @@
                 <td class="img">
                   <div class="ac_linkurl">
                     <router-link :to='{path: "/RentDetails", query: {leaseId: lease.leaseId}}'>
-                      <img v-bind:src="lease.leaseImageSet[0].leaseImageUrl"/>
+                      <img v-if="lease.leaseImageSet.length > 0" v-bind:src="lease.leaseImageSet[0].leaseImageUrl"/>
                     </router-link>
                   </div>
                 </td>
@@ -129,9 +129,10 @@
     mounted: function () {
       let _this = this;
       this.$axios({
-        url: _this.HOME + '/lease/list?page=' + _this.cur
+        url: _this.HOME + '/lease/getAllLease?page=' + _this.cur,
+        method: 'POST'
       }).then(res => {
-        _this.leaseList = res.data.data.content;
+        _this.leaseList = res.data.data;
       })
     }
   }

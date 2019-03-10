@@ -6,35 +6,35 @@
     <!---->
     <div class="centermy">
       <div class="bg">
-        <div class="bg_left">
-          <div class="show">
-            <img src="../../assets/picture/img1.png" alt="">
-            <div class="mask"></div>
-          </div>
-          <div class="smallshow">
-            <p class="prev prevnone"></p>
-            <div class="middle_box">
-              <ul class="middle">
-                <li><img src="../../assets/picture/img1.png" alt=""></li>
-                <li><img src="../../assets/picture/img2.png" alt=""></li>
-                <li><img src="../../assets/picture/img3.png" alt=""></li>
-                <li><img src="../../assets/picture/img4.png" alt=""></li>
-                <li><img src="../../assets/picture/img5.png" alt=""></li>
-                <li><img src="../../assets/picture/img6.png" alt=""></li>
-                <li><img src="../../assets/picture/img7.png" alt=""></li>
-                <li><img src="../../assets/picture/img8.png" alt=""></li>
-              </ul>
-            </div>
-            <p class="next "></p>
-          </div>
-        </div>
-        <div class="bg_right">
-          <div class="bigshow">
-            <div class="bigitem">
-              <img src="../../assets/picture/img1.png" alt="">
-            </div>
-          </div>
-        </div>
+        <!--<div class="bg_left">-->
+          <!--&lt;!&ndash;<div class="show">&ndash;&gt;-->
+            <!--&lt;!&ndash;<img src="../../assets/picture/img1.png" alt="">&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="mask"></div>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;<div class="smallshow">&ndash;&gt;-->
+            <!--&lt;!&ndash;<p class="prev prevnone"></p>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="middle_box">&ndash;&gt;-->
+              <!--&lt;!&ndash;<ul class="middle">&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><img src="../../assets/picture/img1.png" alt=""></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><img src="../../assets/picture/img2.png" alt=""></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><img src="../../assets/picture/img3.png" alt=""></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><img src="../../assets/picture/img4.png" alt=""></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><img src="../../assets/picture/img5.png" alt=""></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><img src="../../assets/picture/img6.png" alt=""></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><img src="../../assets/picture/img7.png" alt=""></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><img src="../../assets/picture/img8.png" alt=""></li>&ndash;&gt;-->
+              <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<p class="next "></p>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="bg_right">-->
+          <!--<div class="bigshow">-->
+            <!--<div class="bigitem">-->
+              <!--<img src="../../assets/picture/img1.png" alt="">-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
         <!--lb-->
         <div class="left project_box">
           <div class="project_title">
@@ -68,9 +68,9 @@
               </p>
             </div>
             <div id="bottom">
-              <p>价格： <font>￥ <span id='price'>{{goodInfo.price}}</span>.00</font>
+              <p>价格： <font>￥ <span id='price'>{{goodInfo.price}}</span></font>
               </p>
-              <button>立即购买</button>
+              <button @click="routerToOrder">立即购买</button>
             </div>
           </div>
         </div>
@@ -207,6 +207,12 @@
           })
         } else {
           alert("您还没有登录，请登录后再加入购物车。")
+        }
+      },
+      routerToOrder() {
+        let userCode = sessionStorage.getItem("userCode");
+        if (userCode) {
+          this.$router.push({path: '/OrderDetails', query: {project: this.goodInfo}});
         }
       }
     }

@@ -100,7 +100,8 @@
     mounted: function () {
       let _this = this;
       this.$axios({
-        url: _this.HOME + '/recruit/allRecruit'
+        url: _this.HOME + '/recruit/allRecruit',
+        method: 'POST'
       }).then(res => {
         _this.recruitList = res.data.data;
       })

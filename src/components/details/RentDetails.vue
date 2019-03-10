@@ -40,7 +40,7 @@
           <p>房屋面积： {{lease.acreage}}</p>
           <p>所在区域： {{lease.stallPosition}}</p>
           <p>档口编号： {{lease.stallCode}}</p>
-          <input type="button" value="查看电话号码" class="rentd_title_btn"/>
+          <input type="button" value="查看电话号码" class="rentd_title_btn" @click="showTelphone"/>
         </div>
         <div class="left">
           <div class="rentd_left_box">
@@ -110,6 +110,11 @@
       }).then(res => {
         _this.lease = res.data.data
       })
+    },
+    methods: {
+      showTelphone(e) {
+        $(e.target).val(this.lease.mobile_phone_num);
+      }
     }
   }
 </script>

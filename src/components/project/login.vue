@@ -61,7 +61,7 @@
     name: "login",
     data() {
       return {
-        isChecked:false
+        isChecked: false
       }
     },
     methods: {
@@ -70,22 +70,22 @@
         let param = new URLSearchParams;
         param.append("mobileNumber", $('#userName').val());
         param.append("password", $('#pwd').val());
-        param.append("rememberMe", $('h3>input[checked="checked"]')?"0":"1");
+        param.append("rememberMe", $('h3>input[checked="checked"]') ? "0" : "1");
         this.$axios({
           url: _this.HOME + '/user/login',
           method: 'POST',
           data: param
         }).then(res => {
-          if (Math.ceil(res.data.code) === 200){
+          if (Math.ceil(res.data.code) === 200) {
             alert(res.data.message);
-            if(res.data.data.isSeller === 0) {
-              sessionStorage.setItem("token", $('#pwd').val());
-              sessionStorage.setItem("userCode", res.data.data.userCode);
-              cookie.setCookie('uid', res.data.data.userCode);
-              cookie.setCookie('sdktoken', $('#pwd').val());
-              this.$store.dispatch('connect');
-              _this.$router.push('/')
-            }
+            // if(res.data.data.isSeller === 0) {
+            sessionStorage.setItem("token", $('#pwd').val());
+            sessionStorage.setItem("userCode", res.data.data.userCode);
+            cookie.setCookie('uid', res.data.data.userCode);
+            cookie.setCookie('sdktoken', $('#pwd').val());
+            this.$store.dispatch('connect');
+            _this.$router.push('/')
+            // }
           } else {
             alert(res.data.message)
           }

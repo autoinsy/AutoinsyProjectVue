@@ -44,13 +44,13 @@
                 <!--<span style="display: none">{{recruit.weichat}}</span>-->
               <!--</a>-->
             <!--</div>-->
-            <!--<div class="rec_btn_1">-->
-              <!--<a href="javascript:">-->
-                <!--<img src="../../assets/images/11.jpg"/>-->
-                <!--<p>电话沟通</p>-->
-                <!--<span style="display: none">{{recruit.contactPhoneNum}}</span>-->
-              <!--</a>-->
-            <!--</div>-->
+            <div class="rec_btn_1">
+              <a href="javascript:" @click="showTelPhone">
+                <img src="../../assets/images/11.jpg"/>
+                <p>电话沟通</p>
+                <span style="display: none">{{recruit.mobilePhoneNum}}</span>
+              </a>
+            </div>
           </div>
         </div>
         <div class="rec_b_box">
@@ -129,6 +129,11 @@
       }).then(res => {
         _this.recruit = res.data.data
       })
+    },
+    methods: {
+      showTelPhone() {
+        alert("联系电话：" + this.recruit.mobilePhoneNum);
+      }
     }
   }
 </script>
